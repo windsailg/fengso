@@ -1,0 +1,139 @@
+
+
+
+ //*{   outline: #FF7757;outline-width: 1px;outline-style:solid;}
+
+#footer{
+   @include ibl;
+   width: 100%;
+   background-color:rgba(255, 255, 255, 0.9);
+   a{
+  color: $color_link;
+}
+}
+
+.footer_container{
+   @include b;
+   width: 1280px;
+   margin:  0 auto;
+   padding: 45px 15px 25px;
+   height: 100%;
+   font-size: 14px;
+   color:$color_fs_footer-font;
+
+   @include M1281() {
+      width: 100%;
+   }
+   @include MCW(480px) {
+      padding: 25px 10px;
+   }
+   
+   .info_block{
+      @include ibl;
+      width: 250px;
+      @include rwd_dp(650px);
+      @include MCW(650px) {
+         width: 100%;
+         margin:  0 auto;
+         padding-left: 10%;
+      }
+      @include MCW(460px) {
+         padding:  10px;
+         margin: 0 auto;
+      }
+      a{
+         text-decoration: underline;
+         color: $color_fs_blue;
+      }
+      .info_logo{
+         @include MCW(650px) {
+            @include ibl;
+            width: 160px;
+            padding: 40px 20px 40px 0;
+         }
+         @include MCW(460px) {
+            width: 120px;
+            padding:  0;
+            float: unset;
+         }
+
+      }
+      .info_content{
+         margin: 15px 0;
+         >li{
+            margin: 12px 0;
+         }
+      }
+   }
+   .links_container{
+      @include ibl;
+      width: calc(100% - 250px);
+      padding-left:  250px;
+      @include M1281() {
+         padding-left:  0px;
+      }
+      @include MCW(650px) {
+         padding-left:  0px;
+         width: 100%;
+      }
+
+      .links_block{
+         @include ibl;
+         letter-spacing: 3px;
+         padding-right: 70px;
+         width: 33%;
+         @include M1281() {
+            padding:   0 ;
+         }
+         @include MCW(480px) {
+            padding:   0 ;
+            letter-spacing: 0px;
+         }
+         .links_title{
+            @include ibl;
+            color: $color_fs_font-title;
+            font-weight: 600;
+            font-size: 17px;
+            margin-bottom: 15px 
+         }
+         .links{
+            @include ibl;
+            width: 100%;
+            >li{
+               margin: 13px 0;
+            }
+         }
+      }
+
+   }
+   .footer_hr{
+      margin: 30px 0 10px;;
+   }
+   .bottom_container{
+      width: 100%;
+      @include flex-center;
+      justify-content: space-between;
+      margin: 20px 0 0;
+      font-size: 13px;
+      @include MCW(768px) {
+         flex-wrap: wrap;
+      }
+      .bottom_block{
+         @include ibl;
+         width: auto;;
+         margin:8px 0;
+         .content{
+            padding-right: 40px;
+            line-height: 25px;
+         }
+         .img_box{
+            width:40px;;
+            padding-right:5px; 
+         }
+      }
+   }
+   
+  
+   
+}
+

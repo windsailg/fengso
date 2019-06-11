@@ -1,0 +1,994 @@
+// @import url("https://fonts.googleapis.com/earlyaccess/notosanstc.css");
+// @import url("https://fonts.googleapis.com/earlyaccess/cwtexming.css");
+// @import url("https://fonts.googleapis.com/earlyaccess/cwtexkai.css");
+// @import url("https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css");
+// @import url("https://fonts.googleapis.com/earlyaccess/cwtexyen.css");
+/* This text is in Century Gothic */
+html{
+   font-family: 'Century Gothic','Arial','Source Sans Pro' , 'Muli' ,'微軟正黑體', '新細明體';
+   // font-family: 'Source Sans Pro' , 'Muli'  ,'cwTeXYen','微軟正黑體','Arial', '新細明體';
+
+}
+body{
+   overflow-x: hidden;
+   overflow-y: scroll; 
+}
+#fengso-productDetail{
+   @include ScrollBar();
+}
+
+//  *{outline-color: rgba(255, 118, 87, 0.233);outline-width: 1px;outline-style:solid;}
+
+.area{
+   @include ibl;
+   width: 100%;
+   overflow: hidden;
+   &.course_intro{
+      background-color: $color_fs_background_gray;
+      margin: -30px 0 30px 0;
+   }
+   .container{
+      @include b;
+      overflow: hidden;;
+      margin:  0 auto;
+      width: 1300px;
+      padding: 40px 20px;
+      &.type_2{
+         width: 100%;
+         padding: 30px 0px;
+         position: relative;
+      }
+      &.type_3{
+         width: 100%;
+         padding: 40px 20px;
+      }
+      &.type_4{
+         padding: 100px 20px 60px;
+         @include M1301() {
+            padding: 30px 20px 60px;
+         }
+      }
+      @include M1301() {
+         width: 100%;
+         padding: 40px 0px 10px;
+      }
+   }
+}
+
+.video_box{
+   @include ibl;
+   width: 100%;
+   margin: 15px 0 0;
+   overflow: hidden;
+   iframe{
+      width: 100%;
+      height: 100%;
+   }
+}
+
+#fengso-productDetail{
+  
+
+   .course_main_block{
+      @include bl;
+      .col{
+         @include ibl;
+      }
+      .course_info{
+         @include ibl;
+         width: 880px;
+         @include M1301() {
+            width: 100%;
+         }
+         .info_block{
+            @include ibl;
+            @include M1301() {
+               padding: 0 15px;
+            }
+            .course_title{
+               @include ibl;
+               width: 100%;
+               margin:  28px 0 5px;
+               line-height: 26px;
+               .title{
+                  @include ibl;
+                  font-size: 18px;
+                  font-weight: 600;
+                  color: $color_fs_font-title;
+                  max-width: 80%;
+                  @include M1301() {
+                     width: 100%;
+                     max-width: unset;
+                  }
+               }
+               .course_popularity{
+                  @include flex-center;
+                  float: right;
+                  width: 20%;
+                  justify-content: space-between;
+                  font-size: 14px;
+                  color: $color_fs_gray_2;
+                  @include M1301() {
+                     margin: 10px 0 5px;
+                     width: 200px;
+                     max-width: 300px;
+                  }
+                  > .popularity_item{
+                     @include tst;
+                     cursor: pointer;
+                     &:hover{
+                        color:$color_fs_orange;
+                     }
+                  }
+               }
+            }
+            .content{
+               @include ibl;
+               font-size: 15px;
+               line-height: 22px;
+            }
+         }
+         .video_block{
+            @include ibl;
+            width: 100%;
+            margin:  5px 0 0;
+            .course_video{
+               height: 480px;
+               @include M1301() {
+                  height: 80vw;
+                  max-height: 400px;
+               }
+            }
+         }
+      }
+      .course_list{
+         @include ibl;
+         margin: 39px 0px 0 50px;
+         width: 320px;   
+         @include M1301() {
+            width: 100%;   
+            margin:  30px 0 0;
+         }
+         .rate_block{
+            @include ibl;
+            width: 100%;
+            height: 100px;
+            padding: 0 0px 0 0px;
+            &.dp-tab{
+               @include M1301() {
+                  display: none;
+               }
+            }
+            &.dp-mob{
+               display: none;
+               @include M1301() {
+                  @include flex-center;
+               }
+            }
+            @include M1301() {
+               padding: 0px;
+            }
+            .act{
+               @include ibl;
+               @include tst(.2s);
+               
+               padding: 5px;
+               
+               position:relative;
+               @include selection-none;
+               @include M1301() {
+                  @include ib;
+                  width: 140px; 
+               }
+            }
+            .btn{
+               @include ibl;
+               font-size: 36px;
+               padding: 10px 0;
+            }
+            .score{
+               @include ibl;
+               
+               width: calc(100% - 50px);
+               padding-left:35px; 
+
+               font-size: 24px;
+               font-weight: 600;
+               padding: 10px 0 0  10px;
+               color: $color_fs_orange;
+            }
+            .act_name{
+               @include ibl;
+               width: calc(100% - 50px);
+               padding-left:10px; 
+               color: $color_fs_gray_2;
+            }
+            //self_style
+            .rate{
+               color: $color_fs_orange;
+               width: 45%;  
+               &::after{
+                 content:'';
+                 @include b;
+                 width: 1px;
+                 height: 70%;
+                 background-color:$color_fs_gray; 
+                 position: absolute;
+                 right:12px;
+                 top:0;
+                 bottom: 0;
+                 margin: auto 0;
+               }
+            }
+
+            .add_to_list{
+               color: $color_fs_gray;
+               width: 55%;  
+               cursor: pointer;
+               &.active{
+                  color: $color_fs_orange;
+               }
+               &.animate{
+                  &::before{
+                     content:'Added';
+                     position:absolute;
+                     top: 10px;
+                     left: -4px;
+                     opacity: 0;;
+                     @include animate-plus;
+                  }
+               }
+               .act_name{
+                  margin: 16px 0 0;
+               }
+            }
+         }
+         .list_block{
+            @include ibl;
+            width: 100%;
+            height: 482px;
+            background-color: $color_fs_background_gray;
+            padding: 0px 5px 0;
+            position: relative;
+            &::after{
+               content:' ';
+               position: absolute;
+               @include b;
+               @include arl;
+               width: 100%;
+               height: 28%;
+               bottom:0px;
+               background: linear-gradient(to top ,rgba(255, 255, 255, 0.541), rgba(255, 255, 255, 0));
+               pointer-events: none;
+            }
+            .list_tab{
+               @include ibl;
+               width: 100%;
+               padding: 0px 15px;
+               .tab_panel{
+                  @include ibl;
+                  width: 50%;
+                  text-align: center;
+                  font-size: 18px;
+                  padding: 25px 0 ;
+                  border-bottom:1px;
+                  border-style:solid;
+                  border-color:$color_fs_gray;
+                  cursor: pointer;
+                  a{
+                     color: rgb(136, 136, 136);
+                  }
+                  &.active{
+                     border-color:$color_fs_orange;
+                     font-weight: 600;
+                     a{
+                        color: rgb(70, 70, 70);
+                     }
+                  }
+               }
+            }
+            .course_type_list{
+               @include ibl;
+               @include ScrollBar;
+               display: none;
+               padding: 10px 0 0 0;
+               &::-webkit-scrollbar {
+                  width: 2px;
+                  background-color:rgba(196, 196, 196, 0.9);
+               }
+               &::-webkit-scrollbar-thumb {
+                  background: rgb(116, 116, 116);
+               }
+               width: 100%;
+               height: 85%;
+               // padding: 0px 0 0 24px;
+               overflow-x: hidden;
+               overflow-y:scroll; 
+               &.active{
+                  display: block;
+               }
+               .course_list_content{//ul
+                  @include ibl;
+                  // overflow: hidden;
+                  width: 100%;
+                  > .course_list_item{//li
+                     @include ibl;
+                     // @include tst(.2s);
+                     @include selection-none;
+                     cursor: pointer;
+                     width: 100%;
+                     position: relative;
+                     padding: 10px 0 10px 24px;
+                     @include tst;
+                     &.active{
+                        @include bs(5px,5px,10px,rgba(82, 82, 82, 0.301));
+                        background-color: #fff;
+                        width: 100%;
+                        transform: translate(-10px,0px);
+                        //width: 118%;
+                        //padding-left:62px;
+                        .icon{
+                           .play_btn{
+                              background: $color_fs_orange;
+                              .triangle{
+                                 border-color: transparent transparent transparent #ffffff;
+                              }
+                           }
+                        }
+                     }
+                     // &::after{
+
+                     // }
+                     .chapter , .title , .time{
+                        @include ibl;
+                        @include nowrap;
+                        width: 85%;
+                        padding: 4px 0;
+                     }
+                     .chapter{
+                        color: rgb(110, 110, 110);
+                     }
+                     .title{
+                        font-weight: 600;
+                        color: $color_fs_font-title;
+                        font-size: 15px;
+                     }
+                     .time{
+                        color:$color_fs_orange;
+                     }
+                     .icon{
+                        @include b;
+                        @include tst;
+                        position: absolute;
+                        width: 25px;
+                        height: 25px;
+                        right: 10px;
+                        top: 34px;
+                        .play_btn{
+                           @include b;
+                           cursor: pointer;
+                           background: #fff;
+                           width: 24px;
+                           height: 24px;
+                           border-radius: 50px;
+                           position: relative;
+                           @include tst;
+                           transition-delay: .1s;
+                           .triangle{
+                              @include b;
+                              @include atb;
+                              position: absolute;
+                              left: 10px;
+                              height: 0;
+                              width: 0;
+                              border-style: solid;
+                              border-width: 5px 0 5px 8px;
+                              border-color: transparent transparent transparent #5e6f79;
+                           }
+                        }
+                        .collapse{
+                           @include b;
+                           cursor: pointer;
+                           width: 22px;
+                           height: 22px;
+                           border:solid 1px $color_fs_gray_2;
+                           position: relative;
+                           @include tst(.2s);
+                           &:hover{
+                              background: $color_fs_gray_3_fadeblue;
+                              i{
+                                 color: #fff;
+                                 @include tst;
+                              }
+                           }
+                           .square{
+                              @include b;
+                              @include arl;
+                              top:5px;
+                              position: absolute;
+                              text-align: center;
+                              font-weight: 600;
+                              font-size: 12px;
+                              @include tst(.2s);
+                              i{
+                                 @include tst(.2s);
+                              }
+                           }
+                        }
+                        .locker{
+                           @include b;
+                         
+                           cursor: pointer;
+                           width: 24px;
+                           height: 24px;
+                           position: relative;
+                           text-align: center;
+                           i{
+                              color:#5e6f79;
+                             
+                           }
+                        }
+                     }
+                  }
+
+
+               }
+
+            }
+         }
+      }
+   }
+   .belt_blocks{
+      @include flex-center;
+      flex-wrap: wrap;
+      width: 100%;
+      background: $color_fs_orange;
+      position: relative;
+      z-index: 3;
+      @include M1301() {
+         padding: 20px 0;
+      }
+      .belt_block{
+         @include ibl;
+         width: 220px;
+         position: relative;
+         &.student::after ,
+         &.time::after{
+            content:' ';
+            @include b;
+            position: absolute;
+            width: 1px;
+            height: 80%;
+            right: 20px;
+            top: 15px;
+            background-color: rgb(224, 224, 224);
+         }
+         @include M1301() {
+            padding: 30px 0;
+         }
+         @include MCW(659px) {
+            &.time::after{
+               display:  none;
+            }
+         }
+         @include MCW(439px) {
+            &.student::after{
+               display:  none;
+            }
+         }
+
+         .col{
+            @include ibl;
+            width: 100%;
+            position: relative;
+            padding: 10px 0 0;
+
+            .title{
+               @include ibl;
+               position: absolute;;
+               top: -12px;
+               width: 150px;;
+               color: $color_fs_brown;
+               font-weight: 600;
+               padding: 5px 0 15px;
+               font-size: 15px;
+            }
+            .imagine{
+               @include ibl;
+               padding: 15px 0  0 15px ;
+               width: 60px;
+               font-size: 40px;
+               color: #fff;
+            }
+            .number{
+               @include ibl;
+               width:100%;
+               font-size: 40px;
+               padding:0px 0 10px; 
+               color: #fff;
+               text-align: center;
+            }
+            .subtitle{
+               @include ibl;
+               width:100%;
+               font-size: 15px;
+               color: #fff;
+               text-align: center;
+            }
+            &.col2{
+               width: 35%;
+               .title{
+
+               }
+               .imagine{
+
+               }
+               .number{
+
+               }
+               .subtitle{
+
+               }
+
+            }
+            &.col3{
+               width: 26%;
+
+               .title{
+
+               }
+               .imagine{
+
+               }
+               .number{
+
+               }
+               .subtitle{
+
+               }
+            }
+            .xs{
+               font-size: 20px;
+               padding: 0 5px;
+            }
+         }
+         &.price{
+            @include bs(1px,1px,12px,rgba(63, 63, 63, 0.301));
+            transform: skewX(-14deg) scale(1 , 1.1);
+            background-color: #fff;
+            overflow: hidden;
+            width: auto;
+            max-width: 250px;
+            height: 160px;
+            @include M1301() {
+               min-width: 100%;
+               transform: skewX(0deg) scale(1);
+            }
+            .col{
+               transform: skewX(14deg);
+               padding: 34px 30px;
+               @include M1301() {
+                  text-align: center;
+                  transform: skewX(0deg);
+                  padding: 0;
+               }
+               .title{
+                  position: unset;;
+                  width: 100%;
+                  color: rgb(68, 68, 68);
+               }
+               .subtitle{
+                  @include ibl;
+                  width:100%;
+                  font-size: 40px;
+                  color: $color_fs_orange;
+                  text-align: center;
+               }
+            }
+
+         }
+         &.buysoon{
+            @include selection-none;
+            width: 350px;
+            padding: 0px 0 0 30px; 
+            color: #fff;
+            @include M1301() {
+               width: auto;
+               padding: 30px 0  5px;
+            }
+            .col2{
+               @include ibl;
+               @include tst;
+               border: 2px solid #fff;
+               padding: 20px 0;
+               height: 90px;
+               cursor: pointer;
+               &:hover{
+                  background-color: #fff;
+
+                  .title, .subtitle, .plus, .imagine{
+                     color: $color_fs_orange;
+                  }
+                  .title{
+                     font-weight: 600;
+                  }
+               }
+               
+            }
+            .buy_box{
+               width: 190px;
+               .title{
+                  position: unset;;
+                  text-align: center;
+                  width: 100%;
+                  color: #fff;
+                  font-size: 22px;
+                  font-weight: 600;
+                  padding: 12px 0 ;
+                  @include tst;
+               }
+               .subtitle{
+                  @include tst;
+               }
+            }
+            .cart_box{
+               margin-left: 10px;
+               width: 100px;
+               text-align: center;
+               .plus{
+                  @include tst;
+                  font-size: 18px;
+                  font-weight: 600;
+               }
+               .imagine{
+                  @include tst;
+                  padding: 8px 0 0 0;
+                  text-align: center;
+                  width: 100%;
+                  font-size: 20px;
+               }
+            }
+
+         }
+
+      }
+   }
+   .announcement_block{
+      @include b;
+      width: 100%;
+      background-color: $color_fs_background_gray;
+      padding: 40px 0px;
+      position: relative;
+      z-index:1;
+      @include M1301() {
+         padding: 10px 0px  ;
+      }
+      .announcement_control{
+         @include ibl;
+         width: 100%;
+         position: relative;
+         padding: 10px 0 0 0;
+         background-color:$color_fs_background_gray;
+         &.active{
+            .controller{
+               i{
+                  margin:  3px 0px 0px  -15px;
+               }
+            }
+         }
+         .controller{
+            @include b;
+            margin: 0 auto;
+            text-align: center;
+            width: 100%;
+            height: 35px;
+            overflow: hidden;
+            position: relative;
+            padding: 10px 0 0;
+            z-index:1;
+            font-size: 14px;
+            cursor: pointer;
+            @include tst;
+            &:hover{
+               color: $color_fs_orange;
+            }
+            i{
+               position: absolute;
+               color: $color_fs_orange;
+               margin:  -7px 0px 0px  -15px;
+               font-size: 20px;
+            }
+
+            &::after{
+               content:' ';
+               position: absolute;
+               z-index:3;
+               @include b;
+               @include arl;
+               width: 100%;
+               height: 8px;
+               bottom:-8px;
+               background: linear-gradient(to right,rgba(255, 255, 255, .2), rgb(0, 0, 0),rgb(0, 0, 0),rgb(8, 8, 8), rgba(255, 255, 255, .2));
+               @include ds(1px,-6px,5px,rgb(255, 255, 255));
+               background-blend-mode: lighten;
+            }
+         }
+         &::after{
+            content:' ';
+            position: absolute;
+            z-index: -1;
+            @include b;
+            @include arl;
+            width: 100%;
+            height: 3px;
+            bottom:2px;
+            background: linear-gradient(to right,rgba(255, 255, 255, .2), rgb(0, 0, 0), rgba(255, 255, 255, .2));
+            @include ds(1px,1px,10px,rgba(0, 0, 0, 0.836));
+         }
+      }
+      .announcement_container{
+         @include flex-center;
+         @include tst;
+         justify-content: flex-start;
+         flex-wrap: nowrap;;
+         overflow: hidden;
+         position: relative;
+         width: 1300px;
+         margin:  0 auto;
+         height: 42px;
+         @include M1301() {
+            width: 100%;
+            flex-wrap: wrap;
+            height: 170px;
+         }
+         &.active{
+            height: 100px;
+            @include M1301() {
+               height: 370px;
+            }
+            .content_list{
+               padding: 0;
+            }
+         }
+         
+         .title_block{
+            @include ibl;
+            width: 170px;
+            padding: 40px 20px 40px 15px;
+            position: relative;
+            @include M1301() {
+               width: 100%;
+               padding: 20px 0 ;
+            }
+            &::after{
+               content:' ';
+               @include b;
+               top:50px;;
+               width: 1px;
+               height: 14px;
+               position: absolute;
+               right: 30px;
+               background: #a8a8a8;
+            }
+            .title{
+               @include ib;
+               letter-spacing: 18px;
+               font-weight: 600;
+               text-align: center;
+               font-size: 20px;
+               color: $color_fs_font-title;
+               @include M1301() {
+                  width: 100%;
+                  text-indent: 18px;
+               }
+            }
+            .subtitle{
+               @include ib;
+               font-size: 13px;
+               text-align: center;
+               color: $color_fs_orange;
+               @include M1301() {
+                  width: 100%;
+               }
+            }
+
+         }
+         .content_list{
+            @include ibl;
+            width: 1000px;
+            padding: 80px 0 0;
+            @include tst;
+            @include M1301() {
+               width: 100%;
+               padding: 10px 0 0;
+            }
+            .content_item{
+               @include ibl;
+               //@include nowrap;
+               width: 100%;
+               height: 36px;
+               padding: 5px 0;
+               font-size: 17px;
+               color: rgb(56, 56, 56);
+               position: relative;
+               @include M1301() {
+                  width: 100%;
+                  height: unset;
+                  padding: 10px 0;
+               }
+               &:not(:last-child)::after{
+                  content:' ';
+                  position: absolute;
+                  @include b;
+                  width: 100%;
+                  height: 0px;
+                  bottom:3px;
+                  left: 5px;
+                  border-color: #c9c9c9;
+                  border-width: 0 0 1px 0;
+                  border-style: dashed;
+               }
+               a{
+                  color: rgb(75, 75, 75);
+               }
+               .date{
+                  @include ibl;
+                  padding: 0 10px ;
+               }
+               .lock{
+                  @include ibl;
+                  padding: 3px 15px  0 10px;
+                  position: relative;
+                  opacity: 0;
+                  font-size: 12px;
+                  &.show{
+                     opacity: 1;
+                  }
+               }
+               .content{
+                  @include ibl;
+                  line-height: 22px;
+                  @include MCW(861px) {
+                     width: 100%;
+                     padding: 10px;
+                  }
+                  .tip{
+                     padding: 0 5px;
+                     a{
+                        font-size: 16px;
+                        color: $color_fs_blue;
+                     }
+                  }
+               }
+            }
+         }
+      }
+
+   }
+   .intro_block{
+      @include ibl;
+      width: 70%;
+      @include M1301() {
+         width: 100%;
+      }
+      .intro_tab_block{
+         @include bl;
+         width: 100%;
+         padding:  0 0 40px 0;
+         .intro_tab{
+            @include bl;
+            width: 100%;
+            .tab_item{
+               @include ibl;
+               width: 160px;;
+               font-weight: 600;
+               text-align: center;
+               position: relative;
+               cursor: pointer;
+               &:not(:last-child)::after{
+                  content:' ';
+                  @include b;
+                  position: absolute;
+                  width: 1px;
+                  height: 50%;
+                  right: 0px;
+                  top: 8px;
+                  transform: skew(-12deg,0);
+                  background-color: rgb(107, 107, 107);
+                  @include MCW(681px) {
+                     display: none;
+                  }
+               }
+               @include MCW(681px) {
+                  width: 50%;
+                  padding: 20px 0 0;
+                  &:nth-child(odd)::after{
+                     content:' ';
+                     @include b;
+                     position: absolute;
+                     width: 1px;
+                     height: 50%;
+                     right: 0px;
+                     top: 24px;
+                     transform: skew(-12deg,0);
+                     background-color: rgb(107, 107, 107);
+                  }
+               }
+               a:hover{
+                  color:$color_fs_orange;
+               }
+               &.active{
+                  a{
+                     color: $color_fs_orange;
+                  }
+                  &::before{
+                     content:' ';
+                     @include b;
+                     @include arl;
+                     position: absolute;
+                     width: 80%;
+                     height: 3px;
+                     bottom: -10px;
+                     background-color:$color_fs_orange;
+                  }
+               }
+   
+            }
+         }
+      }
+      .course_tabtarget{
+         display: none;
+      }
+
+   }
+   .teacher_block{
+      @include ibl;
+      width: 30%;
+      padding-left: 30px;
+      @include rwd_dp();
+      @include M1301() {
+         width: 100%;
+         padding: 10px 30px 50px;
+      }
+      @include MCW(580px) {
+         width: 100%;
+         padding: 10px 10px 50px;
+      }
+      .teacher_box{
+         
+         @include bs(5px ,5px, 15px, rgba(44, 44, 44, 0.116));
+         @include b;
+         background: #fff;
+         margin: 0 auto;
+         padding: 30px;
+         text-align: center;
+         .teacher_avatar{
+            @include b;
+            overflow: hidden;
+            margin:  0 auto;
+            width: 150px;
+            height: 150px;
+            border: 4px solid $color_fs_goose;
+            border-radius: 100px;
+
+         }
+         .teacher_name{
+            margin: 20px auto;
+            font-size: 22px;
+            color: $color_fs_orange;
+         }
+         .teacher_intro{
+            margin: 20px auto;
+            color: $color_fs_gray_2;
+            line-height: 30px;
+         }
+      }
+   }
+
+
+
+
+}
+
+
+

@@ -1,0 +1,240 @@
+.area .container.type_5 {
+  width: 100%;
+}
+
+#fengso-productDetail.preorder .belt_blocks {
+  background: #FFB639;
+}
+
+#fengso-productDetail.preorder .belt_blocks .belt_block.price {
+  -webkit-box-shadow: 1px 1px 12px rgba(63, 63, 63, 0.301);
+          box-shadow: 1px 1px 12px rgba(63, 63, 63, 0.301);
+  -webkit-transform: skewX(-14deg) scale(1, 1.1);
+      -ms-transform: skewX(-14deg) scale(1, 1.1);
+          transform: skewX(-14deg) scale(1, 1.1);
+  background-color: #fff;
+  overflow: hidden;
+  width: auto;
+  max-width: 250px;
+  height: 160px;
+}
+
+@media all and (max-width: 1301px) {
+  #fengso-productDetail.preorder .belt_blocks .belt_block.price {
+    height: unset;
+    min-width: 100%;
+    -webkit-transform: skewX(0deg) scale(1);
+        -ms-transform: skewX(0deg) scale(1);
+            transform: skewX(0deg) scale(1);
+  }
+}
+
+#fengso-productDetail.preorder .belt_blocks .belt_block.price > .subtitle {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  font-size: 20px;
+  -webkit-transform: skewX(14deg);
+      -ms-transform: skewX(14deg);
+          transform: skewX(14deg);
+  color: #ccc;
+  text-decoration: line-through;
+}
+
+@media all and (max-width: 1301px) {
+  #fengso-productDetail.preorder .belt_blocks .belt_block.price > .subtitle.dp-tab {
+    display: none;
+  }
+}
+
+#fengso-productDetail.preorder .belt_blocks .belt_block.price > .subtitle.dp-mob {
+  display: none;
+}
+
+@media all and (max-width: 1301px) {
+  #fengso-productDetail.preorder .belt_blocks .belt_block.price > .subtitle.dp-mob {
+    display: block;
+  }
+}
+
+#fengso-productDetail.preorder .belt_blocks .belt_block.price .col {
+  width: 100%;
+  -webkit-transform: skewX(14deg);
+      -ms-transform: skewX(14deg);
+          transform: skewX(14deg);
+  padding: 34px 30px;
+}
+
+@media all and (max-width: 1301px) {
+  #fengso-productDetail.preorder .belt_blocks .belt_block.price .col {
+    width: 50%;
+    text-align: center;
+    -webkit-transform: skewX(0deg);
+        -ms-transform: skewX(0deg);
+            transform: skewX(0deg);
+    padding: 0;
+  }
+}
+
+@media all and (max-width: 700px) {
+  #fengso-productDetail.preorder .belt_blocks .belt_block.price .col {
+    width: 100%;
+    padding: 20px 0;
+  }
+}
+
+#fengso-productDetail.preorder .belt_blocks .belt_block.price .col .title {
+  position: unset;
+  width: 100%;
+  color: #444444;
+  font-size: 18px;
+  float: left;
+}
+
+#fengso-productDetail.preorder .belt_blocks .belt_block.price .col .subtitle {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  width: 100%;
+  font-size: 40px;
+  color: #FF7757;
+  text-align: center;
+}
+
+#fengso-productDetail.preorder .belt_blocks .belt_block.price .real_price .subtitle {
+  font-size: 34px;
+  color: #ccc;
+  text-decoration: line-through;
+}
+
+@media all and (max-width: 1301px) {
+  #fengso-productDetail.preorder .belt_blocks .belt_block.price .real_price.dp-tab {
+    display: none;
+  }
+}
+
+#fengso-productDetail.preorder .belt_blocks .belt_block.price .real_price.dp-mob {
+  display: none;
+}
+
+@media all and (max-width: 1301px) {
+  #fengso-productDetail.preorder .belt_blocks .belt_block.price .real_price.dp-mob {
+    display: block;
+  }
+}
+
+#fengso-productDetail.preorder .reciprocal_block {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  background-color: #F1F1F1;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  float: left;
+  padding: 50px 0;
+}
+
+@media all and (max-width: 1301px) {
+  #fengso-productDetail.preorder .reciprocal_block {
+    padding: 50px 0 20px;
+  }
+}
+
+#fengso-productDetail.preorder .reciprocal_block .reciprocal_deco {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 1250px;
+  background-color: #FFB639;
+  opacity: .8;
+  position: absolute;
+  z-index: 0;
+  height: 1px;
+}
+
+@media all and (max-width: 1301px) {
+  #fengso-productDetail.preorder .reciprocal_block .reciprocal_deco {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 800px) {
+  #fengso-productDetail.preorder .reciprocal_block .reciprocal_deco {
+    margin: 0 auto;
+    top: 58px;
+  }
+}
+
+#fengso-productDetail.preorder .reciprocal_block .col {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  font-size: 16px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  color: #363636;
+  background-color: #F1F1F1;
+}
+
+@media all and (max-width: 800px) {
+  #fengso-productDetail.preorder .reciprocal_block .col {
+    padding: 20px 0;
+  }
+}
+
+#fengso-productDetail.preorder .reciprocal_block .col .str {
+  font-weight: 600;
+  padding: 0 16px;
+}
+
+#fengso-productDetail.preorder .reciprocal_block .col .num {
+  font-size: 38px;
+  color: #444444;
+}
+
+#fengso-productDetail.preorder .reciprocal_block .col.title {
+  padding: 0 60px;
+}
+
+@media all and (max-width: 800px) {
+  #fengso-productDetail.preorder .reciprocal_block .col.date {
+    width: 100%;
+  }
+}
+
+#fengso-productDetail.preorder .reciprocal_block .col.time {
+  padding: 0 60px 0 20px;
+}
+
+#fengso-productDetail.preorder .reciprocal_block .col.time .str {
+  padding: 0 10px;
+}
+
+#fengso-productDetail.preorder .reciprocal_block .col.time .num > span {
+  padding: 0 10px;
+  font-size: 14px;
+}

@@ -1,0 +1,57 @@
+.intro_block {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  float: left;
+  color: #5a5a5a;
+  line-height: 30px;
+}
+
+.intro_block .style-h2 {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  float: left;
+  width: 100%;
+  font-weight: 600;
+  font-size: 19px;
+  letter-spacing: 10px;
+  color: #363636;
+  margin: 15px 0;
+}
+
+.intro_block .style-p {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  float: left;
+  width: 100%;
+  line-height: 30px;
+  margin: 15px 0 25px;
+}
+
+.intro_block .style-tb {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  float: left;
+  padding: 15px 30px;
+  width: 100%;
+}
+
+.intro_block .style-tb > div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  float: left;
+  padding: 25px 30px;
+  background-color: #E5E3E4;
+}
+
+.intro_block .style-ul {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  float: left;
+  width: 100%;
+}

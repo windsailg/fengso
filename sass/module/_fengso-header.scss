@@ -1,0 +1,257 @@
+
+
+a{
+  color: $color_link;
+}
+
+// *{   outline: #FF7757;outline-width: 1px;outline-style:solid;}
+.header_marginer{
+   margin: 0 0 80px 0; 
+}
+#fengso-header{
+   @include b;
+   @include bs(0px,2px,40px,$color_shadow);
+   width: 100%;
+   height: 80px;
+   background-color:rgba(255, 255, 255, 0.9);
+   position: fixed;
+   top: 0;
+   z-index: 100;;
+   font-family: '''Source Sans Pro' , 'Muli'  ,'cwTeXYen','微軟正黑體','Arial', '新細明體';
+}
+
+.header_container{
+   @include b;
+   width: 1280px;
+   margin:  0 auto;
+   padding: 25px 15px;
+   height: 100%;
+   
+   @include M1301() {
+      width: 100%;
+   }
+   //left blocks
+   .sidebar_menu{
+      @include ibl;
+      margin: 3px 20px 0 0px;
+      .sidebar_btn{
+         @include ibl;
+         margin: 0px 0 0 0;
+         width: 16px;
+         height: 25px;
+         cursor: pointer;
+         .sidebar_btn_element{
+            @include ib;
+            width: 100%;
+            height: 1px;
+            background-color: rgb(107, 107, 107);
+            margin: 5px 0 0;
+            float: left;
+         }
+      }
+   }
+   .fengso_logo{ 
+      @include ibl;
+      margin: 0px 0px 0;
+      width: 108px;
+   }
+   .header_list{
+      @include ibl;
+      margin: 5px 0px 0 62px;;
+      @include M1301(){
+         display: none;
+      }
+      .header_list_item{
+         @include ib;
+         margin: 0 25px 0 0 ;
+         font-size: 14px;
+         &:hover{
+            .header_list_item_dropdown{
+               z-index: 98;
+               @include hov_v;
+            }
+         }
+         i{
+            font-size: 12px;
+            padding:0 0 0 7px;
+            opacity:.6;
+         }
+         .header_list_item_dropdown{
+            @include b;
+            @include bs(0px,10px , 10px, $color_shadow);
+            @include tst;
+            @include hov_h(.3s);
+            position: fixed;
+            width: 100%;
+            z-index: 0;
+            top: 80px;
+            left:0 ;
+            background-color:#f6f7f9;
+
+            .dropdown_container{
+               @include b;
+               overflow: hidden;
+               margin: 0 auto;
+               width: 1300px;
+               padding: 5px 30px 30px;
+               .dropdown_block{
+                  @include ibl;
+                  padding: 5px 30px 0 0;
+                  .dropdown_block_list_title{
+                     color: rgb(20, 20, 20);
+                     font-weight: 600;
+                     padding: 20px 0;
+                     font-size: 16px;
+                  }
+                  .dropdown_list{
+                     
+                     @include ibl;
+                     width: 150px;
+                     overflow: hidden;
+                     max-height: 500px;
+                     .dropdown_list_item{
+                        
+                        margin: 12px 0;
+                     }
+                  }
+               }
+            }
+
+
+         }
+      }
+   }
+
+   //right blocks
+   .user_control{
+      @include ibr;  
+      cursor: pointer;
+      position: relative;
+      &:hover{
+         .user_dropdown{
+            @include hov_v();
+         }
+      }
+      .user_avatar{
+         @include ibl;  
+         border-radius: 100px;
+         overflow: hidden;
+         width: 30px;
+         height: 30px;
+         border:1px solid $color_fs_gray;
+      }
+      i{
+         margin:  10px 0 0 5px ;
+         font-size: 12px;
+         color: rgb(170, 170, 170);
+      }
+      .user_dropdown{
+         @include b;
+         @include ds(4px,4px , 10px, rgba(70, 70, 70, 0.158));
+         @include tst;
+         position: absolute;
+         padding: 2px 0px;
+         background-color: #fff;
+         width: 164px;
+         right: 10px;
+         top:56px;;
+         text-align: center;
+         @include hov_h();
+         &::before{
+            content:'';
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 10px 12px 10px;
+            border-color: transparent transparent #ffffff transparent;
+         }
+         .dropdown_item{
+            @include b;
+            @include tst;
+            cursor: pointer;
+            width: 100%;
+            margin: 2px 0;
+            padding: 12px 0px;
+            font-weight: 600;
+            font-size: 14px;
+            color: $color_link;
+            &:hover{
+               background-color: $color_fs_background_gray;
+            }
+         }
+      }
+   }
+   .cart{
+      @include ibr;  
+      margin: 6px 40px 0 0;
+      cursor: pointer;
+      @include M1301() {
+         margin-right:  10px ;
+         .header_cart_name{
+            display: none;
+         }
+      }
+      .header_cart_img{
+         @include ib;  
+         font-size: 18px;
+         margin: 0 10px 0 0;
+         i{
+            color:$color_fs_gray;
+         }
+      }
+      .header_cart_name{
+         font-size: 14px;
+      }
+   }
+   .search{
+      @include ibr;  
+      margin: 0px 40px 0 0;
+      height: 36px;
+      outline: none;
+      border-style: solid;
+      border-width: 1px;
+      border-radius: 50px;
+      border-color: $color_fs_orange;
+      padding: 9px 14px 0 8px;
+      @include M1301() {
+         margin-right:  10px ;
+         .search_input{
+            width: 120px;
+         }
+      }
+      @include M480() {
+
+      }
+      .search_input{
+         @include ibl;  
+         @include PlaceHolder-Style();
+         font-size: 14px;
+         padding:0 10px 0;
+         border:0px solid;;
+         background:transparent;
+         outline: none;
+      }
+      .search_start{
+         @include ibr;  
+         cursor: pointer;
+         padding: 0px  0 0 0;
+         color: rgba(138, 138, 138, 0.6);
+         font-size: 18px;
+      }
+   }
+
+}
+
+
+
+
+
+.img_box{
+   @include ib;
+   img{
+      width: 100%;
+   }
+}
