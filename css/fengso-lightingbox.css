@@ -23,19 +23,19 @@
   margin-left: auto;
   position: fixed;
   width: 800px;
-  height: 64%;
   overflow: hidden;
-  padding: 52px 50px 10px;
+  padding: 52px 50px 30px;
   background: white;
   z-index: 1000;
   border-radius: 5px;
-  top: 150px;
+  top: 8%;
 }
 
 @media all and (max-width: 861px) {
   .lightingbox .lightingbox_wrap {
     width: 95%;
-    padding: 52px 15px 20px;
+    padding: 42px 15px 20px;
+    height: 80vh;
   }
 }
 
@@ -121,7 +121,8 @@
 }
 
 .lightingbox .lightingbox_wrap .lightingbox_container .lightingbox_body > .col2 {
-  width: 44%;
+  display: none;
+  width: 96%;
   padding: 0 0 20px 0;
 }
 
@@ -305,8 +306,14 @@
       -ms-user-select: none;
           user-select: none;
   width: 100%;
-  padding: 8px 0 45px 0;
+  padding: 10px 0 20px 0;
   /* The container */
+}
+
+@media all and (max-width: 861px) {
+  .lightingbox .lightingbox_wrap .lightingbox_container .lightingbox_body .check_block {
+    padding: 0px 0 20px 0;
+  }
 }
 
 .lightingbox .lightingbox_wrap .lightingbox_container .lightingbox_body .check_block .checkbox_block {
@@ -385,6 +392,15 @@
 
 .lightingbox .lightingbox_wrap .lightingbox_container .lightingbox_body .check_block .forgot_password i {
   color: #8f8f8f;
+}
+
+.lightingbox .lightingbox_wrap .lightingbox_container .lightingbox_body .btn_block {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  width: 100%;
+  padding: 15px 0;
 }
 
 .lightingbox .lightingbox_wrap .lightingbox_container .lightingbox_footer {
@@ -519,6 +535,13 @@
   top: 10px;
   right: 10px;
   cursor: pointer;
+}
+
+@media all and (max-width: 861px) {
+  .lightingbox .btn_close {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .lightingbox .btn_close:hover .c_deco {

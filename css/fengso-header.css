@@ -7,6 +7,12 @@ a {
   margin: 0 0 80px 0;
 }
 
+@media all and (max-width: 781px) {
+  .header_marginer {
+    margin: 0 0 60px 0;
+  }
+}
+
 #fengso-header {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -22,19 +28,32 @@ a {
   font-family: "" "Source Sans Pro", "Muli", "cwTeXYen", "微軟正黑體", "Arial", "新細明體";
 }
 
+@media all and (max-width: 781px) {
+  #fengso-header {
+    height: 60px;
+  }
+}
+
 .header_container {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: block;
   width: 1280px;
   margin: 0 auto;
-  padding: 25px 15px;
+  padding: 25px 15px 0;
   height: 100%;
+  position: relative;
 }
 
 @media all and (max-width: 1301px) {
   .header_container {
     width: 100%;
+  }
+}
+
+@media all and (max-width: 781px) {
+  .header_container {
+    padding-top: 15px;
   }
 }
 
@@ -75,6 +94,13 @@ a {
   float: left;
   margin: 0px 0px 0;
   width: 108px;
+}
+
+@media all and (max-width: 781px) {
+  .header_container .fengso_logo {
+    width: 85px;
+    padding: 6px 0 0 0;
+  }
 }
 
 .header_container .header_list {
@@ -259,10 +285,23 @@ a {
   font-weight: 600;
   font-size: 14px;
   color: #363636;
+  position: relative;
+}
+
+.header_container .user_control .user_dropdown .dropdown_item i {
+  text-align: center;
+  font-size: 16px;
+  margin: 0 0 0 -5px;
+  width: 25px;
 }
 
 .header_container .user_control .user_dropdown .dropdown_item:hover {
   background-color: #F1F1F1;
+}
+
+.header_container .user_control .user_dropdown .dropdown_item.logon {
+  color: #fff;
+  background-color: #FF7757;
 }
 
 .header_container .cart {
@@ -299,6 +338,28 @@ a {
   font-size: 14px;
 }
 
+.header_container .search_trigger {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  float: right;
+  margin: 0px 10px 0 0;
+  height: 36px;
+  outline: none;
+  padding: 8px 14px 0 8px;
+  color: rgba(138, 138, 138, 0.6);
+}
+
+.header_container .search_trigger.dp-mob {
+  display: none;
+}
+
+@media all and (max-width: 781px) {
+  .header_container .search_trigger.dp-mob {
+    display: block;
+  }
+}
+
 .header_container .search {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -314,12 +375,35 @@ a {
   padding: 9px 14px 0 8px;
 }
 
+.header_container .search.dp-tab {
+  display: block;
+}
+
+@media all and (max-width: 781px) {
+  .header_container .search.dp-tab {
+    display: none;
+  }
+}
+
 @media all and (max-width: 1301px) {
   .header_container .search {
     margin-right: 10px;
   }
   .header_container .search .search_input {
     width: 120px;
+  }
+}
+
+@media all and (max-width: 781px) {
+  .header_container .search {
+    width: 80%;
+    position: absolute;
+    right: 0;
+    margin-right: auto;
+    left: 0;
+    margin-left: auto;
+    top: 80px;
+    background-color: rgba(255, 255, 255, 0.9);
   }
 }
 

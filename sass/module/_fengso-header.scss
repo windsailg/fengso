@@ -7,6 +7,9 @@ a{
 // *{   outline: #FF7757;outline-width: 1px;outline-style:solid;}
 .header_marginer{
    margin: 0 0 80px 0; 
+   @include MCW(781px) {
+      margin: 0 0 60px 0; 
+   }
 }
 #fengso-header{
    @include b;
@@ -18,17 +21,23 @@ a{
    top: 0;
    z-index: 100;;
    font-family: '''Source Sans Pro' , 'Muli'  ,'cwTeXYen','微軟正黑體','Arial', '新細明體';
+   @include MCW(781px) {
+      height: 60px;
+   }
 }
 
 .header_container{
    @include b;
    width: 1280px;
    margin:  0 auto;
-   padding: 25px 15px;
+   padding: 25px 15px 0;
    height: 100%;
-   
+   position: relative;
    @include M1301() {
       width: 100%;
+   }
+   @include MCW(781px) {
+      padding-top: 15px;
    }
    //left blocks
    .sidebar_menu{
@@ -54,6 +63,10 @@ a{
       @include ibl;
       margin: 0px 0px 0;
       width: 108px;
+      @include MCW(781px) {
+         width: 85px;
+         padding: 6px 0 0 0;
+      }
    }
    .header_list{
       @include ibl;
@@ -178,8 +191,19 @@ a{
             font-weight: 600;
             font-size: 14px;
             color: $color_link;
+            position: relative;
+            i{
+               text-align: center;
+               font-size: 16px;
+               margin: 0 0 0 -5px; 
+               width: 25px;
+            }
             &:hover{
                background-color: $color_fs_background_gray;
+            }
+            &.logon{
+               color: #fff;
+               background-color: $color_fs_orange;
             }
          }
       }
@@ -206,6 +230,20 @@ a{
          font-size: 14px;
       }
    }
+   .search_trigger{
+      @include ibr;  
+      margin: 0px 10px 0 0;
+      height: 36px;
+      outline: none;
+      padding: 8px 14px 0 8px;
+      color: rgba(138, 138, 138, 0.6);
+      &.dp-mob{
+         display: none;
+         @include MCW(781px) {
+            display: block;
+         }
+      }
+   }
    .search{
       @include ibr;  
       margin: 0px 40px 0 0;
@@ -216,15 +254,26 @@ a{
       border-radius: 50px;
       border-color: $color_fs_orange;
       padding: 9px 14px 0 8px;
+      &.dp-tab{
+         display: block;
+         @include MCW(781px) {
+            display: none;
+         }
+      }
       @include M1301() {
          margin-right:  10px ;
          .search_input{
             width: 120px;
          }
       }
-      @include M480() {
-
+      @include MCW(781px) {
+         width: 80%;
+         position: absolute;
+         @include arl;
+         top:80px;
+         background-color: rgba(255, 255, 255, 0.9);
       }
+
       .search_input{
          @include ibl;  
          @include PlaceHolder-Style();

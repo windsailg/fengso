@@ -122,9 +122,16 @@
          @include ibl;
          width: auto;;
          margin:8px 0;
+
          .content{
             padding-right: 40px;
             line-height: 25px;
+            br{
+            display: none;
+            @include MCW(400px) {
+               display: block;
+            }
+         }
          }
          .img_box{
             width:40px;;

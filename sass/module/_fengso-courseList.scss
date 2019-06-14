@@ -1,23 +1,3 @@
-$color_fs_orange:#FF7757;
-$color_fs_pre_goose:#FFB639;
-$color_fs_goose:#FFB636;
-$color_fs_brown:rgb(95, 54, 23);
-$color_fs_blue:rgb(67, 112, 179);
-
-$color_fs_gray:#BCBDBC;
-$color_fs_gray_2:rgb(161, 161, 161);
-$color_fs_gray_3_fadeblue:#5e6f79;;//blue
-$color_fs_background_gray:#F1F1F1;
-
-$color_link:rgb(54, 54, 54);
-$color_shadow:rgba(77, 77, 77, 0.2);
-
-$color_fs_font-title:rgb(54, 54, 54);
-$color_fs_font-title_2:rgb(68, 68, 68);
-
-$color_fs_font:rgb(90, 90, 90);
-
-$color_fs_footer-font:rgb(124, 124, 124);
 
 //  *{outline-color: rgba(255, 118, 87, 0.233);outline-width: 1px;outline-style:solid;}
 
@@ -34,7 +14,11 @@ $color_fs_footer-font:rgb(124, 124, 124);
       overflow: hidden;;
       margin:  0 auto;
       width: 1300px;
-      padding: 40px 20px;
+      padding: 30px 10px;
+      @include M1301() {
+         width: 100%;
+         padding: 20px 0px 10px;
+      }
       &.type_2{
          width: 100%;
          padding: 30px 0px;
@@ -50,10 +34,7 @@ $color_fs_footer-font:rgb(124, 124, 124);
             padding: 30px 20px 60px;
          }
       }
-      @include M1301() {
-         width: 100%;
-         padding: 40px 0px 10px;
-      }
+
    }
 }
 
@@ -73,12 +54,21 @@ $color_fs_footer-font:rgb(124, 124, 124);
       @include flex-center;
       justify-content: space-around;
       width: 100%;
-      margin: 30px auto 20px;
+      margin: 40px auto 30px;
+      @include M1301() {
+         justify-content: center;
+         padding: 10px;
+         margin: 40px auto 20px;
+      }
       .content_block{
          @include ib;
          overflow: hidden;
          width: 72%;
          padding: 0 40px 0 0;
+         @include M1301() {
+            width: 100%;
+            padding: 0;
+         }
          .title{
             font-size: 24px;
             font-weight: 600;
@@ -90,8 +80,12 @@ $color_fs_footer-font:rgb(124, 124, 124);
             color:$color_fs_font;
          }
       }
-      .category_block{
+      .imagine_block{
          width: 28%;
+         @include M1301() {
+            width: calc(300px + 20%);
+            padding-top: 20px;
+         }
          .image{
             width: 100%;
             height: 110px;
@@ -104,13 +98,17 @@ $color_fs_footer-font:rgb(124, 124, 124);
    .search_block{
       @include ibl;  
       @include flex-center;
-      justify-content: space-around;
+      justify-content: space-between;
       width: 100%;
       .search_box{
          @include ib;
-         width: 58%;
+         width: 67%;
          @include flex-center;
-         justify-content: space-around;
+         justify-content: space-between;
+         @include M1301() {
+            width: 100%;
+            padding: 10px ;
+         }
          .inputs{
             border-color: rgb(201, 201, 201);
             font-size: 15px;
@@ -132,6 +130,7 @@ $color_fs_footer-font:rgb(124, 124, 124);
             }
             @include MCW(861px) {
                width: 100%;
+               margin-right:  0 ;
             }
             .search_input{
                @include ibl;  
@@ -196,16 +195,32 @@ $color_fs_footer-font:rgb(124, 124, 124);
       }
       .course_type{
          @include flex-center;
-         justify-content: space-around;
+         justify-content: space-between;
          box-sizing: border-box;
-         width: 40%;
+         width: 28.8%;
          padding: 0 0 0 10px;;
+         @include M1301() {
+            width: 500px;
+            padding: 10px ;
+            justify-content: space-around;
+         }
+         @include MCW(500px) {
+            width: 100%;;
+         }
          button{
             width: 150px;
             padding: 12px 0px ;
             background-color: #fff;
             color:rgb(65, 65, 65);
             letter-spacing: 2px;
+            border-radius: 0;
+             @include M1301(){
+               margin: 4px 0 ;
+            }
+            @include MCW(500px) {
+               width: 100%;;
+               padding: 6px 0px ;
+            }
             &.active{
                background-color: $color_fs_orange;
                color:#fff;
@@ -215,36 +230,187 @@ $color_fs_footer-font:rgb(124, 124, 124);
       }
    
    }
-
    .course_list_block{
       @include flex-center;
-      box-sizing: border-box;
-      width: 100%;
+      justify-content: start;
+      align-items: flex-start;
       overflow: hidden;
+      // width: calc(100% - 300px);
+      margin:  0 auto;
+      @include tst;
+      @include M1301() {
+         justify-content: center;
+      }
 
       .course_block{
+         @include ibl;
+         width: 300px;
+         margin: 0 10px 60px ;
+         @include tst;
+         @include MCW(580px) {
+            margin: 0 10px 30px ;
+         }
+         a{
+            @include b;
+            &:hover{
+               opacity: 1;
+               //transform: translate(0px,-7px);
+            }
+         }
+         &.preorder{
+            position: relative;
+            &::after{
+               content:'+預購課程';
+               @include b;
+               padding: 6px 8px;
+               color:#fff;
+               font-size: 14px;
+               background-color:$color_fs_courseList_goose; 
+               position: absolute;
+               z-index: 10;
+               top:0;
+               right:0;
+               letter-spacing: 2px;
+               @include hover;
+            }
+   
+         }
          .image{
             width: 100%;
             height: 180px;
-
+            
+            @include tst;
+            @include MCW(580px) {
+               height: 140px;
+            }
+            img{
+               @include tst;
+               &:hover{
+                  transform: scale(1.1);
+               }
+            }
+            &:hover{
+               opacity: 1;
+            }
          }
-         @include ib;
-         width: 300px;
+         .content{
+            @include flex-center;
+            width: 100%;
+            margin: 25px 0 10px;
+            line-height: 24px;
+            height: 52px;
+            overflow: hidden;
+            @include MCW(580px) {
+               font-size: 15px;
+               margin: 15px 0 4px;
+            }
+         }
+         .infos{
+            @include flex-center;
+            justify-content: space-between;
+            width: 100%;
+            .tips{
+               
+               font-size: 13px;
+               color: rgba(85, 85, 85, 0.63);
+               .element{
+                  padding:  0 5px 0 0 ;
+                  i{
+                     padding:  0 5px 0 0 ;
+                  }
+               }
+            }
+            .price{
+               
+               font-size: 24px;
+               color:$color_fs_orange;
+               .preprice{
+                  @include ibl;
+                  font-size:13px;
+                  color: rgb(34, 34, 34);
+                  padding-right: 4px;
+                  line-height: 22px;
+                  .onsale{
+                     font-size: 12px;
+                     padding: 2px 4px; 
+                     background-color: $color_fs_courseList_goose; ;
+                     color:#fff;;
+                     margin-left:6px;
+                  }
+               }
+            }
+         }
+          .teacher_block{
+            @include flex-center;
+            width:100%;
+            float: left;
+            padding: 5px 0;
+            justify-content: space-between;
+            @include hover;
+            .teacher_avatar{
+               width: 50px;
+               height: 50px;
+               border-radius: 50px;
+               overflow:hidden;
+            }
+            .intro{
+               width: calc(100% - 70px);
+               .name{
+                  padding: 2px 0;
+               }
+               > .intro_content{
+                  color:$color_fs_gray_2;
+                  font-size: 15px
+               }
+            }
+         }
       }
    }
+   .pager_block{
+      @include ibl;
+      width: 100%;
+      padding: 20px 0 40px;
+      @include MCW(580px) {
+         padding: 0 0;
+      }
+      .pager{
+         // @include flex-center;
+         // justify-content: space-between;
+         @include ib;
+         float: right;
+         width: auto;
+         height: 60px;
+         .pager_number{
+            @include ibl;
+            width: 30px;
+            height:30px;
+            padding: 7px;
+            margin: 5px;
+            text-align: center;
+            cursor: pointer;
+            background-color: rgb(218, 218, 218);
+            @include hover;
 
-
-
-
+            &.active{
+                background-color:#172532;
+                color: #fff;
+            }
+         }
+      }
+   }
 }
 
 .focuspoint{
-   @include flex-center;
-   align-content: center;
+   // @include flex-center;
+   // align-content: center;
    .lazy{
       @include bg-loading;
       background-color: #fff;
       background-image: url("images/fengso-loading.svg");
+      max-height: 100%;
+   }
+   .lazied{
+      max-height: unset;
    }
 }
 

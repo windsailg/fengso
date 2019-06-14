@@ -50,14 +50,17 @@
                }
                @include MCW(700px) {
                   width:100%;
-                  padding: 20px 0;
+                  padding: 6px 0;
                }
                .title{
+                  @include ibl;
                   position: unset;;
                   width: 100%;
                   color: rgb(68, 68, 68);
                   font-size: 18px;
+                  padding: 0 0 10px 0;
                   float: left;
+                  height: unset
                }
                .subtitle{
                   @include ibl;
@@ -93,7 +96,7 @@
       
       padding: 50px 0; 
       @include M1301() {
-         padding: 50px 0 20px; 
+         padding: 20px 0 20px; 
       }
       .reciprocal_deco{
          
@@ -109,7 +112,7 @@
          }
          @include MCW(800px) {
             margin:0 auto ;
-           top: 58px;
+           top: 26px;
          }
       }
       .col{
@@ -126,10 +129,16 @@
          .str{
             font-weight: 600;
             padding: 0 16px;
+            @include MCW(800px) {
+               padding: 0 16px 0 6px;
+            }
          }
          .num{
             font-size: 38px;
             color: $color_fs_font-title_2;
+            @include MCW(800px) {
+               font-size: 28px;
+            }
          }
          &.title{
             padding: 0 60px;

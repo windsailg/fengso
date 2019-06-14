@@ -14,16 +14,17 @@ $color-lb_default:rgb(218, 218, 218);
          @include arl;
          position: fixed;
          width:800px;
-         height: 64%;
+        
          overflow: hidden;
-         padding: 52px 50px 10px;
+         padding: 52px 50px 30px;
          background: rgb(255, 255, 255);
          z-index: 1000;
          border-radius: 5px;
-         top: 150px;
+         top: 8%;
          @include MCW(861px){
             width:95%;
-            padding: 52px 15px 20px;
+            padding: 42px 15px 20px;
+            height: 80vh;
          }
          .lightingbox_container{
             @include b;
@@ -37,17 +38,16 @@ $color-lb_default:rgb(218, 218, 218);
             @include MCW(861px){
             }
             .lightingbox_body{
-   
                @include col2{
                   justify-content: space-between;
                   align-items: flex-start;
                   
                   @include MCW(861px){
                      flex-direction:column-reverse ;
-                     
                   }
                   > .col2{
-                     width: 44%;
+                     display: none;
+                     width: 96%;
                      padding: 0 0 20px 0;
                      @include MCW(861px){
                         width:100%;
@@ -124,7 +124,10 @@ $color-lb_default:rgb(218, 218, 218);
                   @include ibl;
                   @include selection-none;
                   width: 100%;
-                  padding: 8px 0 45px 0;
+                  padding: 10px 0 20px 0;
+                  @include MCW(861px){
+                     padding: 0px 0 20px 0;
+                  }
                   /* The container */
                   .checkbox_block {
                      @include ibl;
@@ -190,6 +193,13 @@ $color-lb_default:rgb(218, 218, 218);
                         color: rgb(143, 143, 143);
                      }
                   }
+               }
+               .btn_block {
+                  @include ibl;
+                  width: 100%;
+                  padding: 15px 0;
+                 // text-align: center;
+                  
                }
             }
             .lightingbox_footer{
@@ -275,6 +285,10 @@ $color-lb_default:rgb(218, 218, 218);
          right: 10px;
          //background: #FF7757;
          cursor: pointer;    
+         @include MCW(861px){
+            width:40px;
+            height:40px;
+         }
          &:hover{
             .c_deco{
                background-color: $color_fs_orange;
@@ -287,7 +301,6 @@ $color-lb_default:rgb(218, 218, 218);
             position: absolute;
             background: rgb(116, 116, 116);
             transform: rotate(45deg);
-
             &.cd1{
                height: 1px;
                width: 80%;
@@ -297,6 +310,7 @@ $color-lb_default:rgb(218, 218, 218);
                height: 80%;
             }
          }
+
       }
       .lightingbox_mask{
          @include b;

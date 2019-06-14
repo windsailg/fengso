@@ -232,6 +232,16 @@
   line-height: 25px;
 }
 
+.footer_container .bottom_container .bottom_block .content br {
+  display: none;
+}
+
+@media all and (max-width: 400px) {
+  .footer_container .bottom_container .bottom_block .content br {
+    display: block;
+  }
+}
+
 .footer_container .bottom_container .bottom_block .img_box {
   width: 40px;
   padding-right: 5px;

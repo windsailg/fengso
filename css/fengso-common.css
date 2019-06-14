@@ -49,6 +49,10 @@ table {
   border-spacing: 0;
 }
 
+html {
+  font-family: 'Century Gothic','Arial','Source Sans Pro' , 'Muli' ,'微軟正黑體', '新細明體';
+}
+
 html::-webkit-scrollbar {
   width: 13px;
   background-color: rgba(255, 255, 255, 0.9);
@@ -63,6 +67,11 @@ html::-webkit-scrollbar-track {
 html::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background: #a3a3a3;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 a {

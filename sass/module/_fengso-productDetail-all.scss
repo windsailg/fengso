@@ -4,18 +4,7 @@
 // @import url("https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css");
 // @import url("https://fonts.googleapis.com/earlyaccess/cwtexyen.css");
 /* This text is in Century Gothic */
-html{
-   font-family: 'Century Gothic','Arial','Source Sans Pro' , 'Muli' ,'微軟正黑體', '新細明體';
-   // font-family: 'Source Sans Pro' , 'Muli'  ,'cwTeXYen','微軟正黑體','Arial', '新細明體';
 
-}
-body{
-   overflow-x: hidden;
-   overflow-y: scroll; 
-}
-#fengso-productDetail{
-   @include ScrollBar();
-}
 
 //  *{outline-color: rgba(255, 118, 87, 0.233);outline-width: 1px;outline-style:solid;}
 
@@ -37,20 +26,23 @@ body{
          width: 100%;
          padding: 30px 0px;
          position: relative;
+         @include M1301() {
+            padding: 10px 0px 10px;
+         }
       }
       &.type_3{
          width: 100%;
          padding: 40px 20px;
       }
       &.type_4{
-         padding: 100px 20px 60px;
+         padding: 50px 20px 60px;
          @include M1301() {
             padding: 30px 20px 60px;
          }
       }
       @include M1301() {
          width: 100%;
-         padding: 40px 0px 10px;
+         padding: 30px 0px 10px;
       }
    }
 }
@@ -71,17 +63,23 @@ body{
 
    .course_main_block{
       @include bl;
+       @include M1301() {
+         width: 100%;
+      }
       .col{
          @include ibl;
       }
       .course_info{
          @include ibl;
          width: 880px;
+         overflow: hidden;
          @include M1301() {
             width: 100%;
          }
          .info_block{
             @include ibl;
+            width: 100%;
+            overflow: hidden;
             @include M1301() {
                padding: 0 15px;
             }
@@ -90,6 +88,9 @@ body{
                width: 100%;
                margin:  28px 0 5px;
                line-height: 26px;
+               @include M1301() {
+                  margin:  12px 0 5px;
+               }
                .title{
                   @include ibl;
                   font-size: 18px;
@@ -126,6 +127,11 @@ body{
                @include ibl;
                font-size: 15px;
                line-height: 22px;
+               max-height: 89px;
+               overflow: hidden;
+               text-overflow: ellipsis;
+               //white-space: nowrap;
+               width: 100%;
             }
          }
          .video_block{
@@ -150,10 +156,12 @@ body{
             margin:  30px 0 0;
          }
          .rate_block{
-            @include ibl;
+            @include ib;
             width: 100%;
             height: 100px;
             padding: 0 0px 0 0px;
+            @include flex-center;
+            justify-content: space-between;
             &.dp-tab{
                @include M1301() {
                   display: none;
@@ -161,24 +169,25 @@ body{
             }
             &.dp-mob{
                display: none;
+               height: 70px;
+               padding: 10px 0px  0px;
                @include M1301() {
                   @include flex-center;
+                  justify-content: center;
                }
             }
             @include M1301() {
                padding: 0px;
             }
             .act{
-               @include ibl;
-               @include tst(.2s);
-               
-               padding: 5px;
-               
-               position:relative;
+               @include ib;
                @include selection-none;
+               @include tst(.2s);
+               padding: 0px;
+               position:relative;
+               width: 50%;
                @include M1301() {
-                  @include ib;
-                  width: 140px; 
+                  width: unset;
                }
             }
             .btn{
@@ -206,7 +215,6 @@ body{
             //self_style
             .rate{
                color: $color_fs_orange;
-               width: 45%;  
                &::after{
                  content:'';
                  @include b;
@@ -223,7 +231,9 @@ body{
 
             .add_to_list{
                color: $color_fs_gray;
-               width: 55%;  
+               @include M1301() {
+                  width: 160px;
+               }
                cursor: pointer;
                &.active{
                   color: $color_fs_orange;
@@ -250,6 +260,10 @@ body{
             background-color: $color_fs_background_gray;
             padding: 0px 5px 0;
             position: relative;
+            overflow: hidden;
+            @include M1301() {
+               height: 320px;
+            }
             &::after{
                content:' ';
                position: absolute;
@@ -275,6 +289,10 @@ body{
                   border-style:solid;
                   border-color:$color_fs_gray;
                   cursor: pointer;
+                  @include M1301() {
+                     padding: 18px 0 ;
+                     font-size: 16px;
+                  }
                   a{
                      color: rgb(136, 136, 136);
                   }
@@ -320,6 +338,10 @@ body{
                      position: relative;
                      padding: 10px 0 10px 24px;
                      @include tst;
+                     @include M1301() {
+                        padding: 4px 0 4px 24px;
+                        font-size: 14px;
+                     }
                      &.active{
                         @include bs(5px,5px,10px,rgba(82, 82, 82, 0.301));
                         background-color: #fff;
@@ -352,6 +374,10 @@ body{
                         font-weight: 600;
                         color: $color_fs_font-title;
                         font-size: 15px;
+                        @include M1301() {
+                           
+                           font-size: 14px;
+                        }
                      }
                      .time{
                         color:$color_fs_orange;
@@ -446,67 +472,98 @@ body{
       position: relative;
       z-index: 3;
       @include M1301() {
-         padding: 20px 0;
+         padding: 12px 0;
       }
       .belt_block{
          @include ibl;
+         @include flex-center;
+         justify-content: center;
          width: 220px;
          position: relative;
-         &.student::after ,
-         &.time::after{
-            content:' ';
-            @include b;
-            position: absolute;
-            width: 1px;
-            height: 80%;
-            right: 20px;
-            top: 15px;
-            background-color: rgb(224, 224, 224);
-         }
+         // &.student::after ,
+         // &.time::after{
+         //    content:' ';
+         //    @include b;
+         //    position: absolute;
+         //    width: 1px;
+         //    height: 80%;
+         //    right: 20px;
+         //    top: 15px;
+         //    background-color: rgb(224, 224, 224);
+         // }
          @include M1301() {
-            padding: 30px 0;
+            padding: 5px 0 15px;
+            width: unset;
          }
          @include MCW(659px) {
-            &.time::after{
-               display:  none;
+            // &.time::after{
+            //    display:  none;
+            width: 33%;
+         }
+         .title{
+            @include ibl;
+            width: 100%;;
+            color: $color_fs_brown;
+            font-weight: 600;
+            padding: 0px 0  ;
+            font-size: 15px;
+            height: 18px;
+            @include M1301() {
+               text-align: center;
             }
          }
-         @include MCW(439px) {
-            &.student::after{
-               display:  none;
+         .imagine_box{
+            width: 25%;
+            @include M1301() {
+               width: 100%;
+               text-align: center;
+               
+            }
+         }
+         .count_box{
+            
+            @include MCW(500px) {
+               width: 100%;
+            }
+            &.col2{
+               min-width: 40%;
+               @include MCW(500px) {
+                  
+               }
+            }
+            &.col3{
+               width: 33%;
+               @include MCW(500px) {
+                  width: 50%;
+               }
             }
          }
 
          .col{
-            @include ibl;
-            width: 100%;
+            @include ib;
             position: relative;
-            padding: 10px 0 0;
-
-            .title{
-               @include ibl;
-               position: absolute;;
-               top: -12px;
-               width: 150px;;
-               color: $color_fs_brown;
-               font-weight: 600;
-               padding: 5px 0 15px;
-               font-size: 15px;
-            }
+            padding: 5px 0 0;
             .imagine{
+               width: 100%;
                @include ibl;
-               padding: 15px 0  0 15px ;
-               width: 60px;
+               padding: 10px 0 0;
                font-size: 40px;
                color: #fff;
+               @include M1301() {
+                  font-size: 26px;
+                  padding: 5px 0 0 0;
+               }
             }
             .number{
-               @include ibl;
-               width:100%;
+               @include ib;
+               width:100%;;
                font-size: 40px;
                padding:0px 0 10px; 
                color: #fff;
                text-align: center;
+               @include M1301() {
+                  font-size: 26px;
+               }
             }
             .subtitle{
                @include ibl;
@@ -514,38 +571,6 @@ body{
                font-size: 15px;
                color: #fff;
                text-align: center;
-            }
-            &.col2{
-               width: 35%;
-               .title{
-
-               }
-               .imagine{
-
-               }
-               .number{
-
-               }
-               .subtitle{
-
-               }
-
-            }
-            &.col3{
-               width: 26%;
-
-               .title{
-
-               }
-               .imagine{
-
-               }
-               .number{
-
-               }
-               .subtitle{
-
-               }
             }
             .xs{
                font-size: 20px;
@@ -560,9 +585,12 @@ body{
             width: auto;
             max-width: 250px;
             height: 160px;
+            
             @include M1301() {
                min-width: 100%;
                transform: skewX(0deg) scale(1);
+               height: unset;
+               padding: 15px 0;
             }
             .col{
                transform: skewX(14deg);
@@ -603,6 +631,10 @@ body{
                padding: 20px 0;
                height: 90px;
                cursor: pointer;
+               @include MCW(580px) {
+                  height: 70px;
+                  padding: 12px 0  0;
+               }
                &:hover{
                   background-color: #fff;
 
@@ -875,6 +907,9 @@ body{
          @include bl;
          width: 100%;
          padding:  0 0 40px 0;
+         @include MCW(681px) {
+            padding:  0 0 18px 0;
+         }
          .intro_tab{
             @include bl;
             width: 100%;
@@ -948,11 +983,11 @@ body{
       @include rwd_dp();
       @include M1301() {
          width: 100%;
-         padding: 10px 30px 50px;
+         padding: 10px 30px 40px;
       }
       @include MCW(580px) {
          width: 100%;
-         padding: 10px 10px 50px;
+         padding: 10px 10px 20px;
       }
       .teacher_box{
          
@@ -962,6 +997,9 @@ body{
          margin: 0 auto;
          padding: 30px;
          text-align: center;
+         @include MCW(781px) {
+            padding: 15px;
+         }
          .teacher_avatar{
             @include b;
             overflow: hidden;
@@ -984,9 +1022,6 @@ body{
          }
       }
    }
-
-
-
 
 }
 

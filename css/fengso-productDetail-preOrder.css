@@ -79,16 +79,22 @@
 @media all and (max-width: 700px) {
   #fengso-productDetail.preorder .belt_blocks .belt_block.price .col {
     width: 100%;
-    padding: 20px 0;
+    padding: 6px 0;
   }
 }
 
 #fengso-productDetail.preorder .belt_blocks .belt_block.price .col .title {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  float: left;
   position: unset;
   width: 100%;
   color: #444444;
   font-size: 18px;
+  padding: 0 0 10px 0;
   float: left;
+  height: unset;
 }
 
 #fengso-productDetail.preorder .belt_blocks .belt_block.price .col .subtitle {
@@ -157,7 +163,7 @@
 
 @media all and (max-width: 1301px) {
   #fengso-productDetail.preorder .reciprocal_block {
-    padding: 50px 0 20px;
+    padding: 20px 0 20px;
   }
 }
 
@@ -184,7 +190,7 @@
 @media all and (max-width: 800px) {
   #fengso-productDetail.preorder .reciprocal_block .reciprocal_deco {
     margin: 0 auto;
-    top: 58px;
+    top: 26px;
   }
 }
 
@@ -211,9 +217,21 @@
   padding: 0 16px;
 }
 
+@media all and (max-width: 800px) {
+  #fengso-productDetail.preorder .reciprocal_block .col .str {
+    padding: 0 16px 0 6px;
+  }
+}
+
 #fengso-productDetail.preorder .reciprocal_block .col .num {
   font-size: 38px;
   color: #444444;
+}
+
+@media all and (max-width: 800px) {
+  #fengso-productDetail.preorder .reciprocal_block .col .num {
+    font-size: 28px;
+  }
 }
 
 #fengso-productDetail.preorder .reciprocal_block .col.title {
