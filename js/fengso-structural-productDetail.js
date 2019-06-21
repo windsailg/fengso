@@ -69,5 +69,6 @@
     
              BreadCrumbScript.innerHTML = JSON.stringify(BreadcrumbListModel);
              ProductScript.innerHTML = JSON.stringify(ProductModel) ;
+             
             document.getElementsByTagName('head')[0].appendChild(BreadCrumbScript); 
             document.getElementsByTagName('head')[0].appendChild(ProductScript); 

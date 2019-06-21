@@ -26,6 +26,7 @@ body{
 
 a{
    text-decoration: none;
+   color: $color_link;
    @include tst;
    &:hover{
       opacity: .7;
@@ -53,12 +54,18 @@ button{
    @include tst;
    border-radius: 5px;
    padding: 12px 40px;
+   margin: 8px;
    font-size: 16px;
    &:hover{
       opacity: .8;
    }
 }
-
+.img_box{
+   img{
+      height:100%;
+      width:100%;
+   }
+}
 .bread_crumb_block{
    @include bl;
    width: 100%;
@@ -71,7 +78,7 @@ button{
       width: 100%;
       .bread_crumb_item{
          @include ibl;
-
+         font-size: 15px;
          margin: 0;
          padding:  0 10px 0 0px;
          .home{

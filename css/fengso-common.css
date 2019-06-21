@@ -76,6 +76,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #363636;
   -webkit-transition: 0.3s all ease-in-out;
   -o-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
@@ -162,11 +163,17 @@ button {
   transition: 0.3s all ease-in-out;
   border-radius: 5px;
   padding: 12px 40px;
+  margin: 8px;
   font-size: 16px;
 }
 
 button:hover {
   opacity: .8;
+}
+
+.img_box img {
+  height: 100%;
+  width: 100%;
 }
 
 .bread_crumb_block {
@@ -197,6 +204,7 @@ button:hover {
           box-sizing: border-box;
   display: inline-block;
   float: left;
+  font-size: 15px;
   margin: 0;
   padding: 0 10px 0 0px;
 }

@@ -7,9 +7,6 @@
    @include ibl;
    width: 100%;
    background-color:rgba(255, 255, 255, 0.9);
-   a{
-  color: $color_link;
-}
 }
 
 .footer_container{
@@ -20,7 +17,9 @@
    height: 100%;
    font-size: 14px;
    color:$color_fs_footer-font;
-
+   a{
+      color: $color_link;
+   }
    @include M1281() {
       width: 100%;
    }

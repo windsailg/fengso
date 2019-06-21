@@ -480,6 +480,8 @@
 }
 
 .lightingbox .lightingbox_wrap .lightingbox_container .lightingbox_footer .login_btns > .col2 i {
+  top: 10px;
+  left: 20px;
   font-size: 25px;
   position: absolute;
 }
@@ -488,18 +490,8 @@
   background-color: #2C55AD;
 }
 
-.lightingbox .lightingbox_wrap .lightingbox_container .lightingbox_footer .login_btns > .col2.btn_fb i {
-  top: 12px;
-  left: 20px;
-}
-
 .lightingbox .lightingbox_wrap .lightingbox_container .lightingbox_footer .login_btns > .col2.btn_google {
   background-color: #DB4C3E;
-}
-
-.lightingbox .lightingbox_wrap .lightingbox_container .lightingbox_footer .login_btns > .col2.btn_google i {
-  top: 12px;
-  left: 20px;
 }
 
 .lightingbox .lightingbox_wrap .lightingbox_container .lightingbox_footer .tip {

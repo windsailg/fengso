@@ -3,12 +3,18 @@ $('#footer').load('footer.html');
 
 $(document).ready(function(){
    
-   $(".lazy").Lazy({
+   //
+    $('#CourseType button').click(function(){
+        $('#CourseType button').removeClass('active');
+        $(this).addClass('active');
+    });
+   
+   //lazy + focuspoint
+    $(".lazy").Lazy({
       scrollDirection: 'vertical',
       effect: 'fadeIn',
-      effectTime:200, //duration
-      throttle:0,//delay
-      delay: 200,
+      effectTime:300, //duration
+      throttle:1000,//delay
       visibleOnly: true,
       onError: function(element) {
           console.log('lazy error loading' + element.data('src'));
@@ -33,6 +39,7 @@ $(document).ready(function(){
           console.log('Lazy Complete');
       },
    });     
+
 
 
 

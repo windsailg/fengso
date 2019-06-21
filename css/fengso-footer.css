@@ -7,10 +7,6 @@
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-#footer a {
-  color: #363636;
-}
-
 .footer_container {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -21,6 +17,10 @@
   height: 100%;
   font-size: 14px;
   color: #7c7c7c;
+}
+
+.footer_container a {
+  color: #363636;
 }
 
 @media all and (max-width: 1281px) {

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>峰碩資訊 - 忘記密碼變更</title>
+    <link rel="icon" href="img/favicon.png">
+
+    <!-- header -->
+    <link rel="stylesheet" href="css/fengso-header.css">
+    
+    <!-- Golbal -->
+    <link rel="stylesheet" href="css/fengso-lightingbox.css">
+    <link rel="stylesheet" href="css/fengso-common.css">
+    
+
+    <!-- ThisPage -->
+    <link rel="stylesheet" href="css/fengso-account-remind.css">
+    
+    <!-- Plugin -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli|Source+Sans+Pro">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/9188edaa95.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=reCAPTCHA_site_key"></script>
+
+</head>
+    
+<body>
+
+<div id="header" class="fengso-header "></div>
+    <div id="FengsoPasswordSetting" class="password_setting">
+
+        <div class="area big_title">
+            <div class="container">
+
+                <div class="bread_crumb_block">
+                    <ul class="bread_crumb">
+                        <li class="bread_crumb_item bc_first"><a href="#" target="_blank"><span class="home"><i class="fas fa-home"></i></span>首頁</a></li>
+
+                        <li class="bread_crumb_item"><span class="arrow"><i class="fas fa-angle-right"></i></span><a href="#" target="_blank">會員專區</a></li>
+
+                        <li class="bread_crumb_item bc_last"><span class="arrow"><i class="fas fa-angle-right"></i></span>忘記密碼變更</li>
+                    </ul>
+                </div>
+
+                <div class="big_title_block">
+                    <h1 class="title"> 忘記密碼變更</h1>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="area input_and_tips">
+            <div class="container">
+
+                <div class="subtitle_block">
+                    <h2 class="title">親愛的會員您好，峰碩資訊已將新密碼變更寄至您的電子信箱，請儘速收訊以確保帳號安全。</h2>
+                    <div class="subtitle">
+                        若您在收件箱找不到此郵件，請檢查您的垃圾郵件或垃圾桶檔案夾，同時，請確保電郵帳戶可接收到來自我們的郵件。
+                    </div>
+                </div>
+
+                <div class="input_block">
+                    <input type="text" spellcheck="false" class="input member_name" placeholder="&#xf0e0; example@gmail.com"></input>
+                </div>
+
+                <div class="tips">
+                    <a href="#" target="_blank">點此變更電子信箱</a>
+                </div>
+
+                <div class="btns">
+                    <button class="gray">立即登入</button>
+                    <button>再次發送</button>
+                </div>
+
+                <hr class="footer_hr">
+            </div>
+        </div>
+
+
+    </div>
+
+<footer id="footer"></footer>
+
+<script src="js/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/loaders.css/0.1.2/loaders.css.min.js"></script>
+<!-- <script src="https://cdn.bootcss.com/distpicker/2.0.5/distpicker.min.js"></script> -->
+
+<script src="js/fengso-productDetail.js"></script>
+<script src="js/fengso-structural-productDetail.js"></script>
+
+<script>
+        grecaptcha.ready(function () {
+            console.log('1. grecaptcha.ready');
+            console.log('2. grecaptcha.execute("6Ld_n6kUAAAAAHHr_D14UV4UYC1a3J-PMJz_cCj5", { action: "@Url.Action("VerifyBot", "Account")" })');
+            grecaptcha.execute('6Ld_n6kUAAAAAHHr_D14UV4UYC1a3J-PMJz_cCj5', { action: '@Url.Action("VerifyBot", "Account")' }).then((token) => {
+                console.log('3. Get token from reCAPTCHA service => ', token);
+                console.log('4. Verifying Bot...');
+                $.ajax({
+                    type: 'POST',
+                    url: '@Url.Action("VerifyBot", "Account")',
+                    data: { token: token },
+                    success: (res) => {
+                        console.log('5. Return => ', res);
+                    }
+                });
+            });
+        });
+</script>
+    
+</body>
+
+</html>

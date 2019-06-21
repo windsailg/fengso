@@ -8,7 +8,6 @@ $color-lb_default:rgb(218, 218, 218);
       position: fixed;
       z-index: 1001;
       display: none;
-
       .lightingbox_wrap{
          @include b;
          @include arl;
@@ -234,22 +233,18 @@ $color-lb_default:rgb(218, 218, 218);
                      }
    
                      i{
+                        top: 10px;
+                        left:20px; 
                         font-size: 25px;
                         position: absolute;
                      }
                      &.btn_fb{
                         background-color: #2C55AD;
-                        i{
-                           top: 12px;
-                           left:20px; 
-                        }
+
                      }
                      &.btn_google{
                         background-color: #DB4C3E;
-                        i{
-                           top: 12px;
-                           left:20px; 
-                        }
+
                      }
                   }
                }
@@ -275,7 +270,6 @@ $color-lb_default:rgb(218, 218, 218);
             
          }
       }
-
       .btn_close{
          @include b;
          width:50px;
