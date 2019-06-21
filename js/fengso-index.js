@@ -208,7 +208,7 @@ var TeacherIntroSwiper = new Swiper('#TeacherListBlock', {
     autoHeight: false,
     centeredSlides: false,
     speed:400, //default
-    slidesPerView: 3,
+    slidesPerView: 'auto',
     spaceBetween: 0,
     breakpoints: {
         1301: {
@@ -253,10 +253,11 @@ var ArticleListSwiper = new Swiper('#ArticleListIndex', {
     allowTouchMove: true,
     grabCursor : true,
     autoHeight: false,
-    centeredSlides: false,
+    centeredSlides: true,
     speed:400, //default
-    slidesPerView: 5,
+    slidesPerView: 'auto',
     spaceBetween: 0,
+    loop:true,
     breakpoints: {
         1301: {
             // slidesPerView: 3,
@@ -268,7 +269,7 @@ var ArticleListSwiper = new Swiper('#ArticleListIndex', {
         },
         401: {
             slidesPerView: 1,
-            spaceBetween: 20,
+            spaceBetween: 0,
         },
     },
 });
