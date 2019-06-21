@@ -80,21 +80,24 @@ var CourseHotSwiper = new Swiper('#CourseListBlockHot', {
         prevEl: '.pager_number.hot_prev',
         nextEl: '.pager_number.hot_next',
     },
+    lazy: {
+        loadPrevNext: true,
+        loadPrevNextAmount: 1,
+    },
     on:{
         // resize: function(){
         //     // CourseHotSwiper.init();
         // }, 
         lazyImageLoad: function(imageEl){
-            var targetImg = $(imageEl).find('.swiper-lazy');
-            swiperLazyfocusepointer(targetImg);
-            console.log('swiper lazy' + imageEl + 'complete')
+            var targetImgHot = $(imageEl).find('.swiper-lazy');
+            swiperLazyfocusepointer(targetImgHot);
         },
         lazyImageReady: function(imageEl){
-            var targetFocuspoint = $(imageEl).find('.focuspoint');
+            var targetFocuspointHot = $(imageEl).find('.focuspoint');
             setTimeout(() => {
-                $(targetFocuspoint).focusPoint();
+                $(targetFocuspointHot).focusPoint();
             }, 100);
-            $(targetFocuspoint).addClass('lazied');
+            $(targetFocuspointHot).addClass('lazied');
         },
     },
     allowTouchMove: true,
@@ -103,23 +106,22 @@ var CourseHotSwiper = new Swiper('#CourseListBlockHot', {
     centeredSlides: false,
     speed:400, //default
     spaceBetween: 0,
-    slidesPerColumn: 1,
     slidesPerView: 4,
-    lazy: {
-        loadPrevNext: true,
-       // loadPrevNextAmount: 5,
-    },
     breakpoints: {
         1301: {
-           // slidesPerView: 3,
-           slidesPerView: 'auto',
+            // slidesPerView: 3,
+            slidesPerView: 'auto',
+            lazy: {
+                loadPrevNext: true,
+                loadPrevNextAmount: 1,
+            },
         },
         701: {
             slidesPerView: 2,
             slidesPerColumn: 2,
             lazy: {
                 loadPrevNext: true,
-                loadPrevNextAmount: 6,
+                loadPrevNextAmount: 4,
             },
         },
     },
@@ -192,28 +194,18 @@ var TeacherIntroSwiper = new Swiper('#TeacherListBlock', {
         prevEl: '.pager_number.teacher_prev',
         nextEl: '.pager_number.teacher_next',
     },
-    on:{
-        // lazyImageLoad: function(imageEl){
-        //     var targetImg = $(imageEl).find('.swiper-lazy');
-        //     swiperLazyfocusepointer(targetImg);
-        // },
-        // lazyImageReady: function(imageEl){
-        //     var targetFocuspoint = $(imageEl).find('.focuspoint');
-        //     $(targetFocuspoint).focusPoint();
-        //     $(targetFocuspoint).addClass('lazied');
-        // },
-    },
     allowTouchMove: true,
     grabCursor : true,
     autoHeight: false,
     centeredSlides: false,
     speed:400, //default
-    slidesPerView: 'auto',
+    slidesPerView: 3,
     spaceBetween: 0,
     breakpoints: {
         1301: {
            // slidesPerView: 3,
            slidesPerView: 'auto',
+           centeredSlides: true,
         },
         401: {
             slidesPerView: 1,
@@ -234,7 +226,7 @@ var ArticleListSwiper = new Swiper('#ArticleListIndex', {
     },
     lazy: {
         loadPrevNext: true,
-        loadPrevNextAmount: 5,
+        loadPrevNextAmount: 3,
     },
     on:{
         lazyImageLoad: function(imageEl){
@@ -264,12 +256,16 @@ var ArticleListSwiper = new Swiper('#ArticleListIndex', {
             slidesPerView: 'auto',
             lazy: {
                 loadPrevNext: true,
-                loadPrevNextAmount: 5,
+                loadPrevNextAmount: 2,
             },
         },
         401: {
             slidesPerView: 1,
             spaceBetween: 0,
+            lazy: {
+                loadPrevNext: true,
+                loadPrevNextAmount: 1,
+            },
         },
     },
 });
