@@ -13,76 +13,73 @@
 #fengso-productDetail.preorder{
    .belt_blocks{
       background: $color_fs_pre_goose;
-      .belt_block{
-         &.price{
-            @include bs(1px,1px,12px,rgba(63, 63, 63, 0.301));
-            transform: skewX(-14deg) scale(1 , 1.1);
-            
-            background-color: #fff;
-            overflow: hidden;
-            width: auto;
-            max-width: 250px;
-            height: 160px;
+      .price{
+         @include bs(1px,1px,12px,rgba(63, 63, 63, 0.301));
+         transform: skewX(-14deg) scale(1 , 1.1);
+         
+         background-color: #fff;
+         overflow: hidden;
+         width: auto;
+         max-width: 250px;
+         height: 160px;
+         position: relative;
+         @include M1301() {
+            height:unset;
+            min-width: 100%;
+            transform: skewX(0deg) scale(1);
+         }
+         > .subtitle{
+            @include rwd_dp;
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            font-size: 20px;
+            transform: skewX(14deg);
+            color:#ccc;
+            text-decoration: line-through;;
+         }
+         .col{
+            width:100%;
+            transform: skewX(14deg);
+            padding: 34px 30px;
             @include M1301() {
-               height:unset;
-               min-width: 100%;
-               transform: skewX(0deg) scale(1);
+               width:50%;
+               text-align: center;
+               transform: skewX(0deg);
+               padding: 0;
+            }
+            @include MCW(700px) {
+               width:100%;
+               padding: 6px 0;
+            }
+            > .title{
+               @include ibl;
+               position: unset;;
+               width: 100%;
+               color: rgb(68, 68, 68);
+               font-size: 18px;
+               padding: 0 0 10px 0;
+               float: left;
+               height: unset
             }
             > .subtitle{
-               @include rwd_dp;
-               position: absolute;
-               top: 16px;
-               right: 20px;
-               font-size: 20px;
-               transform: skewX(14deg);
+               @include ibl;
+               width:100%;
+               font-size: 40px;
+               color: $color_fs_orange;
+               text-align: center;
+            }
+         }
+         .real_price{
+            .subtitle{
+               font-size: 34px;
                color:#ccc;
                text-decoration: line-through;;
             }
-            .col{
-               width:100%;
-               transform: skewX(14deg);
-               padding: 34px 30px;
-               @include M1301() {
-                  width:50%;
-                  text-align: center;
-                  transform: skewX(0deg);
-                  padding: 0;
-               }
-               @include MCW(700px) {
-                  width:100%;
-                  padding: 6px 0;
-               }
-               .title{
-                  @include ibl;
-                  position: unset;;
-                  width: 100%;
-                  color: rgb(68, 68, 68);
-                  font-size: 18px;
-                  padding: 0 0 10px 0;
-                  float: left;
-                  height: unset
-               }
-               .subtitle{
-                  @include ibl;
-                  width:100%;
-                  font-size: 40px;
-                  color: $color_fs_orange;
-                  text-align: center;
-               }
-            }
-            .real_price{
-               .subtitle{
-                  font-size: 34px;
-                  color:#ccc;
-                  text-decoration: line-through;;
-               }
-               @include rwd_dp;
-            }
-
+            @include rwd_dp;
          }
 
       }
-
    }
 
    .reciprocal_block{
@@ -152,7 +149,7 @@
             padding: 0 60px 0 20px;
             .str{
                padding: 0 10px;
-         }
+            }
             .num{
                > span{
                   padding: 0 10px;

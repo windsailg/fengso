@@ -17,7 +17,9 @@
 	<div id="LightingBox" class="lightingbox">
 
 		<div class="lightingbox_wrap">
-			<div class="lightingbox_container">
+			<div id="LightingBoxInnerContainer" class="lightingbox_container">
+
+
 
 				<div class="lightingbox_body cols">
 
@@ -104,6 +106,8 @@
 								<div class="tip">當您點選註冊或登入時，即表示您以了解並同意我們的<br><a href="#" target="_blank">使用條款</a>和<a href="#" target="_blank">隱私政策</a></div>
 						</div>
 				</div>
+				
+
 			</div>
 			<span id="LightingBoxClose" class="btn_close">
 					<span class="c_deco cd1"></span>
@@ -115,6 +119,22 @@
 
 	</div>
 
+
+	<div id="LightingBoxType2" class="lightingbox type2">
+		<div class="lightingbox_wrap type2">
+			<div id="LightingBoxInnerContainerType2" class="lightingbox_container">
+
+			</div>
+			<span class="btn_close type2">
+				<div class="btn_close_box">
+					<span class="c_deco cd1"></span>
+					<span class="c_deco cd2" ></span>
+				</div>
+				<span class="btn_close_text">關閉視窗</span>
+			</span>
+		</div>
+		<div class="lightingbox_mask"></div>
+	</div>
 
 	<div id="SideBar" class="sidebar">
 		<div class="container">
@@ -313,10 +333,12 @@
 						</div>
 			
 						<div class="cart">
-							<a href="#" target="_blank">
+							<!-- <a href="#" target="_blank">
 								<div class="header_cart_img"><i class="fas fa-shopping-cart"></i></div>
 								<span class="header_cart_name">購物車</span>
-							</a>
+							</a> -->
+								<div class="header_cart_img"><i class="fas fa-shopping-cart"></i></div>
+								<span class="header_cart_name">購物車</span>
 						</div>
 			
 						<div id="HeaderSearchRWDTrigger" class="search_trigger dp-mob"><i class="fas fa-search"></i></div>
@@ -331,30 +353,9 @@
 
 	<div class="header_marginer"></div>
 
-
-	<!-- <script>
-	window.fbAsyncInit = function() {
-		FB.init({
-			appId      : '1060758170791071',
-			cookie     : true,
-			xfbml      : true,
-			version    : '3.3'
-		});
-			
-		FB.AppEvents.logPageView();   
-			
-	};
-
-	(function(d, s, id){
-		var js, fjs = d.getElementsByTagName(s)[0];
-		if (d.getElementById(id)) {return;}
-		js = d.createElement(s); js.id = id;
-		js.src = "https://connect.facebook.net/en_US/sdk.js";
-		fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
-	</script> -->
+	
 	<script src="js/fengso-header.js"></script>
-	<script src="js/lightingbox-fengso.js"></script>
+
 
 </body>
 

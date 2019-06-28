@@ -43,7 +43,7 @@ $color_fs_footer-font:rgb(124, 124, 124);
          @include fxb;
          align-items: flex-start;
          width: 1300px;
-         padding: 10px 10px;
+         padding: 40px 10px;
          position: relative;
          @include M1301(){
             width: 100%;
@@ -85,6 +85,7 @@ $color_fs_footer-font:rgb(124, 124, 124);
             position: relative;
             @include bs;
             .img_box{
+               border: solid 1px #eee;
                background: $color_fs_background_gray_bluer;
             }
          }
