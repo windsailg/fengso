@@ -1,5 +1,5 @@
 @charset "UTF-8";
-#FengsoPasswordSetting .input_block {
+#FengsoPasswordSetting .input_block, #FengsoPasswordSetting .robot_check_block {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -235,6 +235,14 @@
   font-size: 12px;
 }
 
+#FengsoPasswordSetting .robot_check_block {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+}
+
 #FengsoPasswordSetting .tips a {
   color: #FF7757;
   text-decoration: underline;
@@ -242,7 +250,7 @@
 }
 
 #FengsoPasswordSetting .btns {
-  padding: 40px;
+  padding: 20px;
 }
 
 #FengsoPasswordSetting .btns button {
