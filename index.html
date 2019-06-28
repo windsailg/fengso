@@ -17,7 +17,6 @@
     
 
     <!-- ThisPage -->
-   
     <link rel="stylesheet" href="css/fengso-index.css">
     
     <!-- Plugin -->
@@ -92,13 +91,14 @@
 
             </div>
 
-             <div class="container type_video">
+              <div class="container type_video"> 
                 <div class="banner_video_block">
                     <div class="video_box">
-                        <iframe  src="https://www.youtube.com/embed/MOVJYGeu93M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <!-- <div id="player"></div> -->
+                        <!-- <iframe  src="https://www.youtube.com/embed/MOVJYGeu93M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                     </div>
                 </div>
-             </div>
+             </div> 
 
         </div>
 
@@ -1117,12 +1117,58 @@
                             <div class="title">成為名師</div>
                             <div class="content">想要和世界各地的人分享您的知識與技能嗎？</div>
                             
-                            <a href="#" target="_blank">
-                                <div class="btn">
-                                    <div class="title">我想要開課</div>
-                                    <span class="subtitle">I Want to Teach</span>
+                            <div id="IWantToTeach" class="btn" data-content="ITeachContent">
+                                <div class="title">我想要開課</div>
+                                <span class="subtitle">I Want to Teach</span>
+                            </div>
+                            <div id="ITeachContent" class="i_want_teach">
+                                <div id="ITeachContainer" class="teach_container">
+
+                                    <div class="title teacher_apply">講師申請</div>
+                                    
+                                    <ul class="input_list">
+                                        <li class="input_block">
+                                            <div class="title name">真實姓名</div>
+                                            <input type="text" spellcheck="false" class="input member_name" placeholder="&#xf007; User Name"></input>
+                                        </li>
+
+                                        <li class="input_block">
+                                            <div class="col2">
+                                                <div class="title mail">聯絡信箱</div>
+                                                <input type="text" spellcheck="false" class="input member_name" placeholder="&#xf0e0; example@gmail.com"></input>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="title phone">個人電話</div>
+                                                <input type="text" spellcheck="false" class="input member_name" placeholder="&#xf095; 0912345678"></input>
+                                            </div>
+                                        </li>
+
+                                        <li class="input_block">
+                                            <div class="col2">
+                                                 <div class="title phone">預計課名</div>
+                                                  <input type="text" spellcheck="false" class="input member_name" placeholder="&#xf044; Course name"></input>
+                                            </div>
+                                           <div class="col2">
+                                                <div class="title phone">預計時數</div>
+                                                <input type="text" spellcheck="false" class="input member_name" placeholder="&#xf017; 請填入數字(以分鐘為單位)"></input>
+                                           </div>
+                                        </li>
+
+                                    </ul>
+
+                                    <div class="tips_block">
+                                        <span class="title">備註：</span>
+                                        <ul class="list tips_list">
+                                            <li class="list_item tip">1.請務必填寫正確資料，以利峰碩與您聯繫。</li> 
+                                            <li class="list_item tip">2.峰碩在收到您的申請表後，將會儘速安排專人與您聯繫。</li> 
+                                            <li class="list_item tip">若有任何問題，歡迎聯繫<a class="type2" href="#" target="_blank">service@fengso.com.tw</a></li> 
+                                        </ul>
+                                    </div>
+                                    <div class="btns">
+                                        <button>確認送出</button>
+                                    </div>
                                 </div>
-                            </a>
+                            </div>
                         </div>
                     </div>
 
@@ -1583,14 +1629,32 @@
 <footer id="footer"></footer>
 
 
+
+<!-- Golbal -->
 <script src="js/jquery.min.js"></script>
+<script src="js/lightingbox-fengso.js"></script>
+
+
+<!-- OnlyThisPage Plugin -->
 <script src="js/jquery.lazy.min.js"></script>
 <script src="js/jquery.focuspoint.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.js"></script>
-<script src="js/fengso-structural-index.js"></script>
+
+
+<!-- OnlyThisPage -->
+<script src="http://www.youtube.com/player_api"></script>
+<script>
+    $('#header').load('header.html');        
+    $('#footer').load('footer.html');   
+
+</script>
+
 
 <script src="js/fengso-index.js"></script>
-    
+<script src="js/fengso-structural-index.js"></script>
+
+
+
 </body>
 
 </html>
