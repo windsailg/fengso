@@ -27,7 +27,7 @@
       }
       &.type_full{
          width: 100%;
-         padding: 40px 0px 10px;
+         padding: 50px 0px 10px;
       }
       &.type_imagine{
          width: 100%;
@@ -73,7 +73,7 @@
          
          @include MCW (920px){
             //width:100vw;
-            height: 50vw
+            height: 54vw
          }
          .swiper-wrapper{
             a{
@@ -105,7 +105,7 @@
       position: absolute;
       z-index: 5;
       width: 100%;
-      top: -165px;
+      top: -185px;
       @include M1301() {
          position: relative;
          justify-content: center;
@@ -290,9 +290,7 @@
                
                font-size: calc(19px + 0.4vw);
                color:$color_fs_orange;
-               @include MCW(601px) {
-                  
-               }
+
                > .preprice{
                   @include ibl;
                   font-size:13px;
@@ -365,8 +363,8 @@
          @include ibl;
          width: 400px;
          min-height: 220px;
-         margin: 0 10px 5px ;
-         padding: 60px 0 10px;
+         
+         padding: 60px 10px 15px;
          overflow: hidden;
          @include tst;
          @include tst;
@@ -385,6 +383,7 @@
             background: #fff;
             position: relative;
             padding: 20px 25px;
+            min-height: 170px;
             .major_block{
                @include flex-center;
                justify-content: flex-start;
@@ -488,9 +487,11 @@
    }
    .imagine_block{
       @include flex-center;
-
       width: 100%;
       height: 370px;
+      @include MCW(801px) {
+         height: auto;
+      }
       .imagine_box{
          @include fxfe;
          width: 50%;
@@ -505,7 +506,7 @@
          }
          @include MCW(801px) {
             width: 100%;
-            padding: 60px 15px;
+            padding: 40px 10px;
          }
          &.imagine{
             background-image: url("../img/index_imagine.jpg");
@@ -561,34 +562,34 @@
                line-height: 28px;
                font-size:calc(16px + 0.05vw);
             }
-            a{
-               .btn{
-                  @include ib;
-                  width:100%;
-                  border: 2px solid #fff;
-                  text-align: center;
-                  padding: 20px;
-                  @include tst;
-                  cursor: pointer;
-                  color: #fff;
+            > .btn{
+               @include ib;
+               width:100%;
+               border: 2px solid #fff;
+               text-align: center;
+               padding: 20px;
+               @include tst;
+               cursor: pointer;
+               color: #fff;
 
-                  &:hover{
-                     background-color: #fff;
-                     color: $color_fs_font;
-                  }
-                  > .title{
-                  font-size: calc(18px + 0.2vw);
-                  }
-                  > .subtitle{
-                     letter-spacing: 1px;
-                     font-size: 13px;
-                  }
+               &:hover{
+                  background-color: #fff;
+                  color: $color_fs_font;
+               }
+               > .title{
+               font-size: calc(18px + 0.2vw);
+               }
+               > .subtitle{
+                  letter-spacing: 1px;
+                  font-size: 13px;
                }
                &:hover{
                   opacity: 1;
                }
             }
-
+            > .i_want_teach{
+               display:none;
+            }
          }
       }
    }
@@ -622,9 +623,11 @@
                @include b;
                width: 100%;
                font-size: 18px;
-
                color:rgb(97, 97, 97);
                line-height: 26px;
+               line-height: 29px;
+               height: 52px;
+               overflow: hidden;
             }
             > .tips{
                @include flex-center;
@@ -655,7 +658,6 @@
          }
       }
    }
-
 }
 
 
@@ -726,3 +728,96 @@
 }
 
 
+#ITeachContainer{
+   width: 100%;
+
+   > .title{
+      @include ib;
+      color: rgb(63, 63, 63);
+      width: 100%;
+      padding: 10px 0;
+      font-weight:bold;
+      font-size: calc(20px + 0.3vw);
+   }
+   > .input_list{
+      width: 100%;
+      margin: 15px auto 10px;
+      @include MCW(801px) {
+         margin: 5px auto 3px;
+      }
+      > .input_block{
+         @include fxc;
+         position: relative;
+         padding: 0 10px 10px 0;
+         width: 100%;
+         overflow: auto;
+         @include col2(96%,681px){ 
+            
+         }
+         @include MCW(801px) {
+            padding: 0 10px 5px 0;
+         }
+         .title{
+            @include ib;
+            width: 100%;
+            padding: 5px 0 0;
+            font-weight:unset;
+            font-size: 16px;
+            text-align: left;
+         }
+         .input{
+            @include PlaceHolder-Style(rgb(145, 145, 145),.9);
+            @include tst;
+            @include ib;
+            text-decoration: none;
+            width: 100%;
+            max-width: 100%;
+            margin:  15px auto 10px;
+            padding: 8px 15px ;
+            border-width: 1px;
+            border-style: solid;
+            border-color:  rgb(184, 184, 184);
+            outline: none;
+            font-size: 16px;
+            letter-spacing: 1px;
+            @include MCW(801px) {
+               margin:  8px auto ;
+            }
+            &:focus{
+               border-color:  #FF7757;
+               box-shadow: 0px 0px 10px rgba(255, 149, 11, 0.466);
+            }
+         }
+      }
+   }
+   > .tips_block{
+      color: rgb(126, 126, 126);
+      font-size: 17px;
+      line-height: 24px;
+      @include MCW(801px) {
+         font-size: 15px;
+         line-height: 20px;
+      }
+      > .title{
+         @include ib;
+         width: 100%;
+         padding:10px 0;
+      }
+      > .tips_list{
+         width: 100%;
+         > .tip{
+            padding:4px 0;
+            @include MCW(801px) {
+               padding:3px 0;
+            }
+         }
+      }
+   }
+   > .btns{
+      @include fxc;
+      padding: 20px 0 10px; 
+      @include MCW(801px) {
+         padding: 10px 0 5px;
+      }
+   }
+}

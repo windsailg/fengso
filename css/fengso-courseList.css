@@ -818,6 +818,12 @@
 
 #fengso-CourseList .course_list_block .course_block .teacher_block .intro {
   width: calc(100% - 70px);
+  line-height: 28px;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  height: 40px;
 }
 
 #fengso-CourseList .course_list_block .course_block .teacher_block .intro .name {
@@ -826,7 +832,13 @@
 
 #fengso-CourseList .course_list_block .course_block .teacher_block .intro > .intro_content {
   color: #a1a1a1;
+  max-height: 30px;
   font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  height: 40px;
 }
 
 #fengso-CourseList .pager_block {

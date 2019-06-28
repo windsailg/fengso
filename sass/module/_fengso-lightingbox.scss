@@ -13,46 +13,37 @@ $color-lb_default:rgb(218, 218, 218);
          @include arl;
          position: fixed;
          width:800px;
-        
-         overflow: hidden;
+         max-height: 74vh;
          padding: 52px 50px 30px;
          background: rgb(255, 255, 255);
          z-index: 1000;
          border-radius: 5px;
          top: 8%;
+         
          @include MCW(861px){
             width:95%;
             padding: 42px 15px 20px;
-            height: 80vh;
          }
          .lightingbox_container{
             @include b;
             @include arl;
             @include ScrollBar;
-            padding-right: 5px;
+            padding: 0 5px 10px 0;
             width: 100%;
-            height: 100%;
+            max-height: calc(70vh - 46px);
             overflow-x: hidden;
             overflow-y: auto;
             @include MCW(861px){
+               // max-height: 80vh;
             }
             .lightingbox_body{
-               @include col2{
-                  justify-content: space-between;
-                  align-items: flex-start;
-                  
-                  @include MCW(861px){
-                     flex-direction:column-reverse ;
-                  }
-                  > .col2{
+               width: 100%;
+               @include col2(96%,861px){
                      display: none;
-                     width: 96%;
                      padding: 0 0 20px 0;
-                     @include MCW(861px){
-                        width:100%;
-                     }
-                  }
+                     width:94%;
                }
+               justify-content: space-between;
                .title{
                   @include selection-none;
                   font-weight: 600;
@@ -63,14 +54,8 @@ $color-lb_default:rgb(218, 218, 218);
                   }
                }
                .input_blocks{
-                  @include col2{
-                     justify-content: space-between;
-                     > .col2{
-                        width: 48%;
-                        @include MCW(861px){
-                           width:100%;
-                        }
-                     }
+                  @include col2(96%,861px){
+
                   }
                }
                .input_block{
@@ -123,9 +108,9 @@ $color-lb_default:rgb(218, 218, 218);
                   @include ibl;
                   @include selection-none;
                   width: 100%;
-                  padding: 10px 0 20px 0;
+                  padding: 10px 0 5px 0;
                   @include MCW(861px){
-                     padding: 0px 0 20px 0;
+                     padding: 0px 0 0px 0;
                   }
                   /* The container */
                   .checkbox_block {
@@ -269,12 +254,16 @@ $color-lb_default:rgb(218, 218, 218);
             }
             
          }
+         &.type2{
+            top: calc(10% + 15px);
+            border-top-right-radius: 0;
+         }
       }
       .btn_close{
          @include b;
          width:50px;
          height: 50px;
-         position: absolute;;
+         position: absolute;
          top: 10px;
          right: 10px;
          //background: #FF7757;
@@ -304,9 +293,48 @@ $color-lb_default:rgb(218, 218, 218);
                height: 80%;
             }
          }
+         &.type2{
+            @include fxb;
+            width: 130px;
+            height:40px;
+            top: -40px;
+            right: 0px;
+            overflow: hidden;
+            background-color: $color_fs_orange;
+            padding: 0 10px;
+            color: #fff;
+            > .btn_close_box{
+               @include ib;
+               overflow: hidden;
+               width:26px;
+               height:26px;
+               position: relative;
+               .c_deco{
+                  background-color: #fff;
+                  &:hover{
+                     background-color: #fff;
+                  }
+               }
+            }
+            > .btn_close_text{
+               @include ib;
+               padding: 0 5px 0 0;
+            }
+            .c_deco{
+               &.cd1{
+                  height: 2px;
+                  width: 80%;
+               }
+               &.cd2{
+                  width: 2px;
+                  height: 80%;
+               }
+            }
 
+         }
+      
       }
-      .lightingbox_mask{
+      > .lightingbox_mask{
          @include b;
          @include aa;
          cursor: pointer;    

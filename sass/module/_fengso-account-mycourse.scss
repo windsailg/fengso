@@ -1,0 +1,604 @@
+
+$color_fs_orange:#FF7757;
+$color_fs_pre_goose:#FFB639;
+$color_fs_goose:#FFB636;
+$color_fs_courseList_goose:#FEA226;
+$color_fs_brown:rgb(95, 54, 23);
+$color_fs_blue:rgb(67, 112, 179);
+
+$color_fs_gray:#BCBDBC;
+$color_fs_gray_2:rgb(161, 161, 161);
+$color_fs_gray_3_fadeblue:#5e6f79;;//blue
+$color_fs_gray_3_fadeblue_2:#3b4952;//darkerBlue
+$color_fs_background_gray:#F1F1F1;
+$color_fs_background_gray_bluer:#F6F7F9;//forgetpass
+
+$color_link:rgb(54, 54, 54);
+$color_shadow:rgba(77, 77, 77, 0.2);
+
+$color_fs_font-title:rgb(54, 54, 54);
+$color_fs_font-title_2:rgb(68, 68, 68);
+
+$color_fs_font:rgb(90, 90, 90);
+
+$color_fs_footer-font:rgb(124, 124, 124);
+
+//  *{outline-color: rgba(255, 118, 87, 0.233);outline-width: 1px;outline-style:solid;}
+
+.area{
+   @include ibl;
+   width: 100%;
+   overflow: hidden;
+   &.member_control{
+      background-color: $color_fs_background_gray_bluer;
+      overflow: visible;
+   }
+   .container{
+      @include b;
+      overflow: hidden;;
+      margin:  0 auto;
+      width: 1300px;
+      padding: 20px 10px 10px;
+      &.type_mycourse{
+         @include fxb;
+         align-items: flex-start;
+         width: 1300px;
+         padding: 10px 10px;
+         position: relative;
+         @include M1301(){
+            width: 100%;
+            padding: 10px 10px 10px;
+         }
+         @include MCW(861px){
+            width: 100%;
+            padding: 10px 0px 10px;
+         }
+      }
+      @include M1301(){
+         width: 100%;
+         padding: 10px 10px 10px;
+      }
+   }
+}
+
+#fengso-MemberMyCourse{
+   @include bl;
+   width: 100%;
+   overflow: hidden;
+   .bread_crumb_block{
+      .bread_crumb{
+         .bread_crumb_item{
+            font-size: 14px;
+         }
+      }
+   }
+   .user_data_block{
+      @include fxc;
+      width: 100%;
+      padding: 50px 10px;
+      .user_data_container{
+         @include fxb;
+         max-width: 600px;
+         .avatar{
+            padding: 6px;
+            background: #fff;
+            position: relative;
+            @include bs;
+            .img_box{
+               background: $color_fs_background_gray_bluer;
+            }
+         }
+         .info_box{
+            width: 220px;
+            padding: 0 0 0 20px;
+            .user_name{
+               @include ib;
+               width: 100%;
+               font-weight: normal;
+               font-size: calc(28px + 0.5vw);
+               color: rgb(53, 53, 53);
+               padding:  10px 0;
+               position: relative;
+            }
+            .joined_date{
+               @include ib;
+               width: 100%;
+               padding:  10px 0;
+               color: rgb(87, 87, 87);
+               i{
+                  padding: 0 10px 0 0;
+               }
+            }
+         }
+         .edit{
+            @include ib;
+            position: absolute;
+            right: -10px;
+            bottom:-10px;
+            border-radius: 100px;
+            padding:8px;
+            color: #fff;
+            font-size: 13px;
+            background-color: rgb(219, 219, 219);
+            @include hvc(){
+               opacity: .8;;
+            }
+         }
+      }
+   }
+   .tab_block{
+      @include fxc;
+      width: 100%;
+      padding:  0 0 0px 0;
+      @include MCW(681px) {
+         padding:  0 0 0px 0;
+      }
+      .tab{
+         @include ib;
+         width: auto;
+         margin: 0 auto;
+         .tab_item{
+            @include ibl;
+            width: 140px;;
+            font-weight: normal;
+            text-align: center;
+            position: relative;
+            cursor: pointer;
+            padding: 10px 0;
+
+            font-size: 18px;
+            color: rgb(105, 105, 105);
+            &:not(:last-child)::after{
+               content:' ';
+               @include b;
+               position: absolute;
+               width: 1px;
+               height: 40%;
+               right: 0px;
+               @include atb;
+               transform: skew(-12deg,0);
+               background-color: rgb(107, 107, 107);
+               @include MCW(681px) {
+                  display: none;
+               }
+            }
+            @include MCW(681px) {
+               width: 50%;
+               padding: 20px 0 0;
+               &:nth-child(odd)::after{
+                  content:' ';
+                  @include b;
+                  position: absolute;
+                  width: 1px;
+                  height: 50%;
+                  right: 0px;
+                  top: 24px;
+                  transform: skew(-12deg,0);
+                  background-color: rgb(107, 107, 107);
+               }
+            }
+            a:hover{
+               color:$color_fs_orange;
+            }
+            &.active{
+               a{
+                  color: $color_fs_orange;
+               }
+               &::before{
+                  content:' ';
+                  @include b;
+                  @include arl;
+                  position: absolute;
+                  width: 80%;
+                  height: 3px;
+                  bottom: -10px;
+                  background-color:$color_fs_orange;
+               }
+            }
+
+         }
+      }
+   }
+   .tags_block{
+      @include ib;
+      width: 100%;
+      padding: 10px 0 25px;
+      .tags_list{
+         @include fxfs;
+         .tag{
+            @include tst(.2s);
+            min-width: 80px;
+            padding: 6px 8px;
+            margin: 6px 18px  6px 0;
+            text-align: center;
+            background:#D7D7D7;
+            border-radius: 3px;
+            font-size: 15px;
+            cursor:pointer;
+            @include selection-none;
+            &.active{
+               background:$color_fs_orange;
+               color: #fff;
+            }
+         }
+      }
+   }
+   .myCourse_list_content{
+      width: 72%;
+      @include M1301(){
+         width: 100%;
+      }
+   }
+   .myCourse_list_recommend{
+      width:25% ;
+      padding: 24px 0 0 0;
+      @include M1301(){
+         width: 100%;
+      }
+      > .title{
+         @include ib;
+         width: 100%;
+         padding: 15px 0 15px 8px;
+         font-size: 20px;
+         
+      }
+   }
+   .myCoursee_list_block{
+      @include fxv;
+      flex-wrap: wrap;
+      width: 100%;
+      overflow: hidden;
+      height:unset;
+
+      @include MCW(780px) {
+         flex-wrap: wrap;
+         flex-direction: row;
+         justify-content: center;
+      }
+      a{
+         @include b;
+         &:hover{
+            opacity: .9;
+         }
+      }
+      .course_block{
+         @include fxb;
+         width:100%;
+         margin: 0px 0 40px 0;
+         @include MCW(780px) {
+            @include b;
+            width:100%;
+            margin: 0px 0 40px 0;
+         }
+         .image_box{
+            @include bl;
+            width: 320px;
+            height: 180px;
+            img{
+               @include tst;
+               &:hover{
+                  transform: scale(1.1);
+               }
+            }
+             @include MCW(780px) {
+               width:100%;
+               height: 54vw;
+            }
+         }
+         .content_box{
+               @include bl;
+               width: calc(100% - 335px);
+               overflow: hidden;
+               padding: 17px  32px  ;
+               border: 1px solid rgb(197, 197, 197);
+               @include MCW(781px) {
+                  width:100%;
+                  padding: 15px  32px 10px;
+               }
+            > .title{
+               @include b;
+               width: 100%;
+               font-size: 18px;
+               font-weight: 600;
+               color:rgb(92, 92, 92);
+               line-height: 29px;
+               height: 52px;
+               overflow: hidden;
+               a{
+                  color:rgb(92, 92, 92);
+                  @include ellipsis;
+               }
+            }
+            > .tips{
+               @include flex-center;
+               justify-content: space-between;
+               width: 100%;
+               font-size: 13px;
+               color: rgb(156, 156, 156);
+               padding: 15px 0;
+               > .tips_box{
+                  @include fxb;
+                  @include MCW(861px) {
+                     padding: 8px 0 ;
+                  }
+                  > .views{
+                     
+                  }
+                  > .tags{
+                     padding:5px 12px ;
+                     margin: 0 15px 0 0;
+                     background: $color_fs_orange;
+                     color:#fff;;
+                     border-radius: 5px;
+                  }
+                  > .date{
+
+                  }
+               }
+            }
+            > .controls{
+               @include fxb;
+               align-items: center;
+               width: 100%;
+               line-height: 24px;
+               font-size: 15px;
+               color: rgb(112, 112, 112);
+               letter-spacing: 2px;
+               max-height: 72px;
+               overflow: hidden;
+               > .rate{
+                  @include fxb;
+                  width: 130px;
+                  color: $color_fs_orange;
+                  cursor: pointer;
+                  > i{
+                     @include ib;
+                     font-size: 30px;
+                  }
+                  > .title_box{
+                     @include ib;
+                     width: 90px;
+                     padding: 5px 0 0 0;
+                     > .title{
+                        @include ibl;
+                        width: 100%;
+                        font-weight: bold;
+                        font-size: 15px;
+                        line-height: 18px;
+                        padding: 0 0 2px 0;
+                        a{
+                           @include ib;
+                           padding:  1px;
+
+                        }
+                     }
+                     > .subtitle{
+                        @include ibl;
+                        width: 100%;
+                        font-size: 12px;
+                        letter-spacing: 0px;
+                        color: rgb(143, 143, 143);
+                        line-height: 14px;
+                     }
+                  }
+
+               }
+               > .hours{
+                  color: rgb(165, 165, 165);
+               }
+               > .time_limit{
+                  
+               }
+            }
+            > hr{
+               margin: 14px 0 8px;
+            }
+         }
+      }
+   }
+   .course_list_block{
+      @include fxfe;
+      align-items: flex-start;
+      @include ib;
+      overflow: hidden;
+      width: calc(100% - 300px);
+      margin:  0 auto;
+      width: 100%;
+      @include tst;
+      @include M1301() {
+         justify-content: center;
+      }
+
+      .course_block{
+         @include ibl;
+         width: 300px;
+         margin: 0 10px 30px ;
+         @include tst;
+         @include MCW(780px) {
+            margin: 0;
+            padding: 0 6px 30px ;
+            width: 50%;
+         }
+
+         a{
+            
+            &:hover{
+               opacity: 1;
+               //transform: translate(0px,-7px);
+            }
+         }
+         &.preorder{
+            position: relative;
+            &::after{
+               content:'+預購課程';
+               @include b;
+               padding: 6px 8px;
+               color:#fff;
+               font-size: 14px;
+               background-color:$color_fs_courseList_goose; 
+               position: absolute;
+               z-index: 10;
+               top:0;
+               right:0;
+               letter-spacing: 2px;
+               @include hover;
+            }
+   
+         }
+         .image{
+            width: 100%;
+            height: 165px;
+            
+            @include tst;
+            @include MCW(780px) {
+               height: 26vw;
+            }
+            > img{
+               @include tst;
+               &:hover{
+                  transform: scale(1.1);
+               }
+            }
+            &:hover{
+               opacity: 1;
+            }
+         }
+         .content{
+            @include flex-center;
+            @include ellipsis;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 100%;
+            margin: 25px 0 0px;
+            line-height: 24px;
+            height: 52px;
+            overflow: hidden;
+            @include MCW(580px) {
+               font-size: 15px;
+               margin: 15px 0 4px;
+            }
+         }
+         .infos{
+            @include flex-center;
+            justify-content: space-between;
+            width: 100%;
+            .tips{
+               
+               font-size: 13px;
+               color: rgba(85, 85, 85, 0.63);
+               @include MCW(601px) {
+                  padding: 0 0 8px 0;
+               }
+               .element{
+                  padding:  0 5px 0 0 ;
+                  i{
+                     padding:  0 5px 0 0 ;
+                  }
+               }
+            }
+            .price{
+               
+               font-size: calc(19px + 0.4vw);
+               color:$color_fs_orange;
+               .preprice{
+                  @include ibl;
+                  font-size:13px;
+                  color: rgb(34, 34, 34);
+                  padding-right: 4px;
+                  line-height: 22px;
+                  .onsale{
+                     font-size: 12px;
+                     padding: 2px 4px; 
+                     background-color: $color_fs_courseList_goose; ;
+                     color:#fff;;
+                     margin-left:6px;
+                  }
+                  @include MCW(391px) {
+                     padding: 0 0 8px 0;
+                     width: 100%;
+                  }
+               }
+            }
+         }
+          .teacher_block{
+            @include flex-center;
+            width:100%;
+            float: left;
+            padding: 5px 0;
+            justify-content: space-between;
+            @include hover;
+            .teacher_avatar{
+               width: 50px;
+               height: 50px;
+               border-radius: 50px;
+               overflow:hidden;
+            }
+            .intro{
+               width: calc(100% - 70px);
+
+               line-height: 28px;
+               @include nowrap;
+               
+               .name{
+                  padding: 2px 0;
+               }
+               > .intro_content{
+                  color:$color_fs_gray_2;
+                  max-height: 30px;
+                  font-size: 15px;
+                  @include nowrap;
+               }
+            }
+         }
+      }
+   }
+   .pager_block{
+      @include fxc;
+      width: 100%;
+      padding: 20px 0 40px;
+
+      @include MCW(580px) {
+          padding: 0px 0 40px;
+      }
+      .pager{
+         // @include flex-center;
+         // justify-content: space-between;
+         @include ib;
+         width: auto;
+         margin:20px auto;;
+         padding: 0 50px 0;
+         @include MCW(580px) {
+            padding: 0 15px 0;
+         }
+         .pager_number{
+            @include ibl;
+            padding: 12px 15px;
+            margin: 5px;
+            text-align: center;
+            cursor: pointer;
+            background-color: rgb(218, 218, 218);
+            @include hover;
+
+            &.active{
+                background-color:#172532;
+                color: #fff;
+            }
+         }
+      }
+   }
+}
+
+.focuspoint{
+   // @include flex-center;
+   // align-content: center;
+   .lazy{
+      @include bg-loading;
+      background-color: #fff;
+      background-image: url("images/fengso-loading.svg");
+      max-height: 100%;
+   }
+   .lazied{
+      max-height: unset;
+   }
+}
+

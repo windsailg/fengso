@@ -1,5 +1,4 @@
-$('#header').load('header.html');        
-$('#footer').load('footer.html');    
+
 
 
 $(document).ready(function(){
@@ -29,15 +28,15 @@ $(".lazy").Lazy({
 });     
 
 function pureLazyfocusepointer(target){
-var img = new Image();
-img.src = target.data('src');
-var target_focuspoint = target.parent('.focuspoint');
-$(target_focuspoint).attr({
-    'data-focus-x':"0.00",
-    'data-focus-y':"0.00",
-    'data-image-w':img.width,
-    'data-image-h':img.height,
-});
+    var img = new Image();
+    img.src = target.data('src');
+    var target_focuspoint = target.parent('.focuspoint');
+    $(target_focuspoint).attr({
+        'data-focus-x':"0.00",
+        'data-focus-y':"0.00",
+        'data-image-w':img.width,
+        'data-image-h':img.height,
+    });
 }
 
 var BannerSwiper = new Swiper('#BannerSwiperBlock', {
@@ -113,7 +112,7 @@ var CourseHotSwiper = new Swiper('#CourseListBlockHot', {
             slidesPerView: 'auto',
             lazy: {
                 loadPrevNext: true,
-                loadPrevNextAmount: 1,
+                loadPrevNextAmount: 4,
             },
         },
         701: {
@@ -121,7 +120,7 @@ var CourseHotSwiper = new Swiper('#CourseListBlockHot', {
             slidesPerColumn: 2,
             lazy: {
                 loadPrevNext: true,
-                loadPrevNextAmount: 4,
+                loadPrevNextAmount: 6,
             },
         },
     },
@@ -297,17 +296,21 @@ wrap_ellipsis('#ArticleListIndex .article',145);
 
 //換行Ellipsis
 function wrap_ellipsis(article_target,article_length){
-        var target = article_target;
-        var length = article_length;
-        $(article_target).each(function(i){
-            if($(this).text().length>article_length){
-                $(this).attr("title",$(this).text());
-                var thistext=$(this).text().substring(0,article_length-1)+"...";
-                $(this).text(thistext);
-            };
-        });
-        
+    var target = article_target;
+    var length = article_length;
+    $(article_target).each(function(i){
+        if($(this).text().length>article_length){
+            $(this).attr("title",$(this).text());
+            var thistext=$(this).text().substring(0,article_length-1)+"...";
+            $(this).text(thistext);
+        };
+    });
 };
+
+
+
+$('#IWantToTeach').LightingBox();
+
 
 
 // setTimeout(() => {
@@ -315,4 +318,33 @@ function wrap_ellipsis(article_target,article_length){
 //     console.log('init complete')
 // }, 3000);
     
+
 });
+
+
+    var player;
+
+    function onYouTubePlayerAPIReady() {
+        player = new YT.Player('player', {
+        //   height: '390',
+        //   width: '640',
+          videoId: 'MOVJYGeu93M',
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+    }
+
+    // autoplay video
+    function onPlayerReady(event) {
+       event.target.playVideo();
+    }
+
+    // when video ends
+    function onPlayerStateChange(event) {        
+        if(event.data === 0) {            
+            // alert('completed');
+        }
+    }
+ 

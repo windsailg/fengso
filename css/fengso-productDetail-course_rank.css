@@ -517,6 +517,7 @@
   overflow: hidden;
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
+  height: 40px;
 }
 
 .course_discuss_blocks .course_discuss_block .content_box .content {

@@ -1,0 +1,430 @@
+
+//  *{outline-color: rgba(255, 118, 87, 0.233);outline-width: 1px;outline-style:solid;}
+
+.area{
+   @include ibl;
+   width: 100%;
+   overflow: hidden;
+   .container{
+      @include b;
+      overflow: hidden;;
+      margin:  0 auto;
+      width: 1300px;
+      padding: 20px 10px 10px;
+      &.type_article{
+         @include fxb;
+         align-items: flex-start;
+         width: 1300px;
+         padding: 10px 10px;
+         position: relative;
+         @include M1301(){
+            width: 100%;
+            padding: 10px 10px 10px;
+         }
+         @include MCW(861px){
+            width: 100%;
+            padding: 10px 0px 10px;
+         }
+      }
+      @include M1301(){
+         width: 100%;
+         padding: 10px 10px 10px;
+      }
+   }
+}
+
+#fengso-ArticleList{
+   @include bl;
+   width: 100%;
+   overflow: hidden;
+   .bread_crumb_block{
+      .bread_crumb{
+         .bread_crumb_item{
+            font-size: 14px;
+         }
+      }
+   }
+   .tags_block{
+      @include ib;
+      width: 100%;
+      padding: 15px 0 5px;
+      .tags_list{
+         @include fxfs;
+         .tag{
+            @include tst(.2s);
+            min-width: 80px;
+            padding: 6px 8px;
+            margin: 6px 18px  6px 0;
+            text-align: center;
+            background:#D7D7D7;
+            border-radius: 3px;
+            font-size: 15px;
+            cursor:pointer;
+            @include selection-none;
+            &.active{
+               background:$color_fs_orange;
+               color: #fff;
+            }
+         }
+      }
+   }
+   .sort_block{
+      @include ib;
+      width: 100%;
+      padding: 5px 0;
+      text-align: center;
+      font-size: 16px;
+      .sort_item{
+         @include ibl;
+         @include tst(.2s);
+         padding: 6px 8px;
+         margin: 6px 8px  6px 0;
+         @include selection-none;
+      }
+      .sort_list{
+         > .btn{
+            cursor:pointer;
+            position: relative;
+            &.active{
+               color: $color_fs_orange;
+            }
+            &:not(:last-child):after{
+                   content:'';
+                  @include b;
+                  width: 2px;
+                  height: 60%;
+                  background-color:$color_fs_gray; 
+                  position: absolute;
+                  right: -6px;
+                  top:0;
+                  bottom: 0;
+                  margin: auto 0;
+            }
+         }
+      }
+   }
+   .article_list_content{
+      width: 72%;
+      @include M1301(){
+         width: 100%;
+      }
+   }
+   .article_list_recommend{
+      width:25% ;
+      @include M1301(){
+         width: 100%;
+      }
+      > .title{
+         @include ib;
+         width: 100%;
+         padding: 15px 0 15px 8px;
+         font-size: 20px;
+         @include M1301() {
+            padding: 15px 0 24px 8px;
+         }
+      }
+   }
+   .article_list_block{
+      @include fxv;
+      flex-wrap: wrap;
+      width: 100%;
+      overflow: hidden;
+      height:unset;
+      @include MCW(780px) {
+         flex-wrap: wrap;
+         flex-direction: row;
+         justify-content: center;
+      }
+      a{
+         &:hover{
+            opacity: .9;
+         }
+      }
+      .article_block{
+         @include fxc;
+         width:100%;
+         margin: 0px 0 80px 0;
+         @include MCW(780px) {
+            // width:100%;
+            margin: 0px 0 40px 0;
+         }
+         .image_box{
+            @include bl;
+            width: 320px;
+            height: 180px;
+            img{
+               @include tst;
+               &:hover{
+                  transform: scale(1.1);
+               }
+            }
+             @include MCW(780px) {
+               width:100%;
+               height: 54vw;
+            }
+         }
+         .content_box{
+               @include bl;
+               padding: 0px  32px 0;
+               width: calc(100% - 330px);
+               overflow: hidden;
+               @include MCW(781px) {
+                  width:100%;
+                  padding: 15px  32px 10px;
+               }
+            > .title{
+               @include b;
+               width: 100%;
+               font-size: 20px;
+               font-weight: 600;
+               color:rgb(41, 41, 41);
+               line-height: 29px;
+               height: 52px;
+               overflow: hidden;
+            }
+            > .tips{
+               @include flex-center;
+               justify-content: space-between;
+               width: 100%;
+               font-size: 13px;
+               color: rgb(156, 156, 156);
+               padding: 10px 0 0 0;
+               > .tips_box{
+                  @include fxb;
+                  @include MCW(861px) {
+                     padding: 8px 0 ;
+                  }
+                  > .views{
+                     
+                  }
+                  > .tags{
+                     padding:5px 12px ;
+                     margin: 0 15px 0 0;
+                     background: #182432;
+                     color:#fff;;
+                  }
+                  > .date{
+
+                  }
+               }
+            }
+            > .article{
+               @include b;
+               width: 100%;
+               line-height: 24px;
+               font-size: 15px;
+               color: rgb(112, 112, 112);
+               letter-spacing: 2px;
+               max-height: 72px;
+               overflow: hidden;
+            }
+            > hr{
+               margin: 14px 0 8px;
+            }
+         }
+      }
+   }
+   .course_list_block{
+      @include fxfe;
+      align-items: flex-start;
+      overflow: hidden;
+      // width: calc(100% - 300px);
+      margin:  0 auto;
+      width: 100%;
+      @include tst;
+      @include M1301() {
+         justify-content: center;
+      }
+
+      .course_block{
+         @include ibl;
+         width: 300px;
+         margin: 0 10px 30px ;
+         @include tst;
+         @include MCW(780px) {
+            margin: 0;
+            padding: 0 6px 30px ;
+            width: 50%;
+         }
+
+         a{
+            @include b;
+            &:hover{
+               opacity: 1;
+               //transform: translate(0px,-7px);
+            }
+         }
+         &.preorder{
+            position: relative;
+            &::after{
+               content:'+預購課程';
+               @include b;
+               padding: 6px 8px;
+               color:#fff;
+               font-size: 14px;
+               background-color:$color_fs_courseList_goose; 
+               position: absolute;
+               z-index: 10;
+               top:0;
+               right:0;
+               letter-spacing: 2px;
+               @include hover;
+            }
+   
+         }
+         .image{
+            width: 100%;
+            height: 165px;
+            
+            @include tst;
+            @include MCW(780px) {
+               height: 26vw;
+            }
+            > img{
+               @include tst;
+               &:hover{
+                  transform: scale(1.1);
+               }
+            }
+            &:hover{
+               opacity: 1;
+            }
+         }
+         .content{
+            @include flex-center;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 100%;
+            margin: 25px 0 0px;
+            line-height: 24px;
+            height: 52px;
+            overflow: hidden;
+            @include MCW(580px) {
+               font-size: 15px;
+               margin: 15px 0 4px;
+            }
+         }
+         .infos{
+            @include flex-center;
+            justify-content: space-between;
+            width: 100%;
+            .tips{
+               
+               font-size: 13px;
+               color: rgba(85, 85, 85, 0.63);
+               @include MCW(601px) {
+                  padding: 0 0 8px 0;
+               }
+               .element{
+                  padding:  0 5px 0 0 ;
+                  i{
+                     padding:  0 5px 0 0 ;
+                  }
+               }
+            }
+            .price{
+               
+               font-size: calc(19px + 0.4vw);
+               color:$color_fs_orange;
+               .preprice{
+                  @include ibl;
+                  font-size:13px;
+                  color: rgb(34, 34, 34);
+                  padding-right: 4px;
+                  line-height: 22px;
+                  .onsale{
+                     font-size: 12px;
+                     padding: 2px 4px; 
+                     background-color: $color_fs_courseList_goose; ;
+                     color:#fff;;
+                     margin-left:6px;
+                  }
+                  @include MCW(391px) {
+                     padding: 0 0 8px 0;
+                     width: 100%;
+                  }
+               }
+            }
+         }
+          .teacher_block{
+            @include flex-center;
+            width:100%;
+            float: left;
+            padding: 5px 0;
+            justify-content: space-between;
+            @include hover;
+            .teacher_avatar{
+               width: 50px;
+               height: 50px;
+               border-radius: 50px;
+               overflow:hidden;
+            }
+            .intro{
+               width: calc(100% - 70px);
+
+               line-height: 28px;
+               @include nowrap;
+               
+               .name{
+                  padding: 2px 0;
+               }
+               > .intro_content{
+                  color:$color_fs_gray_2;
+                  max-height: 30px;
+                  font-size: 15px;
+                  @include nowrap;
+               }
+            }
+         }
+      }
+   }
+   .pager_block{
+      @include fxc;
+      width: 100%;
+      padding: 20px 0 40px;
+
+      @include MCW(580px) {
+          padding: 0px 0 40px;
+      }
+      .pager{
+         // @include flex-center;
+         // justify-content: space-between;
+         @include ib;
+         width: auto;
+         margin:20px auto;;
+         padding: 0 50px 0;
+         @include MCW(580px) {
+            padding: 0 15px 0;
+         }
+         .pager_number{
+            @include ibl;
+            padding: 12px 15px;
+            margin: 5px;
+            text-align: center;
+            cursor: pointer;
+            background-color: rgb(218, 218, 218);
+            @include hover;
+
+            &.active{
+                background-color:#172532;
+                color: #fff;
+            }
+         }
+      }
+   }
+}
+
+.focuspoint{
+   // @include flex-center;
+   // align-content: center;
+   .lazy{
+      @include bg-loading;
+      background-color: #fff;
+      background-image: url("images/fengso-loading.svg");
+      max-height: 100%;
+   }
+   .lazied{
+      max-height: unset;
+   }
+}
+

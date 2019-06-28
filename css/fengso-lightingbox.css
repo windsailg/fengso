@@ -1,4 +1,25 @@
 @charset "UTF-8";
+.lightingbox .lightingbox_wrap .lightingbox_container .lightingbox_body, .lightingbox .lightingbox_wrap .lightingbox_container .lightingbox_body .input_blocks, .lightingbox .btn_close.type2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .lightingbox {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -23,7 +44,7 @@
   margin-left: auto;
   position: fixed;
   width: 800px;
-  overflow: hidden;
+  max-height: 74vh;
   padding: 52px 50px 30px;
   background: white;
   z-index: 1000;
@@ -35,7 +56,6 @@
   .lightingbox .lightingbox_wrap {
     width: 95%;
     padding: 42px 15px 20px;
-    height: 80vh;
   }
 }
 
@@ -47,9 +67,9 @@
   margin-right: auto;
   left: 0;
   margin-left: auto;
-  padding-right: 5px;
+  padding: 0 5px 10px 0;
   width: 100%;
-  height: 100%;
+  max-height: calc(70vh - 46px);
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -73,57 +93,20 @@
 }
 
 .lightingbox .lightingbox_wrap .lightingbox_container .lightingbox_body {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-flow: row;
-      -ms-flex-flow: row;
-          flex-flow: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  width: 100%;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-.lightingbox .lightingbox_wrap .lightingbox_container .lightingbox_body > .col3 {
-  overflow: hidden;
-  width: 33.33333%;
-}
-
-@media all and (max-width: 861px) {
-  .lightingbox .lightingbox_wrap .lightingbox_container .lightingbox_body {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-    -webkit-flex-direction: column-reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-  }
+  justify-content: space-between;
 }
 
 .lightingbox .lightingbox_wrap .lightingbox_container .lightingbox_body > .col2 {
+  overflow: hidden;
+  width: 48%;
   display: none;
-  width: 96%;
   padding: 0 0 20px 0;
+  width: 94%;
 }
 
 @media all and (max-width: 861px) {
@@ -149,40 +132,14 @@
 }
 
 .lightingbox .lightingbox_wrap .lightingbox_container .lightingbox_body .input_blocks {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-flow: row;
-      -ms-flex-flow: row;
-          flex-flow: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-.lightingbox .lightingbox_wrap .lightingbox_container .lightingbox_body .input_blocks > .col3 {
-  overflow: hidden;
-  width: 33.33333%;
-}
-
 .lightingbox .lightingbox_wrap .lightingbox_container .lightingbox_body .input_blocks > .col2 {
+  overflow: hidden;
   width: 48%;
 }
 
@@ -306,13 +263,13 @@
       -ms-user-select: none;
           user-select: none;
   width: 100%;
-  padding: 10px 0 20px 0;
+  padding: 10px 0 5px 0;
   /* The container */
 }
 
 @media all and (max-width: 861px) {
   .lightingbox .lightingbox_wrap .lightingbox_container .lightingbox_body .check_block {
-    padding: 0px 0 20px 0;
+    padding: 0px 0 0px 0;
   }
 }
 
@@ -517,6 +474,11 @@
   padding: 0 10px;
 }
 
+.lightingbox .lightingbox_wrap.type2 {
+  top: calc(10% + 15px);
+  border-top-right-radius: 0;
+}
+
 .lightingbox .btn_close {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -569,7 +531,57 @@
   height: 80%;
 }
 
-.lightingbox .lightingbox_mask {
+.lightingbox .btn_close.type2 {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 130px;
+  height: 40px;
+  top: -40px;
+  right: 0px;
+  overflow: hidden;
+  background-color: #FF7757;
+  padding: 0 10px;
+  color: #fff;
+}
+
+.lightingbox .btn_close.type2 > .btn_close_box {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+  width: 26px;
+  height: 26px;
+  position: relative;
+}
+
+.lightingbox .btn_close.type2 > .btn_close_box .c_deco {
+  background-color: #fff;
+}
+
+.lightingbox .btn_close.type2 > .btn_close_box .c_deco:hover {
+  background-color: #fff;
+}
+
+.lightingbox .btn_close.type2 > .btn_close_text {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  padding: 0 5px 0 0;
+}
+
+.lightingbox .btn_close.type2 .c_deco.cd1 {
+  height: 2px;
+  width: 80%;
+}
+
+.lightingbox .btn_close.type2 .c_deco.cd2 {
+  width: 2px;
+  height: 80%;
+}
+
+.lightingbox > .lightingbox_mask {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: block;

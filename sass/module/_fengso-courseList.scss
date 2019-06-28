@@ -381,12 +381,18 @@
             }
             .intro{
                width: calc(100% - 70px);
+
+               line-height: 28px;
+               @include nowrap;
+               
                .name{
                   padding: 2px 0;
                }
                > .intro_content{
                   color:$color_fs_gray_2;
-                  font-size: 15px
+                  max-height: 30px;
+                  font-size: 15px;
+                  @include nowrap;
                }
             }
          }

@@ -1,4 +1,4 @@
-.intro_block {
+.intro_block #CourseIntro {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: block;
@@ -7,7 +7,7 @@
   line-height: 30px;
 }
 
-.intro_block .style-h2 {
+.intro_block #CourseIntro > h2, .intro_block #CourseIntro > .style-h2 {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: block;
@@ -20,7 +20,7 @@
   margin: 15px 0;
 }
 
-.intro_block .style-p {
+.intro_block #CourseIntro > p, .intro_block #CourseIntro > .style-p {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: block;
@@ -30,7 +30,7 @@
   margin: 15px 0 25px;
 }
 
-.intro_block .style-tb {
+.intro_block #CourseIntro > .style-tb {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: block;
@@ -39,7 +39,7 @@
   width: 100%;
 }
 
-.intro_block .style-tb > div {
+.intro_block #CourseIntro > .style-tb > div {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: block;
@@ -48,7 +48,7 @@
   background-color: #E5E3E4;
 }
 
-.intro_block .style-ul {
+.intro_block #CourseIntro > ul, .intro_block #CourseIntro > .style-ul {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: block;
