@@ -65,7 +65,11 @@
                 <div class="input_block">
                     <input type="text" spellcheck="false" class="input member_name" placeholder="&#xf0e0; 請輸入您的Email""></input>
                 </div>
-
+                <div class="robot_check_block">
+                    <div>
+                        <div id="recaptcha_box"></div>
+                    </div>
+                </div>
 
                 <div class="btns">
                     <button onclick="remindLogin()" class="gray">立即登入</button>
@@ -80,18 +84,40 @@
 
 <footer id="footer"></footer>
 
+
+
 <!-- Golbal -->
 <script src="js/jquery.min.js"></script>
 <script src="js/lightingbox-fengso.js"></script>
 
 
 <!-- OnlyThisPage -->
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async></script>
 <script>
-$('#header').load('header.html');        
-$('#footer').load('footer.html');    
+
+    $('#header').load('header.html');        
+    $('#footer').load('footer.html');    
+
     function remindLogin(){
         $('#HeaderLogin').click();
     }
+
+
+
+    var onloadCallback = function() {
+        grecaptcha.render("recaptcha_box", {
+        "sitekey": "6Le6HqsUAAAAAI4YGJwmlIPhJL48wiycWz4uk8Kz",
+        "callback": callback
+        });
+    };
+
+    function callback() {
+        alert("驗證成功！");
+        
+    }
+
+
+
 </script>
 
 </body>

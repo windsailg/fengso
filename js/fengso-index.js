@@ -81,7 +81,7 @@ var CourseHotSwiper = new Swiper('#CourseListBlockHot', {
     },
     lazy: {
         loadPrevNext: true,
-        loadPrevNextAmount: 1,
+        loadPrevNextAmount: 2,
     },
     on:{
         // resize: function(){
@@ -117,10 +117,10 @@ var CourseHotSwiper = new Swiper('#CourseListBlockHot', {
         },
         701: {
             slidesPerView: 2,
-            slidesPerColumn: 2,
+            // slidesPerColumn: 2,
             lazy: {
                 loadPrevNext: true,
-                loadPrevNextAmount: 6,
+                loadPrevNextAmount: 4,
             },
         },
     },
@@ -138,7 +138,7 @@ var CoursePreorderSwiper = new Swiper('#CourseListBlockPreorder', {
     },
     lazy: {
         loadPrevNext: true,
-        loadPrevNextAmount: 10,
+        loadPrevNextAmount: 2,
     },
     on:{
         // resize: function(){
@@ -163,21 +163,21 @@ var CoursePreorderSwiper = new Swiper('#CourseListBlockPreorder', {
     speed:400, //default
     slidesPerView: 4,
     spaceBetween: 0,
-    slidesPerColumn: 2,
+    slidesPerColumn: 1,
     breakpoints: {
         1301: {
            slidesPerView: 'auto',
             lazy: {
                 loadPrevNext: true,
-                loadPrevNextAmount: 15,
+                loadPrevNextAmount: 4,
             },
         },
         701: {
-            slidesPerColumn: 3,
+            // slidesPerColumn: 3,
             slidesPerView: 2,
             lazy: {
                 loadPrevNext: true,
-                loadPrevNextAmount: 15,
+                loadPrevNextAmount: 4,
             },
         },
     },
@@ -308,9 +308,9 @@ function wrap_ellipsis(article_target,article_length){
 };
 
 
-
+console.log('lb step2');
 $('#IWantToTeach').LightingBox();
-
+console.log('lb step3');
 
 
 // setTimeout(() => {

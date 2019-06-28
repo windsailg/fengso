@@ -9,7 +9,7 @@ $(document).ready(function(){
    //SidebarControl
    $('#SidebarMenuBTN').click(function(){
       $('#SideBar').fadeIn(220);
-      noscroll.bind();
+      // noscroll.bind();
    })
 
    $('#SidebarMask , #SidebarClose').click(function(){
@@ -17,7 +17,7 @@ $(document).ready(function(){
       $('.type_list_block').fadeOut(220);
       $('.type_name_block , .type_list_block').removeClass('active');
       $('.icon').html('<i class="fas fa-angle-down"></i>');
-      noscroll.unbind();
+      // noscroll.unbind();
    })
 
    $('.type_name_block').click(function(){
