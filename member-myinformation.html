@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>峰碩資訊 - 會員專區 - 會員資訊</title>
+	<link rel="icon" href="img/favicon.png">
+
+    <!-- header -->
+    <link rel="stylesheet" href="css/fengso-header.css">
+    
+    <!-- Golbal -->
+    <link rel="stylesheet" href="css/fengso-lightingbox.css">
+    <link rel="stylesheet" href="css/fengso-common.css">
+    <link rel="stylesheet" href="css/jquery.cxcalendar.css">
+
+    <!-- This Page -->
+    <link rel="stylesheet" href="css/fengso-account.css">
+    
+    
+    <!-- Plugin -->
+    <link rel="stylesheet" href="css/focuspoint.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli|Source+Sans+Pro">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    
+    <script src="https://kit.fontawesome.com/9188edaa95.js"></script>
+      
+</head>
+    
+<body >
+   
+<div id="header" class="fengso-header "></div>
+
+    <div id="fengso-Member" class="member_account">
+
+        <div class="area member_control">
+            <div class="container">
+
+                <div class="bread_crumb_block">
+                    <ul class="bread_crumb">
+                        <li class="bread_crumb_item bc_first"><a href="#" target="_blank"><span class="home"><i class="fas fa-home"></i></span>首頁</a></li>
+
+                        <li class="bread_crumb_item"><span class="arrow"><i class="fas fa-angle-right"></i></span><a href="#" target="_blank">會員專區</a></li>
+
+                        <li class="bread_crumb_item bc_last"><span class="arrow"><i class="fas fa-angle-right"></i></span>我的課程</li>
+                    </ul>
+                </div>
+
+                <div class="user_data_block">
+                    <div class="user_data_container">
+
+                        <div class="avatar box">
+                            <div class="img_box">
+                                <img src="img/user-00.jpg">
+                            </div>
+                            <span class="edit btn"><i class="fas fa-camera"></i></span>
+                        </div>
+
+                        <div class="info_box">
+
+                            <div class="user_name title">
+                                User Name
+                                <span class="edit btn"><i class="fas fa-pen"></i></span>
+                            </div>
+                            <div class="joined_date subtitle"><i class="far fa-address-card"></i>2019年12月31日 加入</div>
+                    
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="tab_block">
+                    <ul id="MemberTabList" class="tab">
+                        <li class="tab_item" data-target="member-mycourse">我的課程</li>
+                        <li class="tab_item" data-target="member-myorder">我的訂單</li>
+                        <li class="tab_item active" data-target="member-myinformation">個人檔案</li>
+                        <li class="tab_item" data-target="member-myfavorite">我的收藏</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div id="TabTriggerContainer" class="tab_trigger_container">
+
+            <div class="tab_trigger_target member-myinformation">
+                <div class="area">
+                    <div class="container type_member type_myinfo ">
+
+
+                        <div class="myInfo_editor_block">
+
+                            <div class="info_block intro">
+                                <div class="title">個人介紹</div>
+                                
+                                <ul class="input_list">
+
+                                    <li class="input_block">
+                                        <div class="title name">峰碩顯示名稱</div>
+                                        <input type="text" spellcheck="false" class="input" placeholder="&#xf007; User Name"></input>
+                                    </li>
+
+                                    <li class="input_block">
+                                        <div class="title phone">自我介紹</div>
+                                        <textarea spellcheck="false" class="question_input content input" placeholder="限150字" maxlength="150"></textarea>
+                                    </li>
+
+
+                                </ul>
+
+                            </div>
+
+                            <hr>
+
+                            <div class="info_block info">
+                                <div class="title">個人資料</div>
+                                
+                                <ul class="input_list">
+                                    <li class="input_block">
+                                        <div class="title name">真實姓名</div>
+                                        <input type="text" spellcheck="false" class="input member_name" placeholder="&#xf007; User Name"></input>
+                                    </li>
+
+                                    <li class="input_block cols_3">
+                                            <div class="title mail">性別</div>
+                                                
+                                                <div class="inputs">
+                                                    <div class="radio_box">
+                                                        <input type="radio" id="sex-male" class="radio" name="default" value="男"></input>
+                                                        <label for="sex-male" class="label"></label>
+                                                    </div>
+                                                    <div class="title">男</div>
+                                                </div>
+
+                                                <div class="inputs">
+                                                    <div class="radio_box">
+                                                        <input type="radio" id="sex-female" class="radio" name="default" value="女"></input>
+                                                        <label for="sex-female" class="label"></label>
+                                                    </div>
+                                                    <div class="title">女</div>
+                                                </div>
+                                    </li>
+                                    
+                                    <li class="input_block cols_3">
+                                        <div class="col">
+                                            <div class="title phone">生日</div>
+                                            <input type="text" spellcheck="false" id="Birthday" class="input member_name"  placeholder="&#xf044; 2019/12/31"></input>
+                                        </div>
+                                    </li>
+
+                                    <div class="input_block">
+                                        <div class="title phone">個人電話</div>
+                                        <input type="text" spellcheck="false" class="input member_name" placeholder="&#xf095; 0915123456"></input>
+                                    </div>
+
+                                    <li class="input_block">
+                                        <div class="title phone">連絡地址</div>
+                                        <input type="text" spellcheck="false" class="input member_name" placeholder="&#xf2c1; 台北市中正區開封街一段32號"></input>
+                                    </li>
+
+                                </ul>
+
+                                
+                            </div>
+
+                            <hr>
+
+                            <div class="info_block password">
+                                <div class="title">變更密碼</div>
+                                
+                                <ul class="input_list">
+
+                                    <li class="input_block">
+                                        <div class="title name">輸入原密碼</div>
+                                        <input type="text" spellcheck="false" class="input member_name" placeholder="&#xf084; 請輸入舊密碼"></input>
+                                    </li>
+
+                                    <li class="input_block">
+                                        <div class="title phone">輸入新密碼</div>
+                                        <input type="text" spellcheck="false" class="input member_name" placeholder="&#xf023; 請輸入新密碼"></input>
+                                    </li>
+
+                                    <li class="input_block">
+                                        <div class="title phone">確認新密碼</div>
+                                        <input type="text" spellcheck="false" class="input member_name" placeholder="&#xf023; 請再次輸入新密碼"></input>
+                                    </li>
+                                    
+                                     <li class="input_block">
+                                         <button>儲存</button>
+                                    </li>
+
+                                </ul>
+
+                                
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>    
+
+        </div>
+
+    </div>
+
+<footer id="footer"></footer>
+
+
+<!-- Golbal -->
+<script src="js/jquery.min.js"></script>
+
+<script>
+    $('#header').load('header.html');        
+    $('#footer').load('footer.html');   
+</script>
+
+<!-- OnlyThisPage Plugin -->
+<script src="js/jquery.focuspoint.js"></script>
+<script src="js/jquery.lazy.min.js"></script>
+<script src="js/jquery.cxcalendar.min.js"></script>
+<script src="js/jquery.cxcalendar.languages.js"></script>
+
+
+<!-- OnlyThisPage -->
+<script src="js/jquery.filterizr.min.js"></script>
+<script src="js/fengso-account.js"></script>
+
+<script>
+
+    $('#Birthday').cxCalendar();
+   
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+
+</html>

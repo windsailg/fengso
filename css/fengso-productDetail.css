@@ -685,7 +685,7 @@
   overflow: hidden;
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
-  height: 40px;
+  max-height: 40px;
   width: 85%;
   padding: 4px 0;
 }
@@ -1065,10 +1065,10 @@
 }
 
 #fengso-productDetail .belt_blocks .belt_blocks_container > .price .col {
-  -webkit-transform: skewX(14deg);
-      -ms-transform: skewX(14deg);
-          transform: skewX(14deg);
-  padding: 34px 30px;
+  -webkit-transform: skewX(14deg) scale(1, 0.9);
+      -ms-transform: skewX(14deg) scale(1, 0.9);
+          transform: skewX(14deg) scale(1, 0.9);
+  padding: 15px 30px;
 }
 
 @media all and (max-width: 1301px) {
@@ -1085,6 +1085,8 @@
   position: unset;
   width: 100%;
   color: #444444;
+  line-height: 20px;
+  padding: 0px 0 6px 0;
 }
 
 @media all and (max-width: 1301px) {
@@ -1590,9 +1592,11 @@
   display: inline-block;
   float: left;
   width: 160px;
+  padding: 12px 0 8px 0;
   font-weight: 600;
   text-align: center;
   position: relative;
+  color: #535353;
   cursor: pointer;
 }
 

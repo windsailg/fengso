@@ -701,7 +701,7 @@
   overflow: hidden;
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
-  height: 40px;
+  max-height: 40px;
 }
 
 #fengso-ArticleList .course_list_block .course_block .teacher_block .intro .name {
@@ -716,7 +716,7 @@
   overflow: hidden;
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
-  height: 40px;
+  max-height: 40px;
 }
 
 #fengso-ArticleList .pager_block {

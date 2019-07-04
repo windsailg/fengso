@@ -512,6 +512,64 @@
                       
                         <div id="CourseRate" class="course_rate course_tabtarget">
 
+                                <div class="ask_title">
+                                    我要評價
+                                </div>
+                                <div class="course_discuss_blocks enter_block">
+
+                                    <div class="title rate_title">課程評分</div>
+
+                                    <div class="ratingStar">
+                                            <div class="rating-container">
+                                            <div id="RatingStars" class="rating">
+                                                <input type="radio" name="stars" id="star_5" value="5">
+                                                <label for="star_5"></label>
+
+                                                <input type="radio" name="stars" id="star_4.5" value="4.5">
+                                                <label for="star_4.5" class="halfstar"></label>
+
+                                                <input type="radio" name="stars" id="star_4" value="4">
+                                                <label for="star_4"></label>
+
+                                                <input type="radio" name="stars" id="star_3.5" value="3.5">
+                                                <label for="star_3.5" class="halfstar"></label>
+
+                                                <input type="radio" name="stars" id="star_3" value="3">
+                                                <label for="star_3"></label>
+
+                                                <input type="radio" name="stars" id="star_2.5" value="2.5">
+                                                <label for="star_2.5" class="halfstar"></label>
+
+                                                <input type="radio" name="stars" id="star_2" value="2">
+                                                <label for="star_2"></label>
+
+                                                <input type="radio" name="stars" id="star_1.5" value="1.5">
+                                                <label for="star_1.5" class="halfstar"></label>
+
+                                                <input type="radio" name="stars" id="star_1" value="1">
+                                                <label for="star_1"></label>
+
+                                                <input type="radio" name="stars" id="star_0.5" value="0.5">
+                                                <label for="star_0.5" class="halfstar"></label>
+
+                                                <input type="radio" name="stars" id="star_0" value="0">
+                                                <label for="star_0" class="hidden"></label>
+                                            </div>
+                                        </div>
+                                        <div id="RatingEvaluation" class="content evaluation">
+                                            0.0
+                                        </div>
+                                    </div>
+                                    <div class="title quest_title">評價標題</div>
+                                    <input id="QuestionTitleInput" type="text" class="question_input title input" maxlength="50">
+                                    
+                                    <div class="title quest_content">評價內容</div>
+                                    <textarea  id="QuestionContentInput"  class="question_input content input"></textarea>
+                                    
+                                    <button>送出評價</button>
+                                </div>
+
+
                                 <h3 class="course_rate_title">
                                         共 108 則評價 <span><i class="fas fa-star"></i>5.0</span>
                                  </h3>
@@ -624,21 +682,11 @@
                                     </div>
                                  </div>
 
-
-
-
                                  <div class="loading_more">
                                      載入更多評價
                                  </div>
                                  
-                                 <div class="course_discuss_blocks enter_quest">
-                                 
-                                         <div class="quest_title">評價敘述</div>
-                                         <input id="QuestionTitleInput" type="text" class="question_input title input" >
-                                         <div class="quest_content">評價內容</div>
-                                         <textarea  id="QuestionContentInput"  class="question_input content input"></textarea>
-                                         <button>確認送出</button>
-                                     </div>
+
                                  
                         </div>
                         
@@ -661,6 +709,38 @@
                                               <option value="全部單元">
                                               <option value="全部單元">
                                             </datalist>
+                                        </div>
+
+                                        <div class="ask_title">
+                                            我要發問
+                                        </div>
+                                        <div class="course_discuss_blocks enter_block">
+
+                                            <div class="title chapter_title">提問章節</div>
+
+                                            <div class="selects">
+                                                <select class="select chapter_selecter" data-province="請選擇">
+                                                    <option value="請選擇">選擇課程章節</option>
+                                                    <option value="第一章">第一章</option>
+                                                    <option value="第二章">第二章</option>
+                                                    <option value="第三章">第三章</option>
+                                                </select>
+                                                <select class="select unit_selecter" data-province="請選擇">
+                                                    <option value="請選擇">選擇課程單元</option>
+                                                    <option value="第一單元">第一單元</option>
+                                                    <option value="第二單元">第二單元</option>
+                                                    <option value="第三單元">第三單元</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="title quest_title">問題名稱</div>
+                                            <input id="QuestionTitleInput" type="text" class="question_input title input" maxlength="50">
+                                            
+                                            <div class="title quest_content">內容描述</div>
+
+                                            <textarea  id="QuestionContentInput"  class="question_input content input"></textarea>
+                                            
+                                            <button>確認送出</button>
                                         </div>
                                     </div>
                                     
@@ -831,20 +911,11 @@
                                     
                                     
                                     <div class="loading_more">
-                                        載入更多評價
+                                        載入更多問答
                                     </div>
                                     
                                     
-                                    <div class="ask_title">
-                                        我要發問
-                                    </div>
-                                    <div class="course_discuss_blocks enter_quest">
-                                        <div class="quest_title">問題名稱</div>
-                                        <input id="QuestionTitleInput" type="text" class="question_input title input" maxlength="50">
-                                        <div class="quest_content">內容描述</div>
-                                        <textarea  id="QuestionContentInput"  class="question_input content input"></textarea>
-                                        <button>確認送出</button>
-                                    </div>
+
                                     
                                     
                         </div>
@@ -888,11 +959,6 @@
     $('#header').load('header.html');        
     $('#footer').load('footer.html');   
 </script>
-<script src="js/lightingbox-fengso.js"></script>
-<script src="js/fengso-header.js"></script>
-
-
-
 
 <!-- OnlyThisPage Plugin -->
 <script src="js/jquery.focuspoint.js"></script>

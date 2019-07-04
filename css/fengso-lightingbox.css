@@ -475,8 +475,9 @@
 }
 
 .lightingbox .lightingbox_wrap.type2 {
-  top: calc(10% + 15px);
+  top: calc(10% + 70px);
   border-top-right-radius: 0;
+  z-index: 1001;
 }
 
 .lightingbox .btn_close {
