@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 .sidebar .container .sidebar_list_type .type_name_block {
   display: -webkit-box;
   display: -webkit-flex;

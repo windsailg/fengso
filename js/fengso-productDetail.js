@@ -1,5 +1,3 @@
-$('#header').load('header.html');        
-$('#footer').load('footer.html');    
 
 $(document).ready(function(){
 
@@ -75,63 +73,80 @@ $(document).ready(function(){
         $(thisTabTarget).fadeIn(350);    
    });
 
+   $('.course_discuss_blocks .trigger').click(function(){
+     
+      if($(this).prev('.content_box').hasClass('expand')){
+
+         $(this).prev('.content_box').removeClass('expand');
+         $(this).removeClass('expand');
+         $(this).html(' 展開 <i class="fas fa-angle-down"></i>');
+      }else{
+         $(this).prev('.content_box').addClass('expand');
+         $(this).addClass('expand');
+         $(this).html(' 收合 <i class="fas fa-angle-up"></i>');
+      }
+       
+   })
+   
 
       //rating function rate and evaluation
       $('#RatingStars label').click(function(){
+
+
          var Target = $(this);
          var RatingVal = Target.attr('for');
          var Evaluation = $('#RatingEvaluation');
 
          if(RatingVal == 'star_0'){
-            Evaluation.html('糟透了 :(( ');
+            Evaluation.html('0 糟透了 :(( ');
          }else if(RatingVal == 'star_0.5'){
-            Evaluation.html('真是糟 :( ');
+            Evaluation.html('0.5 真是糟 :( ');
          }else if(RatingVal == 'star_1'){
-            Evaluation.html('很糟，請在加油 ');
+            Evaluation.html('1.0 請在加油！');
          }else if(RatingVal == 'star_1.5'){
-            Evaluation.html('有很大的進步空間');
+            Evaluation.html('1.5 有很大的進步空間');
          }else if(RatingVal == 'star_2'){
-            Evaluation.html('進步空間很大');
+            Evaluation.html('2.0 還有進步空間');
          }else if(RatingVal == 'star_2.5'){
-            Evaluation.html('再加油！');
+            Evaluation.html('2.5 再加油！');
          }else if(RatingVal == 'star_3'){
-            Evaluation.html('普通');
+            Evaluation.html('3.0 還不錯');
          }else if(RatingVal == 'star_3.5'){
-            Evaluation.html('不錯');
+            Evaluation.html('3.5 Nice！');
          }else if(RatingVal == 'star_4'){
-            Evaluation.html('很棒 ');
+            Evaluation.html('4.0 很棒的課程！');
          }else if(RatingVal == 'star_4.5'){
-            Evaluation.html('棒透了！ ');
+            Evaluation.html('4.5 棒透了！ ');
          }else if(RatingVal == 'star_5'){
-            Evaluation.html('太好了 學到很多東西！ ');
+            Evaluation.html('5.0 太好了！  我學到很多東西！ ');
          }
 
       })
       //rating function mob
-      const labels = document.querySelectorAll('label');
-      const getInput = val => document.getElementById(`star_${val}`);
+      // const labels = document.querySelectorAll('label');
+      // const getInput = val => document.getElementById(`star_${val}`);
 
-      labels.forEach(label => {
+      // labels.forEach(label => {
 
-         label.addEventListener('touchstart', e => {
-            const targetInput = getInput(e.target.control.value);
-            targetInput.checked = true;
-            console.log(getInput)
-         })
+      //    label.addEventListener('touchstart', e => {
+      //       const targetInput = getInput(e.target.control.value);
+      //       targetInput.checked = true;
+      //       console.log(getInput)
+      //    })
 
-         label.addEventListener('touchmove', e => {
-            const touch = e.touches[0]
-            const targetLabel = document.elementFromPoint(touch.clientX, touch.clientY)
+      //    label.addEventListener('touchmove', e => {
+      //       const touch = e.touches[0]
+      //       const targetLabel = document.elementFromPoint(touch.clientX, touch.clientY)
 
-            if (!targetLabel || !targetLabel.htmlFor) {
+      //       if (!targetLabel || !targetLabel.htmlFor) {
                
-               return
+      //          return
                
-            }
+      //       }
 
-            const targetInput = document.getElementById(targetLabel.htmlFor)
-            targetInput.checked = true;
-         })
+      //       const targetInput = document.getElementById(targetLabel.htmlFor)
+      //       targetInput.checked = true;
+      //    })
          
-      })
+      // })
 });

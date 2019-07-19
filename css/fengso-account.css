@@ -1,5 +1,6 @@
 @charset "UTF-8";
-.area .container.type_member, #fengso-Member .user_data_block, #fengso-Member .user_data_block .user_data_container, #fengso-Member .tab_block, #fengso-Member .tags_block .tags_list, #fengso-Member .myCoursee_list_block .course_block, #fengso-Member .myCoursee_list_block .course_block .content_box > .tips > .tips_box, #fengso-Member .myCoursee_list_block .course_block .content_box > .controls, #fengso-Member .myCoursee_list_block .course_block .content_box > .controls .rate, #fengso-Member .course_list_block, #fengso-Member .myOrder_list_block > .course_block .block_head > .order_Info, #fengso-Member .myOrder_list_block > .course_block .block_body, #fengso-Member .myOrder_list_block > .course_block .block_body .content_box > .status_box, #fengso-Member .myOrder_list_block > .course_block .block_body .content_box > .status_box > .status, #fengso-Member .myOrder_list_block > .course_block .block_body .content_box > .controls, #fengso-Member .myOrder_list_block > .course_block .block_body .content_box > .controls .rate, #fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block, #fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block.cols_3, #fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block .inputs, #fengso-Member .myFavorite_list_block .course_block, #fengso-Member .myFavorite_list_block .course_block .content_box > .tips > .tips_box, #fengso-Member .myFavorite_list_block .course_block .content_box > .controls, #fengso-Member .myFavorite_list_block .course_block .content_box > .controls .item_box, #fengso-Member .myFavorite_list_block .course_block .content_box > .controls .item_box .rate, #fengso-Member .myFavorite_list_block .course_block .content_box > .controls > .buysoon, #fengso-Member .myFavorite_list_block .course_block .content_box > .controls > .buysoon .elem, #fengso-Member .myFavorite_list_block .course_block .content_box > .controls > .buysoon .cart, #fengso-Member .pager_block {
+@import url(https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+.area .container.type_member, #fengso-Member .user_data_block, #fengso-Member .user_data_block .user_data_container, #fengso-Member .tab_block, #fengso-Member .tags_block .tags_list, #fengso-Member .myCoursee_list_block .course_block, #fengso-Member .myCoursee_list_block .course_block .content_box > .tips > .tips_box, #fengso-Member .myCoursee_list_block .course_block .content_box > .controls, #fengso-Member .myCoursee_list_block .course_block .content_box > .controls .rate, #fengso-Member .course_list_block, #fengso-Member .myOrder_list_block > .course_block .block_head > .order_Info, #fengso-Member .myOrder_list_block > .course_block .block_body, #fengso-Member .myOrder_list_block > .course_block .block_body > .orders, #fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item, #fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .controls, #fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .controls .rate, #fengso-Member .myOrder_list_block > .course_block .block_body > .status, #fengso-Member .myOrder_list_block > .course_block .block_body > .status > .status_item, #fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block, #fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block.cols_3, #fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block .inputs, #fengso-Member .myFavorite_list_block .course_block, #fengso-Member .myFavorite_list_block .course_block .content_box > .tips > .tips_box, #fengso-Member .myFavorite_list_block .course_block .content_box > .controls, #fengso-Member .myFavorite_list_block .course_block .content_box > .controls .item_box, #fengso-Member .myFavorite_list_block .course_block .content_box > .controls .item_box .rate, #fengso-Member .myFavorite_list_block .course_block .content_box > .controls > .buysoon, #fengso-Member .myFavorite_list_block .course_block .content_box > .controls > .buysoon .elem, #fengso-Member .myFavorite_list_block .course_block .content_box > .controls > .buysoon .cart, #fengso-Member .pager_block {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -20,7 +21,7 @@
           align-items: center;
 }
 
-#fengso-Member .myCoursee_list_block, #fengso-Member .myOrder_list_block, #fengso-Member .myOrder_list_block > .course_block .block_body .content_box, #fengso-Member .myFavorite_list_block {
+#fengso-Member .myCoursee_list_block, #fengso-Member .myOrder_list_block, #fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box, #fengso-Member .myFavorite_list_block {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1135,7 +1136,7 @@
   display: inline-block;
   float: left;
   width: 100%;
-  margin: 0px 0 40px 0;
+  margin: 0px 0 25px 0;
   padding: 15px 0 25px 0;
 }
 
@@ -1145,7 +1146,8 @@
             box-sizing: border-box;
     display: block;
     width: 100%;
-    margin: 0px 0 40px 0;
+    margin: 0px 0 18px 0;
+    padding: 15px 10px 20px;
   }
 }
 
@@ -1176,101 +1178,14 @@
   line-height: 22px;
 }
 
+@media all and (max-width: 780px) {
+  #fengso-Member .myOrder_list_block > .course_block .block_head > .order_Info > .order_item {
+    width: 100%;
+    padding: 3px 0;
+  }
+}
+
 #fengso-Member .myOrder_list_block > .course_block .block_body {
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-  padding: 20px 25px;
-  border: 1px solid #c5c5c5;
-  border-width: 0px 1px 1px 1px;
-  height: 220px;
-}
-
-@media all and (max-width: 780px) {
-  #fengso-Member .myOrder_list_block > .course_block .block_body {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    display: block;
-    width: 100%;
-    height: unset;
-    padding: 12px 0px;
-  }
-}
-
-#fengso-Member .myOrder_list_block > .course_block .block_body .image_box {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: block;
-  float: left;
-  width: 320px;
-  height: 180px;
-}
-
-#fengso-Member .myOrder_list_block > .course_block .block_body .image_box img {
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
-}
-
-#fengso-Member .myOrder_list_block > .course_block .block_body .image_box img:hover {
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-@media all and (max-width: 780px) {
-  #fengso-Member .myOrder_list_block > .course_block .block_body .image_box {
-    width: 100%;
-    height: 54vw;
-  }
-}
-
-#fengso-Member .myOrder_list_block > .course_block .block_body .content_box {
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: calc(100% - 335px);
-  overflow: hidden;
-  padding: 0 15px;
-  height: 100%;
-}
-
-@media all and (max-width: 781px) {
-  #fengso-Member .myOrder_list_block > .course_block .block_body .content_box {
-    width: 100%;
-    padding: 15px  10px 5px;
-  }
-}
-
-#fengso-Member .myOrder_list_block > .course_block .block_body .content_box > .title {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: block;
-  width: 100%;
-  font-size: 18px;
-  font-weight: 600;
-  color: #5c5c5c;
-  line-height: 29px;
-  height: 52px;
-  overflow: hidden;
-}
-
-#fengso-Member .myOrder_list_block > .course_block .block_body .content_box > .title a {
-  color: #5c5c5c;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  display: -webkit-box;
-  overflow: hidden;
-}
-
-#fengso-Member .myOrder_list_block > .course_block .block_body .content_box > .status_box {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
@@ -1280,16 +1195,134 @@
       -ms-flex-align: end;
           align-items: flex-end;
   width: 100%;
-  padding: 0px 0;
+  padding: 20px 25px;
+  border: 1px solid #c5c5c5;
+  border-width: 0px 1px 1px 1px;
+  min-height: 160px;
+  overflow: hidden;
 }
 
-@media all and (max-width: 861px) {
-  #fengso-Member .myOrder_list_block > .course_block .block_body .content_box > .status_box {
-    padding: 15px 0;
+@media all and (max-width: 780px) {
+  #fengso-Member .myOrder_list_block > .course_block .block_body {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 12px 0px;
   }
 }
 
-#fengso-Member .myOrder_list_block > .course_block .block_body .content_box > .status_box > .tags {
+#fengso-Member .myOrder_list_block > .course_block .block_body > .orders {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 72%;
+  overflow: hidden;
+}
+
+@media all and (max-width: 1301px) {
+  #fengso-Member .myOrder_list_block > .course_block .block_body > .orders {
+    width: 100%;
+  }
+}
+
+#fengso-Member .myOrder_list_block > .course_block .block_body > .orders > a {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  overflow: visible;
+  min-height: 100px;
+}
+
+#fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin: 12px 0;
+}
+
+#fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item .image_box {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  float: left;
+  width: 220px;
+  height: 120px;
+}
+
+#fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item .image_box > img {
+  -webkit-transition: 0.3s all ease-in-out;
+  -o-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+}
+
+#fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item .image_box > img:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+@media all and (max-width: 780px) {
+  #fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item .image_box {
+    width: 100%;
+    height: 54vw;
+  }
+}
+
+#fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: calc(100% - 220px);
+  overflow: hidden;
+  padding: 0 15px;
+  height: 100%;
+}
+
+@media all and (max-width: 781px) {
+  #fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box {
+    width: 100%;
+    padding: 15px  10px 5px;
+  }
+}
+
+#fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .title {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  color: #5c5c5c;
+  line-height: 29px;
+  height: 52px;
+  overflow: hidden;
+  margin: 0 0 18px 0;
+}
+
+#fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .title a {
+  color: #5c5c5c;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+}
+
+#fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .tags {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  float: left;
   padding: 5px 12px;
   margin: 0 15px 0 0;
   background: #FF7757;
@@ -1297,28 +1330,7 @@
   border-radius: 5px;
 }
 
-#fengso-Member .myOrder_list_block > .course_block .block_body .content_box > .status_box > .status {
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border: 1px solid #c5c5c5;
-  padding: 28px 40px;
-  margin-top: 20px;
-}
-
-@media all and (max-width: 861px) {
-  #fengso-Member .myOrder_list_block > .course_block .block_body .content_box > .status_box > .status {
-    padding: 15px 20px;
-  }
-}
-
-#fengso-Member .myOrder_list_block > .course_block .block_body .content_box > .status_box > .status > .price {
-  color: #FF7757;
-  padding: 0 10px 0;
-}
-
-#fengso-Member .myOrder_list_block > .course_block .block_body .content_box > .controls {
+#fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .controls {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
@@ -1336,7 +1348,7 @@
   overflow: hidden;
 }
 
-#fengso-Member .myOrder_list_block > .course_block .block_body .content_box > .controls .rate {
+#fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .controls .rate {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
@@ -1350,18 +1362,18 @@
   cursor: pointer;
 }
 
-#fengso-Member .myOrder_list_block > .course_block .block_body .content_box > .controls .rate:hover {
+#fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .controls .rate:hover {
   opacity: .8;
 }
 
-#fengso-Member .myOrder_list_block > .course_block .block_body .content_box > .controls .rate > i {
+#fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .controls .rate > i {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: inline-block;
   font-size: 30px;
 }
 
-#fengso-Member .myOrder_list_block > .course_block .block_body .content_box > .controls .rate > .title_box {
+#fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .controls .rate > .title_box {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: inline-block;
@@ -1369,7 +1381,7 @@
   padding: 5px 0 0 0;
 }
 
-#fengso-Member .myOrder_list_block > .course_block .block_body .content_box > .controls .rate > .title_box > .title {
+#fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .controls .rate > .title_box > .title {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: inline-block;
@@ -1381,14 +1393,14 @@
   padding: 0 0 2px 0;
 }
 
-#fengso-Member .myOrder_list_block > .course_block .block_body .content_box > .controls .rate > .title_box > .title a {
+#fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .controls .rate > .title_box > .title a {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: inline-block;
   padding: 1px;
 }
 
-#fengso-Member .myOrder_list_block > .course_block .block_body .content_box > .controls .rate > .title_box > .subtitle {
+#fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .controls .rate > .title_box > .subtitle {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: inline-block;
@@ -1400,8 +1412,84 @@
   line-height: 14px;
 }
 
-#fengso-Member .myOrder_list_block > .course_block .block_body .content_box > .controls > .hours {
+#fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .controls > .hours {
   color: #a5a5a5;
+}
+
+#fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .tags {
+  padding: 2px 12px;
+  margin: 0 15px 0 0;
+  background: #FF7757;
+  color: #fff;
+  border-radius: 5px;
+}
+
+#fengso-Member .myOrder_list_block > .course_block .block_body > .status {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 28%;
+  padding: 0px 0;
+}
+
+@media all and (max-width: 1301px) {
+  #fengso-Member .myOrder_list_block > .course_block .block_body > .status {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 450px;
+    padding: 0px 0px;
+  }
+}
+
+@media all and (max-width: 780px) {
+  #fengso-Member .myOrder_list_block > .course_block .block_body > .status {
+    width: 100%;
+    padding: 0px 15px;
+  }
+}
+
+#fengso-Member .myOrder_list_block > .course_block .block_body > .status > .status_item {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  border: 1px solid #c5c5c5;
+  padding: 20px 34px;
+  margin: 12px 0;
+}
+
+@media all and (max-width: 861px) {
+  #fengso-Member .myOrder_list_block > .course_block .block_body > .status > .status_item {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 12px 10px;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+#fengso-Member .myOrder_list_block > .course_block .block_body > .status > .status_item > .price {
+  font-size: 19px;
+  color: #FF7757;
+  padding: 0 0px 0 10px;
+}
+
+#fengso-Member .myOrder_list_block > .course_block .block_body > .status > .status_item > .type2 {
+  padding: 0 0px 0 10px;
 }
 
 #fengso-Member .myInfo_editor_block {

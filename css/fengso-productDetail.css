@@ -1,3 +1,4 @@
+@import url(https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 #fengso-productDetail .belt_blocks .belt_blocks_container > .belt_block, #fengso-productDetail .belt_blocks .belt_blocks_container > .belt_elements, #fengso-productDetail .belt_blocks .belt_blocks_container > .belt_elements > .belt_block_item > .count_box, #fengso-productDetail .belt_blocks .belt_blocks_container > .belt_elements > .belt_block_item > .count_box > .count_item {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1625,7 +1626,7 @@
 @media all and (max-width: 681px) {
   #fengso-productDetail .intro_block .intro_tab_block .intro_tab .tab_item {
     width: 50%;
-    padding: 20px 0 0;
+    padding: 20px 0 10px;
   }
   #fengso-productDetail .intro_block .intro_tab_block .intro_tab .tab_item:nth-child(odd)::after {
     content: ' ';

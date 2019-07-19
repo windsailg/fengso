@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 .lightingbox .lightingbox_wrap .lightingbox_container .lightingbox_body, .lightingbox .lightingbox_wrap .lightingbox_container .lightingbox_body .input_blocks, .lightingbox .btn_close.type2 {
   display: -webkit-box;
   display: -webkit-flex;
