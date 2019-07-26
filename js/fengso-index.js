@@ -4,12 +4,12 @@
 $(document).ready(function(){
    
 
-console.log('lb step0');
+
 (function ($) {
    
    //點擊後將資料嵌入動態產生的容器內
    $.fn.LightingBoxType2 = function(options) {
-      console.log('lb step1');
+
 
 
       //init - 開始建立容器
@@ -50,14 +50,14 @@ console.log('lb step0');
 
       //type2
       var newlb = document.createElement('div');
-      newlb.setAttribute('id', 'LightingBoxType2') ;
+    //   newlb.setAttribute('id', 'LightingBoxType2') ;
       newlb.setAttribute('class', 'lightingbox type2') ;
 
       var lbwrap = document.createElement('div');
       lbwrap.setAttribute('class', 'lightingbox_wrap type2') ;
 
       var lbcontainer = document.createElement('div');
-      lbcontainer.setAttribute('id', 'LightingBoxInnerContainerType2') ;
+    //   lbcontainer.setAttribute('id', 'LightingBoxInnerContainerType2') ;
       lbcontainer.setAttribute('class', 'lightingbox_container') ;
 
 
@@ -126,9 +126,6 @@ console.log('lb step0');
    //  }, options);
 
    //    var options = $.extend(defaluts,options);
-
-
-      this.click(function(options){
          var Target = $(this);
          //將創建的元素寫入容器
          Target.after(newlb);
@@ -141,9 +138,12 @@ console.log('lb step0');
          //lbbtntext.appendChild(textnode);
          var targetID = '#' + Target.data('content');
          var targetHtml = $(targetID).html();
-         $('#LightingBoxInnerContainerType2').html(targetHtml);
+         $('.lightingbox_container').html(targetHtml);
 
          btnFunction();
+
+      this.click(function(options){
+
          LightingBoxOpeningType2();
          
          console.log('lb success');
@@ -156,9 +156,7 @@ console.log('lb step0');
 }( jQuery ));
 
 //init
-btnFunction();
-
-
+    btnFunction();
 
 
    function btnFunction(){
@@ -185,18 +183,18 @@ btnFunction();
 
    }
 
-      function LightingBoxOpeningType2(BoxType){
-         $('#LightingBoxType2').fadeIn(220);
-   //noscroll.bind();
-      }
-      function LightingBoxOpening(BoxType){
-         $('#LightingBox').fadeIn(220);
-         //noscroll.bind();
-      }
-      function LightingBoxClosing(BoxType){
-         $('#LightingBox , #LightingBoxType2 , .user_lr').fadeOut(220);
-         //noscroll.unbind();
-      }
+    function LightingBoxOpeningType2(BoxType){
+        $('.lightingbox.type2').fadeIn(220);
+    //noscroll.bind();
+    }
+    function LightingBoxOpening(BoxType){
+        $('#LightingBox').fadeIn(220);
+        //noscroll.bind();
+    }
+    function LightingBoxClosing(BoxType){
+        $('#LightingBox , .lightingbox , .user_lr').fadeOut(220);
+        //noscroll.unbind();
+    }
 
 
 $(".lazy").Lazy({
@@ -503,9 +501,12 @@ function wrap_ellipsis(article_target,article_length){
 };
 
 
-console.log('lb step2');
-$('#IWantToTeach').LightingBoxType2();
-console.log('lb step3');
+// $('#IWantToTeach').LightingBoxType2();
+
+
+ $('#IWantToTeach').click(function(){
+      $('.lightingbox.type2').fadeToggle(250);
+ })
 
 
 // setTimeout(() => {

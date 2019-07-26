@@ -177,6 +177,15 @@ button:hover {
   opacity: .8;
 }
 
+button.type_gray {
+  background: #ddd;
+  color: #444;
+}
+
+button.shape {
+  border-radius: 0;
+}
+
 .img_box img {
   width: 100%;
 }

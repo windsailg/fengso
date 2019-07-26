@@ -322,6 +322,7 @@
 
 .lightingbox .lightingbox_wrap .lightingbox_container .lightingbox_body .check_block .checkbox_block input:checked ~ .checkmark {
   background-color: #FF7757;
+  border-color: #fff;
 }
 
 .lightingbox .lightingbox_wrap .lightingbox_container .lightingbox_body .check_block .checkbox_block input:checked ~ .checkmark:after {

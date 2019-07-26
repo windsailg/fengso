@@ -47,12 +47,10 @@ $(document).ready(function(){
 
 
 
-console.log('lb step0');
 (function ($) {
    
    //點擊後將資料嵌入動態產生的容器內
    $.fn.LightingBoxType2 = function(options) {
-      console.log('lb step1');
 
 
       //init - 開始建立容器
@@ -93,14 +91,14 @@ console.log('lb step0');
 
       //type2
       var newlb = document.createElement('div');
-      newlb.setAttribute('id', 'LightingBoxType2') ;
+      // newlb.setAttribute('id', 'LightingBoxType2') ;
       newlb.setAttribute('class', 'lightingbox type2') ;
 
       var lbwrap = document.createElement('div');
       lbwrap.setAttribute('class', 'lightingbox_wrap type2') ;
 
       var lbcontainer = document.createElement('div');
-      lbcontainer.setAttribute('id', 'LightingBoxInnerContainerType2') ;
+      // lbcontainer.setAttribute('id', 'LightingBoxInnerContainerType2') ;
       lbcontainer.setAttribute('class', 'lightingbox_container') ;
 
 
@@ -125,53 +123,6 @@ console.log('lb step0');
       lbmask.setAttribute('class', 'lightingbox_mask') ;
 
 
-
-      //type2
-      // var newlb_type2 = document.createElement('div');
-      // newlb_type2.setAttribute('id', 'LightingBoxType2') ;
-      // newlb_type2.setAttribute('class', 'lightingbox type2') ;
-
-      // var lbwrap_type2 = document.createElement('div');
-      // lbwrap_type2.setAttribute('class', 'lightingbox_wrap type2') ;
-
-      // var lbcontainer_type2 = document.createElement('div');
-      // lbcontainer_type2.setAttribute('id', 'LightingBoxInnerContainerType2') ;
-      // lbcontainer_type2.setAttribute('class', 'lightingbox_container') ;
-
-
-      // var lbbtnclose_type2 = document.createElement('span');
-      // lbbtnclose_type2.setAttribute('class', 'btn_close type2') ;
-
-      // var lbbtnclosebox = document.createElement('div');
-      // lbbtnclosebox.setAttribute('class', 'btn_close_box') ;
-
-      // var lbbtncloseelement_1 = document.createElement('span');
-      // lbbtncloseelement_1.setAttribute('class', 'c_deco cd1') ;
-
-      // var lbbtncloseelement_2 = document.createElement('span');
-      // lbbtncloseelement_2.setAttribute('class', 'c_deco cd2') ;
-
-      // var lbbtntext = document.createElement('span');
-      // lbbtntext.setAttribute('class', 'btn_close_text') ;
-
-      // var lbbtntextnode = document.createTextNode("關閉視窗");
-      
-      // var lbmask = document.createElement('div');
-      // lbmask.setAttribute('class', 'lightingbox_mask') ;
-
-   //  var defaluts  = $.extend( {
-   //    'default':function(){
-
-   //    },
-   //    'type2':function(){
-
-   //    }
-   //  }, options);
-
-   //    var options = $.extend(defaluts,options);
-
-
-      this.click(function(options){
          var Target = $(this);
          //將創建的元素寫入容器
          Target.after(newlb);
@@ -184,12 +135,17 @@ console.log('lb step0');
          //lbbtntext.appendChild(textnode);
          var targetID = '#' + Target.data('content');
          var targetHtml = $(targetID).html();
-         $('#LightingBoxInnerContainerType2').html(targetHtml);
+         $('.lightingbox_container').html(targetHtml);
 
-         btnFunction();
+         btnFunctionheader();
+
+
+      this.click(function(options){
+
          LightingBoxOpeningType2();
          
          console.log('lb success');
+
       })
 
 
@@ -198,16 +154,10 @@ console.log('lb step0');
    return this;
 }( jQuery ));
 
-//init
-btnFunction();
 
+btnFunctionheader()
 
-
-
-   function btnFunction(){
-
-      //Header Controls
-
+   function btnFunctionheader(){
 
       $('#HeaderLogin').click(function(){
          LightingBoxOpening();
@@ -219,17 +169,19 @@ btnFunction();
          $('#RegisterBlock').show();
       })
 
-      //LB Control
       $('.lightingbox_mask , .btn_close').click(function(){
          LightingBoxClosing();
       })
 
-
-
    }
 
+      //LB Control
+
+
+
+
       function LightingBoxOpeningType2(BoxType){
-         $('#LightingBoxType2').fadeIn(220);
+         $('.lightingbox.type2').fadeIn(220);
    //noscroll.bind();
       }
       function LightingBoxOpening(BoxType){
@@ -237,8 +189,9 @@ btnFunction();
          //noscroll.bind();
       }
       function LightingBoxClosing(BoxType){
-         $('#LightingBox , #LightingBoxType2 , .user_lr').fadeOut(220);
+         $('#LightingBox , .lightingbox.type2 , .user_lr').fadeOut(220);
          //noscroll.unbind();
+
       }
 
 

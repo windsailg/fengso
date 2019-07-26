@@ -48,6 +48,19 @@ var resizeTimer = null;
          }, 500);
    })
 
+// $('#SideBarITeach').ightingBoxType2();
+// $('#HeaderITeach').LightingBoxType2();
+
+ $('#SideBarITeach').click(function(){
+      // $(this).next().fadeToggle(300);
+      $('.lightingbox.type2').fadeToggle(250);
+ })
+ $('#HeaderITeach').click(function(){
+      // $(this).next().fadeToggle(300);
+      $('.lightingbox.type2').fadeToggle(250);
+ })
+
+ 
 
 });
 
