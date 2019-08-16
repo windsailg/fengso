@@ -102,7 +102,7 @@
   font-size: calc(26px + 0.7vw);
   font-weight: 600;
   color: #3b4952;
-  padding: 40px 0;
+  padding: 30px 0;
   line-height: 38px;
 }
 
@@ -114,7 +114,7 @@
   font-size: calc(18px + 0.5vw);
   font-weight: 600;
   color: #3b4952;
-  padding: 40px 0;
+  padding: 20px 0;
 }
 
 #FengsoPasswordSetting .subtitle_block > .subtitle {
@@ -129,11 +129,73 @@
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  padding: 0 0 20px 0;
+  padding: 10px 0;
   width: 100%;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-#FengsoPasswordSetting .input_block > .input_name {
+#FengsoPasswordSetting .input_block > .col {
+  overflow: hidden;
+  width: 98%;
+}
+
+#FengsoPasswordSetting .input_block > .col2 {
+  overflow: hidden;
+  width: 49%;
+}
+
+#FengsoPasswordSetting .input_block > .col3 {
+  overflow: hidden;
+  width: 32.66667%;
+}
+
+#FengsoPasswordSetting .input_block > .col4 {
+  overflow: hidden;
+  width: 24.5%;
+}
+
+#FengsoPasswordSetting .input_block > .col5 {
+  overflow: hidden;
+  width: 19.6%;
+}
+
+#FengsoPasswordSetting .input_block > .col6 {
+  overflow: hidden;
+  width: 16.33333%;
+}
+
+#FengsoPasswordSetting .input_block.cols {
+  width: 400px;
+}
+
+@media all and (max-width: 400px) {
+  #FengsoPasswordSetting .input_block.cols {
+    width: 100%;
+  }
+}
+
+#FengsoPasswordSetting .input_block .title {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  padding: 5px 0 0;
+  font-weight: unset;
+  font-size: 16px;
+  text-align: left;
+}
+
+@media all and (max-width: 681px) {
+  #FengsoPasswordSetting .input_block .title.dp_tab {
+    display: none;
+  }
+}
+
+#FengsoPasswordSetting .input_block .input_name {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -141,7 +203,7 @@
   padding: 10px 0 5px;
 }
 
-#FengsoPasswordSetting .input_block > .input {
+#FengsoPasswordSetting .input_block .input {
   font-family: 'Century Gothic','Arial','Source Sans Pro' , 'Muli' ,'微軟正黑體','FontAwesome', '新細明體';
   -webkit-transition: 0.3s all ease-in-out;
   -o-transition: 0.3s all ease-in-out;
@@ -152,7 +214,7 @@
   text-decoration: none;
   width: 100%;
   max-width: 650px;
-  margin: 15px auto 10px;
+  margin: 8px auto 6px;
   padding: 8px 15px;
   border-width: 1px;
   border-style: solid;
@@ -162,65 +224,67 @@
   letter-spacing: 1px;
 }
 
-#FengsoPasswordSetting .input_block > .input::-webkit-input-placeholder {
+#FengsoPasswordSetting .input_block .input::-webkit-input-placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #919191;
   opacity: 0.9;
   /* Firefox */
 }
 
-#FengsoPasswordSetting .input_block > .input::-moz-placeholder {
+#FengsoPasswordSetting .input_block .input::-moz-placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #919191;
   opacity: 0.9;
   /* Firefox */
 }
 
-#FengsoPasswordSetting .input_block > .input:-ms-input-placeholder {
+#FengsoPasswordSetting .input_block .input:-ms-input-placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #919191;
   opacity: 0.9;
   /* Firefox */
 }
 
-#FengsoPasswordSetting .input_block > .input::-ms-input-placeholder {
+#FengsoPasswordSetting .input_block .input::-ms-input-placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #919191;
   opacity: 0.9;
   /* Firefox */
 }
 
-#FengsoPasswordSetting .input_block > .input::placeholder {
+#FengsoPasswordSetting .input_block .input::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #919191;
   opacity: 0.9;
   /* Firefox */
 }
 
-#FengsoPasswordSetting .input_block > .input:-ms-input-placeholder {
+#FengsoPasswordSetting .input_block .input:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: #919191;
 }
 
-#FengsoPasswordSetting .input_block > .input ::-ms-input-placeholder {
+#FengsoPasswordSetting .input_block .input ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: #919191;
 }
 
-#FengsoPasswordSetting .input_block > .input:focus {
+#FengsoPasswordSetting .input_block .input:focus {
   -webkit-box-shadow: 0px 0px 14px rgba(255, 149, 11, 0.466);
           box-shadow: 0px 0px 14px rgba(255, 149, 11, 0.466);
 }
 
-#FengsoPasswordSetting .input_block > .input.fail {
+#FengsoPasswordSetting .input_block .input.fail {
+  border-color: #c40303;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#FengsoPasswordSetting .input_block .input.fail[type="text"]:focus {
   border-color: #c40303;
 }
 
-#FengsoPasswordSetting .input_block > .input.fail[type="text"]:focus {
-  border-color: #c40303;
-}
-
-#FengsoPasswordSetting .input_block > .fail_info {
+#FengsoPasswordSetting .input_block .fail_info {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;

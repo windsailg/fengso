@@ -1,5 +1,26 @@
 @charset "UTF-8";
 @import url(https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+.nothing_block, .nothing_block .nothing {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -186,8 +207,42 @@ button.shape {
   border-radius: 0;
 }
 
+.nothing_block {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  padding: 30px 0px;
+  position: relative;
+}
+
+@media all and (max-width: 861px) {
+  .nothing_block {
+    padding: 30px 15px;
+  }
+}
+
+.nothing_block .nothing {
+  letter-spacing: 3px;
+  color: #888;
+  font-size: 22px;
+  padding: 80px 0px;
+  max-height: 260px;
+  width: 100%;
+  border: 1px solid #ccc;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .img_box img {
   width: 100%;
+}
+
+.tdu {
+  text-decoration: underline;
 }
 
 .bread_crumb_block {

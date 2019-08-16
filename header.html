@@ -120,11 +120,12 @@
 	</div>
 
 
-	<div id="LightingBoxType2" class="lightingbox type2">
+	<!-- <div id="LightingBoxType2" class="lightingbox type2">
 		<div class="lightingbox_wrap type2">
 			<div id="LightingBoxInnerContainerType2" class="lightingbox_container">
 
 			</div>
+
 			<span class="btn_close type2">
 				<div class="btn_close_box">
 					<span class="c_deco cd1"></span>
@@ -132,9 +133,12 @@
 				</div>
 				<span class="btn_close_text">關閉視窗</span>
 			</span>
+
 		</div>
 		<div class="lightingbox_mask"></div>
-	</div>
+	</div> -->
+
+	
 
 	<div id="SideBar" class="sidebar">
 		<div class="container">
@@ -181,11 +185,75 @@
 			</div>
 
 			<div class="sidebar_list_type">
-				<a href="#" target="_blank" >
-					<div class="type_name_block">
+					<div id="SideBarITeach" class="type_name_block" data-content="SideBarITeachContent" >
 						<span class="name">成為名師</span>
 					</div>
-				</a>
+
+					<!-- <div  class="lightingbox type2"> 
+							<div class="lightingbox_wrap type2">
+								<div  class="lightingbox_container">
+									<div id="ITeachContainer" class="teach_container">
+
+										<div class="title teacher_apply">講師申請</div>
+										
+										<ul class="input_list">
+												<li class="input_block">
+													<div class="title name">真實姓名</div>
+													<input type="text" spellcheck="false" class="input member_name" placeholder="&#xf007; User Name"></input>
+												</li>
+
+												<li class="input_block">
+													<div class="col2">
+														<div class="title mail">聯絡信箱</div>
+														<input type="text" spellcheck="false" class="input member_name" placeholder="&#xf0e0; example@gmail.com"></input>
+													</div>
+													<div class="col2">
+														<div class="title phone">個人電話</div>
+														<input type="text" spellcheck="false" class="input member_name" placeholder="&#xf095; 0912345678"></input>
+													</div>
+												</li>
+
+												<li class="input_block">
+													<div class="col2">
+															<div class="title course_name">預計課名</div>
+															<input type="text" spellcheck="false" class="input member_name" placeholder="&#xf044; Course name"></input>
+													</div>
+													<div class="col2">
+														<div class="title clock">預計時數</div>
+														<input type="text" spellcheck="false" class="input member_name" placeholder="&#xf017; 請填入數字(以分鐘為單位)"></input>
+													</div>
+												</li>
+
+										</ul>
+
+										<div class="tips_block">
+												<span class="title">備註：</span>
+												<ul class="list tips_list">
+													<li class="list_item tip">1.請務必填寫正確資料，以利峰碩與您聯繫。</li> 
+													<li class="list_item tip">2.峰碩在收到您的申請表後，將會儘速安排專人與您聯繫。</li> 
+													<li class="list_item tip">若有任何問題，歡迎聯繫<a class="type2" href="#" target="_blank">service.fengso@gmail.com</a></li> 
+												</ul>
+										</div>
+										
+										<div class="btns">
+												<button>確認送出</button>
+										</div>
+
+									</div>
+								</div>
+
+								<span class="btn_close type2">
+									<div class="btn_close_box">
+										<span class="c_deco cd1"></span>
+										<span class="c_deco cd2" ></span>
+									</div>
+									<span class="btn_close_text">關閉視窗</span>
+								</span>
+
+							</div>
+							<div class="lightingbox_mask"></div>
+					</div>  -->
+					
 			</div>
 
 			<span id="SidebarClose" class="btn_close">
@@ -311,9 +379,13 @@
 	
 									</div>
 							</li>
-							<li class="header_list_item">
-									<a href="#">成為名師</a>
+							<li  id="HeaderITeach" class="header_list_item" data-content="HeaderITeachContent">
+									成為名師
 							</li>
+
+
+
+
 						</ul>
 			
 						<div class="user_control">
@@ -349,12 +421,81 @@
 						
 				</nav>
 				
+
 	</div>
+
+
+	<div  class="lightingbox type2"> 
+			<div class="lightingbox_wrap type2">
+				<div  class="lightingbox_container">
+					<div id="ITeachContainer" class="teach_container">
+
+						<div class="title teacher_apply">講師申請</div>
+						
+						<ul class="input_list">
+								<li class="input_block">
+									<div class="title name">真實姓名</div>
+									<input type="text" spellcheck="false" class="input member_name" placeholder="&#xf007; User Name"></input>
+								</li>
+
+								<li class="input_block">
+									<div class="col2">
+										<div class="title mail">聯絡信箱</div>
+										<input type="text" spellcheck="false" class="input member_name" placeholder="&#xf0e0; example@gmail.com"></input>
+									</div>
+									<div class="col2">
+										<div class="title phone">個人電話</div>
+										<input type="text" spellcheck="false" class="input member_name" placeholder="&#xf095; 0912345678"></input>
+									</div>
+								</li>
+
+								<li class="input_block">
+									<div class="col2">
+											<div class="title course_name">預計課名</div>
+											<input type="text" spellcheck="false" class="input member_name" placeholder="&#xf044; Course name"></input>
+									</div>
+									<div class="col2">
+										<div class="title clock">預計時數</div>
+										<input type="text" spellcheck="false" class="input member_name" placeholder="&#xf017; 請填入數字(以分鐘為單位)"></input>
+									</div>
+								</li>
+
+						</ul>
+
+						<div class="tips_block">
+								<span class="title">備註：</span>
+								<ul class="list tips_list">
+									<li class="list_item tip">1.請務必填寫正確資料，以利峰碩與您聯繫。</li> 
+									<li class="list_item tip">2.峰碩在收到您的申請表後，將會儘速安排專人與您聯繫。</li> 
+									<li class="list_item tip">若有任何問題，歡迎聯繫<a class="type2" href="#" target="_blank">service.fengso@gmail.com</a></li> 
+								</ul>
+						</div>
+						
+						<div class="btns">
+								<button>確認送出</button>
+						</div>
+
+					</div>
+				</div>
+
+				<span class="btn_close type2">
+					<div class="btn_close_box">
+						<span class="c_deco cd1"></span>
+						<span class="c_deco cd2" ></span>
+					</div>
+					<span class="btn_close_text">關閉視窗</span>
+				</span>
+
+			</div>
+			<div class="lightingbox_mask"></div>
+	</div> 
+
+
 
 	<div class="header_marginer"></div>
 
-	
-
+<script src="js/lightingbox-fengso.js"></script>
+<script src="js/fengso-header.js"></script>
 
 </body>
 

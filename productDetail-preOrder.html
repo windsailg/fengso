@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="css/fengso-productDetail.css">
     <link rel="stylesheet" href="css/fengso-productDetail-preOrder.css">
     <link rel="stylesheet" href="css/fengso-productDetail-course_style.css">
-    <link rel="stylesheet" href="css/fengso-productDetail-course_rank.css">
+    <link rel="stylesheet" href="css/fengso-productDetail-courseDetail_style.css">
     
     <!-- Plugin -->
     <link rel="stylesheet" href="css/focuspoint.css">
@@ -465,47 +465,398 @@
 
                     <div class="intro_tab_block">
                         <ul id="CourseContentTab" class="intro_tab">
-                            <li class="tab_item active"><a href="#">課程簡介</a></li>
-                            <li class="tab_item"><a href="#">預計單元</a></li>
-                            <li class="tab_item"><a href="#">留言討論</a></li>
+                            <li class="tab_item active" data-target="course_intro">課程簡介</li>
+                            <li class="tab_item" data-target="course_qa">購課前問答</li>
+                            <li class="tab_item" data-target="course_unit">預計單元</li>
                         </ul>
                         <hr>
                     </div>
                     
 
-                    <div class="course_intro_main_content">
+                    <div id="CourseMainContent" class="course_intro_main_content">
 
-                        <h3 class="style-h2">
-                            課程核心
-                        </h3>
-                        <hr>
-                        <p class="style-p">
-                            電子學大部分的章節都是與放大器有關從單級、多級、差動、頻率響應、回授、穩定度、CMOS OP等都是與放大器直接相關的，要學好一定要先知道各單元的特性是什麼，為什麼有這個單元,其要傳達的觀念是什麼,都必須要搞懂釐清才行！
-                            電子學大部分的章節都是與放大器有關從單級、多級、差動、頻率響應、回授、穩定度、CMOS OP等都是與放大器直接相關的，要學好一定要先知道各單元的特性是什麼，為什麼有這個單元,其要傳達的觀念是什麼,都必須要搞懂釐清才行！
-                        </p>
+                        <div id="CourseIntro" class="course_intro course_tabtarget">
+                                <h3 class="style-h2">
+                                        課程核心
+                                    </h3>
+                                    <hr>
+                                    <p class="style-p">
+                                        電子學大部分的章節都是與放大器有關從單級、多級、差動、頻率響應、回授、穩定度、CMOS OP等都是與放大器直接相關的，要學好一定要先知道各單元的特性是什麼，為什麼有這個單元,其要傳達的觀念是什麼,都必須要搞懂釐清才行！
+                                        電子學大部分的章節都是與放大器有關從單級、多級、差動、頻率響應、回授、穩定度、CMOS OP等都是與放大器直接相關的，要學好一定要先知道各單元的特性是什麼，為什麼有這個單元,其要傳達的觀念是什麼,都必須要搞懂釐清才行！
+                                    </p>
+                                
+                                    <h3 class="style-h2">
+                                        課程規劃
+                                    </h3>
+                                    <hr>
+                                    
+                                    <div class="style-tb">
+                                        <div>
+                                            "商業模式畫布是一種「框架」，他將商業模式中的元素標準化成９個模塊，並強調元素間的相互作用。"
+                                        </div>
+                                    </div>
+                                    
+                                        分別以：
+                                    <ul class="style-ul">
+                                        <li>1.目標客層——企業或機構所服務的一個或多個客戶分類群體</li>
+                                        <li>2.價值主張——透過價值主張來解決客戶難題和滿足客戶需求</li>
+                                        <li>3.通路管道——通過溝通、分銷和銷售通路向顧客傳遞價值主張</li>
+                                        <li>4.顧客關係——在每一個客戶細分市場建立和維繫顧客關係</li>
+                                        <li>5.收入來源——收入來源產生於成功提供給客戶的價值主張</li>
+                                    </ul>
+                        </div>
+                      
+                        <div id="CourseRate" class="course_qa course_tabtarget">
 
-                        <h3 class="style-h2">
-                            課程規劃
-                        </h3>
-                        <hr>
-                        
-                        <div class="style-tb">
-                            <div>
-                                "商業模式畫布是一種「框架」，他將商業模式中的元素標準化成９個模塊，並強調元素間的相互作用。"
+                            <div class="course_discuss_inputs_block">
+                                
+                                    <div class="course_discuss_search">
+                                        <input id="DiscussSearchInput" type="text" class="search_input" placeholder="搜尋看看，您的問題可能已經有人問過囉..."></input>
+                                        <span id="DiscussSearchStart" class="search_start"><i class="fas fa-search"></i></span>
+                                    </div>
+
+                                    <div class="course_discuss_picker">
+                                        <select class="picker_date" data-province="日期最新">
+                                            <option value="日期最新">日期最新</option>
+                                            <option value="日期最舊">日期最舊</option>
+                                        </select>
+                                        <input class="picker_unit" list="type" name="types" value="全部單元">
+                                        <datalist id="type">
+                                            <option value="全部單元">
+                                            <option value="全部單元">
+                                        </datalist>
+                                    </div>
+
+                                    <div class="ask_title">
+                                        我要發問
+                                    </div>
+
+                                    <div class="course_discuss_blocks enter_block">
+
+
+                                        <div class="title quest_title">問題名稱</div>
+                                        <input id="QuestionTitleInput" type="text" class="question_input title input" maxlength="50">
+                                        
+                                        <div class="title quest_content">內容描述</div>
+
+                                        <textarea  id="QuestionContentInput"  class="question_input content input"></textarea>
+                                        
+                                        <div class="btns">
+                                            <button>確認送出</button>
+                                        </div>
+                                        
+                                    </div>
+
                             </div>
+                                
+                            <div class="course_discuss_blocks">
+                            
+
+                                <div class="course_discuss_block my_discuss">
+                            
+                                        <div class="avatar_box col2 ">
+                                            <div class="avatar img_box">
+                                                <img src="img/user-03.jpg">
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="content_box expand col2 ">
+                                            <div class="chapter_block">
+                                                <div class="title">CH1，第一單元</div>
+                                            </div>
+                                            <div class="title">
+                                                    非常用心的好課！非常用心的好課！非常用心的好課！非常用心的好課！非常用心的好課！非常用心的好課！非常用心的好課！非常用心的好課！非常用心的好課！非常用心的好課！<br>
+                                            </div>
+                                            
+                                            <div class="tips">
+                                                <div class="user_info">
+                                                    <span class="user_name element">little baby</span>
+                                                    <span class="discuss_time element">．8天前</span>
+                                                    <span class="likes element"><i class="far fa-heart"></i>35</span>
+                                                    <span class="discusses element"><i class="far fa-comment"></i>10</span>
+                                                </div>
+                                                <span class="status solved">已解決</span>
+                                            </div>
+                            
+                                            <div class="content">
+                                                在課程中，老師帶我們
+                                                1. 思考怎樣規劃我們想要的動畫到把它出來Code。從無到有的這樣的教學。
+                                                2. 教我們怎樣去看code。像是codepen有些動畫，但自己學著看別人的code卻想要做一遍，卻無法做到。(實力要再加強外，不知道有啥撇步之類的:))
+                                            </div>
+                            
+                                            <div class="answer">
+                            
+                                                <div class="avatar_box type_answer col2 ">
+                                                    <div class="avatar img_box">
+                                                        <img src="img/teacher.jpg">
+                                                    </div>
+                                                </div>
+
+                                                <div class="content_box type_answer col2 ">
+                                                    <div class="tips">
+                                                        <div class="user_info">
+                                                            <span class="user_name element">Terry 老師</span>
+                                                            <span class="discuss_time element">．8天前</span>
+                                                            <span class="likes element"><i class="far fa-heart"></i>35</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="content">
+                                                        洞察報告時區問題<br>
+                                                    </div>
+                            
+                                        
+                                                </div>
+                            
+                                            </div>
+
+                                            <div class="answer reanswer">
+                            
+                                                <div class="avatar_box type_answer col2 ">
+                                                    <div class="avatar student img_box">
+                                                        <img src="img/user-03.jpg">
+                                                    </div>
+                                                </div>
+
+                                                <div class="content_box type_answer col2 ">
+                                                    <div class="tips">
+                                                        <div class="user_info">
+                                                            <span class="user_name element student">little baby</span>
+                                                            <span class="discuss_time element">．8天前</span>
+                                                            <span class="likes element"><i class="far fa-heart"></i>35</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="content">
+                                                        洞察報告時區問題<br>
+                                                    </div>
+                            
+                                        
+                                                </div>
+
+                                            </div>
+                                                
+                                                <div class="answer reanswering">
+                                                <div class="avatar_box type_answer col2 ">
+                                                    <div class="avatar student img_box">
+                                                        <img src="img/user-03.jpg">
+                                                    </div>
+                                                </div>
+
+                                                <div class="content_box type_answer col2 ">
+                                                    <textarea id="DiscussReAnswerInput" type="text" class="textarea input reanswer" placeholder="更多提問"></textarea>
+                                                    <div class="btns">
+                                                        <button>確認送出</button>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                            
+                                        </div>
+                                            
+
+                                </div>
+
+                                <hr>
+
+                                <div class="course_discuss_block">
+                            
+                                    <div class="avatar_box col2 ">
+                                        <div class="avatar img_box">
+                                            <img src="img/user-01.jpg">
+                                        </div>
+                                    </div>
+                                
+                                    <div class="content_box col2 ">
+                                        <div class="chapter_block">
+                                            <div class="title">CH1，第一單元</div>
+                                        </div>
+                                        <div class="title">
+                                                企業或機構所服務的一個或多個客戶分類群體 2.價值主張——透過價值主張來解決客戶難題和滿足客戶需求 <br>
+                                        </div>
+                                        <div class="tips">
+                                            <div class="user_info">
+                                                <span class="user_name element">little baby</span>
+                                                <span class="discuss_time element">．8天前</span>
+                                                <span class="likes element"><i class="far fa-heart"></i>35</span>
+                                                <span class="discusses element"><i class="far fa-comment"></i>10</span>
+                                            </div>
+                                            <span class="status unsolved">未解決</span>
+                                            
+                                        </div>
+                                        <div class="content">
+                                            在課程中，老師帶我們
+                                            1. 思考怎樣規劃我們想要的動畫到把它出來Code。從無到有的這樣的教學。
+                                            2. 教我們怎樣去看code。像是codepen有些動畫，但自己學著看別人的code卻想要做一遍，卻無法做到。(實力要再加強外，不知道有啥撇步之類的:))
+                                        </div>
+                            
+                                    </div>
+                                    
+                                    <span class="trigger">展開 <i class="fas fa-angle-down"></i></span>
+                                
+                                </div>
+                            
+                                <hr>
+
+                                <div class="course_discuss_block">
+                            
+                                    <div class="avatar_box col2 ">
+                                        <div class="avatar img_box">
+                                            <img src="img/user-02.jpg">
+                                        </div>
+                                    </div>
+                                
+                                    <div class="content_box col2 ">
+                                        <div class="chapter_block">
+                                            <div class="title">CH1，第一單元</div>
+                                        </div>
+                                        <div class="title">
+                                                企業或機構所服務的一個或多個客戶分類群體 2.價值主張——透過價值主張來解決客戶難題和滿足客戶需求 <br>
+                                        </div>
+                                        <div class="tips">
+                                            <div class="user_info">
+                                                <span class="user_name element">little baby</span>
+                                                <span class="discuss_time element">．8天前</span>
+                                                <span class="likes element"><i class="far fa-heart"></i>35</span>
+                                                <span class="discusses element"><i class="far fa-comment"></i>10</span>
+                                            </div>
+                                            <span class="status unsolved">未解決</span>
+                                        </div>
+                                        <div class="content">
+                                            在課程中，老師帶我們
+                                            1. 思考怎樣規劃我們想要的動畫到把它出來Code。從無到有的這樣的教學。
+                                            2. 教我們怎樣去看code。像是codepen有些動畫，但自己學著看別人的code卻想要做一遍，卻無法做到。(實力要再加強外，不知道有啥撇步之類的:))
+                                        </div>
+                                    </div>
+                                    
+                                    <span class="trigger">展開 <i class="fas fa-angle-down"></i></span>
+
+                                </div>
+                            
+                                <hr>
+
+                                    <div class="course_discuss_block">
+                            
+                                    <div class="avatar_box col2 ">
+                                        <div class="avatar img_box">
+                                            <img src="img/user-00.jpg">
+                                        </div>
+                                    </div>
+                                
+                                    <div class="content_box col2 ">
+                                        <div class="chapter_block">
+                                            <div class="title">CH1，第一單元</div>
+                                        </div>
+                                        <div class="title">
+                                                企業或機構所服務的一個或多個客戶分類群體 2.價值主張——透過價值主張來解決客戶難題和滿足客戶需求 <br>
+                                        </div>
+                                        <div class="tips">
+                                            <div class="user_info">
+                                                <span class="user_name element">little baby</span>
+                                                <span class="discuss_time element">．8天前</span>
+                                                <span class="likes element"><i class="far fa-heart"></i>35</span>
+                                                <span class="discusses element"><i class="far fa-comment"></i>10</span>
+                                            </div>
+                                            <span class="status unsolved">未解決</span>
+                                        </div>
+                                        <div class="content">
+                                            在課程中，老師帶我們
+                                            1. 思考怎樣規劃我們想要的動畫到把它出來Code。從無到有的這樣的教學。
+                                            2. 教我們怎樣去看code。像是codepen有些動畫，但自己學著看別人的code卻想要做一遍，卻無法做到。(實力要再加強外，不知道有啥撇步之類的:))
+                                        </div>
+                            
+                                    </div>
+                                    
+                                    <span class="trigger">展開 <i class="fas fa-angle-down"></i></span>
+
+                                </div>
+                            
+
+
+
+                            </div>
+                            
+                            <div class="loading_more">
+                                載入更多問答
+                            </div>
+
                         </div>
                         
-                            分別以：
-                        <ul class="style-ul">
-                            <li>1.目標客層——企業或機構所服務的一個或多個客戶分類群體</li>
-                            <li>2.價值主張——透過價值主張來解決客戶難題和滿足客戶需求</li>
-                            <li>3.通路管道——通過溝通、分銷和銷售通路向顧客傳遞價值主張</li>
-                            <li>4.顧客關係——在每一個客戶細分市場建立和維繫顧客關係</li>
-                            <li>5.收入來源——收入來源產生於成功提供給客戶的價值主張</li>
-                        </ul>
-                        
-                        
+                        <div id="CourseDiscuss" class="course_unit course_tabtarget">
+
+
+                            <div class="container unit_list_container">
+
+                                <div class="unit_title">
+                                    <div class="title">
+                                        <i class="fas fa-list-alt"></i>預計的課程單元
+                                    </div>
+                                    <hr>
+                                    <span class="subtitle">
+                                        整堂課程時間估計約 100分鐘
+                                    </span>
+                                    
+                                </div>
+                                <div class="unit_block">
+                                    <div class="ele title">
+                                        <i class="fas fa-list"></i>
+                                        章節 1 - 基礎篇
+                                    </div>
+                                    <span class="ele item">
+                                        <i class="far fa-play-circle"></i>
+                                        單元 1 - 為何本課程重要?
+                                    </span>
+                                    <span class="ele item">
+                                        <i class="far fa-play-circle"></i>
+                                        單元 2 - 為什本課程重要?(續)
+                                    </span>
+                                    <span class="ele item">
+                                        <i class="far fa-play-circle"></i>
+                                        單元 3 - 程式語言的科學
+                                    </span>
+                                    <span class="ele item">
+                                        <i class="far fa-play-circle"></i>
+                                        單元 4 - 潛意識與程式語言
+                                    </span>
+                                    <span class="ele item">
+                                        <i class="far fa-file-alt"></i>
+                                        作業 1 - Python重溫及問答
+                                    </span>
+                                </div>
+
+                                <div class="unit_block">
+                                    <div class="ele title">
+                                        <i class="fas fa-list"></i>
+                                        章節 2 - 物件導向篇
+                                    </div>
+                                    <span class="ele item">
+                                        <i class="far fa-play-circle"></i>
+                                        單元 1 - 程式邏輯你想的不一樣
+                                    </span>
+                                    <span class="ele item">
+                                        <i class="far fa-play-circle"></i>
+                                        單元 2 - 什麼是預處理
+                                    </span>
+
+                                    <span class="ele item">
+                                        <i class="far fa-file-alt"></i>
+                                        作業 2 - 預處理器認識及操作
+                                    </span>
+                                </div>
+
+
+                            </div>
+                            
+
+
+                            
+                                
+                                
+                                    
+
+                        </div>
+
                     </div>
+
 
                 </div>
 

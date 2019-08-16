@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>峰碩資訊 - 忘記密碼</title>
+    <title>峰碩資訊 - 會員認證信確認</title>
     <link rel="icon" href="img/favicon.png">
 
     <!-- header -->
@@ -41,12 +41,12 @@
 
                         <li class="bread_crumb_item"><span class="arrow"><i class="fas fa-angle-right"></i></span><a href="#" target="_blank">會員專區</a></li>
 
-                        <li class="bread_crumb_item bc_last"><span class="arrow"><i class="fas fa-angle-right"></i></span>忘記密碼</li>
+                        <li class="bread_crumb_item bc_last"><span class="arrow"><i class="fas fa-angle-right"></i></span>會員認證信確認</li>
                     </ul>
                 </div>
 
                 <div class="big_title_block">
-                    <h1 class="title"> 忘記密碼</h1>
+                    <h1 class="title"> 會員認證信確認</h1>
                 </div>
 
             </div>
@@ -56,23 +56,22 @@
             <div class="container">
 
                 <div class="subtitle_block">
-                    <h2 class="title">親愛的會員您好，請輸入您註冊時所使用的信箱及認證碼。</h2>
+                    <h2 class="title">親愛的會員您好，會員認證信已寄送至您的電子信箱，請儘速收信以開啟完整的會員功能！</h2>
                     <div class="subtitle">
-                        峰碩資訊將會發送一組新的密碼變更給您，請您在收到信件後儘速變更密碼，以確保帳號安全！
+                        若您在收件箱找不到此郵件，請檢察您的垃圾郵件或垃圾桶檔案夾，<br>同時，請確保電郵帳戶可接收到來自我們的郵件。
                     </div>
                 </div>
 
                 <div class="input_block">
-                    <input type="text" spellcheck="false" class="input member_name" placeholder="&#xf0e0; 請輸入您的Email"></input>
+                    <input type="text" spellcheck="false" class="input member_name" placeholder="&#xf0e0; example@gmail.com""></input>
                 </div>
 
-                <div class="robot_check_block">
-                        <div id="recaptcha_box"></div>
+                <div class="tips">
+                    <a href="#" target="_blank">點此變更電子信箱</a>
                 </div>
 
                 <div class="btns">
-                    <button onclick="remindLogin()" class="gray">立即登入</button>
-                    <button>發送新密碼</button>
+                    <button>再次發送</button>
                 </div>
                 <hr class="footer_hr">
             </div>
@@ -97,24 +96,6 @@
 
 
 <!-- OnlyThisPage -->
-<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async></script>
-<script>
-
-    function remindLogin(){
-        $('#HeaderLogin').click();
-    }
-
-    var onloadCallback = function() {
-        grecaptcha.render("recaptcha_box", {
-        "sitekey": "6Le6HqsUAAAAAI4YGJwmlIPhJL48wiycWz4uk8Kz",
-        "callback": callback
-        });
-    };
-
-    function callback() {
-        alert("驗證成功！");
-    }
-</script>
 
 
 </body>

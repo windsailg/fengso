@@ -53,7 +53,8 @@
                 <div class="step_block">
 
                     <div class="img_box step_img ">
-                        <img  src="img/timeline-stpe3.png">
+                        <img class="dp_tab" src="img/timeline-stpe3.png">
+                        <img class="dp_mob" src="img/timeline-stpe3-mob.png">
                     </div>
                     <!-- <div class="step_container">
                         <div class="step_item">
@@ -94,7 +95,6 @@
                                 課程價格
                             </div>
                         </div>
-
 
                     </div>
                 </div>
@@ -277,7 +277,7 @@
                 <div class="block cart_list_block foot">
                     <div class="container cart_list_total_container">
 
-                        <div class="block total_title_block">
+                        <div class="block total_title_block deco">
                             <div class="title list_title name">
                                 購買明細
                             </div>
@@ -286,38 +286,80 @@
                         <div class="block total_detail_title_block">
 
                             <div class="item total_title">
-                                <span class="elem">
-                                    優惠代碼
-                                </span>
-                                <span class="elem">
-                                    總計
-                                </span>
+                                優惠碼
                             </div>
 
                             <div class="item sale_num">
-                                <span class="elem">
-                                    <span class="num">
-                                        NX4321
-                                    </span>
-                                </span>
-                                <span class="elem">
-
+                                <span class="num">
+                                    NX4321657157TYR4
                                 </span>
                             </div>
 
                             <div class="item total_price">
-                                <span class="elem">
-                                    - NT 10,000
-                                </span>
-                                <span class="elem">
-                                    NT 16,000
-                                </span>
+                                - NT 10,000
                             </div>
 
                         </div>
 
 
                     </div>
+                    <div class="container cart_list_total_container">
+
+                        <div class="block total_title_block dp_tab">
+                            <div class="title list_title name">
+                                
+                            </div>
+                        </div>
+
+                        <div class="block total_detail_title_block">
+
+                            <div class="item total_title">
+                                總計
+                            </div>
+
+                            <div class="item sale_num">
+
+                            </div>
+
+                            <div class="item total_price">
+                                NT 16,000
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="title_block">
+                    <h3 class="title"><i class="far fa-credit-card"></i>會員登入</h3>
+                    <div class="subtitle"><span class="tip">※</span>字號為必填</div>
+                </div>
+
+                <div class="block info_block">
+
+                    <div class="input_list cols_2">
+
+                        <div class="input_block col">
+                            <div class="title name">輸入帳號<span class="tip">※</span></div>
+                            <input type="text" spellcheck="false" class="input member_name" placeholder="&#xf007; User Name"></input>
+                        </div>
+
+                        <div class="input_block col">
+                            <div class="title mail">輸入密碼<span class="tip">※</span></div>
+                            <input type="password" spellcheck="false" class="input member_name" placeholder="&#xf084; 請輸入您的密碼"></input>
+                        </div>
+
+                        <div class="input_block col">
+                            <button class="shape">登入</button>
+                        </div>
+
+                        <div class="input_block col">
+                            
+                        </div>
+
+                    </div>
+
                 </div>
 
 
@@ -328,16 +370,41 @@
 
                 <div class="block info_block">
 
-                    <ul class="input_list cols_2">
+                    <div class="input_list cols_2">
 
-                        <div class="input_block col">
+                        <div class="input_block">
                             <div class="title name">真實姓名<span class="tip">※</span></div>
                             <input type="text" spellcheck="false" class="input member_name" placeholder="&#xf007; User Name"></input>
                         </div>
 
                         <div class="input_block col">
-                            <div class="title mail">電子郵件<span class="tip">※</span></div>
-                            <input type="text" spellcheck="false" class="input member_name" placeholder="&#xf0e0; example@gmail.com"></input>
+                            <div class="title mail">電子郵件 <span class="tip">※</span></div>
+                            <input type="text" spellcheck="false" class="input member_name" placeholder="&#xf0e0; example@gmail.com" maxlength="50"></input>
+                            <div class="tips_block">*此電子信箱為您日後登入之帳號</div>
+                        </div>
+
+                        <div class="input_block col">
+                            
+
+                            <div class="cols_2">
+                                <div class="col">
+                                    <div class="title mail">密碼 <span class="tip">※</span></div>
+                                    <input type="password" spellcheck="false" class="input member_name" placeholder="&#xf0e0; 輸入密碼" maxlength="50"></input>
+                                    
+                                </div>
+                                <div class="col">
+                                    <div class="title mail">確認密碼 <span class="tip">※</span></div>
+                                    <input type="password" spellcheck="false" class="input member_name" placeholder="&#xf0e0; 再次輸入密碼" maxlength="50"></input>
+           
+                                </div>
+                            </div>
+                            <div class="tips_block">*密碼必須為4碼以上，12碼以下</div>
+
+                        </div>
+
+                        <div class="input_block col">
+                            <div class="title id">身分證<span class="tip">※</span></div>
+                            <input type="text" spellcheck="false" class="input member_name" placeholder="&#xf0ca; 輸入身分證"></input>
                         </div>
 
                         <div class="input_block col">
@@ -347,13 +414,40 @@
 
                         <div class="input_block col">
                             <div class="title address">聯絡地址<span class="tip">※</span></div>
-                            <input type="text" spellcheck="false" class="input member_name" placeholder="&#xf041; 台北市中正區開封街一段32號"></input>
+
+                            <div class="cols_2">
+                                <div class="col">
+                                    <select class="input" data-province="台北市">
+                                        <option value="台北市">台北市</option>
+                                        <option value="桃園市">桃園市</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <select class="input" data-province="大同區">
+                                        <option value="大同區">大同區</option>
+                                        <option value="中正區">中正區</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
                         </div>
 
-                    </ul>
+                        <div class="input_block col">
+                            <div class="title dp_tab">　　　　</div>
 
-                    
+                            <input type="text" spellcheck="false" class="input member_name" placeholder="&#xf041; 開封街一段32號"></input>
+                        
+                        </div>
+
+
+
+
+
+                    </div>
+
                 </div>
+
+
 
                 <div class="title_block">
                     <h3 class="title"><i class="far fa-credit-card"></i>發票資訊</h3>
@@ -363,10 +457,11 @@
                 <div class="block info_block">
 
                     <div class="input_list col">
-                        <li class="input_block col">
+                        <div class="input_block col">
                             <div class="title mail">發票類型<span class="tip">※</span></div>
                                 
                             <div class="input_col">
+
                                 <div class="inputs">
                                     <div class="radio_box">
                                         <input type="radio" id="personal" class="radio" name="default" value="個人"></input>
@@ -382,9 +477,12 @@
                                     </div>
                                     <div class="title">公司用</div>
                                 </div>
+
                             </div>
+
                             <div class="tips_block">*若發票類型選擇(公司用)，則公司名稱欄位為必填，請填入公司全名。</div>
-                        </li>
+
+                        </div>
                     </div>
                         
                     <div class="input_list cols_2">
@@ -399,35 +497,48 @@
                             <input type="text" spellcheck="false" id="Birthday" class="input member_name"   disabled="disabled"></input>
                         </div>
 
-                    </div>
-
-                    <div class="input_list col">
-
                         <div class="input_block col">
-
-                            <div class="title_col">
-
-                                <div class="title name">
-                                    發票寄送地址<span class="tip">※</span>
-                                </div>
+                            <div class="title address">發票寄送地址<span class="tip">※</span></div>
 
                                 <div class="checker_box type_inline">
-                                        <label class="checkbox_block">
+                                    <label class="checkbox_block">
                                         <span class="text">同訂購人聯絡地址</span>
                                         <input type="checkbox">
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
 
+                            <div class="cols_2">
+                                <div class="col">
+                                    <select class="input" data-province="台北市">
+                                        <option value="台北市">台北市</option>
+                                        <option value="桃園市">桃園市</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <select class="input" data-province="大同區">
+                                        <option value="大同區">大同區</option>
+                                        <option value="中正區">中正區</option>
+                                    </select>
+                                </div>
                             </div>
-
-                            <input type="text" spellcheck="false" id="Birthday" class="input member_name"  placeholder="&#xf041; 100台北市中正區開封街一段32號"></input>
+                            
                         </div>
+
+                        <div class="input_block col">
+                            <div class="title dp_tab">　　　　</div>
+
+                            <input type="text" spellcheck="false" class="input member_name" placeholder="&#xf041; 開封街一段32號"></input>
+                        
+                        </div>
+                        
                         <div class="tips_block">
                             * 您所填寫的發票資料設定僅適用本次交易<br>
                             * 依統一發票使用辦法規定：個人發票一經開立，不得任意更改或改開公司戶發票。
                         </div>
+
                     </div>
+
 
                 </div>
 
@@ -453,6 +564,8 @@
                     <a href="img/cart-step4.jpg" ><button class="shape">前往結帳</button></a>
                     
                 </div>
+
+
 
 
 

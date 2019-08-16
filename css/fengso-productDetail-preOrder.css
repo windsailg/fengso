@@ -61,9 +61,9 @@
 
 #fengso-productDetail.preorder .belt_blocks .price .col {
   width: 100%;
-  -webkit-transform: skewX(14deg);
-      -ms-transform: skewX(14deg);
-          transform: skewX(14deg);
+  -webkit-transform: skewX(14deg) scale(1, 0.9);
+      -ms-transform: skewX(14deg) scale(1, 0.9);
+          transform: skewX(14deg) scale(1, 0.9);
   padding: 34px 30px;
 }
 
@@ -160,7 +160,7 @@
   position: relative;
   width: 100%;
   float: left;
-  padding: 50px 0;
+  padding: 30px 0;
 }
 
 @media all and (max-width: 1301px) {

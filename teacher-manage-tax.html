@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>峰碩資訊 - 會員專區 - 我的訂單</title>
+    <title>峰碩資訊 - 教師專區 - 稅收管理</title>
 	<link rel="icon" href="img/favicon.png">
 
     <!-- header -->
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="css/jquery.cxcalendar.css">
 
     <!-- This Page -->
-    <link rel="stylesheet" href="css/fengso-account.css">
+    <link rel="stylesheet" href="css/fengso-teacher-manage.css">
     
     
     <!-- Plugin -->
@@ -33,7 +33,7 @@
    
 <div id="header" class="fengso-header "></div>
 
-    <div id="fengso-Member" class="member_account">
+    <div id="fengso-Teacher" class="Teacher-functions">
 
         <div class="area member_control">
             <div class="container">
@@ -42,9 +42,9 @@
                     <ul class="bread_crumb">
                         <li class="bread_crumb_item bc_first"><a href="#" target="_blank"><span class="home"><i class="fas fa-home"></i></span>首頁</a></li>
 
-                        <li class="bread_crumb_item"><span class="arrow"><i class="fas fa-angle-right"></i></span><a href="#" target="_blank">會員專區</a></li>
+                        <li class="bread_crumb_item"><span class="arrow"><i class="fas fa-angle-right"></i></span><a href="#" target="_blank">教師專區</a></li>
 
-                        <li class="bread_crumb_item bc_last"><span class="arrow"><i class="fas fa-angle-right"></i></span>我的課程</li>
+                        <li class="bread_crumb_item bc_last"><span class="arrow"><i class="fas fa-angle-right"></i></span>稅收管理</li>
                     </ul>
                 </div>
 
@@ -53,60 +53,15 @@
 
                         <div  class="avatar box">
                             <div id="AvatarImageCurrent" class="img_box">
-                                <img data-current-number="00" src="img/user-00.jpg">
+                                <img data-current-number="00" src="img/teacher-00.png">
                             </div>
-                            <span id="EditAvatarBTN" class="edit btn"><i class="fas fa-camera"></i></span>
                             
-                            <div  class="lightingbox type3 "> 
-                                <div class="lightingbox_wrap type2">
-
-                                    <div  class="lightingbox_container typeaccount__myavaar">
-
-                                        <div class="title change_title">更換顯示大頭照</div>
-
-                                            <div id="AvatarImages" class="block img_box_block">
-                                                <div class="img_box chooseable">
-                                                    <img data-num="00" src="img/user-00.jpg">
-                                                </div>
-                                                <div class="img_box chooseable">
-                                                    <img data-num="01" src="img/user-01.jpg">
-                                                </div>
-                                                <div class="img_box chooseable">
-                                                    <img data-num="02" src="img/user-02.jpg">
-                                                </div>
-                                                <div class="img_box chooseable">
-                                                    <img data-num="03" src="img/user-03.jpg">
-                                                </div>
-                                                <div class="img_box chooseable">
-                                                    <img data-num="04" src="img/user-04.jpg">
-                                                </div>
-                                                <div class="img_box chooseable">
-                                                    <img data-num="05" src="img/user-05.jpg">
-                                                </div>
-
-
-                                            </div>
-                                    </div>
-
-                                    <span class="btn_close type2">
-                                        <div class="btn_close_box">
-                                            <span class="c_deco cd1"></span>
-                                            <span class="c_deco cd2" ></span>
-                                        </div>
-                                        <span class="btn_close_text">關閉視窗</span>
-                                    </span>
-
-                                </div>
-                                <div class="lightingbox_mask"></div>
-                            </div>
-
                         </div>
 
                         <div class="info_box">
 
                             <div class="user_name title">
-                                User Name
-                                <span class="edit btn"><i class="fas fa-pen"></i></span>
+                                Issac
                             </div>
                             <div class="joined_date subtitle"><i class="far fa-address-card"></i>2019年12月31日 加入</div>
                     
@@ -117,11 +72,10 @@
                 </div>
 
                 <div class="tab_block">
-                    <ul id="MemberTabList" class="tab">
-                        <li class="tab_item" data-target="member-mycourse">我的課程</li>
-                        <li class="tab_item active" data-target="member-myorder">我的訂單</li>
-                        <li class="tab_item" data-target="member-myinformation">個人檔案</li>
-                        <li class="tab_item" data-target="member-myfavorite">我的收藏</li>
+                    <ul id="FunctionTab" class="tab">
+                        <li class="tab_item" data-target="teacher-order">訂單查詢</li>
+                        <li class="tab_item active" data-target="teacher-tax">稅收管理</li>
+                        <li class="tab_item" data-target="teacher-total">結算管理</li>
                     </ul>
                 </div>
 
@@ -131,27 +85,34 @@
 
         <div id="TabTriggerContainer" class="tab_trigger_container">
 
-            <div class="tab_trigger_target member-myorder">
+            <div class="tab_trigger_target teacher-order">
                 <div class="area ">
                     <div class="container type_member">
 
                         <div class="myOrder_list_content">
 
-                            <div class="tags_block">
-                                <ul id="MyOrderTags" class="list tags_list col">
-                                    <li class="list_item tag active" data-filter="all">全部</li>
-                                    <li class="list_item tag" data-filter="paid">已付款</li>
-                                    <li class="list_item tag" data-filter="unpaid">未付款</li>
-                                    <li class="list_item tag" data-filter="refund">退費</li>
-                                    <input type="text"  class="course_search" name="filtr-search" value="" placeholder="輸入訂單關鍵字" data-search="" autocomplete="off">
-                                    
-                                    
-                                    <!-- <li data-shuffle> Shuffle items </li>
-                                    <li data-sortAsc> Ascending </li>
-                                    <li data-sortDesc> Descending </li> -->
-                                </lu>
+                            <div class="list_date_block">
+                                <span class="title"> 日期區間 </span>
+                                <input id="DataSearchStart" type="text"  class="input"  value="" autocomplete="off">
+                                <span class="space">
+                                    ~
+                                </span>
+                                <input id="DataSearchEnd" type="text"  class="input"  value="" autocomplete="off">
+                                <button class="shape date_search">搜尋</button>
                             </div>
-
+                            
+                            <div class="total_order_block">
+                                <div class="item title">
+                                    共
+                                    <span>
+                                        100
+                                    </span>
+                                    筆訂單
+                                </div>
+                                <div class="item price">
+                                    總計 <span>NT $100,000</span>
+                                </div>
+                            </div>
 
                             <div id="MyOrderListBlock" class="myOrder_list_block myOrder-filter-container">
 
@@ -663,10 +624,7 @@
 
                             </div>
 
-                            <div class="nothing_block">
-                                <span class="nothing">尚無任何訂單</span>
-                            </div>
-                            <!-- <div class="pager_block">
+                            <div class="pager_block">
                                 <ul class="pager">
                                     <li class="pager_number "><i class="fas fa-angle-left"></i></li>
                                     <li class="pager_number  active">1</li>
@@ -674,7 +632,7 @@
                                     <li class="pager_number ">3</li>
                                     <li class="pager_number "><i class="fas fa-angle-right"></i></li>
                                 </ul>
-                            </div> -->
+                            </div>
 
                         </div>
 
@@ -708,13 +666,15 @@
 
 <!-- OnlyThisPage -->
 <script src="js/jquery.filterizr.min.js"></script>
-<script src="js/fengso-account.js"></script>
+<script src="js/fengso-teacher.js"></script>
 
 
 <script>
+    $('#DataSearchStart').cxCalendar();
+    $('#DataSearchEnd').cxCalendar();
 
-    $('#MyOrderTags li').click(function(){
-        $('#MyOrderTags li').removeClass('active');
+    $('#MyOrderTags .tag').click(function(){
+        $('#MyOrderTags .tag').removeClass('active');
         $(this).addClass('active');
     });
 

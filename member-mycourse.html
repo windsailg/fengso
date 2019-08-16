@@ -51,11 +51,54 @@
                 <div class="user_data_block">
                     <div class="user_data_container">
 
-                        <div class="avatar box">
-                            <div class="img_box">
-                                <img src="img/user-00.jpg">
+                        <div  class="avatar box">
+                            <div id="AvatarImageCurrent" class="img_box">
+                                <img data-current-number="00" src="img/user-00.jpg">
                             </div>
-                            <span class="edit btn"><i class="fas fa-camera"></i></span>
+                            <span id="EditAvatarBTN" class="edit btn"><i class="fas fa-camera"></i></span>
+                            
+                            <div  class="lightingbox type3 "> 
+                                <div class="lightingbox_wrap type2">
+
+                                    <div  class="lightingbox_container typeaccount__myavaar">
+
+                                        <div class="title change_title">更換顯示大頭照</div>
+
+                                            <div id="AvatarImages" class="block img_box_block">
+                                                <div class="img_box chooseable">
+                                                    <img data-num="00" src="img/user-00.jpg">
+                                                </div>
+                                                <div class="img_box chooseable">
+                                                    <img data-num="01" src="img/user-01.jpg">
+                                                </div>
+                                                <div class="img_box chooseable">
+                                                    <img data-num="02" src="img/user-02.jpg">
+                                                </div>
+                                                <div class="img_box chooseable">
+                                                    <img data-num="03" src="img/user-03.jpg">
+                                                </div>
+                                                <div class="img_box chooseable">
+                                                    <img data-num="04" src="img/user-04.jpg">
+                                                </div>
+                                                <div class="img_box chooseable">
+                                                    <img data-num="05" src="img/user-05.jpg">
+                                                </div>
+
+                                            </div>
+                                    </div>
+
+                                    <span class="btn_close type2">
+                                        <div class="btn_close_box">
+                                            <span class="c_deco cd1"></span>
+                                            <span class="c_deco cd2" ></span>
+                                        </div>
+                                        <span class="btn_close_text">關閉視窗</span>
+                                    </span>
+
+                                </div>
+                                <div class="lightingbox_mask"></div>
+                            </div>
+
                         </div>
 
                         <div class="info_box">
@@ -98,7 +141,7 @@
                                     <li class="list_item tag active" data-filter="all">全部</li>
                                     <li class="list_item tag" data-filter="職場技能">職場技能</li>
                                     <li class="list_item tag" data-filter="人工智慧">人工智慧</li>
-                                    <input type="text"  class="course_search" name="filtr-search" value="" placeholder="輸入課程關鍵字" data-search="">
+                                    <input type="text"  class="course_search" name="filtr-search" value="" placeholder="輸入課程關鍵字" data-search="" autocomplete="off">
 
                                     <!-- <li data-shuffle> Shuffle items </li>
                                     <li data-sortAsc> Ascending </li>
@@ -318,6 +361,9 @@
 
                             </div>
 
+                            <div class="nothing_block">
+                                <span class="nothing">尚無任何課程</span>
+                            </div>
 
                         </div>
 
@@ -429,8 +475,6 @@
 <!-- OnlyThisPage Plugin -->
 <script src="js/jquery.focuspoint.js"></script>
 <script src="js/jquery.lazy.min.js"></script>
-<script src="js/jquery.cxcalendar.min.js"></script>
-<script src="js/jquery.cxcalendar.languages.js"></script>
 
 
 <!-- OnlyThisPage -->
