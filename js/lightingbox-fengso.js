@@ -189,7 +189,7 @@ btnFunctionheader()
          //noscroll.bind();
       }
       function LightingBoxClosing(BoxType){
-         $('#LightingBox , .lightingbox.type2 , .user_lr').fadeOut(220);
+         $(' .lightingbox, .user_lr').fadeOut(220);
          //noscroll.unbind();
 
       }

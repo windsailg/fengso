@@ -4,16 +4,32 @@ $(document).ready(function(){
 
 $('.delet_box').click(function(){
     // $(this).parents('.cart_course_container').addClass('deleted').delay(300).slideUp(500);
-        var target = $(this).parents('.cart_course_container');
-        target.delay(300).addClass('deleted').animate({'height':'0','padding-top':'0 ','padding-bottom':'0 ','opacity':'0'},500, 'easeOutQuart' ,function() {
-            setTimeout(() => {
-                
-                target.remove();
-            }, 500);
-        });
-
-
+    var target = $(this).parents('.cart_course_container');
+    target.delay(300).addClass('deleted').animate({'height':'0','padding-top':'0 ','padding-bottom':'0 ','opacity':'0'},500, 'easeOutQuart' ,function() {
+        setTimeout(() => {
+            
+            target.remove();
+        }, 500);
+    });
 })
+
+
+//Step-4 Print Function
+$('#PrintStartBTN').click(function(){
+
+    //去除超連結設置
+    // $('a').each(function(index) {
+    //     $(this).replaceWith($(this).html());
+    // });
+
+    //指定要列印的區塊
+    var PrintTarget = $("#PrintThis").html();
+    var bodyHtml = document.body.innerHTML;
+    document.body.innerHTML = PrintTarget;
+    window.print();
+    document.body.innerHTML = bodyHtml;
+    window.location.reload(); //列印輸出後更新頁面
+});
 
 
 

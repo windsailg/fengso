@@ -6,6 +6,45 @@ $(document).ready(function(){
         $(this).addClass('active');
     });
 
+
+//-----------------
+
+$('#EditAvatarBTN').click(function(){
+  $('.lightingbox.type3').fadeToggle(150);
+})
+
+$('#AvatarImages .chooseable').click(function(){
+
+  var getSrc = $(this).children('img').attr('src');
+  var getNum = $(this).children('img').data('num');
+
+  $('#AvatarImageCurrent').children('img').attr({
+    'src':getSrc ,
+    'data-current-number':getNum,
+  });
+  alert('個人圖片更換完成');
+
+  $(this).addClass('active').removeClass('chooseable').siblings().removeClass('active').addClass('chooseable')
+  $('.lightingbox.type3').fadeToggle(150);
+});
+
+//讀取時先判斷是否重複並禁止點選
+var getStartNum = $('#AvatarImageCurrent').children('img').attr('data-current-number');
+checkAvatarNumber(getStartNum);
+function checkAvatarNumber(target){
+  $('#AvatarImages .img_box').each(function(){
+
+      var DefaultAvatarImage = $(this).children('img').attr('data-num');
+      if( DefaultAvatarImage == target){
+        console.log($(this).children('img').attr('data-num'))
+        $(this).addClass('active').removeClass('chooseable');
+        $('#AvatarImages .active').siblings().removeClass('active').addClass('chooseable');
+      }
+  });
+}
+//-----------------
+
+
    //lazy + focuspoint
     $(".lazy").Lazy({ 
       scrollDirection: 'vertical',
