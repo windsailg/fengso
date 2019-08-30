@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>峰碩資訊 - 教師專區 - 課程資訊管理</title>
+	<link rel="icon" href="img/favicon.png">
+
+    <!-- header -->
+    <link rel="stylesheet" href="css/fengso-header.css">
+    
+    <!-- Golbal -->
+    <link rel="stylesheet" href="css/fengso-lightingbox.css">
+    <link rel="stylesheet" href="css/fengso-common.css">
+    <link rel="stylesheet" href="css/jquery.cxcalendar.css">
+
+    <!-- This Page -->
+    <link rel="stylesheet" href="css/fengso-teacher-manage.css">
+    
+    
+    <!-- Plugin -->
+    <link rel="stylesheet" href="css/focuspoint.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli|Source+Sans+Pro">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    
+    <script src="https://kit.fontawesome.com/9188edaa95.js"></script>
+      
+</head>
+    
+<body >
+   
+<div id="header" class="fengso-header "></div>
+
+    <div id="fengso-TeacherManage" class="teacher_manage">
+
+        <div class="area member_control">
+            <div class="container">
+
+                <div class="bread_crumb_block">
+                    <ul class="bread_crumb">
+                        <li class="bread_crumb_item bc_first"><a href="#" target="_blank"><span class="home"><i class="fas fa-home"></i></span>首頁</a></li>
+
+                        <li class="bread_crumb_item"><span class="arrow"><i class="fas fa-angle-right"></i></span><a href="#" target="_blank">教師專區</a></li>
+
+                        <li class="bread_crumb_item bc_last"><span class="arrow"><i class="fas fa-angle-right"></i></span>訂單查詢</li>
+                    </ul>
+                </div>
+
+                <div class="user_data_block">
+                    <div class="user_data_container">
+
+                        <div  class="avatar box">
+                            <div id="AvatarImageCurrent" class="img_box">
+                                <img data-current-number="00" src="img/teacher-00.png">
+                            </div>
+                            
+
+
+                        </div>
+
+                        <div class="info_box">
+
+                            <div class="user_name title">
+                                Issac
+                            </div>
+                            <div class="joined_date subtitle"><i class="far fa-address-card"></i>2019年12月31日 加入</div>
+                    
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="tab_block">
+                    <ul id="FunctionTab" class="tab">
+                        <li class="tab_item active" data-target="teacher-courseinfo">課程資訊管理</li>
+                        <li class="tab_item " data-target="teacher-order">訂單查詢</li>
+                        <li class="tab_item " data-target="teacher-tax">稅收管理</li>
+                        <li class="tab_item" data-target="teacher-total">結算管理</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div id="TabTriggerContainer" class="tab_trigger_container">
+
+            <div class="tab_trigger_target teacher-courseinfo">
+                <div class="area ">
+                    <div class="container type_member">
+
+                        <div class="title_block">
+                            <h2 class="title">
+                                我開的課
+                            </h2>
+                        </div>
+
+                        <div class="swiper_pager_container">
+
+                            <div id="TeacherCourseInformationSwiperSlider" class="teacher_course_list_block">
+                                <div class="swiper-wrapper">
+
+                                    <div class="course_block swiper-slide">
+
+                                        <a href="#">
+                                            <div class="image_box img_box focuspoint">
+                                                <img class="lazy" data-src="img/course_img-14.jpg">
+                                            </div>
+                                        </a>
+
+                                        <div class="content_box">
+
+                                            <div class="elem title">
+                                                <a href="#">
+                                                    全球AR/VR生態繼 續快速發展上半年融資總額破10億美元加速計畫（企劃力）：SMART企劃，讓提案一次上手
+                                                </a>
+                                            </div>
+
+                                            <div class="elem tips">
+
+                                                <div class="box tips_box">
+                                                    <span class="elem tags">人工智慧</span>
+                                                    <span class="elem count"><i class="fas fa-user-alt"></i>5000</span>
+                                                    <span class="elem hours"><i class="fas fa-clock"></i>155小時50分</span>
+                                                </div>
+
+                                                <div class="box price_box">
+                                                    <div class="elem price">NT 3,680</div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="elem course_information_controls controls">
+
+                                                <div class="item qa" >
+                                                    <div class="elem title">
+                                                        <i class="fas fa-comments"></i>
+                                                        <span class="text">學員提問</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="item rate" >
+                                                    <div class="elem title">
+                                                        <i class="fas fa-star"></i>
+                                                        <span class="text">學員評價</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="item homework" >
+                                                    <div class="elem title">
+                                                        <i class="fas fa-book"></i>
+                                                        <span class="text">作業批改</span>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="course_block swiper-slide preorder">
+
+                                        <a href="#">
+                                            <div class="image_box img_box focuspoint">
+                                                <img class="lazy" data-src="img/course_img-13.jpe">
+                                                
+                                            </div>
+                                        </a>
+
+                                        <div class="content_box">
+
+                                            <div class="elem title">
+                                                <a href="#">
+                                                    全球AR/VR生態繼 續快速發展上半年融資總額破10億美元加速計畫（企劃力）：SMART企劃，讓提案一次上手
+                                                </a>
+                                            </div>
+
+                                            <div class="elem tips">
+
+                                                <div class="box tips_box">
+                                                    <span class="elem tags">人工智慧</span>
+                                                </div>
+
+                                                <div class="box price_box">
+                                                    <div class="elem price">NT 3,680</div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="elem course_information_controls controls">
+
+                                                <div class="item qa" >
+                                                    <div class="elem title">
+                                                        <i class="fas fa-comments"></i>
+                                                        <span class="text">學員提問</span>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="course_block swiper-slide">
+
+                                        <a href="#">
+                                            <div class="image_box img_box focuspoint">
+                                                <img class="lazy" data-src="img/course_img-12.jpe">
+                                                
+                                            </div>
+                                        </a>
+
+                                        <div class="content_box">
+
+                                            <div class="elem title">
+                                                <a href="#">
+                                                    全球AR/VR生態繼 續快速發展上半年融資總額破10億美元加速計畫（企劃力）：SMART企劃，讓提案一次上手
+                                                </a>
+                                            </div>
+
+                                            <div class="elem tips">
+
+                                                <div class="box tips_box">
+                                                    <span class="elem tags">人工智慧</span>
+                                                    <span class="elem count"><i class="fas fa-user-alt"></i>5000</span>
+                                                    <span class="elem hours"><i class="fas fa-clock"></i>155小時50分</span>
+                                                </div>
+
+                                                <div class="box price_box">
+                                                    <div class="elem price">NT 3,680</div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="elem course_information_controls controls">
+
+                                                <div class="item qa" >
+                                                    <div class="elem title">
+                                                        <i class="fas fa-comments"></i>
+                                                        <span class="text">學員提問</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="item rate" >
+                                                    <div class="elem title">
+                                                        <i class="fas fa-star"></i>
+                                                        <span class="text">學員評價</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="item homework" >
+                                                    <div class="elem title">
+                                                        <i class="fas fa-book"></i>
+                                                        <span class="text">作業批改</span>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="course_block swiper-slide">
+
+                                        <a href="#">
+                                            <div class="image_box img_box focuspoint">
+                                                <img class="lazy" data-src="img/course_img-10.jpg">
+                                                
+                                            </div>
+                                        </a>
+
+                                        <div class="content_box">
+
+                                            <div class="elem title">
+                                                <a href="#">
+                                                    全球AR/VR生態繼 續快速發展上半年融資總額破10億美元加速計畫（企劃力）：SMART企劃，讓提案一次上手
+                                                </a>
+                                            </div>
+
+                                            <div class="elem tips">
+
+                                                <div class="box tips_box">
+                                                    <span class="elem tags">人工智慧</span>
+                                                    <span class="elem count"><i class="fas fa-user-alt"></i>5000</span>
+                                                    <span class="elem hours"><i class="fas fa-clock"></i>155小時50分</span>
+                                                </div>
+
+                                                <div class="box price_box">
+                                                    <div class="elem price">NT 3,680</div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="elem course_information_controls controls">
+
+                                                <div class="item qa" >
+                                                    <div class="elem title">
+                                                        <i class="fas fa-comments"></i>
+                                                        <span class="text">學員提問</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="item rate" >
+                                                    <div class="elem title">
+                                                        <i class="fas fa-star"></i>
+                                                        <span class="text">學員評價</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="item homework" >
+                                                    <div class="elem title">
+                                                        <i class="fas fa-book"></i>
+                                                        <span class="text">作業批改</span>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="teacher_course_next swiper-button-next"></div>
+                            <div class="teacher_course_prev swiper-button-prev"></div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>     
+
+        </div>
+
+
+
+
+    </div>
+
+<footer id="footer"></footer>
+
+
+<!-- Golbal -->
+<script src="js/jquery.min.js"></script>
+
+<script>
+    $('#header').load('header.html');        
+    $('#footer').load('footer.html');   
+</script>
+
+<!-- OnlyThisPage Plugin -->
+<script src="js/jquery.focuspoint.js"></script>
+<script src="js/jquery.lazy.min.js"></script>
+<script src="js/jquery.cxcalendar.min.js"></script>
+<script src="js/jquery.cxcalendar.languages.js"></script>
+
+
+<!-- OnlyThisPage -->
+<script src="js/fengso-teacher-manage.js"></script>
+
+
+<script>
+    // $('#DataSearchStart').cxCalendar();
+    // $('#DataSearchEnd').cxCalendar();
+
+    $('#MyOrderTags .tag').click(function(){
+        $('#MyOrderTags .tag').removeClass('active');
+        $(this).addClass('active');
+    });
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+
+</html>

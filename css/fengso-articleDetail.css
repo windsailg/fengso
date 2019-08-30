@@ -42,6 +42,11 @@
           align-items: flex-start;
 }
 
+.img_box img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 .area {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -124,9 +129,9 @@
 }
 
 #fengso-ArticleDetail .tags_block .tags_list .tag {
-  -webkit-transition: 0.2s all ease-in-out;
-  -o-transition: 0.2s all ease-in-out;
-  transition: 0.2s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
   min-width: 80px;
   padding: 6px 8px;
   margin: 6px 18px  6px 0;
@@ -161,9 +166,9 @@
           box-sizing: border-box;
   display: inline-block;
   float: left;
-  -webkit-transition: 0.2s all ease-in-out;
-  -o-transition: 0.2s all ease-in-out;
-  transition: 0.2s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
   padding: 6px 8px;
   margin: 6px 8px  6px 0;
   -webkit-user-select: none;
@@ -362,14 +367,17 @@
   float: left;
   padding: 0 0px  0 12px;
   font-size: 30px;
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
   cursor: pointer;
 }
 
 #fengso-ArticleDetail .article_detail_block .article_block > .info_block > .share_block > .ele:hover {
   opacity: .8;
+  -webkit-transition-duration: .1s;
+       -o-transition-duration: .1s;
+          transition-duration: .1s;
 }
 
 #fengso-ArticleDetail .article_detail_block .article_block > .info_block > .share_block > .ele.fb {
@@ -399,9 +407,9 @@
 }
 
 #fengso-ArticleDetail .article_detail_block .article_block > .image_box img {
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
 }
 
 #fengso-ArticleDetail .article_detail_block .article_block > .image_box img:hover {
@@ -450,9 +458,9 @@
   overflow: hidden;
   margin: 0 auto;
   width: 100%;
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
 }
 
 @media all and (max-width: 1301px) {
@@ -471,9 +479,9 @@
   float: left;
   width: 300px;
   margin: 0 10px 30px;
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
 }
 
 @media all and (max-width: 780px) {
@@ -512,22 +520,25 @@
   top: 0;
   right: 0;
   letter-spacing: 2px;
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
   cursor: pointer;
 }
 
 #fengso-ArticleDetail .course_list_block .course_block.preorder::after:hover {
   opacity: .8;
+  -webkit-transition-duration: .1s;
+       -o-transition-duration: .1s;
+          transition-duration: .1s;
 }
 
 #fengso-ArticleDetail .course_list_block .course_block .image {
   width: 100%;
   height: 165px;
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
 }
 
 @media all and (max-width: 780px) {
@@ -537,9 +548,9 @@
 }
 
 #fengso-ArticleDetail .course_list_block .course_block .image > img {
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
 }
 
 #fengso-ArticleDetail .course_list_block .course_block .image > img:hover {
@@ -707,14 +718,17 @@
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
   cursor: pointer;
 }
 
 #fengso-ArticleDetail .course_list_block .course_block .teacher_block:hover {
   opacity: .8;
+  -webkit-transition-duration: .1s;
+       -o-transition-duration: .1s;
+          transition-duration: .1s;
 }
 
 #fengso-ArticleDetail .course_list_block .course_block .teacher_block .teacher_avatar {
@@ -880,14 +894,17 @@
   text-align: center;
   cursor: pointer;
   background-color: #dadada;
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
   cursor: pointer;
 }
 
 #fengso-ArticleDetail .pager_block .pager .pager_number:hover {
   opacity: .8;
+  -webkit-transition-duration: .1s;
+       -o-transition-duration: .1s;
+          transition-duration: .1s;
 }
 
 #fengso-ArticleDetail .pager_block .pager .pager_number.active {

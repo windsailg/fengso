@@ -6,10 +6,8 @@ $(document).ready(function(){
         $(this).addClass('active');
     });
 
-
-
    //lazy + focuspoint
-    $(".lazy").Lazy({ 
+    $('.lazy').Lazy({ 
       scrollDirection: 'vertical',
       effect: 'fadeIn',
       effectTime:300, //duration
@@ -39,4 +37,6 @@ $(document).ready(function(){
       },
     });     
 
+
+    
 });

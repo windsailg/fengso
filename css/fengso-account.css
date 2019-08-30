@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url(https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
-.area .container.type_member, #fengso-Member .user_data_block, #fengso-Member .user_data_block .user_data_container, #fengso-Member .user_data_block .user_data_container .avatar .typeaccount__myavaar .img_box_block, #fengso-Member .tab_block, #fengso-Member .tags_block .tags_list, #fengso-Member .myCoursee_list_block .course_block, #fengso-Member .myCoursee_list_block .course_block .content_box > .tips > .tips_box, #fengso-Member .myCoursee_list_block .course_block .content_box > .controls, #fengso-Member .myCoursee_list_block .course_block .content_box > .controls .rate, #fengso-Member .course_list_block, #fengso-Member .myOrder_list_block > .course_block .block_head > .order_Info, #fengso-Member .myOrder_list_block > .course_block .block_body, #fengso-Member .myOrder_list_block > .course_block .block_body > .orders, #fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item, #fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .controls, #fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .controls .rate, #fengso-Member .myOrder_list_block > .course_block .block_body > .status, #fengso-Member .myOrder_list_block > .course_block .block_body > .status > .status_item, #fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block, #fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block.cols_3, #fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block .inputs, #fengso-Member .myFavorite_list_block .course_block, #fengso-Member .myFavorite_list_block .course_block .content_box > .tips > .tips_box, #fengso-Member .myFavorite_list_block .course_block .content_box > .controls, #fengso-Member .myFavorite_list_block .course_block .content_box > .controls .item_box, #fengso-Member .myFavorite_list_block .course_block .content_box > .controls .item_box .rate, #fengso-Member .myFavorite_list_block .course_block .content_box > .controls > .buysoon, #fengso-Member .myFavorite_list_block .course_block .content_box > .controls > .buysoon .elem, #fengso-Member .myFavorite_list_block .course_block .content_box > .controls > .buysoon .cart, #fengso-Member .pager_block {
+.area .container.type_member, #fengso-Member .user_data_block, #fengso-Member .user_data_block .user_data_container, #fengso-Member .user_data_block .user_data_container .avatar .typeaccount__myavaar .img_box_block, #fengso-Member .tab_block, #fengso-Member .tags_block .tags_list, #fengso-Member .myCoursee_list_block .course_block, #fengso-Member .myCoursee_list_block .course_block .content_box > .tips > .tips_box, #fengso-Member .myCoursee_list_block .course_block .content_box > .controls, #fengso-Member .myCoursee_list_block .course_block .content_box > .controls .rate, #fengso-Member .course_list_block, #fengso-Member .myOrder_list_block > .course_block .block_head > .order_Info, #fengso-Member .myOrder_list_block > .course_block .block_body, #fengso-Member .myOrder_list_block > .course_block .block_body > .orders, #fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item, #fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box, #fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .controls, #fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .controls .rate, #fengso-Member .myOrder_list_block > .course_block .block_body > .status, #fengso-Member .myOrder_list_block > .course_block .block_body > .status > .status_item, #fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block, #fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block.cols_3, #fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block .inputs, #fengso-Member .myFavorite_list_block .course_block, #fengso-Member .myFavorite_list_block .course_block .content_box > .tips > .tips_box, #fengso-Member .myFavorite_list_block .course_block .content_box > .controls, #fengso-Member .myFavorite_list_block .course_block .content_box > .controls .item_box, #fengso-Member .myFavorite_list_block .course_block .content_box > .controls .item_box .rate, #fengso-Member .myFavorite_list_block .course_block .content_box > .controls > .buysoon, #fengso-Member .myFavorite_list_block .course_block .content_box > .controls > .buysoon .elem, #fengso-Member .myFavorite_list_block .course_block .content_box > .controls > .buysoon .cart, #fengso-Member .pager_block {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -21,7 +21,7 @@
           align-items: center;
 }
 
-#fengso-Member .myCoursee_list_block, #fengso-Member .myOrder_list_block, #fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box, #fengso-Member .myFavorite_list_block {
+#fengso-Member .myCoursee_list_block, #fengso-Member .myOrder_list_block, #fengso-Member .myFavorite_list_block {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -40,6 +40,11 @@
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+
+.img_box img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .area {
@@ -219,9 +224,9 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
   cursor: pointer;
 }
 
@@ -234,6 +239,9 @@
 
 #fengso-Member .user_data_block .user_data_container .avatar .typeaccount__myavaar .img_box_block .img_box:hover {
   opacity: .8;
+  -webkit-transition-duration: .1s;
+       -o-transition-duration: .1s;
+          transition-duration: .1s;
 }
 
 #fengso-Member .user_data_block .user_data_container .avatar .typeaccount__myavaar .img_box_block .img_box.active {
@@ -268,6 +276,12 @@
   position: relative;
 }
 
+@media all and (max-width: 600px) {
+  #fengso-Member .user_data_block .user_data_container .info_box .user_name {
+    text-align: center;
+  }
+}
+
 #fengso-Member .user_data_block .user_data_container .info_box .joined_date {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -279,6 +293,12 @@
 
 #fengso-Member .user_data_block .user_data_container .info_box .joined_date i {
   padding: 0 10px 0 0;
+}
+
+@media all and (max-width: 600px) {
+  #fengso-Member .user_data_block .user_data_container .info_box .joined_date {
+    text-align: center;
+  }
 }
 
 #fengso-Member .user_data_block .user_data_container .edit {
@@ -295,9 +315,9 @@
   color: #fff;
   font-size: 13px;
   background-color: #dbdbdb;
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
   cursor: pointer;
 }
 
@@ -440,9 +460,9 @@
 }
 
 #fengso-Member .tags_block .tags_list .tag {
-  -webkit-transition: 0.2s all ease-in-out;
-  -o-transition: 0.2s all ease-in-out;
-  transition: 0.2s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
   min-width: 80px;
   padding: 6px 8px;
   margin: 6px 18px  6px 0;
@@ -464,9 +484,9 @@
 
 #fengso-Member .tags_block .course_search {
   font-family: 'Century Gothic','Arial','Source Sans Pro' , 'Muli' ,'微軟正黑體','FontAwesome', '新細明體';
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: inline-block;
@@ -573,9 +593,9 @@
   width: 100%;
   overflow: hidden;
   height: unset;
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
   -webkit-transition-delay: .2s;
        -o-transition-delay: .2s;
           transition-delay: .2s;
@@ -638,9 +658,9 @@
 }
 
 #fengso-Member .myCoursee_list_block .course_block .image_box img {
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
 }
 
 #fengso-Member .myCoursee_list_block .course_block .image_box img:hover {
@@ -772,9 +792,9 @@
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
   cursor: pointer;
   width: 130px;
   color: #FF7757;
@@ -783,6 +803,9 @@
 
 #fengso-Member .myCoursee_list_block .course_block .content_box > .controls .rate:hover {
   opacity: .8;
+  -webkit-transition-duration: .1s;
+       -o-transition-duration: .1s;
+          transition-duration: .1s;
 }
 
 #fengso-Member .myCoursee_list_block .course_block .content_box > .controls .rate > i {
@@ -864,9 +887,9 @@
   width: calc(100% - 300px);
   margin: 0 auto;
   width: 100%;
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
 }
 
 @media all and (max-width: 1301px) {
@@ -885,9 +908,9 @@
   float: left;
   width: 300px;
   margin: 0 10px 30px;
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
 }
 
 @media all and (max-width: 780px) {
@@ -920,22 +943,25 @@
   top: 0;
   right: 0;
   letter-spacing: 2px;
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
   cursor: pointer;
 }
 
 #fengso-Member .course_list_block .course_block.preorder::after:hover {
   opacity: .8;
+  -webkit-transition-duration: .1s;
+       -o-transition-duration: .1s;
+          transition-duration: .1s;
 }
 
 #fengso-Member .course_list_block .course_block .image {
   width: 100%;
   height: 165px;
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
 }
 
 @media all and (max-width: 780px) {
@@ -945,9 +971,9 @@
 }
 
 #fengso-Member .course_list_block .course_block .image > img {
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
 }
 
 #fengso-Member .course_list_block .course_block .image > img:hover {
@@ -1116,14 +1142,17 @@
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
   cursor: pointer;
 }
 
 #fengso-Member .course_list_block .course_block .teacher_block:hover {
   opacity: .8;
+  -webkit-transition-duration: .1s;
+       -o-transition-duration: .1s;
+          transition-duration: .1s;
 }
 
 #fengso-Member .course_list_block .course_block .teacher_block .teacher_avatar {
@@ -1180,9 +1209,9 @@
   overflow: hidden;
   height: unset;
   margin: 0px 0  25px;
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
   -webkit-transition-delay: .3s;
        -o-transition-delay: .3s;
           transition-delay: .3s;
@@ -1287,11 +1316,17 @@
   overflow: hidden;
 }
 
+@media all and (max-width: 1301px) {
+  #fengso-Member .myOrder_list_block > .course_block .block_body {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
 @media all and (max-width: 780px) {
   #fengso-Member .myOrder_list_block > .course_block .block_body {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    display: block;
     width: 100%;
     padding: 12px 0px;
   }
@@ -1328,6 +1363,23 @@
           justify-content: space-between;
   width: 100%;
   margin: 12px 0;
+  position: relative;
+}
+
+@media all and (max-width: 780px) {
+  #fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item {
+    margin: 5px 0;
+  }
+  #fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item:not(:last-child)::after {
+    content: '';
+    display: block;
+    width: 99%;
+    height: 1px;
+    background-color: #ddd;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+  }
 }
 
 #fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item .image_box {
@@ -1340,9 +1392,9 @@
 }
 
 #fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item .image_box > img {
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
 }
 
 #fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item .image_box > img:hover {
@@ -1369,10 +1421,6 @@
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   width: calc(100% - 220px);
   overflow: hidden;
   padding: 0 15px;
@@ -1382,13 +1430,20 @@
 @media all and (max-width: 781px) {
   #fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box {
     width: calc(100% - 160px);
-    padding: 15px  10px 5px;
+    padding: 5px  10px;
   }
 }
 
 @media all and (max-width: 481px) {
   #fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box {
     width: 100%;
+  }
+}
+
+@media all and (max-width: 861px) {
+  #fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .elem {
+    font-size: 14px;
+    padding: 0 10px 0 0;
   }
 }
 
@@ -1420,11 +1475,33 @@
           box-sizing: border-box;
   display: inline-block;
   float: left;
-  padding: 5px 12px;
-  margin: 0 15px 0 0;
+  padding: 2px 12px;
+  margin: 6px 18px 6px 0;
   background: #FF7757;
   color: #fff;
   border-radius: 5px;
+}
+
+@media all and (max-width: 861px) {
+  #fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .tags {
+    font-size: 13px;
+  }
+}
+
+#fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .types {
+  max-width: 100px;
+  margin: 6px 18px 6px 0;
+}
+
+#fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .types i {
+  color: #777;
+  padding: 0 4px 0 0;
+}
+
+#fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .number {
+  font-size: 14px;
+  padding: 0 18px 0 0;
+  margin: 6px 0;
 }
 
 #fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .controls {
@@ -1450,9 +1527,9 @@
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
   cursor: pointer;
   width: 130px;
   color: #FF7757;
@@ -1461,6 +1538,9 @@
 
 #fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .controls .rate:hover {
   opacity: .8;
+  -webkit-transition-duration: .1s;
+       -o-transition-duration: .1s;
+          transition-duration: .1s;
 }
 
 #fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .controls .rate > i {
@@ -1517,14 +1597,6 @@
   padding: 4px 0;
 }
 
-#fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .tags {
-  padding: 2px 12px;
-  margin: 0 15px 0 0;
-  background: #FF7757;
-  color: #fff;
-  border-radius: 5px;
-}
-
 #fengso-Member .myOrder_list_block > .course_block .block_body > .status {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -1536,36 +1608,34 @@
   -webkit-align-items: flex-end;
       -ms-flex-align: end;
           align-items: flex-end;
-  width: auto;
-  padding: 0px 0;
+  width: 28%;
+  max-width: 260px;
+  max-height: 120px;
+  padding: 8px 34px;
+  border: 1px solid #c5c5c5;
 }
 
 @media all and (max-width: 1301px) {
   #fengso-Member .myOrder_list_block > .course_block .block_body > .status {
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    width: auto;
-    padding: 0px 0px;
+    width: 100%;
   }
 }
 
 @media all and (max-width: 780px) {
   #fengso-Member .myOrder_list_block > .course_block .block_body > .status {
     width: 100%;
-    padding: 0px 15px;
+    padding: 8px 12px;
+    margin: 0px 10px;
   }
 }
 
 #fengso-Member .myOrder_list_block > .course_block .block_body > .status > .status_item {
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  border: 1px solid #c5c5c5;
-  padding: 20px 34px;
-  margin: 12px 0;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: auto;
+  margin: 6px 0;
 }
 
 @media all and (max-width: 861px) {
@@ -1574,12 +1644,20 @@
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding: 12px 10px;
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
+}
+
+#fengso-Member .myOrder_list_block > .course_block .block_body > .status > .status_item > .title {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  width: 80px;
+  text-align: right;
 }
 
 #fengso-Member .myOrder_list_block > .course_block .block_body > .status > .status_item > .price {
@@ -1670,9 +1748,9 @@
 
 #fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block .input {
   font-family: 'Century Gothic','Arial','Source Sans Pro' , 'Muli' ,'微軟正黑體','FontAwesome', '新細明體';
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: inline-block;
@@ -1881,9 +1959,9 @@
   width: 100%;
   overflow: hidden;
   height: unset;
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
   -webkit-transition-delay: .3s;
        -o-transition-delay: .3s;
           transition-delay: .3s;
@@ -1947,9 +2025,9 @@
 }
 
 #fengso-Member .myFavorite_list_block .course_block .image_box img {
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
 }
 
 #fengso-Member .myFavorite_list_block .course_block .image_box img:hover {
@@ -2064,14 +2142,17 @@
   top: 40px;
   right: 20px;
   color: #aaa;
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
   cursor: pointer;
 }
 
 #fengso-Member .myFavorite_list_block .course_block .content_box > .tips > .delet:hover {
   opacity: .8;
+  -webkit-transition-duration: .1s;
+       -o-transition-duration: .1s;
+          transition-duration: .1s;
 }
 
 @media all and (max-width: 781px) {
@@ -2111,9 +2192,9 @@
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
   cursor: pointer;
   color: #FF7757;
   padding: 0 16px  0 0;
@@ -2122,6 +2203,9 @@
 
 #fengso-Member .myFavorite_list_block .course_block .content_box > .controls .item_box .rate:hover {
   opacity: .8;
+  -webkit-transition-duration: .1s;
+       -o-transition-duration: .1s;
+          transition-duration: .1s;
 }
 
 #fengso-Member .myFavorite_list_block .course_block .content_box > .controls .item_box .rate > i {
@@ -2178,14 +2262,17 @@
   height: 55px;
   padding: 10px 15px;
   border: 1px solid #FF7757;
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
   cursor: pointer;
 }
 
 #fengso-Member .myFavorite_list_block .course_block .content_box > .controls > .buysoon .elem:hover {
   opacity: .8;
+  -webkit-transition-duration: .1s;
+       -o-transition-duration: .1s;
+          transition-duration: .1s;
 }
 
 #fengso-Member .myFavorite_list_block .course_block .content_box > .controls > .buysoon .buy {
@@ -2279,14 +2366,17 @@
   text-align: center;
   cursor: pointer;
   background-color: #dadada;
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
   cursor: pointer;
 }
 
 #fengso-Member .pager_block .pager .pager_number:hover {
   opacity: .8;
+  -webkit-transition-duration: .1s;
+       -o-transition-duration: .1s;
+          transition-duration: .1s;
 }
 
 #fengso-Member .pager_block .pager .pager_number.active {

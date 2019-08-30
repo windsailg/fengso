@@ -1,5 +1,10 @@
 @charset "UTF-8";
 @import url(https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+.img_box img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 .area {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -381,9 +386,9 @@
           box-sizing: border-box;
   display: inline-block;
   float: right;
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
   cursor: pointer;
   cursor: pointer;
   padding: 0px  0 0 0;
@@ -395,6 +400,9 @@
 
 #fengso-CourseList .search_block .search_box .keyword .search_start:hover {
   opacity: .8;
+  -webkit-transition-duration: .1s;
+       -o-transition-duration: .1s;
+          transition-duration: .1s;
 }
 
 #fengso-CourseList .search_block .search_box .sort {
@@ -558,9 +566,9 @@
           align-items: flex-start;
   overflow: hidden;
   margin: 0 auto;
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
 }
 
 @media all and (max-width: 1301px) {
@@ -579,9 +587,9 @@
   float: left;
   width: 300px;
   margin: 0 10px 60px;
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
 }
 
 @media all and (max-width: 580px) {
@@ -618,22 +626,25 @@
   top: 0;
   right: 0;
   letter-spacing: 2px;
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
   cursor: pointer;
 }
 
 #fengso-CourseList .course_list_block .course_block.preorder::after:hover {
   opacity: .8;
+  -webkit-transition-duration: .1s;
+       -o-transition-duration: .1s;
+          transition-duration: .1s;
 }
 
 #fengso-CourseList .course_list_block .course_block .image {
   width: 100%;
   height: 165px;
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
 }
 
 @media all and (max-width: 580px) {
@@ -643,9 +654,9 @@
 }
 
 #fengso-CourseList .course_list_block .course_block .image img {
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
 }
 
 #fengso-CourseList .course_list_block .course_block .image img:hover {
@@ -800,14 +811,17 @@
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
   cursor: pointer;
 }
 
 #fengso-CourseList .course_list_block .course_block .teacher_block:hover {
   opacity: .8;
+  -webkit-transition-duration: .1s;
+       -o-transition-duration: .1s;
+          transition-duration: .1s;
 }
 
 #fengso-CourseList .course_list_block .course_block .teacher_block .teacher_avatar {
@@ -921,14 +935,17 @@
   text-align: center;
   cursor: pointer;
   background-color: #dadada;
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
   cursor: pointer;
 }
 
 #fengso-CourseList .pager_block .pager .pager_number:hover {
   opacity: .8;
+  -webkit-transition-duration: .1s;
+       -o-transition-duration: .1s;
+          transition-duration: .1s;
 }
 
 #fengso-CourseList .pager_block .pager .pager_number.active {

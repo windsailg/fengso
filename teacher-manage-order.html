@@ -33,7 +33,7 @@
    
 <div id="header" class="fengso-header "></div>
 
-    <div id="fengso-Teacher" class="Teacher-functions">
+    <div id="fengso-TeacherManage" class="teacher_manage">
 
         <div class="area member_control">
             <div class="container">
@@ -52,12 +52,11 @@
                     <div class="user_data_container">
 
                         <div  class="avatar box">
+
                             <div id="AvatarImageCurrent" class="img_box">
                                 <img data-current-number="00" src="img/teacher-00.png">
                             </div>
                             
-
-
                         </div>
 
                         <div class="info_box">
@@ -69,13 +68,12 @@
                     
                         </div>
 
-
                     </div>
                 </div>
 
                 <div class="tab_block">
                     <ul id="FunctionTab" class="tab">
-                        <li class="tab_item " data-target="teacher-order">課程資訊管理</li>
+                        <li class="tab_item " data-target="teacher-coursemanage">課程資訊管理</li>
                         <li class="tab_item active" data-target="teacher-order">訂單查詢</li>
                         <li class="tab_item " data-target="teacher-tax">稅收管理</li>
                         <li class="tab_item" data-target="teacher-total">結算管理</li>
@@ -92,7 +90,6 @@
                 <div class="area ">
                     <div class="container type_member">
 
-                        <div class="myOrder_list_content">
 
                             <div class="tags_block">
                                 <ul id="MyOrderTags" class="list tags_list col">
@@ -112,9 +109,48 @@
                                 <button class="shape date_search">搜尋</button>
                             </div>
 
-                            <div id="MyOrderListBlock" class="myOrder_list_block myOrder-filter-container">
+                            <div class="total_order_block">
+                                <div class="item title">
+                                    共
+                                    <span>
+                                        100
+                                    </span>
+                                    筆訂單
+                                </div>
+                                <div class="item price">
+                                    總計 <span>NT $100,000</span>
+                                </div>
+                            </div>
 
-                                <div class="course_block filtr-item" data-category="paid" data-sort="value">
+                            <div class="search_and_sort_block">
+
+                                <div class="course_discuss_control_panel">
+
+                                        <div class="title">
+                                            搜尋課程
+                                        </div>
+
+                                        <select class="picker" data-province="請選擇">
+                                            <option value=" 選擇我開的課"> 
+                                            選擇我開的課
+                                            </option>
+                                            <option value=" IBM遭質疑：未經許可用網路相冊照片訓練AI IBM遭質疑：未經許可用網路相冊照片訓練AI IBM遭質疑：未經許可用網路相冊照片訓練A"> 
+                                                IBM遭質疑：未經許可用網路相冊照片訓練AI IBM遭質疑：未經許可用網路相冊照片訓練AI IBM遭質疑：未經許可用網路相冊照片訓練
+                                            </option>
+                                            <option value=" IBM遭質疑：未經許可用網路相冊照片訓練AI IBM遭質疑：未經許可用網路相冊照片訓練AI IBM遭質疑：未經許可用網路相冊照片訓練A"> 
+                                                IBM遭質疑：未經許可用網路相冊照片訓練AI IBM遭質疑：未經許可用網路相冊照片訓練AI IBM遭質疑：未經許可用網路相冊照片訓練A
+                                            </option>
+                                        </select>
+
+
+                                </div>
+
+
+                            </div>
+
+                            <div id="TeacherOrderListBlock" class="teacherOrder_list_block ">
+
+                                <div class="course_block" >
 
                                     <div class="block_head">
                                         <ul class="order_Info">
@@ -172,7 +208,7 @@
 
                                 </div>
 
-                                <div class="course_block filtr-item" data-category="paid" data-sort="value">
+                                <div class="course_block " >
 
                                     <div class="block_head">
                                         <ul class="order_Info">
@@ -334,7 +370,6 @@
                                 <div class="lightingbox_mask"></div>
                             </div>
 
-                            
                         </div>
 
                     </div>
@@ -369,7 +404,6 @@
 
 
 <!-- OnlyThisPage -->
-<script src="js/jquery.filterizr.min.js"></script>
 <script src="js/fengso-teacher-manage.js"></script>
 
 
@@ -382,46 +416,6 @@
         $(this).addClass('active');
     });
 
-    var options = {
-        animationDuration: 0.5, // in seconds
-        delay: 70, // Transition delay in ms
-        delayMode: 'progressive', // 'progressive' or 'alternate'
-        easing: 'ease-in-out',
-        filter: 'all', // Initial filter
-        filterOutCss: { // Filtering out animation
-            opacity: 0,
-            transform: 'scale(0.3)'
-        },
-        filterInCss: { // Filtering in animation
-            opacity: 1,
-            transform: 'scale(1)'
-        },
-        layout: 'sameWidth',
-        multifilterLogicalOperator: 'or',
-        setupControls: true, // Should be false if controlsSelector is set 
-        callbacks: { 
-            onFilteringStart: function(target) { 
-                
-            },
-            onFilteringEnd: function() { 
-
-            },
-            onShufflingStart: function() { 
-
-            },
-            onShufflingEnd: function() { 
-
-            },
-            onSortingStart: function() { 
-
-            },
-            onSortingEnd: function() { 
-
-            }
-        },
-    } ;
-
-    var myOrderFilterizr = new Filterizr('.myOrder-filter-container', options );
 
 </script>
 
