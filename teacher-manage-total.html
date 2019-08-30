@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>峰碩資訊 - 教師專區 - 版稅管理</title>
+    <title>峰碩資訊 - 教師專區 - 結算管理</title>
 	<link rel="icon" href="img/favicon.png">
 
     <!-- header -->
@@ -44,7 +44,7 @@
 
                         <li class="bread_crumb_item"><span class="arrow"><i class="fas fa-angle-right"></i></span><a href="#" target="_blank">教師專區</a></li>
 
-                        <li class="bread_crumb_item bc_last"><span class="arrow"><i class="fas fa-angle-right"></i></span>版稅管理</li>
+                        <li class="bread_crumb_item bc_last"><span class="arrow"><i class="fas fa-angle-right"></i></span>稅收管理</li>
                     </ul>
                 </div>
 
@@ -52,6 +52,7 @@
                     <div class="user_data_container">
 
                         <div  class="avatar box">
+
                             <div id="AvatarImageCurrent" class="img_box">
                                 <img data-current-number="00" src="img/teacher-00.png">
                             </div>
@@ -67,16 +68,15 @@
                     
                         </div>
 
-
                     </div>
                 </div>
 
                 <div class="tab_block">
                     <ul id="FunctionTab" class="tab">
                         <li class="tab_item " data-target="teacher-coursemanage">課程資訊管理</li>
-                        <li class="tab_item" data-target="teacher-order">訂單查詢</li>
-                        <li class="tab_item active" data-target="teacher-tax">版稅管理</li>
-                        <li class="tab_item" data-target="teacher-total">結算管理</li>
+                        <li class="tab_item " data-target="teacher-order">訂單查詢</li>
+                        <li class="tab_item " data-target="teacher-tax">稅收管理</li>
+                        <li class="tab_item active" data-target="teacher-total">結算管理</li>
                     </ul>
                 </div>
 
@@ -94,8 +94,8 @@
                             <div class="tags_block">
                                 <ul id="MyOrderTags" class="list tags_list col">
                                     <li class="list_item tag active" data-filter="all">全部</li>
-                                    <li class="list_item tag" data-filter="paid">已完成</li>
-                                    <li class="list_item tag" data-filter="refund">退費</li>                                    
+                                    <li class="list_item tag" data-filter="paid">已結算</li>
+                                    <li class="list_item tag" data-filter="refund">未結算</li>                                    
                                 </lu>
                             </div>
 
@@ -156,7 +156,7 @@
                                         <ul class="order_Info">
                                             <li class="order_item num">訂單編號：201912310909</li>
                                             <li class="order_item date">訂單日期：2019/12/31</li>
-                                            <li class="order_item status">訂單狀態：已完成</li>
+                                            <li class="order_item status">結算狀態：已結算</li>
                                         </ul>
                                     </div>
 
@@ -281,7 +281,7 @@
                                         <ul class="order_Info">
                                             <li class="order_item num">訂單編號：201912310909</li>
                                             <li class="order_item date">訂單日期：2019/12/31</li>
-                                            <li class="order_item status">訂單狀態：已退費</li>
+                                            <li class="order_item status">結算狀態：未結算</li>
                                         </ul>
                                     </div>
 
@@ -335,7 +335,7 @@
                                                     40%
                                                 </div>
                                                 <div class="item income">
-                                                    -1500
+                                                    --
                                                 </div>
 
 
@@ -361,7 +361,7 @@
                                                     40%
                                                 </div>
                                                 <div class="item income">
-                                                    -1500
+                                                    --
                                                 </div>
 
 
@@ -379,7 +379,7 @@
                                         <ul class="order_Info">
                                             <li class="order_item num">訂單編號：201912310909</li>
                                             <li class="order_item date">訂單日期：2019/12/31</li>
-                                            <li class="order_item status">訂單狀態：已退費</li>
+                                            <li class="order_item status">結算狀態：未結算</li>
                                         </ul>
                                     </div>
 
@@ -433,7 +433,7 @@
                                                     40%
                                                 </div>
                                                 <div class="item income">
-                                                    -1500
+                                                    --
                                                 </div>
 
 
@@ -492,7 +492,6 @@
 
 <!-- OnlyThisPage -->
 <script src="js/fengso-teacher-manage.js"></script>
-
 
 <script>
     $('#DataSearchStart').cxCalendar();
