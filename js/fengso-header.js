@@ -8,7 +8,7 @@ $(document).ready(function(){
 
    //SidebarControl
    $('#SidebarMenuBTN').click(function(){
-      $('#SideBar').fadeIn(220);
+       $('#SideBar').fadeIn(220);
       // noscroll.bind();
    })
 
@@ -53,11 +53,11 @@ var resizeTimer = null;
 
  $('#SideBarITeach').click(function(){
       // $(this).next().fadeToggle(300);
-      $('.lightingbox.type2').fadeToggle(250);
+      $('#TeacherRegister').fadeToggle(250);
  })
  $('#HeaderITeach').click(function(){
       // $(this).next().fadeToggle(300);
-      $('.lightingbox.type2').fadeToggle(250);
+      $('#TeacherRegister').fadeToggle(250);
  })
 
  

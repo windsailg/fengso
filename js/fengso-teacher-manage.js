@@ -6,6 +6,7 @@ $(document).ready(function(){
         $(this).addClass('active');
     });
 
+
    //lazy + focuspoint
     $('.lazy').Lazy({ 
       scrollDirection: 'vertical',
@@ -37,6 +38,12 @@ $(document).ready(function(){
       },
     });     
 
+    $('.detail_list_btn').click(function(){
+          
+          let thisDetail = $(this).children('.detail_list_container');
 
+          $('#LightingNoxTax').find('.lightingbox_container').html(thisDetail.clone());
+          $('#LightingNoxTax').fadeToggle(250);
+    })
     
 });

@@ -730,10 +730,10 @@
 }
 
 #fengso-Teacher .search_and_sort_block .course_discuss_control_panel {
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -764,7 +764,7 @@
   outline: none;
   color: #6e6e6e;
   margin: 6px 5px 6px 0;
-  padding: 5px 10px;
+  padding: 5px 18px 5px 10px;
   letter-spacing: 3px;
 }
 
@@ -817,7 +817,8 @@
   display: inline-block;
   float: left;
   margin: 0px 0px 0 0;
-  width: 67%;
+  width: 100%;
+  max-width: 780px;
   height: 36px;
   outline: none;
   border-style: solid;
