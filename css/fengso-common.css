@@ -242,6 +242,18 @@ button.shape {
           justify-content: center;
 }
 
+.focuspoint .lazy {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  background-image: url("images/fengso-loading.svg");
+  max-height: 100%;
+}
+
+.focuspoint .lazied {
+  max-height: unset;
+}
+
 .img_box img {
   width: 100%;
 }
@@ -305,4 +317,42 @@ button.shape {
 
 .bread_crumb_block .bread_crumb .bread_crumb_item.bc_last {
   font-weight: 600;
+}
+
+.isopen {
+  -webkit-transition: 0.3s all cubic-bezier(0.03, 0.08, 0, 0.99);
+  -o-transition: 0.3s all cubic-bezier(0.03, 0.08, 0, 0.99);
+  transition: 0.3s all cubic-bezier(0.03, 0.08, 0, 0.99);
+  opacity: 0;
+  -webkit-transform: scale(0.2);
+      -ms-transform: scale(0.2);
+          transform: scale(0.2);
+}
+
+.is_rotate {
+  opacity: 0;
+  -webkit-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.is_right {
+  opacity: 0;
+  -webkit-transition: all 0.2s cubic-bezier(0.03, 0.08, 0, 0.99);
+  -o-transition: all 0.2s cubic-bezier(0.03, 0.08, 0, 0.99);
+  transition: all 0.2s cubic-bezier(0.03, 0.08, 0, 0.99);
+  -webkit-transform: translateX(-120px);
+      -ms-transform: translateX(-120px);
+          transform: translateX(-120px);
+}
+
+form {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  width: 100%;
 }
