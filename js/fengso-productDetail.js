@@ -48,7 +48,6 @@ $(document).ready(function(){
    })
    
    //Rate and Add to list
-  
    var ActName = $('.add_to_list').children('.act_name').html();
    $('.add_to_list').click(function(){
       if($(this).hasClass('active')){
@@ -62,7 +61,6 @@ $(document).ready(function(){
          $(this).children('.act_name').html('已加入課程');
       }
    })
-
 
     //tmp course trigger
    $('.course_intro').fadeIn(200);
@@ -89,64 +87,95 @@ $(document).ready(function(){
    })
    
 
-      //rating function rate and evaluation
-      $('#RatingStars label').click(function(){
+   //rating function rate and evaluation
+   $('#RatingStars label').click(function(){
 
 
-         var Target = $(this);
-         var RatingVal = Target.attr('for');
-         var Evaluation = $('#RatingEvaluation');
+      var Target = $(this);
+      var RatingVal = Target.attr('for');
+      var Evaluation = $('#RatingEvaluation');
 
-         if(RatingVal == 'star_0'){
-            Evaluation.html('0 糟透了 :(( ');
-         }else if(RatingVal == 'star_0.5'){
-            Evaluation.html('0.5 真是糟 :( ');
-         }else if(RatingVal == 'star_1'){
-            Evaluation.html('1.0 請在加油！');
-         }else if(RatingVal == 'star_1.5'){
-            Evaluation.html('1.5 有很大的進步空間');
-         }else if(RatingVal == 'star_2'){
-            Evaluation.html('2.0 還有進步空間');
-         }else if(RatingVal == 'star_2.5'){
-            Evaluation.html('2.5 再加油！');
-         }else if(RatingVal == 'star_3'){
-            Evaluation.html('3.0 還不錯');
-         }else if(RatingVal == 'star_3.5'){
-            Evaluation.html('3.5 Nice！');
-         }else if(RatingVal == 'star_4'){
-            Evaluation.html('4.0 很棒的課程！');
-         }else if(RatingVal == 'star_4.5'){
-            Evaluation.html('4.5 棒透了！ ');
-         }else if(RatingVal == 'star_5'){
-            Evaluation.html('5.0 太好了！  我學到很多東西！ ');
-         }
+      if(RatingVal == 'star_0'){
+         Evaluation.html('0 糟透了 :(( ');
+      }else if(RatingVal == 'star_0.5'){
+         Evaluation.html('0.5 真是糟 :( ');
+      }else if(RatingVal == 'star_1'){
+         Evaluation.html('1.0 請在加油！');
+      }else if(RatingVal == 'star_1.5'){
+         Evaluation.html('1.5 有很大的進步空間');
+      }else if(RatingVal == 'star_2'){
+         Evaluation.html('2.0 還有進步空間');
+      }else if(RatingVal == 'star_2.5'){
+         Evaluation.html('2.5 再加油！');
+      }else if(RatingVal == 'star_3'){
+         Evaluation.html('3.0 還不錯');
+      }else if(RatingVal == 'star_3.5'){
+         Evaluation.html('3.5 Nice！');
+      }else if(RatingVal == 'star_4'){
+         Evaluation.html('4.0 很棒的課程！');
+      }else if(RatingVal == 'star_4.5'){
+         Evaluation.html('4.5 棒透了！ ');
+      }else if(RatingVal == 'star_5'){
+         Evaluation.html('5.0 太好了！  我學到很多東西！ ');
+      }
 
-      })
-      //rating function mob
-      // const labels = document.querySelectorAll('label');
-      // const getInput = val => document.getElementById(`star_${val}`);
+   })
+   //rating function mob
+   // const labels = document.querySelectorAll('label');
+   // const getInput = val => document.getElementById(`star_${val}`);
 
-      // labels.forEach(label => {
+   // labels.forEach(label => {
 
-      //    label.addEventListener('touchstart', e => {
-      //       const targetInput = getInput(e.target.control.value);
-      //       targetInput.checked = true;
-      //       console.log(getInput)
-      //    })
+   //    label.addEventListener('touchstart', e => {
+   //       const targetInput = getInput(e.target.control.value);
+   //       targetInput.checked = true;
+   //       console.log(getInput)
+   //    })
 
-      //    label.addEventListener('touchmove', e => {
-      //       const touch = e.touches[0]
-      //       const targetLabel = document.elementFromPoint(touch.clientX, touch.clientY)
+   //    label.addEventListener('touchmove', e => {
+   //       const touch = e.touches[0]
+   //       const targetLabel = document.elementFromPoint(touch.clientX, touch.clientY)
 
-      //       if (!targetLabel || !targetLabel.htmlFor) {
-               
-      //          return
-               
-      //       }
+   //       if (!targetLabel || !targetLabel.htmlFor) {
+            
+   //          return
+            
+   //       }
 
-      //       const targetInput = document.getElementById(targetLabel.htmlFor)
-      //       targetInput.checked = true;
-      //    })
-         
-      // })
+   //       const targetInput = document.getElementById(targetLabel.htmlFor)
+   //       targetInput.checked = true;
+   //    })
+      
+   // })
+
+   //HomeworkBox Functions
+   $('#HomeworkUploadBox').hide();
+   $('#HomeworkUploadOpenButton').click(function(){
+      // $(this).delay(80).hide(0);
+      $(this).hide(0);
+      // $('#HomeworkUploadBox').slideDown(200);
+      $('#HomeworkUploadBox').fadeIn(200);
+   });
+   $('#HomeworkUploadCloseButton').click(function(){
+      // $('#HomeworkUploadBox').slideUp(200);
+      $('#HomeworkUploadBox').fadeOut(0);
+      $('#HomeworkUploadOpenButton').show(0);
+   });
+
+
+   //HomeworkDiscussion LightingBox content
+   $('.discuss_btn').click(function(){
+
+      //放入該區塊內容
+      let thisDetail = $(this).parents('.homework_block').children('.homework_discussion_block')
+      $('#LightingBoxHomework').find('.lightingbox_container').html(thisDetail.clone());
+
+      //開啟燈箱動畫
+      let target = $('#LightingBoxHomework');
+         target.hide().children('.lightingbox_wrap').removeClass('isopen').css({'transform':'scale(0)'});
+         target.show().children('.lightingbox_wrap').addClass('isopen').animate({'opacity':'1'} ,200 ,function() {
+         $('#LightingBoxHomework .lightingbox_wrap').css({'transform':'scale(1)'});
+      });
+
+   }) 
 });
