@@ -2,20 +2,20 @@
 $(document).ready(function(){
    
 
+
+
+// const resizeTimer = null;
+// $(window).resize(function(){
+//     if (resizeTimer) {
+//         clearTimeout(resizeTimer);
+//     }
+//     resizeTimer = setTimeout(function(){
+//         location.reload();
+//     }, 500);
+// })
+
 ResizerRunner();
-
-var resizeTimer = null;
-$(window).resize(function(){
-    if (resizeTimer) {
-        clearTimeout(resizeTimer);
-    }
-    resizeTimer = setTimeout(function(){
-        location.reload();
-    }, 500);
-})
-
 function ResizerRunner(){
-    console.log('resizer complete');
     let ww = window.innerWidth;
     if(ww <= 920){
 
