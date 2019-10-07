@@ -601,7 +601,7 @@
   cursor: pointer;
   position: fixed;
   width: 100vw;
-  height: 100vh;
+  height: 140vh;
   background: rgba(0, 0, 0, 0.705);
   z-index: 999;
 }

@@ -96,7 +96,7 @@ $color_fs_footer-font:rgb(124, 124, 124);
          font-size: calc(26px + 0.7vw);
          font-weight: 600;
          color: $color_fs_gray_3_fadeblue_2;
-         padding:40px 0;
+         padding:30px 0;
          line-height: 38px;
       }
    }
@@ -109,7 +109,7 @@ $color_fs_footer-font:rgb(124, 124, 124);
          font-size: calc(18px + 0.5vw);
          font-weight: 600;
          color: $color_fs_gray_3_fadeblue_2;
-         padding:40px 0;
+         padding:20px 0;
       }
       > .subtitle{
          @extend %centerbox_reminder;
@@ -121,21 +121,42 @@ $color_fs_footer-font:rgb(124, 124, 124);
    .input_block{
       @include fxc;
       position: relative;
-      padding: 0 0 20px 0;
+      padding: 10px 0 ;
       width: 100%;
-      
-      > .input_name{
+      margin:  0 auto;
+      @include cols_v2(98%){
+      }
+     &.cols{
+         width: 400px;
+         @include MCW(400px) {
+            width: 100%;
+         }
+      }
+      .title{
+         
+         @include ibl;
+         padding: 5px 0 0 ;
+         font-weight:unset;
+         font-size: 16px;
+         text-align: left;
+         &.dp_tab{
+            @include MCW(681px) {
+               display:none;
+            }
+         }
+      }
+      .input_name{
          @include selection-none;
          padding: 10px 0 5px;;
       }
-      > .input{
+      .input{
          @include PlaceHolder-Style(rgb(145, 145, 145),.9);
          @include tst;
          @include ib;
          text-decoration: none;
          width: 100%;
          max-width: 650px;
-         margin:  15px auto 10px;
+         margin:  8px auto 6px;
          padding: 8px 15px ;
          border-width: 1px;
          border-style: solid;
@@ -154,12 +175,13 @@ $color_fs_footer-font:rgb(124, 124, 124);
          }
          &.fail{
             border-color:  rgb(196, 3, 3);
+            box-shadow: none;
             &[type="text"]:focus{
                border-color:  rgb(196, 3, 3);
             }
          }
       }
-      > .fail_info{
+      .fail_info{
          @include selection-none;
          @include ib;
          position: absolute;
@@ -171,6 +193,10 @@ $color_fs_footer-font:rgb(124, 124, 124);
          font-size: 12px;
       }
    }
+   .robot_check_block{
+      @include fxc;
+      padding:10px;
+   }
    .tips{
       @extend %centerbox_reminder;
       a{
@@ -181,7 +207,7 @@ $color_fs_footer-font:rgb(124, 124, 124);
    }
    .btns{
       @extend %centerbox_reminder;
-      padding:40px;
+      padding:20px;
       button{
          margin: 10px;
          &.gray{

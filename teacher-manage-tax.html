@@ -21,6 +21,7 @@
     
     
     <!-- Plugin -->
+    
     <link rel="stylesheet" href="css/focuspoint.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli|Source+Sans+Pro">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
@@ -36,7 +37,7 @@
     <div id="fengso-TeacherManage" class="teacher_manage">
 
         <div class="area member_control">
-            <div class="container">
+            <div class="container type_account">
 
                 <div class="bread_crumb_block">
                     <ul class="bread_crumb">
@@ -73,10 +74,10 @@
 
                 <div class="tab_block">
                     <ul id="FunctionTab" class="tab">
-                        <li class="tab_item " data-target="teacher-coursemanage">課程資訊管理</li>
-                        <li class="tab_item" data-target="teacher-order">訂單查詢</li>
-                        <li class="tab_item active" data-target="teacher-tax">版稅管理</li>
-                        <li class="tab_item" data-target="teacher-total">結算管理</li>
+                        <li class="tab_item active" data-target="teacher-courseinfo"><a href="#" >課程資訊管理</a></li>
+                        <li class="tab_item " data-target="teacher-order"><a href="#" >訂單查詢</a></li>
+                        <li class="tab_item " data-target="teacher-tax"><a href="#" >稅收管理</a></li>
+                        <li class="tab_item" data-target="teacher-total"><a href="#" >結算管理</a></li>
                     </ul>
                 </div>
 
@@ -137,8 +138,8 @@
                                             <option value=" IBM遭質疑：未經許可用網路相冊照片訓練AI IBM遭質疑：未經許可用網路相冊照片訓練AI IBM遭質疑：未經許可用網路相冊照片訓練A"> 
                                                 IBM遭質疑：未經許可用網路相冊照片訓練AI IBM遭質疑：未經許可用網路相冊照片訓練AI IBM遭質疑：未經許可用網路相冊照片訓練
                                             </option>
-                                            <option value=" IBM遭質疑：未經許可用網路相冊照片訓練AI IBM遭質疑：未經許可用網路相冊照片訓練AI IBM遭質疑：未經許可用網路相冊照片訓練A"> 
-                                                IBM遭質疑：未經許可用網路相冊照片訓練AI IBM遭質疑：未經許可用網路相冊照片訓練AI IBM遭質疑：未經許可用網路相冊照片訓練A
+                                            <option value="成長加速計畫（思考力）：突破常規思考、開創新思維力"> 
+                                                成長加速計畫（思考力）：突破常規思考、開創新思維力
                                             </option>
                                         </select>
 
@@ -781,6 +782,12 @@
                                 </div>
 
                             </div>
+                            
+                                <div id="NohingBlock" class="block nothing_block">
+                                    <div class="title">
+                                        目前無任何訂單紀錄
+                                    </div>
+                                </div>                            
 
                             <div class="pager_block">
                                 <ul class="pager">
@@ -805,7 +812,7 @@
 
 </div>
 
-	<div  id="LightingNoxTax" class="lightingbox type2"> 
+	<div  id="LightingBoxTotalTax" class="lightingbox type2"> 
 			<div class="lightingbox_wrap type2">
 				<div  class="lightingbox_container">
 
@@ -844,20 +851,31 @@
 <script src="js/jquery.cxcalendar.min.js"></script>
 <script src="js/jquery.cxcalendar.languages.js"></script>
 
-
 <!-- OnlyThisPage -->
 <script src="js/fengso-teacher-manage.js"></script>
 
 
 <script>
-    $('#DataSearchStart').cxCalendar();
-    $('#DataSearchEnd').cxCalendar();
 
-    $('#MyOrderTags .tag').click(function(){
-        $('#MyOrderTags .tag').removeClass('active');
-        $(this).addClass('active');
-    });
+$('#DataSearchStart').cxCalendar();
+$('#DataSearchEnd').cxCalendar();
 
+$('#MyOrderTags .tag').click(function(){
+    $('#MyOrderTags .tag').removeClass('active');
+    $(this).addClass('active');
+});
+
+$(document).ready(function(){
+
+    const elemQuan = $('.tax_container').length;
+    if(elemQuan == 0){
+        $('#NohingBlock').show();
+        return;
+    }else{
+        $('#NohingBlock').hide();
+    }
+    
+});
 
 </script>
 

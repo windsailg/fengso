@@ -47,21 +47,6 @@ $(document).ready(function(){
       }
    })
    
-   //Rate and Add to list
-   var ActName = $('.add_to_list').children('.act_name').html();
-   $('.add_to_list').click(function(){
-      if($(this).hasClass('active')){
-
-         $(this).removeClass('active animate');
-         $(this).children('.btn').html('<i class="far fa-heart"></i>');
-         $(this).children('.act_name').html(ActName);
-      }else{
-         $(this).addClass('active animate');
-         $(this).children('.btn').html('<i class="fas fa-heart"></i>');
-         $(this).children('.act_name').html('已加入課程');
-      }
-   })
-
     //tmp course trigger
    $('.course_intro').fadeIn(200);
    $('#CourseContentTab .tab_item').click(function(){

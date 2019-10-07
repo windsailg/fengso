@@ -63,12 +63,62 @@ button{
    &:hover{
       opacity: .8;
    }
+   &.type_gray{
+      background: #ddd;
+      color:#444;
+   }
+   &.shape{
+      border-radius: 0;
+   }
+}
+
+//if no content, show it  
+.nothing_block{
+   @include fxc;
+   width: 100%;
+   padding:30px 0px;
+
+   position: relative;
+   @include MCW(861px) {
+      padding:30px 15px;
+   }
+   .nothing{
+      letter-spacing: 3px;
+      color:#888;
+      font-size: 22px;
+      padding:80px 0px;
+      max-height: 260px;
+      width: 100%;
+      border: 1px solid #ccc;
+      @include fxc;
+   };
+}
+
+
+//lazy and position focuspoint style
+.focuspoint{
+   // @include flex-center;
+   // align-content: center;
+   .lazy{
+      @include bg-loading;
+      background-color: #fff;
+      background-image: url("images/fengso-loading.svg");
+      max-height: 100%;
+   }
+   .lazied{
+      max-height: unset;
+   }
 }
 .img_box{
    img{
-      height:100%;
+      // height:100%;
       width:100%;
    }
+}
+
+
+.tdu{
+   text-decoration: underline;
 }
 
 .bread_crumb_block{
@@ -107,4 +157,25 @@ button{
       }
 
    }
+}
+
+
+
+
+
+// jquery animate 
+.isopen{
+   transition: .3s all cubic-bezier(.03,.08,0,.99) ;
+   opacity: 0;
+   transform:scale(0.2);
+}
+.is_rotate{
+   opacity: 0;
+   transition: all .5s ease-in-out;
+   transform:rotate(180deg);
+}
+.is_right{
+   opacity: 0;
+   transition: all .2s cubic-bezier(.03,.08,0,.99) ;
+   transform:translateX(-120px);
 }

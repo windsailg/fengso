@@ -8,6 +8,7 @@ $color-lb_default:rgb(218, 218, 218);
       position: fixed;
       z-index: 1001;
       display: none;
+      
       .lightingbox_wrap{
          @include b;
          @include arl;
@@ -19,7 +20,6 @@ $color-lb_default:rgb(218, 218, 218);
          z-index: 1000;
          border-radius: 5px;
          top: 8%;
-         
          @include MCW(861px){
             width:95%;
             padding: 42px 15px 20px;
@@ -155,6 +155,7 @@ $color-lb_default:rgb(218, 218, 218);
                   }
                   .checkbox_block input:checked ~ .checkmark {
                      background-color: #FF7757;
+                     border-color: #fff;;
                   }
                   .checkbox_block input:checked ~ .checkmark:after {
                      display: block;
@@ -255,9 +256,11 @@ $color-lb_default:rgb(218, 218, 218);
             
          }
          &.type2{
-            top: calc(10% + 15px);
+            top: calc(10% + 70px);
             border-top-right-radius: 0;
+            z-index: 1001;
          }
+
       }
       .btn_close{
          @include b;
@@ -340,10 +343,11 @@ $color-lb_default:rgb(218, 218, 218);
          cursor: pointer;    
          position: fixed;
          width:100vw;
-         height: 100vh;
+         height: 140vh;
          background: rgba(0, 0, 0, 0.705);
          z-index: 999;;
       }
+
    }
    
    

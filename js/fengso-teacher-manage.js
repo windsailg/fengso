@@ -7,6 +7,7 @@ $(document).ready(function(){
     });
 
 
+
    //lazy + focuspoint
     $('.lazy').Lazy({ 
       scrollDirection: 'vertical',
@@ -39,11 +40,20 @@ $(document).ready(function(){
     });     
 
     $('.detail_list_btn').click(function(){
-          
-          let thisDetail = $(this).children('.detail_list_container');
 
-          $('#LightingNoxTax').find('.lightingbox_container').html(thisDetail.clone());
-          $('#LightingNoxTax').fadeToggle(250);
+        //放入該訂單訊息
+        let thisDetail = $(this).children('.detail_list_container');
+        $('#LightingBoxTotalTax').find('.lightingbox_container').html(thisDetail.clone());
+
+        //開啟燈箱動畫
+        let target = $('#LightingBoxTotalTax');
+        target.hide().children('.lightingbox_wrap').removeClass('isopen').css({'transform':'scale(0)'});
+        target.show().children('.lightingbox_wrap').addClass('isopen').animate({'opacity':'1'} ,200 ,function() {
+            $('#LightingBoxTotalTax .lightingbox_wrap').css({'transform':'scale(1)'});
+        });
+
     })
     
+
+
 });

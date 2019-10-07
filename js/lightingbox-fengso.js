@@ -2,91 +2,41 @@
 
 $(document).ready(function(){
 
-
-
-   //固定畫面不捲動物件
-   // var noscroll = {
-   //    bind: function(){
-   //       var tops = $(document).scrollTop();
-   //       $(document).bind("scroll",function (){
-   //          $(document).scrollTop(tops);
-   //       });
-   //    },
-   //    unbind: function(){
-   //       $(document).unbind("scroll");
-   //    },
-   //    overflow: function(){
-   //       if($('body').css('overflow-y') === 'hidden' ){
-   //          $('body').css({
-   //             'overflow-y':'auto',
-   //          });
-   //       }else{
-   //          $('body').css({
-   //             'overflow-y':'hidden',
-   //          });
-   //       }
-   //    }
-   // };
-
-
-
-// console.log('lb step0');
-// (function ($) {
-//    console.log('lb step1');
-//    $.fn.LightingBox = function(event) {
-//       this.click(function(event){
-//          event.preventDefault();
-//          var targetID = '#' + $(this).data('content');
-//          var targetHtml = $(targetID).html();
-//          LightingBoxOpeningType2();
-//          $('#LightingBoxInnerContainerType2').html(targetHtml);
-//          console.log('lb success');
-//       })
-//    };
-// }( jQuery ));
-
-
-
-
-
-btnFunctionheader()
+   btnFunctionheader()
 
    function btnFunctionheader(){
 
       $('#HeaderLogin').click(function(){
          LightingBoxOpening();
-         $('#LoginBlock').show();
+         $('#LoginBlock').delay(500).show();
       })
 
       $('#HEaderRegister').click(function(){
          LightingBoxOpening();
-         $('#RegisterBlock').show();
+         $('#RegisterBlock').delay(500).show();
       })
 
+      //全域關閉
       $('.lightingbox_mask , .btn_close').click(function(){
          LightingBoxClosing();
       })
 
    }
 
-      //LB Control
 
-
-
-
-      function LightingBoxOpeningType2(BoxType){
-         $('#TeacherRegister').fadeIn(220);
-   //noscroll.bind();
-      }
-      function LightingBoxOpening(BoxType){
-         $('#LightingBox').fadeIn(220);
-         //noscroll.bind();
-      }
-      function LightingBoxClosing(BoxType){
-         $(' .lightingbox, .user_lr').fadeOut(220);
-         //noscroll.unbind();
-
-      }
+   function LightingBoxOpening(BoxType){
+      // $('#LightingBox').fadeIn(200);
+      //noscroll.bind();
+      let target = $('#LightingBox');
+      target.hide().children('.lightingbox_wrap').removeClass('isopen').css({'transform':'scale(0)'});
+      target.fadeIn(100).children('.lightingbox_wrap').addClass('isopen').animate({'opacity':'1'} ,200 ,function() {
+         $('#LightingBox .lightingbox_wrap').css({'transform':'scale(1)'});
+      });
+   }
+   function LightingBoxClosing(BoxType){
+      $(' .lightingbox, .user_lr').delay(50).hide();
+      //noscroll.unbind();
+   }
 
 
 });

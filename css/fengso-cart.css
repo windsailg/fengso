@@ -55,6 +55,7 @@
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  overflow: visible;
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
@@ -586,6 +587,10 @@
   width: 285px;
 }
 
+#fengso-Cart .cart_list_block > .cart_list_total_container > .total_detail_title_block > .sale_num form {
+  display: inline-block;
+}
+
 #fengso-Cart .cart_list_block > .cart_list_total_container > .total_detail_title_block > .sale_num .input {
   font-family: 'Century Gothic','Arial','Source Sans Pro' , 'Muli' ,'微軟正黑體','FontAwesome', '新細明體';
   font-size: 16px;
@@ -614,6 +619,7 @@
   width: 160px;
   color: #FF7757;
   font-size: 22px;
+  text-align: right;
 }
 
 #fengso-Cart .cart_list_block > .cart_list_total_container > .total_detail_title_block > .item {
@@ -682,7 +688,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  margin: 30px 0 0;
+  margin: 38px 0 0;
 }
 
 #fengso-Cart .checker_block .checker_container {

@@ -14,7 +14,7 @@
     <!-- Golbal -->
     <link rel="stylesheet" href="css/fengso-lightingbox.css">
     <link rel="stylesheet" href="css/fengso-common.css">
-    <link rel="stylesheet" href="css/jquery.cxcalendar.css">
+    <link rel="stylesheet" href="css/jquery.cxcalendar.scss">
 
     <!-- This Page -->
     <link rel="stylesheet" href="css/fengso-teacher-manage.css">
@@ -36,7 +36,7 @@
     <div id="fengso-TeacherManage" class="teacher_manage">
 
         <div class="area member_control">
-            <div class="container">
+            <div class="container type_account">
 
                 <div class="bread_crumb_block">
                     <ul class="bread_crumb">
@@ -75,10 +75,10 @@
 
                 <div class="tab_block">
                     <ul id="FunctionTab" class="tab">
-                        <li class="tab_item active" data-target="teacher-courseinfo">課程資訊管理</li>
-                        <li class="tab_item " data-target="teacher-order">訂單查詢</li>
-                        <li class="tab_item " data-target="teacher-tax">稅收管理</li>
-                        <li class="tab_item" data-target="teacher-total">結算管理</li>
+                        <li class="tab_item active" data-target="teacher-courseinfo"><a href="#" >課程資訊管理</a></li>
+                        <li class="tab_item " data-target="teacher-order"><a href="#" >訂單查詢</a></li>
+                        <li class="tab_item " data-target="teacher-tax"><a href="#" >稅收管理</a></li>
+                        <li class="tab_item" data-target="teacher-total"><a href="#" >結算管理</a></li>
                     </ul>
                 </div>
 
@@ -99,11 +99,9 @@
                         </div>
 
                         <div class="swiper_pager_container">
-
                             <div id="TeacherCourseInformationSwiperSlider" class="teacher_course_list_block">
-                                <div class="swiper-wrapper">
 
-                                    <div class="course_block swiper-slide">
+                                    <div class="course_block ">
 
                                         <a href="#">
                                             <div class="image_box img_box focuspoint">
@@ -135,26 +133,14 @@
 
                                             <div class="elem course_information_controls controls">
 
-                                                <div class="item qa" >
-                                                    <div class="elem title">
-                                                        <i class="fas fa-comments"></i>
-                                                        <span class="text">學員提問</span>
+                                                <a href="#" targe="_blank">
+                                                    <div class="item manage" >
+                                                        <div class="elem title">
+                                                            <i class="fas fa-book"></i>
+                                                            <span class="text">前往管理</span>
+                                                        </div>
                                                     </div>
-                                                </div>
-
-                                                <div class="item rate" >
-                                                    <div class="elem title">
-                                                        <i class="fas fa-star"></i>
-                                                        <span class="text">學員評價</span>
-                                                    </div>
-                                                </div>
-
-                                                <div class="item homework" >
-                                                    <div class="elem title">
-                                                        <i class="fas fa-book"></i>
-                                                        <span class="text">作業批改</span>
-                                                    </div>
-                                                </div>
+                                                </a>
 
                                             </div>
 
@@ -162,7 +148,7 @@
 
                                     </div>
 
-                                    <div class="course_block swiper-slide preorder">
+                                    <div class="course_block preorder">
 
                                         <a href="#">
                                             <div class="image_box img_box focuspoint">
@@ -193,19 +179,21 @@
 
                                             <div class="elem course_information_controls controls">
 
-                                                <div class="item qa" >
-                                                    <div class="elem title">
-                                                        <i class="fas fa-comments"></i>
-                                                        <span class="text">學員提問</span>
+                                                 <a href="#" targe="_blank">
+                                                    <div class="item manage" >
+                                                        <div class="elem title">
+                                                            <i class="fas fa-book"></i>
+                                                            <span class="text">前往管理</span>
+                                                        </div>
                                                     </div>
-                                                </div>
-
+                                                </a>
+                                                
                                             </div>
 
                                         </div>
                                     </div>
 
-                                    <div class="course_block swiper-slide">
+                                    <div class="course_block ">
 
                                         <a href="#">
                                             <div class="image_box img_box focuspoint">
@@ -238,33 +226,21 @@
 
                                             <div class="elem course_information_controls controls">
 
-                                                <div class="item qa" >
-                                                    <div class="elem title">
-                                                        <i class="fas fa-comments"></i>
-                                                        <span class="text">學員提問</span>
+                                                <a href="#" targe="_blank">
+                                                    <div class="item manage" >
+                                                        <div class="elem title">
+                                                            <i class="fas fa-book"></i>
+                                                            <span class="text">前往管理</span>
+                                                        </div>
                                                     </div>
-                                                </div>
-
-                                                <div class="item rate" >
-                                                    <div class="elem title">
-                                                        <i class="fas fa-star"></i>
-                                                        <span class="text">學員評價</span>
-                                                    </div>
-                                                </div>
-
-                                                <div class="item homework" >
-                                                    <div class="elem title">
-                                                        <i class="fas fa-book"></i>
-                                                        <span class="text">作業批改</span>
-                                                    </div>
-                                                </div>
+                                                </a>
 
                                             </div>
 
                                         </div>
                                     </div>
 
-                                    <div class="course_block swiper-slide">
+                                    <div class="course_block ">
 
                                         <a href="#">
                                             <div class="image_box img_box focuspoint">
@@ -297,39 +273,30 @@
 
                                             <div class="elem course_information_controls controls">
 
-                                                <div class="item qa" >
-                                                    <div class="elem title">
-                                                        <i class="fas fa-comments"></i>
-                                                        <span class="text">學員提問</span>
+                                                <a href="#" targe="_blank">
+                                                    <div class="item manage" >
+                                                        <div class="elem title">
+                                                            <i class="fas fa-book"></i>
+                                                            <span class="text">前往管理</span>
+                                                        </div>
                                                     </div>
-                                                </div>
-
-                                                <div class="item rate" >
-                                                    <div class="elem title">
-                                                        <i class="fas fa-star"></i>
-                                                        <span class="text">學員評價</span>
-                                                    </div>
-                                                </div>
-
-                                                <div class="item homework" >
-                                                    <div class="elem title">
-                                                        <i class="fas fa-book"></i>
-                                                        <span class="text">作業批改</span>
-                                                    </div>
-                                                </div>
+                                                </a>
 
                                             </div>
 
                                         </div>
                                     </div>
 
-                                </div>
-
                             </div>
-                            <div class="teacher_course_next swiper-button-next"></div>
-                            <div class="teacher_course_prev swiper-button-prev"></div>
-
                         </div>
+
+
+                        <div id="NohingBlock" class="block nothing_block">
+                            <div class="title">
+                                目前無任何開課紀錄
+                            </div>
+                        </div>
+
 
                     </div>
                 </div>
@@ -365,6 +332,7 @@
 
 
 <script>
+
     // $('#DataSearchStart').cxCalendar();
     // $('#DataSearchEnd').cxCalendar();
 
@@ -372,6 +340,7 @@
         $('#MyOrderTags .tag').removeClass('active');
         $(this).addClass('active');
     });
+
 
 </script>
 

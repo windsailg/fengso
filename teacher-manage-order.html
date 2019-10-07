@@ -36,7 +36,7 @@
     <div id="fengso-TeacherManage" class="teacher_manage">
 
         <div class="area member_control">
-            <div class="container">
+            <div class="container type_account">
 
                 <div class="bread_crumb_block">
                     <ul class="bread_crumb">
@@ -73,10 +73,10 @@
 
                 <div class="tab_block">
                     <ul id="FunctionTab" class="tab">
-                        <li class="tab_item " data-target="teacher-coursemanage">課程資訊管理</li>
-                        <li class="tab_item active" data-target="teacher-order">訂單查詢</li>
-                        <li class="tab_item " data-target="teacher-tax">稅收管理</li>
-                        <li class="tab_item" data-target="teacher-total">結算管理</li>
+                        <li class="tab_item active" data-target="teacher-courseinfo"><a href="#" >課程資訊管理</a></li>
+                        <li class="tab_item " data-target="teacher-order"><a href="#" >訂單查詢</a></li>
+                        <li class="tab_item " data-target="teacher-tax"><a href="#" >稅收管理</a></li>
+                        <li class="tab_item" data-target="teacher-total"><a href="#" >結算管理</a></li>
                     </ul>
                 </div>
 
@@ -315,7 +315,15 @@
 
                                 </div>
                                 
+                                <div id="NohingBlock" class="block nothing_block">
+                                    <div class="title">
+                                        目前無任何訂單
+                                    </div>
+                                </div>
+
                             </div>
+
+
 
                             <div class="pager_block">
                                 <ul class="pager">
@@ -408,6 +416,10 @@
 
 
 <script>
+
+
+$(document).ready(function(){
+
     $('#DataSearchStart').cxCalendar();
     $('#DataSearchEnd').cxCalendar();
 
@@ -415,7 +427,16 @@
         $('#MyOrderTags .tag').removeClass('active');
         $(this).addClass('active');
     });
-
+    
+    const elemQuan = $('.course_block').length;
+    if(elemQuan == 0){
+        $('#NohingBlock').show();
+        return;
+    }else{
+        $('#NohingBlock').hide();
+    }
+    
+});
 
 </script>
 

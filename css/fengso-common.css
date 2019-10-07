@@ -348,11 +348,3 @@ button.shape {
       -ms-transform: translateX(-120px);
           transform: translateX(-120px);
 }
-
-form {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: inline-block;
-  float: left;
-  width: 100%;
-}

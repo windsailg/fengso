@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url(https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
-.area .container.type_member, #fengso-Member .user_data_block, #fengso-Member .user_data_block .user_data_container, #fengso-Member .user_data_block .user_data_container .avatar .typeaccount__myavaar .img_box_block, #fengso-Member .tab_block, #fengso-Member .tags_block .tags_list, #fengso-Member .myCoursee_list_block .course_block, #fengso-Member .myCoursee_list_block .course_block .content_box > .tips > .tips_box, #fengso-Member .myCoursee_list_block .course_block .content_box > .controls, #fengso-Member .myCoursee_list_block .course_block .content_box > .controls .rate, #fengso-Member .course_list_block, #fengso-Member .myOrder_list_block > .course_block .block_head > .order_Info, #fengso-Member .myOrder_list_block > .course_block .block_body, #fengso-Member .myOrder_list_block > .course_block .block_body > .orders, #fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item, #fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box, #fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .controls, #fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .controls .rate, #fengso-Member .myOrder_list_block > .course_block .block_body > .status, #fengso-Member .myOrder_list_block > .course_block .block_body > .status > .status_item, #fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block, #fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block.cols_3, #fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block .inputs, #fengso-Member .myFavorite_list_block .course_block, #fengso-Member .myFavorite_list_block .course_block .content_box > .tips > .tips_box, #fengso-Member .myFavorite_list_block .course_block .content_box > .controls, #fengso-Member .myFavorite_list_block .course_block .content_box > .controls .item_box, #fengso-Member .myFavorite_list_block .course_block .content_box > .controls .item_box .rate, #fengso-Member .myFavorite_list_block .course_block .content_box > .controls > .buysoon, #fengso-Member .myFavorite_list_block .course_block .content_box > .controls > .buysoon .elem, #fengso-Member .myFavorite_list_block .course_block .content_box > .controls > .buysoon .cart, #fengso-Member .pager_block {
+.area .container.type_member, #fengso-Member .user_data_block, #fengso-Member .user_data_block .user_data_container, #fengso-Member .user_data_block .user_data_container .avatar .typeaccount__myavaar .img_box_block, #fengso-Member .tab_block, #fengso-Member .tags_block .tags_list, #fengso-Member .myCoursee_list_block .course_block, #fengso-Member .myCoursee_list_block .course_block .content_box > .tips > .tips_box, #fengso-Member .myCoursee_list_block .course_block .content_box > .controls, #fengso-Member .myCoursee_list_block .course_block .content_box > .controls .rate, #fengso-Member .course_list_block, #fengso-Member .myOrder_list_block > .course_block .block_head > .order_Info, #fengso-Member .myOrder_list_block > .course_block .block_body, #fengso-Member .myOrder_list_block > .course_block .block_body > .orders, #fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item, #fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box, #fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .controls, #fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .controls .rate, #fengso-Member .myOrder_list_block > .course_block .block_body > .status, #fengso-Member .myOrder_list_block > .course_block .block_body > .status > .status_item, #fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block, #fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block.cols_2, #fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block.cols_3, #fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block .select_block, #fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block .inputs, #fengso-Member .myFavorite_list_block .course_block, #fengso-Member .myFavorite_list_block .course_block .content_box > .tips > .tips_box, #fengso-Member .myFavorite_list_block .course_block .content_box > .controls, #fengso-Member .myFavorite_list_block .course_block .content_box > .controls .item_box, #fengso-Member .myFavorite_list_block .course_block .content_box > .controls .item_box .rate, #fengso-Member .myFavorite_list_block .course_block .content_box > .controls > .buysoon, #fengso-Member .myFavorite_list_block .course_block .content_box > .controls > .buysoon .elem, #fengso-Member .myFavorite_list_block .course_block .content_box > .controls > .buysoon .cart, #fengso-Member .pager_block {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -710,8 +710,11 @@
 #fengso-Member .myCoursee_list_block .course_block .content_box > .title a {
   color: #5c5c5c;
   -webkit-line-clamp: 2;
+  /* 設定欲顯示的行數，超出則顯示省略符號(...)。 */
   -webkit-box-orient: vertical;
+  /* 設定 box 的子元素，是由上往下垂直排列。 */
   display: -webkit-box;
+  /* 設定 display 為 -webkit-box 元素。 */
   overflow: hidden;
 }
 
@@ -1007,8 +1010,11 @@
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
   -webkit-line-clamp: 2;
+  /* 設定欲顯示的行數，超出則顯示省略符號(...)。 */
   -webkit-box-orient: vertical;
+  /* 設定 box 的子元素，是由上往下垂直排列。 */
   display: -webkit-box;
+  /* 設定 display 為 -webkit-box 元素。 */
   overflow: hidden;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
@@ -1465,8 +1471,11 @@
 #fengso-Member .myOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .title a {
   color: #5c5c5c;
   -webkit-line-clamp: 2;
+  /* 設定欲顯示的行數，超出則顯示省略符號(...)。 */
   -webkit-box-orient: vertical;
+  /* 設定 box 的子元素，是由上往下垂直排列。 */
   display: -webkit-box;
+  /* 設定 display 為 -webkit-box 元素。 */
   overflow: hidden;
 }
 
@@ -1704,7 +1713,32 @@
   position: relative;
   padding: 0 10px 10px 0;
   width: 100%;
-  overflow: auto;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block.cols_2 {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block.cols_2 > .col {
+  overflow: hidden;
+  width: 48%;
+}
+
+@media all and (max-width: 681px) {
+  #fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block.cols_2 > .col {
+    width: 100%;
+  }
 }
 
 #fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block.cols_3 {
@@ -1735,13 +1769,140 @@
   }
 }
 
+#fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block > .col {
+  overflow: hidden;
+  width: 97%;
+}
+
+#fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block > .col2 {
+  overflow: hidden;
+  width: 48.5%;
+}
+
+@media all and (max-width: 781px) {
+  #fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block > .col2 {
+    width: 100%;
+  }
+}
+
+#fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block > .col3 {
+  overflow: hidden;
+  width: 32.33333%;
+}
+
+@media all and (max-width: 781px) {
+  #fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block > .col3 {
+    width: 100%;
+  }
+}
+
+#fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block > .col4 {
+  overflow: hidden;
+  width: 24.25%;
+}
+
+@media all and (max-width: 781px) {
+  #fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block > .col4 {
+    width: 100%;
+  }
+}
+
+#fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block > .col5 {
+  overflow: hidden;
+  width: 19.4%;
+}
+
+@media all and (max-width: 781px) {
+  #fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block > .col5 {
+    width: 100%;
+  }
+}
+
+#fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block > .col6 {
+  overflow: hidden;
+  width: 16.16667%;
+}
+
+@media all and (max-width: 781px) {
+  #fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block > .col6 {
+    width: 100%;
+  }
+}
+
+#fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block .select_block {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block .select_block > .col {
+  overflow: hidden;
+  width: 97%;
+}
+
+#fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block .select_block > .col2 {
+  overflow: hidden;
+  width: 48.5%;
+}
+
+@media all and (max-width: 781px) {
+  #fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block .select_block > .col2 {
+    width: 100%;
+  }
+}
+
+#fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block .select_block > .col3 {
+  overflow: hidden;
+  width: 32.33333%;
+}
+
+@media all and (max-width: 781px) {
+  #fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block .select_block > .col3 {
+    width: 100%;
+  }
+}
+
+#fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block .select_block > .col4 {
+  overflow: hidden;
+  width: 24.25%;
+}
+
+@media all and (max-width: 781px) {
+  #fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block .select_block > .col4 {
+    width: 100%;
+  }
+}
+
+#fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block .select_block > .col5 {
+  overflow: hidden;
+  width: 19.4%;
+}
+
+@media all and (max-width: 781px) {
+  #fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block .select_block > .col5 {
+    width: 100%;
+  }
+}
+
+#fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block .select_block > .col6 {
+  overflow: hidden;
+  width: 16.16667%;
+}
+
+@media all and (max-width: 781px) {
+  #fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block .select_block > .col6 {
+    width: 100%;
+  }
+}
+
 #fengso-Member .myInfo_editor_block > .info_block > .input_list > .input_block .title {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: inline-block;
   width: 100%;
   padding: 5px 0 0;
-  font-weight: unset;
+  font-weight: bold;
   font-size: 16px;
   text-align: left;
 }
@@ -2077,8 +2238,11 @@
 #fengso-Member .myFavorite_list_block .course_block .content_box > .title a {
   color: #5c5c5c;
   -webkit-line-clamp: 2;
+  /* 設定欲顯示的行數，超出則顯示省略符號(...)。 */
   -webkit-box-orient: vertical;
+  /* 設定 box 的子元素，是由上往下垂直排列。 */
   display: -webkit-box;
+  /* 設定 display 為 -webkit-box 元素。 */
   overflow: hidden;
 }
 

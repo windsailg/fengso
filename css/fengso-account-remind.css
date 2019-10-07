@@ -155,7 +155,7 @@
 
 @media all and (max-width: 781px) {
   #FengsoPasswordSetting .input_block > .col2 {
-    width: 98%;
+    width: 100%;
   }
 }
 
@@ -166,7 +166,7 @@
 
 @media all and (max-width: 781px) {
   #FengsoPasswordSetting .input_block > .col3 {
-    width: 98%;
+    width: 100%;
   }
 }
 
@@ -177,7 +177,7 @@
 
 @media all and (max-width: 781px) {
   #FengsoPasswordSetting .input_block > .col4 {
-    width: 98%;
+    width: 100%;
   }
 }
 
@@ -188,7 +188,7 @@
 
 @media all and (max-width: 781px) {
   #FengsoPasswordSetting .input_block > .col5 {
-    width: 98%;
+    width: 100%;
   }
 }
 
@@ -199,7 +199,7 @@
 
 @media all and (max-width: 781px) {
   #FengsoPasswordSetting .input_block > .col6 {
-    width: 98%;
+    width: 100%;
   }
 }
 

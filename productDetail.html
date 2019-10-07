@@ -1661,6 +1661,31 @@
 <script src="js/fengso-structural-productDetail.js"></script>
 
 
+<script>
+
+$(document).ready(function(){
+    // Add to list
+    $('.add_to_list').click(function(){
+        AddList();
+    })
+    function AddList(){
+        var target = $('.add_to_list');
+        if(target.hasClass('active')){
+            target.removeClass('active animate').children('.act_name').html('加入我的課程');
+            target.children('.btn').html('<i class="far fa-heart"></i>');
+        }else{
+            target.addClass('active animate').children('.act_name').html('已加入課程');
+            target.children('.btn').html('<i class="fas fa-heart"></i>');
+        }
+    };
+
+
+
+});
+
+</script>
+
+
 
     
     

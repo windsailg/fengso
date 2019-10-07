@@ -366,7 +366,7 @@
                }
             }
          }
-          .teacher_block{
+         .teacher_block{
             @include flex-center;
             width:100%;
             float: left;
@@ -382,8 +382,8 @@
             .intro{
                width: calc(100% - 70px);
 
-               line-height: 28px;
-               @include nowrap;
+               line-height: 20px;
+               @include nowrap(auto);
                
                .name{
                   padding: 2px 0;
@@ -392,7 +392,7 @@
                   color:$color_fs_gray_2;
                   max-height: 30px;
                   font-size: 15px;
-                  @include nowrap;
+                  @include nowrap(auto);
                }
             }
          }

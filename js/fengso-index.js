@@ -343,7 +343,13 @@ function wrap_ellipsis(article_target,article_length){
 
 
  $('#IWantToTeach').click(function(){
-      $('#TeacherRegister').fadeToggle(250);
+    //$('#TeacherRegister').fadeToggle(250);
+    let target = $('#TeacherRegister');
+    target.hide().children('.lightingbox_wrap').removeClass('isopen').css({'transform':'scale(0)'});
+    target.show(200).children('.lightingbox_wrap').addClass('isopen').animate({'opacity':'1'} ,200 ,function() {
+        $('#TeacherRegister .lightingbox_wrap').css({'transform':'scale(1)'});
+    });
+    
  })
 
 
