@@ -366,7 +366,7 @@
          @include M1301() {
             margin-right:  10px ;
             .search_input{
-               width: 120px;
+               width: calc(100% - 38px);
             }
          }
          @include MCW(781px) {

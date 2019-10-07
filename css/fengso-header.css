@@ -573,7 +573,7 @@
     margin-right: 10px;
   }
   #fengso-header .header_container .search .search_input {
-    width: 120px;
+    width: calc(100% - 38px);
   }
 }
 
