@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>峰碩資訊 - 教師專區 - 版稅管理</title>
+	<link rel="icon" href="img/favicon.png">
+
+    <!-- header -->
+    <link rel="stylesheet" href="css/fengso-header.css">
+    
+    <!-- Golbal -->
+    <link rel="stylesheet" href="css/fengso-lightingbox.css">
+    <link rel="stylesheet" href="css/fengso-common.css">
+    <link rel="stylesheet" href="css/jquery.cxcalendar.css">
+
+    <!-- This Page -->
+    <link rel="stylesheet" href="css/fengso-teacher-manage.css">
+    
+    
+    <!-- Plugin -->
+    
+    <link rel="stylesheet" href="css/focuspoint.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli|Source+Sans+Pro">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    
+    <script src="https://kit.fontawesome.com/9188edaa95.js"></script>
+      
+</head>
+    
+<body >
+   
+<div id="header" class="fengso-header "></div>
+
+    <div id="fengso-TeacherManage" class="teacher_manage">
+
+        <div class="area member_control">
+            <div class="container type_account">
+
+                <div class="bread_crumb_block">
+                    <ul class="bread_crumb">
+                        <li class="bread_crumb_item bc_first"><a href="#" target="_blank"><span class="home"><i class="fas fa-home"></i></span>首頁</a></li>
+
+                        <li class="bread_crumb_item"><span class="arrow"><i class="fas fa-angle-right"></i></span><a href="#" target="_blank">教師專區</a></li>
+
+                        <li class="bread_crumb_item bc_last"><span class="arrow"><i class="fas fa-angle-right"></i></span>版稅管理</li>
+                    </ul>
+                </div>
+
+                <div class="user_data_block">
+                    <div class="user_data_container">
+
+                        <div  class="avatar box">
+                            <div id="AvatarImageCurrent" class="img_box">
+                                <img data-current-number="00" src="img/teacher-00.png">
+                            </div>
+                            
+                        </div>
+
+                        <div class="info_box">
+
+                            <div class="user_name title">
+                                Issac
+                            </div>
+                            <div class="joined_date subtitle"><i class="far fa-address-card"></i>2019年12月31日 加入</div>
+                    
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="tab_block">
+                    <ul id="FunctionTab" class="tab">
+                        <li class="tab_item active" data-target="teacher-courseinfo"><a href="#" >課程資訊管理</a></li>
+                        <li class="tab_item " data-target="teacher-order"><a href="#" >訂單查詢</a></li>
+                        <li class="tab_item " data-target="teacher-tax"><a href="#" >稅收管理</a></li>
+                        <li class="tab_item" data-target="teacher-total"><a href="#" >結算管理</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div id="TabTriggerContainer" class="tab_trigger_container">
+
+            <div class="tab_trigger_target teacher-order">
+
+                    <div class="area ">
+                        <div class="container type_member">
+
+                            <div class="tags_block">
+                                <ul id="MyOrderTags" class="list tags_list col">
+                                    <li class="list_item tag active" data-filter="all">全部</li>
+                                    <li class="list_item tag" data-filter="paid">已完成</li>
+                                    <li class="list_item tag" data-filter="refund">退費</li>                                    
+                                </lu>
+                            </div>
+
+                            <div class="list_date_block">
+                                <span class="title"> 日期區間 </span>
+                                <input id="DataSearchStart" type="text"  class="input" name="filtr-search" value="" autocomplete="off" readonly="readonly">
+                                <span class="space">
+                                    ~
+                                </span>
+                                <input id="DataSearchEnd" type="text"  class="input" name="filtr-search" value="" autocomplete="off" readonly="readonly">
+                                <button class="shape date_search">搜尋</button>
+                            </div>
+
+                            <div class="total_order_block">
+                                <div class="item title">
+                                    共
+                                    <span>
+                                        100
+                                    </span>
+                                    筆訂單
+                                </div>
+                                <div class="item price">
+                                    總計 <span>NT $100,000</span>
+                                </div>
+                            </div>
+
+                            <div class="search_and_sort_block">
+
+                                <div class="course_discuss_control_panel">
+
+                                        <div class="title">
+                                            搜尋課程
+                                        </div>
+
+                                        <select class="picker" data-province="請選擇">
+                                            <option value=" 選擇我開的課"> 
+                                            選擇我開的課
+                                            </option>
+                                            <option value=" IBM遭質疑：未經許可用網路相冊照片訓練AI IBM遭質疑：未經許可用網路相冊照片訓練AI IBM遭質疑：未經許可用網路相冊照片訓練A"> 
+                                                IBM遭質疑：未經許可用網路相冊照片訓練AI IBM遭質疑：未經許可用網路相冊照片訓練AI IBM遭質疑：未經許可用網路相冊照片訓練
+                                            </option>
+                                            <option value="成長加速計畫（思考力）：突破常規思考、開創新思維力"> 
+                                                成長加速計畫（思考力）：突破常規思考、開創新思維力
+                                            </option>
+                                        </select>
+
+
+                                </div>
+
+
+                            </div>
+
+                            <div id="TaxListBlock" class="tax_list_block ">
+
+                                <div class="tax_container" >
+
+                                    <div class="block_head">
+                                        <ul class="order_Info">
+                                            <li class="order_item num">訂單編號：201912310909</li>
+                                            <li class="order_item date">訂單日期：2019/12/31</li>
+                                            <li class="order_item status">訂單狀態：已完成</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="block_body">
+
+                                        <div class="content_box">
+                                            
+                                            <div class="title_list_block">
+                                                <div class="item course_title">
+                                                    課程名稱
+                                                </div>
+                                                <div class="item selling_price">
+                                                    <i class="fas fa-file-invoice-dollar"></i>
+                                                    銷售金額
+                                                </div>
+                                                <div class="item tax">
+                                                    <i class="fas fa-tags"></i>
+                                                    營業稅
+                                                </div>
+                                                <div class="item handling">
+                                                    <i class="fas fa-hand-holding-usd"></i>
+                                                    金流手續
+                                                </div>
+                                                <div class="item profit">
+                                                    <i class="fas fa-coins"></i>
+                                                    分潤
+                                                </div>
+                                                <div class="item income">
+                                                    <i class="fas fa-money-check-alt"></i>
+                                                    版稅收入
+                                                </div>
+                                            </div>
+
+                                            <div class="content_list_block ">
+
+                                                <a  href="#" target="_blank">
+                                                    <div class="item course_title">
+                                                        IBM遭質疑：未經許可用網路相冊照片訓練AI IBM遭質疑：未經許可用網路相冊照片訓練AI IBM遭質疑：未經許可用網路相冊照片訓練A
+                                                    </div>
+                                                </a>
+                                                <div class="item selling_price">
+                                                    1,000
+                                                </div>
+                                                <div class="item tax">
+                                                    50
+                                                </div>
+                                                <div class="item handling">
+                                                    50
+                                                </div>
+                                                <div class="item profit">
+                                                    40%
+                                                </div>
+                                                <div class="item income">
+                                                    1,500
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="content_list_block ">
+
+                                                <a  href="#" target="_blank">
+                                                    <div class="item course_title">
+                                                        IBM遭質疑：未經許可用網路相冊照片訓練AI IBM遭質疑：未經許可用網路相冊照片訓練AI IBM遭質疑：未經許可用網路相冊照片訓練A
+                                                    </div>
+                                                </a>
+                                                <div class="item selling_price">
+                                                    1,000
+                                                </div>
+                                                <div class="item tax">
+                                                    50
+                                                </div>
+                                                <div class="item handling">
+                                                    50
+                                                </div>
+                                                <div class="item profit">
+                                                    40%
+                                                </div>
+                                                <div class="item income">
+                                                    1,500
+                                                </div>
+
+
+                                            </div>
+                                            
+                                            <div class="content_list_block ">
+
+                                                <a  href="#" target="_blank">
+                                                    <div class="item course_title">
+                                                         IBM遭質疑：未經許可用網路相冊照片訓練A
+                                                    </div>
+                                                </a>
+                                                <div class="item selling_price">
+                                                    1,000
+                                                </div>
+                                                <div class="item tax">
+                                                    50
+                                                </div>
+                                                <div class="item handling">
+                                                    50
+                                                </div>
+                                                <div class="item profit">
+                                                    40%
+                                                </div>
+                                                <div class="item income">
+                                                    1,500
+                                                </div>
+
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="content_box_mob detail_list_btn">
+                                            訂單詳情<i class="far fa-window-restore"></i>
+                                            <div class="detail_list_container">
+
+                                                <div class="title_block">
+                                                    訂單編號：201912310408
+                                                </div>
+
+                                                <div class="detail_list">
+
+                                                    <div class="title">
+                                                        成長加速計畫（思考力）：突破常規思考、開創新思維力
+                                                    </div>
+
+                                                    <div class="list_item content">
+
+                                                        <div class="item selling_price">
+                                                            <i class="fas fa-file-invoice-dollar"></i>
+                                                            銷售金額
+                                                        </div>
+                                                        <div class="item num price">
+                                                            1,000
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="list_item content">
+
+                                                        <div class="item profit">
+                                                            <i class="fas fa-coins"></i>
+                                                            分潤
+                                                        </div>
+                                                        <div class="item num percent">
+                                                            40%
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="list_item content">
+                                                        <div class="item income">
+                                                            <i class="fas fa-money-check-alt"></i>
+                                                            版稅收入
+                                                        </div>
+                                                        <div class="item num total">
+                                                            1000
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="detail_list">
+
+                                                    <div class="title">
+                                                        成長加速計畫（思考力）：突破常規思考、開創新思維力
+                                                    </div>
+
+                                                    <div class="list_item content">
+
+                                                        <div class="item selling_price">
+                                                            <i class="fas fa-file-invoice-dollar"></i>
+                                                            銷售金額
+                                                        </div>
+                                                        <div class="item num price">
+                                                            1,000
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="list_item content">
+
+                                                        <div class="item profit">
+                                                            <i class="fas fa-coins"></i>
+                                                            分潤
+                                                        </div>
+                                                        <div class="item num percent">
+                                                            40%
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="list_item content">
+                                                        <div class="item income">
+                                                            <i class="fas fa-money-check-alt"></i>
+                                                            版稅收入
+                                                        </div>
+                                                        <div class="item num total">
+                                                            1000
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="detail_list">
+
+                                                    <div class="title">
+                                                        成長加速計畫（思考力）：突破常規思考、開創新思維力
+                                                    </div>
+
+                                                    <div class="list_item content">
+
+                                                        <div class="item selling_price">
+                                                            <i class="fas fa-file-invoice-dollar"></i>
+                                                            銷售金額
+                                                        </div>
+                                                        <div class="item num price">
+                                                            1,000
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="list_item content">
+
+                                                        <div class="item profit">
+                                                            <i class="fas fa-coins"></i>
+                                                            分潤
+                                                        </div>
+                                                        <div class="item num percent">
+                                                            40%
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="list_item content">
+                                                        <div class="item income">
+                                                            <i class="fas fa-money-check-alt"></i>
+                                                            版稅收入
+                                                        </div>
+                                                        <div class="item num total">
+                                                            1000
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="tax_container" >
+
+                                    <div class="block_head">
+                                        <ul class="order_Info">
+                                            <li class="order_item num">訂單編號：201912310909</li>
+                                            <li class="order_item date">訂單日期：2019/12/31</li>
+                                            <li class="order_item status">訂單狀態：已退費</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="block_body">
+
+                                        <div class="content_box">
+                                            
+                                            <div class="title_list_block">
+                                                <div class="item course_title">
+                                                    課程名稱
+                                                </div>
+                                                <div class="item selling_price">
+                                                    <i class="fas fa-file-invoice-dollar"></i>
+                                                    銷售金額
+                                                </div>
+                                                <div class="item tax">
+                                                    <i class="fas fa-tags"></i>
+                                                    營業稅
+                                                </div>
+                                                <div class="item handling">
+                                                    <i class="fas fa-hand-holding-usd"></i>
+                                                    金流手續
+                                                </div>
+                                                <div class="item profit">
+                                                    <i class="fas fa-coins"></i>
+                                                    分潤
+                                                </div>
+                                                <div class="item income">
+                                                    <i class="fas fa-money-check-alt"></i>
+                                                    版稅收入
+                                                </div>
+                                            </div>
+
+                                            <div class="content_list_block ">
+
+                                                <a  href="#" target="_blank">
+                                                    <div class="item course_title">
+                                                        IBM遭質疑：未經許可用網路相冊照片訓練AI 
+                                                    </div>
+                                                </a>
+                                                <div class="item selling_price">
+                                                    1,000
+                                                </div>
+                                                <div class="item tax">
+                                                    50
+                                                </div>
+                                                <div class="item handling">
+                                                    50
+                                                </div>
+                                                <div class="item profit">
+                                                    40%
+                                                </div>
+                                                <div class="item income">
+                                                    -1500
+                                                </div>
+
+
+                                            </div>
+                                            
+                                            <div class="content_list_block ">
+
+                                                <a  href="#" target="_blank">
+                                                    <div class="item course_title">
+                                                         IBM遭質疑：未經許可用網路相冊照片訓練A
+                                                    </div>
+                                                </a>
+                                                <div class="item selling_price">
+                                                    1,000
+                                                </div>
+                                                <div class="item tax">
+                                                    50
+                                                </div>
+                                                <div class="item handling">
+                                                    50
+                                                </div>
+                                                <div class="item profit">
+                                                    40%
+                                                </div>
+                                                <div class="item income">
+                                                    -1500
+                                                </div>
+
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="content_box_mob detail_list_btn">
+                                            訂單詳情<i class="far fa-window-restore"></i>
+
+                                            <div class="detail_list_container">
+
+                                                <div class="title_block">
+                                                    訂單編號：201912310909
+                                                </div>
+
+                                                <div class="detail_list">
+
+                                                    <div class="title">
+                                                        成長加速計畫（思考力）：突破常規思考、開創新思維力
+                                                    </div>
+
+                                                    <div class="list_item content">
+
+                                                        <div class="item selling_price">
+                                                            <i class="fas fa-file-invoice-dollar"></i>
+                                                            銷售金額
+                                                        </div>
+                                                        <div class="item num price">
+                                                            1,000
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="list_item content">
+
+                                                        <div class="item profit">
+                                                            <i class="fas fa-coins"></i>
+                                                            分潤
+                                                        </div>
+                                                        <div class="item num percent">
+                                                            40%
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="list_item content">
+                                                        <div class="item income">
+                                                            <i class="fas fa-money-check-alt"></i>
+                                                            版稅收入
+                                                        </div>
+                                                        <div class="item num total">
+                                                            1000
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="detail_list">
+
+                                                    <div class="title">
+                                                        成長加速計畫（思考力）：突破常規思考、開創新思維力
+                                                    </div>
+
+                                                    <div class="list_item content">
+
+                                                        <div class="item selling_price">
+                                                            <i class="fas fa-file-invoice-dollar"></i>
+                                                            銷售金額
+                                                        </div>
+                                                        <div class="item num price">
+                                                            1,000
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="list_item content">
+
+                                                        <div class="item profit">
+                                                            <i class="fas fa-coins"></i>
+                                                            分潤
+                                                        </div>
+                                                        <div class="item num percent">
+                                                            40%
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="list_item content">
+                                                        <div class="item income">
+                                                            <i class="fas fa-money-check-alt"></i>
+                                                            版稅收入
+                                                        </div>
+                                                        <div class="item num total">
+                                                            1000
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="detail_list">
+
+                                                    <div class="title">
+                                                        成長加速計畫（思考力）：突破常規思考、開創新思維力
+                                                    </div>
+
+                                                    <div class="list_item content">
+
+                                                        <div class="item selling_price">
+                                                            <i class="fas fa-file-invoice-dollar"></i>
+                                                            銷售金額
+                                                        </div>
+                                                        <div class="item num price">
+                                                            1,000
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="list_item content">
+
+                                                        <div class="item profit">
+                                                            <i class="fas fa-coins"></i>
+                                                            分潤
+                                                        </div>
+                                                        <div class="item num percent">
+                                                            40%
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="list_item content">
+                                                        <div class="item income">
+                                                            <i class="fas fa-money-check-alt"></i>
+                                                            版稅收入
+                                                        </div>
+                                                        <div class="item num total">
+                                                            1000
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+                                
+                                <div class="tax_container" >
+
+                                    <div class="block_head">
+                                        <ul class="order_Info">
+                                            <li class="order_item num">訂單編號：201912310909</li>
+                                            <li class="order_item date">訂單日期：2019/12/31</li>
+                                            <li class="order_item status">訂單狀態：已退費</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="block_body">
+
+                                        <div class="content_box">
+                                            
+                                            <div class="title_list_block">
+                                                <div class="item course_title">
+                                                    課程名稱
+                                                </div>
+                                                <div class="item selling_price">
+                                                    <i class="fas fa-file-invoice-dollar"></i>
+                                                    銷售金額
+                                                </div>
+                                                <div class="item tax">
+                                                    <i class="fas fa-tags"></i>
+                                                    營業稅
+                                                </div>
+                                                <div class="item handling">
+                                                    <i class="fas fa-hand-holding-usd"></i>
+                                                    金流手續
+                                                </div>
+                                                <div class="item profit">
+                                                    <i class="fas fa-coins"></i>
+                                                    分潤
+                                                </div>
+                                                <div class="item income">
+                                                    <i class="fas fa-money-check-alt"></i>
+                                                    版稅收入
+                                                </div>
+                                            </div>
+
+                                            <div class="content_list_block ">
+
+                                                <a  href="#" target="_blank">
+                                                    <div class="item course_title">
+                                                        IBM遭質疑：未經許可用網路相冊照片訓練AI IBM遭質疑：未經許可用網路相冊照片訓練AI IBM遭質疑：未經許可用網路相冊照片訓練A
+                                                    </div>
+                                                </a>
+                                                <div class="item selling_price">
+                                                    1,000
+                                                </div>
+                                                <div class="item tax">
+                                                    50
+                                                </div>
+                                                <div class="item handling">
+                                                    50
+                                                </div>
+                                                <div class="item profit">
+                                                    40%
+                                                </div>
+                                                <div class="item income">
+                                                    -1500
+                                                </div>
+
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="content_box_mob detail_list_btn">
+                                            訂單詳情<i class="far fa-window-restore"></i>
+
+                                            <div class="detail_list_container">
+
+                                                <div class="title_block">
+                                                    訂單編號：201912310407
+                                                </div>
+
+                                                <div class="detail_list">
+
+                                                    <div class="title">
+                                                        成長加速計畫（思考力）：突破常規思考、開創新思維力
+                                                    </div>
+
+                                                    <div class="list_item content">
+
+                                                        <div class="item selling_price">
+                                                            <i class="fas fa-file-invoice-dollar"></i>
+                                                            銷售金額
+                                                        </div>
+                                                        <div class="item num price">
+                                                            1,000
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="list_item content">
+
+                                                        <div class="item profit">
+                                                            <i class="fas fa-coins"></i>
+                                                            分潤
+                                                        </div>
+                                                        <div class="item num percent">
+                                                            40%
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="list_item content">
+                                                        <div class="item income">
+                                                            <i class="fas fa-money-check-alt"></i>
+                                                            版稅收入
+                                                        </div>
+                                                        <div class="item num total">
+                                                            1000
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            
+                                <div id="NohingBlock" class="block nothing_block">
+                                    <div class="title">
+                                        目前無任何訂單紀錄
+                                    </div>
+                                </div>                            
+
+                            <div class="pager_block">
+                                <ul class="pager">
+                                    <li class="pager_number "><i class="fas fa-angle-left"></i></li>
+                                    <li class="pager_number  active">1</li>
+                                    <li class="pager_number ">2</li>
+                                    <li class="pager_number ">3</li>
+                                    <li class="pager_number "><i class="fas fa-angle-right"></i></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+            </div>
+
+
+
+        </div>     
+
+    </div>
+
+</div>
+
+	<div  id="LightingBoxTotalTax" class="lightingbox type2"> 
+			<div class="lightingbox_wrap type2">
+				<div  class="lightingbox_container">
+
+
+                    
+
+				</div>
+
+				<span class="btn_close type2">
+					<div class="btn_close_box">
+						<span class="c_deco cd1"></span>
+						<span class="c_deco cd2" ></span>
+					</div>
+					<span class="btn_close_text">關閉視窗</span>
+				</span>
+
+			</div>
+			<div class="lightingbox_mask"></div>
+	</div> 
+
+
+<footer id="footer"></footer>
+
+
+<!-- Golbal -->
+<script src="js/jquery.min.js"></script>
+
+<script>
+    $('#header').load('header.html');        
+    $('#footer').load('footer.html');   
+</script>
+
+<!-- OnlyThisPage Plugin -->
+<script src="js/jquery.focuspoint.js"></script>
+<script src="js/jquery.lazy.min.js"></script>
+<script src="js/jquery.cxcalendar.min.js"></script>
+<script src="js/jquery.cxcalendar.languages.js"></script>
+
+<!-- OnlyThisPage -->
+<script src="js/fengso-teacher-manage.js"></script>
+
+
+<script>
+
+$('#DataSearchStart').cxCalendar();
+$('#DataSearchEnd').cxCalendar();
+
+$('#MyOrderTags .tag').click(function(){
+    $('#MyOrderTags .tag').removeClass('active');
+    $(this).addClass('active');
+});
+
+$(document).ready(function(){
+
+    const elemQuan = $('.tax_container').length;
+    if(elemQuan == 0){
+        $('#NohingBlock').show();
+        return;
+    }else{
+        $('#NohingBlock').hide();
+    }
+    
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+
+</html>

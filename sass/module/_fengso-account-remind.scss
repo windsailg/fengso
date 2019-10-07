@@ -1,0 +1,224 @@
+
+//  *{outline-color: rgba(255, 118, 87, 0.233);outline-width: 1px;outline-style:solid;}
+
+$color_fs_orange:#FF7757;
+$color_fs_pre_goose:#FFB639;
+$color_fs_goose:#FFB636;
+$color_fs_courseList_goose:#FEA226;
+$color_fs_brown:rgb(95, 54, 23);
+$color_fs_blue:rgb(67, 112, 179);
+
+$color_fs_gray:#BCBDBC;
+$color_fs_gray_2:rgb(161, 161, 161);
+$color_fs_gray_3_fadeblue:#5e6f79;;//blue
+$color_fs_gray_3_fadeblue_2:#3b4952;//darkerBlue
+$color_fs_background_gray:#F1F1F1;
+$color_fs_background_gray_bluer:#F6F7F9;//forgetpass
+
+
+$color_link:rgb(54, 54, 54);
+$color_shadow:rgba(77, 77, 77, 0.2);
+
+$color_fs_font-title:rgb(54, 54, 54);
+$color_fs_font-title_2:rgb(68, 68, 68);
+
+$color_fs_font:rgb(90, 90, 90);
+
+$color_fs_footer-font:rgb(124, 124, 124);
+
+%centerbox_reminder{
+   @include ib;
+   width: 100%;
+   margin: 0 auto;
+   text-align: center;
+}
+
+.area{
+   @include ibl;
+   width: 100%;
+   overflow: hidden;
+   &.big_title{
+      background-color: $color_fs_background_gray_bluer;
+   }
+   .container{
+      @include b;
+      overflow: hidden;;
+      margin:  0 auto;
+      width: 1300px;
+      padding: 40px 10px;
+      position: relative;
+      z-index: 0;
+      &.type_banner{
+         width: 100%;
+         padding: 0px 0px;
+      }
+      @include M1301() {
+         width: 100%;
+      }
+   }
+}
+
+.video_box{
+   @include ibl;
+   width: 100%;
+   margin: 15px 0 0;
+   overflow: hidden;
+   iframe{
+      width: 100%;
+      height: 100%;
+   }
+}
+
+.focuspoint{
+   // @include flex-center;
+   // align-content: center;
+   .lazy{
+      @include bg-loading;
+      background-color: #fff;
+      background-image: url("images/fengso-loading.svg");
+      max-height: 100%;
+   }
+   .lazied{
+      max-height: unset;
+   }
+}
+
+
+
+#FengsoPasswordSetting{
+
+   .big_title_block{
+      @extend %centerbox_reminder;
+      > .title{
+         @include ib;
+         width: 100%;
+         text-align: center;
+         font-size: calc(26px + 0.7vw);
+         font-weight: 600;
+         color: $color_fs_gray_3_fadeblue_2;
+         padding:30px 0;
+         line-height: 38px;
+      }
+   }
+   .subtitle_block{
+      @extend %centerbox_reminder;
+      
+      line-height: 34px;
+      > .title{
+         @extend %centerbox_reminder;
+         font-size: calc(18px + 0.5vw);
+         font-weight: 600;
+         color: $color_fs_gray_3_fadeblue_2;
+         padding:20px 0;
+      }
+      > .subtitle{
+         @extend %centerbox_reminder;
+         max-width: 480px;
+         line-height: 22px;
+         font-size: 14px;
+      }
+   }
+   .input_block{
+      @include fxc;
+      position: relative;
+      padding: 10px 0 ;
+      width: 100%;
+      margin:  0 auto;
+      @include cols_v2(98%){
+      }
+     &.cols{
+         width: 400px;
+         @include MCW(400px) {
+            width: 100%;
+         }
+      }
+      .title{
+         
+         @include ibl;
+         padding: 5px 0 0 ;
+         font-weight:unset;
+         font-size: 16px;
+         text-align: left;
+         &.dp_tab{
+            @include MCW(681px) {
+               display:none;
+            }
+         }
+      }
+      .input_name{
+         @include selection-none;
+         padding: 10px 0 5px;;
+      }
+      .input{
+         @include PlaceHolder-Style(rgb(145, 145, 145),.9);
+         @include tst;
+         @include ib;
+         text-decoration: none;
+         width: 100%;
+         max-width: 650px;
+         margin:  8px auto 6px;
+         padding: 8px 15px ;
+         border-width: 1px;
+         border-style: solid;
+         border-color:  $color_fs_courseList_goose;
+         outline: none;
+         font-size: 16px;
+         letter-spacing: 1px;
+         // &[type="text"]:focus{
+         //    border-color:  #FF7757;
+         // }
+         &:focus{
+            //FF7757
+            box-shadow: 0px 0px 14px rgba(255, 149, 11, 0.466);
+            // box-shadow: 0px 0px 14px rgba(255, 118, 87, 0.637);
+            // border-color:  #FF7757;
+         }
+         &.fail{
+            border-color:  rgb(196, 3, 3);
+            box-shadow: none;
+            &[type="text"]:focus{
+               border-color:  rgb(196, 3, 3);
+            }
+         }
+      }
+      .fail_info{
+         @include selection-none;
+         @include ib;
+         position: absolute;
+         width: 100%;
+         
+         color: rgb(196, 3, 3);
+         bottom: 2px;
+         text-align: left;
+         font-size: 12px;
+      }
+   }
+   .robot_check_block{
+      @include fxc;
+      padding:10px;
+   }
+   .tips{
+      @extend %centerbox_reminder;
+      a{
+         color: $color_fs_orange;
+         text-decoration: underline;
+         font-weight: bold;
+      }
+   }
+   .btns{
+      @extend %centerbox_reminder;
+      padding:20px;
+      button{
+         margin: 10px;
+         &.gray{
+            background: #F1F1F1;
+            color: rgb(34, 34, 34)
+         }
+      }
+   }
+   .footer_hr{
+      margin: 50px 0 0;
+   }
+}
+
+

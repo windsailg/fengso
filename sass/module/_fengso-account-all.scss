@@ -1,0 +1,1352 @@
+
+//  *{outline-color: rgba(255, 118, 87, 0.233);outline-width: 1px;outline-style:solid;}
+
+.area{
+   @include ibl;
+   width: 100%;
+   overflow: hidden;
+   &.member_control{
+      background-color: $color_fs_background_gray_bluer;
+      overflow: visible;
+   }
+   .container{
+      @include b;
+      overflow: hidden;;
+      margin:  0 auto;
+      width: 1300px;
+      padding: 20px 10px 10px;
+      &.type_member{
+         @include fxb;
+         align-items: flex-start;
+         width: 1300px;
+         padding: 40px 10px;
+         position: relative;
+         @include M1301(){
+            width: 100%;
+            padding: 40px 10px 10px;
+         }
+         @include MCW(861px){
+            width: 100%;
+            padding: 25px 0px 10px;
+         }
+      }
+      &.type_myinfo{
+         width: 860px;
+         @include MCW(861px){
+            width: 100%;
+            padding: 25px 10px 10px;
+         }
+      }
+      @include M1301(){
+         width: 100%;
+         padding: 10px 10px 10px;
+      }
+   }
+}
+
+#fengso-Member{
+   @include bl;
+   width: 100%;
+   overflow: hidden;
+   line-height: 20px;
+   .bread_crumb_block{
+      .bread_crumb{
+         .bread_crumb_item{
+            font-size: 14px;
+         }
+      }
+   }
+   .user_data_block{
+      @include fxc;
+      width: 100%;
+      padding: 50px 10px;
+      .user_data_container{
+         @include fxb;
+         max-width: 600px;
+         @include MCW(600px) {
+            justify-content: center;
+         }
+         .avatar{
+            
+            padding: 6px;
+            background: #fff;
+            position: relative;
+            @include bs;
+            @include MCW(600px) {
+               margin: 16px 0  8px 0;
+            }
+            .img_box{
+               border: solid 1px #eee;
+               background: $color_fs_background_gray_bluer;
+            }
+            .typeaccount__myavaar{
+               width: 100%;
+               margin: 0;
+               padding: 0;
+               .change_title{
+                  text-align: center;
+                  @include ibl;
+                  width:100%;
+                  font-size: 25px;
+                  font-weight: bold;
+                  margin: 15px 0;
+               }
+               .img_box_block{
+                  @include fxfs;
+                  width: 100%;
+                  @include MCW(700px) {
+                     justify-content: center;
+                  }
+                  .img_box{
+                     @include ibl;
+                     padding: 8px;
+                     margin: 10px ;
+                     border:1px solid #ccc;
+                     width: 22%;
+                     
+                     user-select:none;
+                     @include MCW(700px) {
+                        margin: 6px ;
+                        width: 28%;
+                     }
+                     @include hover;
+                     &.active{
+                        user-select: none;
+                        pointer-events: none;
+                        opacity: .2;
+                     }
+
+                  }
+               }
+            }
+         }
+         .info_box{
+            width: 220px;
+            padding: 0 0 0 20px;
+            @include MCW(600px) {
+               margin: 8px 0  16px 0;
+            }
+            .user_name{
+               @include ib;
+               width: 100%;
+               font-weight: normal;
+               font-size: calc(28px + 0.5vw);
+               color: rgb(53, 53, 53);
+               padding:  10px 0;
+               position: relative;
+               @include MCW(600px) {
+                  text-align: center;
+               }
+            }
+            .joined_date{
+               @include ib;
+               width: 100%;
+               padding:  10px 0;
+               color: rgb(87, 87, 87);
+               i{
+                  padding: 0 10px 0 0;
+               }
+               @include MCW(600px) {
+                  text-align: center;
+               }
+            }
+         }
+         .edit{
+            @include ib;
+            position: absolute;
+            right: -10px;
+            bottom:-10px;
+            border-radius: 100px;
+            padding:3px 6px;
+            width: 25px;
+            height: 25px;
+            color: #fff;
+            font-size: 13px;
+            background-color: rgb(219, 219, 219);
+            @include hvc(){
+               opacity: .8;;
+            }
+         }
+      }
+   }
+   .tab_block{
+      @include fxc;
+      width: 100%;
+      padding:  0 0 0px 0;
+      @include MCW(681px) {
+         padding:  0 0 0px 0;
+      }
+      .tab{
+         @include ib;
+         width: auto;
+         margin: 0 auto;
+         .tab_item{
+            @include ibl;
+            width: 140px;;
+            font-weight: normal;
+            text-align: center;
+            position: relative;
+            cursor: pointer;
+            padding: 10px 0;
+
+            font-size: 18px;
+            color: rgb(105, 105, 105);
+            &:not(:last-child)::after{
+               content:' ';
+               @include b;
+               position: absolute;
+               width: 1px;
+               height: 40%;
+               right: 0px;
+               @include atb;
+               transform: skew(-12deg,0);
+               background-color: rgb(107, 107, 107);
+               @include MCW(681px) {
+                  display: none;
+               }
+            }
+            @include MCW(681px) {
+               width: 50%;
+               padding: 20px 0 0;
+               &:nth-child(odd)::after{
+                  content:' ';
+                  @include b;
+                  position: absolute;
+                  width: 1px;
+                  height: 50%;
+                  right: 0px;
+                  top: 24px;
+                  transform: skew(-12deg,0);
+                  background-color: rgb(107, 107, 107);
+               }
+            }
+            a:hover{
+               color:$color_fs_orange;
+            }
+            &.active{
+               a{
+                  color: $color_fs_orange;
+               }
+               color: $color_fs_orange;
+               &::before{
+                  content:' ';
+                  @include b;
+                  @include arl;
+                  position: absolute;
+                  width: 80%;
+                  height: 3px;
+                  bottom: -10px;
+                  background-color:$color_fs_orange;
+               }
+            }
+
+         }
+      }
+   }
+   .tags_block{
+      @include ib;
+      width: 100%;
+      padding: 10px 0 25px;
+      @include MCW(861px) {
+         padding: 10px 15px 25px;
+      }
+      .tags_list{
+         @include fxfs;
+         .tag{
+            @include tst(.2s);
+            min-width: 80px;
+            padding: 6px 8px;
+            margin: 6px 18px  6px 0;
+            text-align: center;
+            background:#D7D7D7;
+            border-radius: 3px;
+            font-size: 15px;
+            cursor:pointer;
+            @include selection-none;
+            &.active{
+               background:$color_fs_orange;
+               color: #fff;
+            }
+         }
+      }
+      .course_search{
+
+         @include PlaceHolder-Style(rgb(145, 145, 145),.9);
+         @include tst;
+         @include ib;
+         text-decoration: none;
+
+         border-width: 1px;
+         border-style: solid;
+         border-color:  rgb(184, 184, 184);
+         outline: none;
+         letter-spacing: 1px;
+
+         padding: 4px 10px;
+         font-size: 17px;
+         width: 185px;
+         &:focus{
+            border-color:  #FF7757;
+            box-shadow: 0px 0px 10px rgba(255, 149, 11, 0.466);
+         }
+      }
+   }
+
+   //外容器設定
+   .myCourse_list_content{
+      width: 72%;
+      @include M1301(){
+         width: 100%;
+      }
+   }
+   .myCourse_list_recommend{
+      width:25% ;
+      padding: 24px 0 0 0;
+      @include M1301(){
+         width: 100%;
+      }
+      > .title{
+         @include ib;
+         width: 100%;
+         padding: 15px 0 15px 8px;
+         font-size: 20px;
+         
+      }
+   }
+
+   //我的課程
+   .myCoursee_list_block{
+      @include fxv;
+      flex-wrap: wrap;
+      width: 100%;
+      overflow: hidden;
+      height:unset;
+      @include tst;
+      transition-delay: .2s;
+      @include MCW(780px) {
+         flex-wrap: wrap;
+         flex-direction: row;
+         justify-content: center;
+      }
+      a{
+         @include b;
+         &:hover{
+            opacity: .9;
+         }
+      }
+      .course_block{
+         @include fxb;
+         width:100%;
+         margin: 0px 0 40px 0;
+         padding: 12px 0;
+         @include MCW(780px) {
+            @include b;
+            width:100%;
+            margin: 0px 0 40px 0;
+         }
+         .image_box{
+            @include bl;
+            width: 320px;
+            height: 180px;
+            img{
+               @include tst;
+               &:hover{
+                  transform: scale(1.1);
+               }
+            }
+             @include MCW(780px) {
+               width:100%;
+               height: 54vw;
+            }
+         }
+         .content_box{
+               @include bl;
+               width: calc(100% - 335px);
+               overflow: hidden;
+               padding: 14px  32px  ;
+               border: 1px solid rgb(197, 197, 197);
+               @include MCW(781px) {
+                  width:100%;
+                  padding: 15px  32px 10px;
+               }
+            > .title{
+               @include b;
+               width: 100%;
+               font-size: 18px;
+               font-weight: 600;
+               color:rgb(92, 92, 92);
+               line-height: 29px;
+               height: 52px;
+               overflow: hidden;
+               a{
+                  color:rgb(92, 92, 92);
+                  @include multi_nowrap;
+               }
+            }
+            > .tips{
+               @include flex-center;
+               justify-content: space-between;
+               width: 100%;
+               font-size: 13px;
+               color: rgb(156, 156, 156);
+               padding: 15px 0;
+               > .tips_box{
+                  @include fxb;
+                  @include MCW(861px) {
+                     padding: 8px 0 ;
+                  }
+                  > .views{
+                     
+                  }
+                  > .tags{
+                     padding:5px 12px ;
+                     margin: 0 15px 0 0;
+                     background: $color_fs_orange;
+                     color:#fff;;
+                     border-radius: 5px;
+                  }
+                  > .date{
+
+                  }
+               }
+            }
+            > .controls{
+               @include fxb;
+               align-items: center;
+               width: 100%;
+               line-height: 24px;
+               font-size: 15px;
+               color: rgb(112, 112, 112);
+               letter-spacing: 2px;
+               max-height: 72px;
+               overflow: hidden;
+               .rate{
+                  @include fxb;
+                  @include hover;
+                  width: 130px;
+                  color: $color_fs_orange;
+
+                  cursor: pointer;
+                  > i{
+                     @include ib;
+                     font-size: 30px;
+                  }
+                  > .title_box{
+                     @include ib;
+                     width: 90px;
+                     padding: 5px 0 0 0;
+                     > .title{
+                        @include ibl;
+                        width: 100%;
+                        font-weight: bold;
+                        font-size: 15px;
+                        line-height: 18px;
+                        padding: 0 0 2px 0;
+                        a{
+                           @include ib;
+                           padding:  1px;
+
+                        }
+                     }
+                     > .subtitle{
+                        @include ibl;
+                        width: 100%;
+                        font-size: 12px;
+                        letter-spacing: 0px;
+                        color: rgb(143, 143, 143);
+                        line-height: 14px;
+                     }
+                  }
+
+               }
+               > .hours{
+                  padding: 6px 0;
+                  i{
+                     padding:0 4px 0 0;
+                  }
+                  color: rgb(165, 165, 165);
+               }
+               .time_limit{
+                     padding: 6px 0;
+
+               }
+            }
+            > hr{
+               margin: 14px 0 8px;
+            }
+         }
+      }
+   }
+   .course_list_block{
+      @include fxfe;
+      align-items: flex-start;
+      @include ib;
+      overflow: hidden;
+      width: calc(100% - 300px);
+      margin:  0 auto;
+      width: 100%;
+      @include tst;
+      @include M1301() {
+         justify-content: center;
+      }
+
+      .course_block{
+         @include ibl;
+         width: 300px;
+         margin: 0 10px 30px ;
+         @include tst;
+         @include MCW(780px) {
+            margin: 0;
+            padding: 0 6px 30px ;
+            width: 50%;
+         }
+
+         a{
+            
+            &:hover{
+               opacity: 1;
+               //transform: translate(0px,-7px);
+            }
+         }
+         &.preorder{
+            position: relative;
+            &::after{
+               content:'+預購課程';
+               @include b;
+               padding: 6px 8px;
+               color:#fff;
+               font-size: 14px;
+               background-color:$color_fs_courseList_goose; 
+               position: absolute;
+               z-index: 10;
+               top:0;
+               right:0;
+               letter-spacing: 2px;
+               @include hover;
+            }
+   
+         }
+         .image{
+            width: 100%;
+            height: 165px;
+            
+            @include tst;
+            @include MCW(780px) {
+               height: 26vw;
+            }
+            > img{
+               @include tst;
+               &:hover{
+                  transform: scale(1.1);
+               }
+            }
+            &:hover{
+               opacity: 1;
+            }
+         }
+         .content{
+            @include flex-center;
+            @include multi_nowrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 100%;
+            margin: 25px 0 0px;
+            line-height: 24px;
+            height: 52px;
+            overflow: hidden;
+            @include MCW(580px) {
+               font-size: 15px;
+               margin: 15px 0 4px;
+            }
+         }
+         .infos{
+            @include flex-center;
+            justify-content: space-between;
+            width: 100%;
+            .tips{
+               
+               font-size: 13px;
+               color: rgba(85, 85, 85, 0.63);
+               @include MCW(601px) {
+                  padding: 0 0 8px 0;
+               }
+               .element{
+                  padding:  0 5px 0 0 ;
+                  i{
+                     padding:  0 5px 0 0 ;
+                  }
+               }
+            }
+            .price{
+               
+               font-size: calc(19px + 0.4vw);
+               color:$color_fs_orange;
+               .preprice{
+                  @include ibl;
+                  font-size:13px;
+                  color: rgb(34, 34, 34);
+                  padding-right: 4px;
+                  line-height: 22px;
+                  .onsale{
+                     font-size: 12px;
+                     padding: 2px 4px; 
+                     background-color: $color_fs_courseList_goose; ;
+                     color:#fff;;
+                     margin-left:6px;
+                  }
+                  @include MCW(391px) {
+                     padding: 0 0 8px 0;
+                     width: 100%;
+                  }
+               }
+            }
+         }
+          .teacher_block{
+            @include flex-center;
+            width:100%;
+            float: left;
+            padding: 5px 0;
+            justify-content: space-between;
+            @include hover;
+            .teacher_avatar{
+               width: 50px;
+               height: 50px;
+               border-radius: 50px;
+               overflow:hidden;
+            }
+            .intro{
+               width: calc(100% - 70px);
+
+               line-height: 28px;
+               @include nowrap;
+               
+               .name{
+                  padding: 2px 0;
+               }
+               > .intro_content{
+                  color:$color_fs_gray_2;
+                  max-height: 30px;
+                  font-size: 15px;
+                  @include nowrap;
+               }
+            }
+         }
+      }
+   }
+
+   //我的訂單
+   .myOrder_list_content{
+      width: 100%;
+      @include M1301(){
+         width: 100%;
+      }
+   }
+   .myOrder_list_block{
+      @include fxv;
+      flex-wrap: wrap;
+      width: 100%;
+      overflow: hidden;
+      height:unset;
+      margin: 0px 0  25px;
+      @include tst;
+      transition-delay: .3s;
+      @include MCW(780px) {
+         flex-wrap: wrap;
+         flex-direction: row;
+         justify-content: center;
+      }
+      a{
+         @include b;
+         &:hover{
+            opacity: .9;
+         }
+      }
+      > .course_block{
+         @include inline-block;
+         width:100%;
+         margin: 0px 0 25px 0;
+         padding: 15px 0 25px 0;
+         @include MCW(781px) {
+            @include b;
+            width:100%;
+            margin: 0px 0 18px 0;
+            padding: 15px 10px 20px ;
+         }
+         .block_head{
+            @include ib;
+            width:100%;
+            padding: 10px 25px;
+            border: 1px solid rgb(197, 197, 197);
+            border-bottom-color: rgb(223, 223, 223);;
+            > .order_Info{
+               @include fxfs;
+               float: left;
+               color:rgb(63, 63, 63);;
+               > .order_item{
+                  @include ib;
+                  padding:  10px 80px 10px 0;
+                  line-height: 22px;
+                  @include MCW(780px) {
+                     width: 100%;
+                     padding:  3px 0;
+                  }
+               }
+            }
+         }
+         .block_body{
+            @include fxb;
+            align-items: flex-end;
+            width:100%;
+            padding: 20px 25px;
+            border: 1px solid rgb(197, 197, 197);
+            border-width: 0px 1px 1px 1px;
+            min-height: 160px;
+            overflow: hidden;
+            @include MCW(1301px) {
+               justify-content: flex-end;
+            }
+            @include MCW(780px) {
+               width:100%;
+               padding: 12px 0px;
+            }
+
+            > .orders{
+               @include fxb;
+               width:72%;
+               overflow: hidden;
+               @include M1301() {
+                  width: 100%;
+               }
+               > a{
+                  @include ibl;
+                  overflow: visible;
+                  min-height: 100px;
+                  
+               }
+               .order_item{
+                  @include fxb;
+                  width:100%;
+                  margin: 12px 0;
+                  position:relative;
+
+                  @include MCW(780px) {
+                     margin: 5px 0 ;
+                     &:not(:last-child)::after{
+                        content:'';
+                        display: block;
+                        width: 99%;
+                        height: 1px;
+                        background-color: #ddd;
+                        position:absolute;
+                        left: 0;
+                        bottom:-6px;;
+                     }
+                  }
+                  .image_box{
+                     @include bl;
+                     width: 220px;
+                     height: 120px;
+                     > img{
+                        @include tst;
+                        &:hover{
+                           transform: scale(1.1);
+                        }
+                     }
+                     @include MCW(780px) {
+                        width:150px;
+                        height: 82px;
+                     }
+                     @include MCW(481px) {
+                        display:none;
+                     }
+                  }
+                  > .content_box{
+                        @include fxfs;
+                        width: calc(100% - 220px);
+                        overflow: hidden;
+                        padding: 0 15px  ;
+                        height: 100%;
+
+                        @include MCW(781px) {
+                           width: calc(100% - 160px);
+                           padding: 5px  10px ;
+                        }
+                        @include MCW(481px) {
+                           width: 100%;
+                        }
+                     > .elem{
+                        @include MCW(861px) {
+                           font-size: 14px;
+                           padding: 0 10px 0 0 ;
+                        }
+                     }
+                     > .title{
+                        @include ibl;
+                        width: 100%;
+                        font-size: 18px;
+                        font-weight: 600;
+                        color:rgb(92, 92, 92);
+                        line-height: 29px;
+                        height: 52px;
+                        overflow: hidden;
+                        margin: 0 0 18px 0;
+                        a{
+                           color:rgb(92, 92, 92);
+                           @include multi_nowrap;
+                        }
+                     }
+                     > .tags{
+                        @include ibl;
+                        padding:2px 12px ;
+                        margin: 6px 18px 6px 0;
+                        background: $color_fs_orange;
+                        color:#fff;;
+                        border-radius: 5px;
+                        @include MCW(861px) {
+                           font-size: 13px;
+                        }
+                     }
+                     > .types{
+                        max-width: 100px;
+                        margin: 6px 18px 6px 0;
+                        i{
+                           color:#777;
+                           padding:   0 4px 0 0;
+                        }
+                     }
+                     > .number{
+                        font-size: 14px;
+                        padding: 0 18px 0 0 ;
+                        margin:  6px 0;
+                     }
+
+                     > .controls{
+                        @include fxb;
+                        align-items: center;
+                        width: 100%;
+                        line-height: 24px;
+                        font-size: 15px;
+                        color: rgb(112, 112, 112);
+                        letter-spacing: 2px;
+                        max-height: 72px;
+                        overflow: hidden;
+                        .rate{
+                           @include fxb;
+                           @include hover;
+                           width: 130px;
+                           color: $color_fs_orange;
+
+                           cursor: pointer;
+                           > i{
+                              @include ib;
+                              font-size: 30px;
+                           }
+                           > .title_box{
+                              @include ib;
+                              width: 90px;
+                              padding: 5px 0 0 0;
+                              > .title{
+                                 @include ibl;
+                                 width: 100%;
+                                 font-weight: bold;
+                                 font-size: 15px;
+                                 line-height: 18px;
+                                 padding: 0 0 2px 0;
+                                 a{
+                                    @include ib;
+                                    padding:  1px;
+
+                                 }
+                              }
+                              > .subtitle{
+                                 @include ibl;
+                                 width: 100%;
+                                 font-size: 12px;
+                                 letter-spacing: 0px;
+                                 color: rgb(143, 143, 143);
+                                 line-height: 14px;
+                              }
+                           }
+
+                        }
+                        > .hours{
+                           color: rgb(165, 165, 165);
+                        }
+                        .time_limit{
+                              padding: 4px 0;
+    
+                        }
+                     }
+
+                  }
+               }
+            }
+
+            > .status{
+               @include fxc;
+               box-sizing: border-box;
+               align-items: flex-end;
+               width: 28%;
+               max-width: 260px;
+               max-height: 120px;
+               padding: 8px 34px ;
+               border: 1px solid rgb(197, 197, 197);
+               @include M1301() {
+                  width: 100%;
+               }
+               @include MCW(780px) {
+                  width: 100%;
+                  padding: 8px 12px ;
+                  margin: 0px 10px;
+               }
+
+               > .status_item{
+                  @include fxfs;
+                  width: auto;
+                  margin: 6px 0;
+                  @include MCW(861px) {
+                     @include fxc;
+                     justify-content: flex-end;
+                  }
+                  > .title{
+                     @include ibl;
+                     width:80px;
+                     text-align: right;
+                  }
+                  > .price{
+                     font-size: 19px;
+                     color:$color_fs_orange;
+                     padding: 0 0px 0 10px;
+                  }
+                  > .type2{
+                     padding: 0 0px 0 10px;
+                  }
+
+                  
+               }
+               
+            }
+
+         }
+      }
+   }
+
+   //個人檔案
+   .myInfo_editor_block{
+      width: 100%;
+      
+      > .info_block{
+         > .title{
+            @include ib;
+            color: rgb(63, 63, 63);
+            width: 100%;
+            padding: 10px 0;
+            font-weight:bold;
+            font-size: calc(20px + 0.3vw);
+         }
+         > .input_list{
+            width: 100%;
+            margin: 15px auto 10px;
+            @include MCW(801px) {
+               margin: 5px auto 3px;
+            }
+            > .input_block{
+               @include fxc;
+               position: relative;
+               padding: 0 10px 10px 0;
+               width: 100%;
+               @include cols_2(96%,681px){
+                  justify-content: flex-start;
+               }
+               @include cols_3(96%,681px){
+                  justify-content: flex-start;
+               }
+               @include MCW(801px) {
+                  padding: 0 10px 5px 0;
+               }
+               @include cols_v2(97%){
+
+               }
+               .select_block{
+                  @include cols_v2(97%){
+
+                  }
+               }
+               .title{
+                  @include ib;
+                  width: 100%;
+                  padding: 5px 0 0;
+                  font-weight:bold;
+                  font-size: 16px;
+                  text-align: left;
+               }
+               .input{
+                  @include PlaceHolder-Style(rgb(145, 145, 145),.9);
+                  @include tst;
+                  @include ib;
+                  text-decoration: none;
+                  width: 100%;
+                  max-width: 100%;
+                  margin:  15px auto 10px;
+                  padding: 8px 15px ;
+                  border-width: 1px;
+                  border-style: solid;
+                  border-color:  rgb(184, 184, 184);
+                  outline: none;
+                  font-size: 16px;
+                  letter-spacing: 1px;
+                  @include MCW(801px) {
+                     margin:  8px auto ;
+                  }
+                  &:focus{
+                     border-color:  #FF7757;
+                     box-shadow: 0px 0px 10px rgba(255, 149, 11, 0.466);
+                  }
+               }
+               .inputs{
+                  @include fxfs;
+                  width: 100px;
+                  margin: 15px 0 20px;
+                  padding: 5px;
+                  .radio_box{
+                     width: 20px ;
+                     @include radio_2;
+                     .label{
+                        cursor: pointer;
+                     }
+                  }
+                  > .title{
+                     width: 40px ;
+                     padding: 0 12px;
+                  }
+               }
+               button{
+                  margin: 8px 0;
+               }
+            }
+         }
+         > .tips_block{
+            color: rgb(126, 126, 126);
+            font-size: 17px;
+            line-height: 24px;
+            @include MCW(801px) {
+               font-size: 15px;
+               line-height: 20px;
+            }
+            > .title{
+               @include ib;
+               width: 100%;
+               padding:10px 0;
+            }
+            > .tips_list{
+               width: 100%;
+               > .tip{
+                  padding:4px 0;
+                  @include MCW(801px) {
+                     padding:3px 0;
+                  }
+               }
+            }
+         }
+      }
+      > hr{
+         margin: 40px 0;
+         @include MCW(801px) {
+            margin: 20px 0 30px;
+         }
+      }
+
+   }
+
+   //我的收藏
+   .myFavorite_list_content{
+      width: 72%;
+      @include M1301(){
+         width: 100%;
+      }
+   }
+   .myFavorites_list_recommend{
+      width:25% ;
+      padding: 24px 0 0 0;
+      @include M1301(){
+         width: 100%;
+      }
+      > .title{
+         @include ib;
+         width: 100%;
+         padding: 15px 0 15px 8px;
+         font-size: 20px;
+      }
+   }
+   .myFavorite_list_block{
+      @include fxv;
+      flex-wrap: wrap;
+      width: 100%;
+      overflow: hidden;
+      height:unset;
+      @include tst;
+      transition-delay: .3s;
+      @include MCW(780px) {
+         flex-wrap: wrap;
+         flex-direction: row;
+         justify-content: center;
+      }
+      a{
+         @include b;
+         &:hover{
+            opacity: .9;
+         }
+      }
+      .course_block{
+         @include fxb;
+         width:100%;
+         margin: 0px 0 40px 0;
+         position: relative;
+         padding: 15px 0;
+         @include MCW(780px) {
+            @include b;
+            width:100%;
+            margin: 0px 0 40px 0;
+         }
+         .image_box{
+            @include bl;
+            width: 320px;
+            height: 180px;
+            img{
+               @include tst;
+               &:hover{
+                  transform: scale(1.1);
+               }
+            }
+             @include MCW(780px) {
+               width:100%;
+               height: 54vw;
+            }
+         }
+         .content_box{
+            @include bl;
+            width: calc(100% - 335px);
+            overflow: hidden;
+            padding: 14px  32px  ;
+            border: 1px solid rgb(197, 197, 197);
+            @include MCW(781px) {
+               width:100%;
+               padding: 15px  32px 10px;
+            }
+            > .title{
+               @include b;
+               width: 90%;
+               font-size: 18px;
+               font-weight: 600;
+               color:rgb(92, 92, 92);
+               line-height: 29px;
+               height: 52px;
+               overflow: hidden;
+               a{
+                  color:rgb(92, 92, 92);
+                  @include multi_nowrap;
+               }
+            }
+            > .tips{
+               @include flex-center;
+               justify-content: space-between;
+               width: 100%;
+               font-size: 13px;
+               color: rgb(156, 156, 156);
+               padding: 15px 0 4px;
+               > .tips_box{
+                  @include fxb;
+                  @include MCW(861px) {
+                     padding: 8px 0 ;
+                  }
+                  > .tags{
+                     padding:2px 12px ;
+                     margin: 0 15px 0 0;
+                     background: $color_fs_orange;
+                     color:#fff;;
+                     border-radius: 5px;
+                  }
+                  > .date{
+
+                  }
+               }
+               > .delet{
+                  font-size: 22px;
+                  position: absolute;
+                  top:40px;;
+                  right: 20px;
+                  color:#aaa;
+                  @include hover;
+                  @include MCW(781px) {
+                     position: relative;;
+                     top:unset;;
+                  }
+               }
+            }
+            > .controls{
+               @include fxb;
+               align-items: center;
+               width: 100%;
+               line-height: 24px;
+               font-size: 15px;
+               color: rgb(112, 112, 112);
+               letter-spacing: 2px;
+               
+               overflow: hidden;
+               .item_box{
+                  @include fxfs;
+                  padding:  8px 0;
+                  .rate{
+                     @include fxb;
+                     @include hover;
+                     color: $color_fs_orange;
+                     padding:  0 16px  0 0;
+                     cursor: pointer;
+                     > i{
+                        @include ib;
+                        font-size: 30px;
+                     }
+                     > .title{
+                        @include ibl;
+                        font-weight: bold;
+                        font-size: calc(20px + 0.4vw);
+                        line-height: 18px;
+                        padding: 0 0 2px 0;
+                        a{
+                           @include ib;
+                           padding:  1px;
+
+                        }
+                     }
+
+                  }
+                  .hours{
+                     i{
+                        padding:  0 6px 0 0;
+                     }
+
+                     color: rgb(165, 165, 165);
+                  }
+                  .time_limit{
+                     padding: 4px 0;
+                  }
+                  
+               }
+               > .buysoon{
+                  @include fxb;
+                  
+                  width: 210px;
+                  .elem{
+                     @include fxc;
+                     text-align: center;
+                     height: 55px ;
+                     padding:  10px 15px ;
+                     border: 1px solid $color_fs_orange;
+                     @include hover;
+                  }
+                  .buy{
+                     background-color: $color_fs_orange;
+                     max-width: 140px;
+                     color: #fff;
+                     > .item{
+                        line-height: 12px;
+                     }
+                     > .title{
+                        width: 100%;
+                        font-size: 16px;
+                     }
+                     > .subtitle{
+                        width: 100%;
+                        font-size: 12px;
+                        letter-spacing: 0;
+                     }
+                  }
+                  .cart{
+                     @include fxc;
+                     align-items: center;
+                     max-width:59px;
+                     position: relative;
+                     > .item{
+                        color: $color_fs_orange;
+                     }
+                     > .title{
+                        font-size: 20px;
+                        margin: -4px 0 -6px;
+                     }
+                     > .subtitle{
+                        position: relative;
+                        
+                     }
+                  }
+               }
+            }
+            > hr{
+               margin: 14px 0 8px;
+            }
+
+         }
+
+      }
+   }
+
+
+   .pager_block{
+      @include fxc;
+      width: 100%;
+      padding: 20px 0 40px;
+
+      @include MCW(580px) {
+          padding: 0px 0 40px;
+      }
+      .pager{
+         // @include flex-center;
+         // justify-content: space-between;
+         @include ib;
+         width: auto;
+         margin:20px auto;;
+         padding: 0 50px 0;
+         @include MCW(580px) {
+            padding: 0 15px 0;
+         }
+         .pager_number{
+            @include ibl;
+            padding: 12px 15px;
+            margin: 5px;
+            text-align: center;
+            cursor: pointer;
+            background-color: rgb(218, 218, 218);
+            @include hover;
+
+            &.active{
+                background-color:#172532;
+                color: #fff;
+            }
+         }
+      }
+   }
+
+
+}
+
+.focuspoint{
+   // @include flex-center;
+   // align-content: center;
+   .lazy{
+      @include bg-loading;
+      background-color: #fff;
+      background-image: url("images/fengso-loading.svg");
+      max-height: 100%;
+   }
+   .lazied{
+      max-height: unset;
+   }
+}
+
+.img_box{
+   > img{
+      max-width:100%;
+      max-height:100%;
+   }
+}
+
+

@@ -1,0 +1,925 @@
+@charset "UTF-8";
+@import url(https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+.area .container.type_article, #fengso-ArticleDetail .tags_block .tags_list, #fengso-ArticleDetail .article_detail_block .article_block, #fengso-ArticleDetail .article_detail_block .article_block > .info_block, #fengso-ArticleDetail .article_detail_block .article_block > .info_block > .tags, #fengso-ArticleDetail .article_detail_block .article_block > .info_block > .share_block, #fengso-ArticleDetail .course_list_block, #fengso-ArticleDetail .pager_block, #fengso-ArticleDetail .pager_block .pager.type_pagination, #fengso-ArticleDetail .pager_block .pager.type_pagination > .pager_prev > a, #fengso-ArticleDetail .pager_block .pager.type_pagination > .pager_next > a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#fengso-ArticleDetail .article_detail_block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: column;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.img_box img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.area {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  width: 100%;
+  overflow: hidden;
+}
+
+.area .container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 1300px;
+  padding: 20px 10px 10px;
+}
+
+.area .container.type_article {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 1300px;
+  padding: 10px 10px;
+  position: relative;
+}
+
+@media all and (max-width: 1301px) {
+  .area .container.type_article {
+    width: 100%;
+    padding: 10px 10px 10px;
+  }
+}
+
+@media all and (max-width: 861px) {
+  .area .container.type_article {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 1301px) {
+  .area .container {
+    width: 100%;
+    padding: 10px 10px 10px;
+  }
+}
+
+#fengso-ArticleDetail {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  float: left;
+  width: 100%;
+  overflow: hidden;
+}
+
+#fengso-ArticleDetail .bread_crumb_block .bread_crumb .bread_crumb_item {
+  font-size: 14px;
+}
+
+#fengso-ArticleDetail .tags_block {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+  padding: 15px 0 5px;
+}
+
+#fengso-ArticleDetail .tags_block .tags_list {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#fengso-ArticleDetail .tags_block .tags_list .tag {
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
+  min-width: 80px;
+  padding: 6px 8px;
+  margin: 6px 18px  6px 0;
+  text-align: center;
+  background: #D7D7D7;
+  border-radius: 3px;
+  font-size: 15px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#fengso-ArticleDetail .tags_block .tags_list .tag.active {
+  background: #FF7757;
+  color: #fff;
+}
+
+#fengso-ArticleDetail .sort_block {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+  padding: 5px 0;
+  text-align: center;
+  font-size: 16px;
+}
+
+#fengso-ArticleDetail .sort_block .sort_item {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
+  padding: 6px 8px;
+  margin: 6px 8px  6px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#fengso-ArticleDetail .sort_block .sort_list > .btn {
+  cursor: pointer;
+  position: relative;
+}
+
+#fengso-ArticleDetail .sort_block .sort_list > .btn.active {
+  color: #FF7757;
+}
+
+#fengso-ArticleDetail .sort_block .sort_list > .btn:not(:last-child):after {
+  content: '';
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  width: 2px;
+  height: 60%;
+  background-color: #BCBDBC;
+  position: absolute;
+  right: -6px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+
+#fengso-ArticleDetail .article_detail_content {
+  width: 72%;
+}
+
+@media all and (max-width: 1301px) {
+  #fengso-ArticleDetail .article_detail_content {
+    width: 100%;
+  }
+}
+
+#fengso-ArticleDetail .article_detail_recommend {
+  width: 25%;
+}
+
+@media all and (max-width: 1301px) {
+  #fengso-ArticleDetail .article_detail_recommend {
+    width: 100%;
+  }
+}
+
+#fengso-ArticleDetail .article_detail_recommend > .title {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+  padding: 15px 0 15px 8px;
+  font-size: 20px;
+}
+
+@media all and (max-width: 1301px) {
+  #fengso-ArticleDetail .article_detail_recommend > .title {
+    padding: 15px 0 24px 8px;
+  }
+}
+
+#fengso-ArticleDetail .article_detail_block {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  width: 100%;
+  overflow: hidden;
+  height: unset;
+}
+
+@media all and (max-width: 780px) {
+  #fengso-ArticleDetail .article_detail_block {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+#fengso-ArticleDetail .article_detail_block a:hover {
+  opacity: .9;
+}
+
+#fengso-ArticleDetail .article_detail_block .article_block {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0px 0 80px 0;
+}
+
+@media all and (max-width: 780px) {
+  #fengso-ArticleDetail .article_detail_block .article_block {
+    margin: 0px 0 40px 0;
+  }
+}
+
+#fengso-ArticleDetail .article_detail_block .article_block > .title {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  color: #363636;
+  line-height: 28px;
+  padding: 10px 0 30px;
+}
+
+#fengso-ArticleDetail .article_detail_block .article_block > .info_block {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  font-size: 13px;
+  color: #9c9c9c;
+  padding: 10px 0;
+}
+
+#fengso-ArticleDetail .article_detail_block .article_block > .info_block > .tags {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media all and (max-width: 861px) {
+  #fengso-ArticleDetail .article_detail_block .article_block > .info_block > .tags {
+    padding: 8px 0;
+  }
+}
+
+#fengso-ArticleDetail .article_detail_block .article_block > .info_block > .tags .tag {
+  padding: 5px 12px;
+  margin: 0 15px 0 0;
+  background: #182432;
+  color: #fff;
+}
+
+#fengso-ArticleDetail .article_detail_block .article_block > .info_block > .date {
+  letter-spacing: 1px;
+}
+
+#fengso-ArticleDetail .article_detail_block .article_block > .info_block > .hr {
+  margin: 16px 0 18px;
+}
+
+#fengso-ArticleDetail .article_detail_block .article_block > .info_block > .share_block {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin: 5px 0;
+}
+
+#fengso-ArticleDetail .article_detail_block .article_block > .info_block > .share_block > .title {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  padding: 0 0px  0 12px;
+  font-size: 16px;
+  color: #333;
+}
+
+#fengso-ArticleDetail .article_detail_block .article_block > .info_block > .share_block > .ele {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  padding: 0 0px  0 12px;
+  font-size: 30px;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
+  cursor: pointer;
+}
+
+#fengso-ArticleDetail .article_detail_block .article_block > .info_block > .share_block > .ele:hover {
+  opacity: .8;
+  -webkit-transition-duration: .1s;
+       -o-transition-duration: .1s;
+          transition-duration: .1s;
+}
+
+#fengso-ArticleDetail .article_detail_block .article_block > .info_block > .share_block > .ele.fb {
+  color: #3b5998;
+  font-size: 32px;
+}
+
+#fengso-ArticleDetail .article_detail_block .article_block > .info_block > .share_block > .ele.line {
+  color: #54CF01;
+  height: 30px;
+  overflow: hidden;
+}
+
+#fengso-ArticleDetail .article_detail_block .article_block > .info_block > .share_block > .ele.line img {
+  width: 100%;
+  height: 100%;
+}
+
+#fengso-ArticleDetail .article_detail_block .article_block > .image_box {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  float: left;
+  max-width: 1000px;
+  width: 100%;
+  height: 310px;
+}
+
+#fengso-ArticleDetail .article_detail_block .article_block > .image_box img {
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
+}
+
+#fengso-ArticleDetail .article_detail_block .article_block > .image_box img:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+@media all and (max-width: 780px) {
+  #fengso-ArticleDetail .article_detail_block .article_block > .image_box {
+    width: 100%;
+    height: 54vw;
+  }
+}
+
+#fengso-ArticleDetail .article_detail_block .article_block > .content {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  float: left;
+  padding: 24px  0px 40px;
+  width: 100%;
+  line-height: 28px;
+  letter-spacing: 1px;
+  font-size: 16px;
+  overflow: hidden;
+  color: #6c6c80;
+}
+
+@media all and (max-width: 781px) {
+  #fengso-ArticleDetail .article_detail_block .article_block > .content {
+    width: 100%;
+    padding: 15px  10px 10px;
+  }
+}
+
+#fengso-ArticleDetail .course_list_block {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100%;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
+}
+
+@media all and (max-width: 1301px) {
+  #fengso-ArticleDetail .course_list_block {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+#fengso-ArticleDetail .course_list_block .course_block {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  width: 300px;
+  margin: 0 10px 30px;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
+}
+
+@media all and (max-width: 780px) {
+  #fengso-ArticleDetail .course_list_block .course_block {
+    margin: 0;
+    padding: 0 6px 30px;
+    width: 50%;
+  }
+}
+
+#fengso-ArticleDetail .course_list_block .course_block a {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+}
+
+#fengso-ArticleDetail .course_list_block .course_block a:hover {
+  opacity: 1;
+}
+
+#fengso-ArticleDetail .course_list_block .course_block.preorder {
+  position: relative;
+}
+
+#fengso-ArticleDetail .course_list_block .course_block.preorder::after {
+  content: '+預購課程';
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  padding: 6px 8px;
+  color: #fff;
+  font-size: 14px;
+  background-color: #FEA226;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  letter-spacing: 2px;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
+  cursor: pointer;
+}
+
+#fengso-ArticleDetail .course_list_block .course_block.preorder::after:hover {
+  opacity: .8;
+  -webkit-transition-duration: .1s;
+       -o-transition-duration: .1s;
+          transition-duration: .1s;
+}
+
+#fengso-ArticleDetail .course_list_block .course_block .image {
+  width: 100%;
+  height: 165px;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
+}
+
+@media all and (max-width: 780px) {
+  #fengso-ArticleDetail .course_list_block .course_block .image {
+    height: 26vw;
+  }
+}
+
+#fengso-ArticleDetail .course_list_block .course_block .image > img {
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
+}
+
+#fengso-ArticleDetail .course_list_block .course_block .image > img:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#fengso-ArticleDetail .course_list_block .course_block .image:hover {
+  opacity: 1;
+}
+
+#fengso-ArticleDetail .course_list_block .course_block .content {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  margin: 25px 0 0px;
+  line-height: 24px;
+  height: 52px;
+  overflow: hidden;
+}
+
+@media all and (max-width: 580px) {
+  #fengso-ArticleDetail .course_list_block .course_block .content {
+    font-size: 15px;
+    margin: 15px 0 4px;
+  }
+}
+
+#fengso-ArticleDetail .course_list_block .course_block .infos {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+#fengso-ArticleDetail .course_list_block .course_block .infos .tips {
+  font-size: 13px;
+  color: rgba(85, 85, 85, 0.63);
+}
+
+@media all and (max-width: 601px) {
+  #fengso-ArticleDetail .course_list_block .course_block .infos .tips {
+    padding: 0 0 8px 0;
+  }
+}
+
+#fengso-ArticleDetail .course_list_block .course_block .infos .tips .element {
+  padding: 0 5px 0 0;
+}
+
+#fengso-ArticleDetail .course_list_block .course_block .infos .tips .element i {
+  padding: 0 5px 0 0;
+}
+
+#fengso-ArticleDetail .course_list_block .course_block .infos .price {
+  font-size: calc(19px + 0.4vw);
+  color: #FF7757;
+}
+
+#fengso-ArticleDetail .course_list_block .course_block .infos .price .preprice {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  font-size: 13px;
+  color: #222222;
+  padding-right: 4px;
+  line-height: 22px;
+}
+
+#fengso-ArticleDetail .course_list_block .course_block .infos .price .preprice .onsale {
+  font-size: 12px;
+  padding: 2px 4px;
+  background-color: #FEA226;
+  color: #fff;
+  margin-left: 6px;
+}
+
+@media all and (max-width: 391px) {
+  #fengso-ArticleDetail .course_list_block .course_block .infos .price .preprice {
+    padding: 0 0 8px 0;
+    width: 100%;
+  }
+}
+
+#fengso-ArticleDetail .course_list_block .course_block .teacher_block {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  width: 100%;
+  float: left;
+  padding: 5px 0;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
+  cursor: pointer;
+}
+
+#fengso-ArticleDetail .course_list_block .course_block .teacher_block:hover {
+  opacity: .8;
+  -webkit-transition-duration: .1s;
+       -o-transition-duration: .1s;
+          transition-duration: .1s;
+}
+
+#fengso-ArticleDetail .course_list_block .course_block .teacher_block .teacher_avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+#fengso-ArticleDetail .course_list_block .course_block .teacher_block .intro {
+  width: calc(100% - 70px);
+  line-height: 28px;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  max-height: 40px;
+}
+
+#fengso-ArticleDetail .course_list_block .course_block .teacher_block .intro .name {
+  padding: 2px 0;
+}
+
+#fengso-ArticleDetail .course_list_block .course_block .teacher_block .intro > .intro_content {
+  color: #a1a1a1;
+  max-height: 30px;
+  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  max-height: 40px;
+}
+
+#fengso-ArticleDetail .pager_block {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  padding: 20px 0 40px;
+}
+
+@media all and (max-width: 580px) {
+  #fengso-ArticleDetail .pager_block {
+    padding: 0px 0 40px;
+  }
+}
+
+#fengso-ArticleDetail .pager_block .pager {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  width: auto;
+  margin: 20px auto;
+  padding: 0 50px 0;
+}
+
+@media all and (max-width: 580px) {
+  #fengso-ArticleDetail .pager_block .pager {
+    padding: 0 15px 0;
+  }
+}
+
+#fengso-ArticleDetail .pager_block .pager.type_pagination {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#fengso-ArticleDetail .pager_block .pager.type_pagination > .pager_prev > a {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 310px;
+}
+
+#fengso-ArticleDetail .pager_block .pager.type_pagination > .pager_prev .icos {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/artdetail_prev.svg");
+  background-position: center;
+  background-size: 100%;
+  opacity: .4;
+}
+
+#fengso-ArticleDetail .pager_block .pager.type_pagination > .pager_prev .title {
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  max-height: 40px;
+  padding: 5px 10px;
+  max-width: 200px;
+}
+
+#fengso-ArticleDetail .pager_block .pager.type_pagination > .deco {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  height: 20px;
+  width: 1px;
+  background: #999;
+  margin: 0 15px;
+}
+
+@media all and (max-width: 671px) {
+  #fengso-ArticleDetail .pager_block .pager.type_pagination > .deco {
+    display: none;
+  }
+}
+
+#fengso-ArticleDetail .pager_block .pager.type_pagination > .pager_next > a {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 310px;
+}
+
+#fengso-ArticleDetail .pager_block .pager.type_pagination > .pager_next .icos {
+  color: #54CF01;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/artdetail_next.svg");
+  background-position: center;
+  background-size: 100%;
+  opacity: .4;
+}
+
+#fengso-ArticleDetail .pager_block .pager.type_pagination > .pager_next .title {
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  max-height: 40px;
+  padding: 5px 10px;
+  max-width: 200px;
+}
+
+#fengso-ArticleDetail .pager_block .pager .pager_number {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  padding: 12px 15px;
+  margin: 5px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #dadada;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
+  cursor: pointer;
+}
+
+#fengso-ArticleDetail .pager_block .pager .pager_number:hover {
+  opacity: .8;
+  -webkit-transition-duration: .1s;
+       -o-transition-duration: .1s;
+          transition-duration: .1s;
+}
+
+#fengso-ArticleDetail .pager_block .pager .pager_number.active {
+  background-color: #172532;
+  color: #fff;
+}
+
+.focuspoint .lazy {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  background-image: url("images/fengso-loading.svg");
+  max-height: 100%;
+}
+
+.focuspoint .lazied {
+  max-height: unset;
+}

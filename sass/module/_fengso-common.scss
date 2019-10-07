@@ -1,0 +1,181 @@
+@include resetCSS;
+
+html{
+   font-family: 'Century Gothic','Arial','Source Sans Pro' , 'Muli' ,'微軟正黑體', '新細明體';
+   &::-webkit-scrollbar {
+      width: 13px;
+      background-color:rgba(255, 255, 255, 0.9);
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+   }
+   &::-webkit-scrollbar-track {
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+      margin:8px 0 ;
+   }
+   &::-webkit-scrollbar-thumb {
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+      background: rgb(163, 163, 163);
+   }
+}
+body{
+   overflow-x: hidden;
+   overflow-y: scroll; 
+}
+
+a{
+   text-decoration: none;
+   color: $color_link;
+   @include tst;
+   &:hover{
+      opacity: .7;
+   }
+   &.type2{
+      text-decoration: underline;
+      color: $color_fs_blue;
+   }
+}
+input{
+   @include PlaceHolder-Style;
+}
+hr{
+   @include bl;
+   height: 1px;
+   width: 100%;
+   background-color: rgb(226, 226, 226);
+   border: 0px;
+   margin: 8px 0;
+}
+button{
+   @include selection-none;
+   font-family: 'Century Gothic','Arial','Source Sans Pro' , 'Muli' ,'微軟正黑體','FontAwesome', '新細明體';
+   background: $color_fs_orange;
+   border: 0px solid #fff;
+   cursor:pointer;
+   color:#fff;
+   outline:none;
+   @include tst;
+   border-radius: 5px;
+   padding: 12px 40px;
+   margin: 8px;
+   font-size: 16px;
+   &:hover{
+      opacity: .8;
+   }
+   &.type_gray{
+      background: #ddd;
+      color:#444;
+   }
+   &.shape{
+      border-radius: 0;
+   }
+}
+
+//if no content, show it  
+.nothing_block{
+   @include fxc;
+   width: 100%;
+   padding:30px 0px;
+
+   position: relative;
+   @include MCW(861px) {
+      padding:30px 15px;
+   }
+   .nothing{
+      letter-spacing: 3px;
+      color:#888;
+      font-size: 22px;
+      padding:80px 0px;
+      max-height: 260px;
+      width: 100%;
+      border: 1px solid #ccc;
+      @include fxc;
+   };
+}
+
+
+//lazy and position focuspoint style
+.focuspoint{
+   // @include flex-center;
+   // align-content: center;
+   .lazy{
+      @include bg-loading;
+      background-color: #fff;
+      background-image: url("images/fengso-loading.svg");
+      max-height: 100%;
+   }
+   .lazied{
+      max-height: unset;
+   }
+}
+.img_box{
+   img{
+      // height:100%;
+      width:100%;
+   }
+}
+
+
+.tdu{
+   text-decoration: underline;
+}
+
+.bread_crumb_block{
+   @include bl;
+   width: 100%;
+   line-height: 28px;
+   @include M1301() {
+      padding: 0 15px;
+   }
+   .bread_crumb{
+      @include bl;
+      width: 100%;
+      .bread_crumb_item{
+         @include ibl;
+         font-size: 14px;
+         margin: 0;
+         padding:  0 10px 0 0px;
+         .home{
+            @include ibl;
+            padding: 0px 10px 0 0;
+            font-size: 16px;
+            color: rgb(63, 63, 63);
+         }
+         .arrow{
+            @include ibl;
+            padding: 2px 12px 0 8px;
+            font-size: 12px;
+            color: $color_fs_gray;
+         }
+
+         &.bc_first{
+         }
+         &.bc_last{
+            font-weight: 600;
+         }
+      }
+
+   }
+}
+
+
+
+
+
+// jquery animate 
+.isopen{
+   transition: .3s all cubic-bezier(.03,.08,0,.99) ;
+   opacity: 0;
+   transform:scale(0.2);
+}
+.is_rotate{
+   opacity: 0;
+   transition: all .5s ease-in-out;
+   transform:rotate(180deg);
+}
+.is_right{
+   opacity: 0;
+   transition: all .2s cubic-bezier(.03,.08,0,.99) ;
+   transform:translateX(-120px);
+}

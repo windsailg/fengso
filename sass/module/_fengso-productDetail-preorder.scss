@@ -1,0 +1,167 @@
+
+.area{
+   .container{
+      &.type_5{
+         width: 100%;
+         
+      }
+   }
+}
+
+//  *{outline-color: rgba(255, 118, 87, 0.233);outline-width: 1px;outline-style:solid;}
+
+#fengso-productDetail.preorder{
+
+   
+   .belt_blocks{
+      background: $color_fs_pre_goose;
+      .price{
+         @include bs(1px,1px,12px,rgba(63, 63, 63, 0.301));
+         transform: skewX(-14deg) scale(1 , 1.1);
+         
+         background-color: #fff;
+         overflow: hidden;
+         width: auto;
+         max-width: 250px;
+         height: 160px;
+         position: relative;
+         @include M1301() {
+            height:unset;
+            min-width: 100%;
+            transform: skewX(0deg) scale(1);
+         }
+         > .subtitle{
+            @include rwd_dp;
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            font-size: 20px;
+            transform: skewX(14deg);
+            color:#ccc;
+            text-decoration: line-through;;
+         }
+         .col{
+            width:100%;
+            transform: skewX(14deg) scale(1 , 0.9);
+            padding: 34px 30px;
+            @include M1301() {
+               width:50%;
+               text-align: center;
+               transform: skewX(0deg);
+               padding: 0;
+            }
+            @include MCW(700px) {
+               width:100%;
+               padding: 6px 0;
+            }
+            > .title{
+               @include ibl;
+               position: unset;;
+               width: 100%;
+               color: rgb(68, 68, 68);
+               font-size: 18px;
+               padding: 0 0 10px 0;
+               float: left;
+               height: unset
+            }
+            > .subtitle{
+               @include ibl;
+               width:100%;
+               font-size: 40px;
+               color: $color_fs_orange;
+               text-align: center;
+            }
+         }
+         .real_price{
+
+            .subtitle{
+               font-size: 34px;
+               color:#ccc;
+               text-decoration: line-through;;
+            }
+            @include rwd_dp;
+         }
+
+      }
+   }
+
+   .reciprocal_block{
+      @include flex-center;;
+      background-color: $color_fs_background_gray;
+      justify-content: center;
+      position: relative;
+      
+      width: 100%;;
+      float: left;
+      
+      padding: 30px 0; 
+      @include M1301() {
+         padding: 20px 0 20px; 
+      }
+      .reciprocal_deco{
+         
+         @include aa;
+         width: 1250px;
+         background-color: $color_fs_pre_goose;
+         opacity: .8;
+         position: absolute;
+         z-index: 0;
+         height:1px;
+         @include M1301() {
+            width: 100%;;
+         }
+         @include MCW(800px) {
+            margin:0 auto ;
+           top: 26px;
+         }
+      }
+      .col{
+         @include ib;
+         font-size: 16px;
+         text-align: center;
+         position: relative;
+         z-index: 1;
+         color: $color_fs_font-title;
+         background-color: $color_fs_background_gray;
+         @include MCW(800px) {
+            padding: 20px 0;
+         }
+         .str{
+            font-weight: 600;
+            padding: 0 16px;
+            @include MCW(800px) {
+               padding: 0 16px 0 6px;
+            }
+         }
+         .num{
+            font-size: 38px;
+            color: $color_fs_font-title_2;
+            @include MCW(800px) {
+               font-size: 28px;
+            }
+         }
+         &.title{
+            padding: 0 60px;
+         }
+         &.date{
+            @include MCW(800px) {
+               width: 100%;;
+            }
+         }
+         &.time{
+            padding: 0 60px 0 20px;
+            .str{
+               padding: 0 10px;
+            }
+            .num{
+               > span{
+                  padding: 0 10px;
+                  font-size: 14px;
+               }
+            }
+         }
+      }
+
+   }
+
+}
