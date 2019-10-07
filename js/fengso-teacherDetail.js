@@ -2,9 +2,9 @@
 $(document).ready(function(){
    
 
-ResizerRunner();
 
-var resizeTimer = null;
+
+const resizeTimer = null;
 $(window).resize(function(){
     if (resizeTimer) {
         clearTimeout(resizeTimer);
@@ -14,8 +14,8 @@ $(window).resize(function(){
     }, 500);
 })
 
+ResizerRunner();
 function ResizerRunner(){
-    console.log('resizer complete');
     let ww = window.innerWidth;
     if(ww <= 920){
 
