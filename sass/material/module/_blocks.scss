@@ -1,8 +1,0 @@
- 
- @mixin model-blocks-flex_center($blocks_width:320px){
-      @include flex-center;
-      .block{
-         @include inline-block;
-         width: $blocks_width;
-      }
- }
