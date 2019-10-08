@@ -4,7 +4,7 @@ $(document).ready(function(){
    //Header Controls
    $('#HeaderSearchRWDTrigger').click(function(){
       
-      $('#HeaderSearchBlock').fadeToggle(220);
+      $('.header_Search_block').fadeToggle(220);
    })
 
    //SidebarControl

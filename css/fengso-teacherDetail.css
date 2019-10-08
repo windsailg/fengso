@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url(https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
-#fengso-teacherDetail .tab_block .tab, #fengso-teacherDetail .teacher_block .teacher_box > .action_icons, #fengso-teacherDetail .course_container, #fengso-teacherDetail .course_list_block, #fengso-teacherDetail .article_list_block .article_block, #fengso-teacherDetail .article_list_block .article_block .content_box > .tips > .tips_box, #fengso-teacherDetail .pager_block {
+#fengso-teacherDetail .tab_block .tab, #fengso-teacherDetail .teacher_block .teacher_box, #fengso-teacherDetail .teacher_block .teacher_box > .action_icons, #fengso-teacherDetail .course_container, #fengso-teacherDetail .course_list_block, #fengso-teacherDetail .article_list_block .article_block, #fengso-teacherDetail .article_list_block .article_block .content_box > .tips > .tips_box, #fengso-teacherDetail .pager_block {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -112,10 +112,10 @@ html {
 }
 
 #fengso-teacherDetail .tab_block .tab {
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
@@ -134,14 +134,14 @@ html {
   text-align: center;
   position: relative;
   cursor: pointer;
-  padding: 10px 30px 20px;
-  font-size: 18px;
+  padding: 10px 22px 20px;
+  font-size: 16px;
   color: dimgray;
 }
 
 @media all and (max-width: 681px) {
   #fengso-teacherDetail .tab_block .tab .tab_item {
-    padding: 10px 24px 14px;
+    padding: 10px 18px 14px;
   }
 }
 
@@ -227,16 +227,17 @@ html {
 }
 
 #fengso-teacherDetail .teacher_block .teacher_box {
-  -webkit-box-shadow: 5px 5px 15px rgba(44, 44, 44, 0.116);
-          box-shadow: 5px 5px 15px rgba(44, 44, 44, 0.116);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   background: #fff;
   margin: 0 auto;
   padding: 30px;
   text-align: center;
+  -webkit-box-shadow: 5px 5px 15px rgba(44, 44, 44, 0.116);
+          box-shadow: 5px 5px 15px rgba(44, 44, 44, 0.116);
 }
 
 @media all and (max-width: 781px) {
@@ -248,7 +249,8 @@ html {
 #fengso-teacherDetail .teacher_block .teacher_box > .teacher_avatar {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  display: block;
+  display: inline-block;
+  float: left;
   overflow: hidden;
   margin: 0 auto;
   width: 150px;
@@ -258,6 +260,11 @@ html {
 }
 
 #fengso-teacherDetail .teacher_block .teacher_box > .teacher_name {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  width: 100%;
   margin: 20px auto;
   font-size: 22px;
   color: #FF7757;
@@ -268,6 +275,7 @@ html {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 100%;
 }
 
 #fengso-teacherDetail .teacher_block .teacher_box > .action_icons a {
@@ -283,8 +291,42 @@ html {
   font-size: 23px;
 }
 
-#fengso-teacherDetail .teacher_block .teacher_box > .teacher_intro {
-  margin: 20px auto;
+#fengso-teacherDetail .teacher_block .teacher_box .teacher_intro-content_box {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  width: 100%;
+  padding: 20px 0 10px;
+}
+
+#fengso-teacherDetail .teacher_block .teacher_box .teacher_intro-hr {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  width: 100%;
+}
+
+#fengso-teacherDetail .teacher_block .teacher_box .teacher_intro_title {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  width: 100%;
+  padding: 15px 0 10px;
+  text-align: left;
+  color: #777;
+  font-weight: bold;
+}
+
+#fengso-teacherDetail .teacher_block .teacher_box .teacher_intro_content {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  width: 100%;
+  margin: 12px auto 20px;
   color: #a1a1a1;
   line-height: 30px;
   text-align: left;
@@ -327,7 +369,7 @@ html {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
-  padding: 10px;
+  padding: 10px 0px 30px 0px;
   color: #363636;
 }
 
@@ -336,10 +378,13 @@ html {
           box-sizing: border-box;
   display: inline-block;
   float: left;
+  width: 100%;
   font-size: calc(16px + 0.5vw);
   font-weight: 600;
-  margin: 10px 0;
+  padding: 10px 0;
   color: #5e6f79;
+  border: solid #ccc;
+  border-width: 0 0 1px 0;
 }
 
 #fengso-teacherDetail .title_block > .title_box > .title {
@@ -359,6 +404,7 @@ html {
   height: 1px;
   background-color: #3b4952;
   margin: 11px 0 0;
+  display: none;
 }
 
 #fengso-teacherDetail .title_block > .more_box {
@@ -435,17 +481,11 @@ html {
           box-sizing: border-box;
   display: inline-block;
   width: 300px;
-  margin: 0 0px 25px;
+  margin: 0 0px 30px;
   padding: 0 12px 0;
   -webkit-transition: 0.2s all ease-out;
   -o-transition: 0.2s all ease-out;
   transition: 0.2s all ease-out;
-}
-
-@media all and (max-width: 1301px) {
-  #fengso-teacherDetail .course_list_block .course_block {
-    margin: 0 0px 26px;
-  }
 }
 
 @media all and (max-width: 701px) {
@@ -566,7 +606,7 @@ html {
       -ms-flex-align: start;
           align-items: flex-start;
   width: 100%;
-  margin: 25px 0 10px;
+  margin: 10px 0 10px;
   line-height: 24px;
   height: 52px;
   overflow: hidden;

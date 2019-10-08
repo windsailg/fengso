@@ -318,10 +318,16 @@
                                 輸入優惠碼
                             </div>
 
+
+
                             <div class="item sale_num">
-                                <form><input type="text" class="input"></form>
+                                <form id="baseform" action="${BASE_PATH}orders/toCartAntiFraud.action" method="POST">
+                                    <input type="text" class="input">
+                                </form>
                                 <button class="confirm">確認</button>
                             </div>
+
+
 
                             <div class="item total_price">
                                 - NT 10,000

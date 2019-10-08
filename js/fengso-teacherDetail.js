@@ -4,15 +4,15 @@ $(document).ready(function(){
 
 
 
-// const resizeTimer = null;
-// $(window).resize(function(){
-//     if (resizeTimer) {
-//         clearTimeout(resizeTimer);
-//     }
-//     resizeTimer = setTimeout(function(){
-//         location.reload();
-//     }, 500);
-// })
+const resizeTimer = null;
+$(window).resize(function(){
+    if (resizeTimer) {
+        clearTimeout(resizeTimer);
+    }
+    resizeTimer = setTimeout(function(){
+        location.reload();
+    }, 500);
+})
 
 ResizerRunner();
 function ResizerRunner(){
@@ -24,7 +24,7 @@ function ResizerRunner(){
         $('#TeacherDetailSwiperWrapper').append(SwiperItemSaver);
 
         const TeacherIntroTabSwiper = new Swiper('#TeacherIntroTabSwiper',{
-            centeredSlides:true,
+            // centeredSlides:true,
             grabCursor:true,
             slidesPerView: 'auto',
         })
