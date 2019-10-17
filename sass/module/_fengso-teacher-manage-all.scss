@@ -474,6 +474,47 @@ $color_fs_footer-font:rgb(124, 124, 124);
       }
    }
 
+   //總訂單數結算
+   .total_order_block{
+      @include fxb;
+      width:auto;
+      max-width: 380px;
+      padding: 15px    ;
+      @include MCW(861px) {
+         padding: 5px 10px;
+      }
+      > .item{
+         @include fxb;
+         box-sizing:border-box;
+         padding: 6px 15px 6px 0 ;
+         position: relative;
+         letter-spacing: 1px;
+         &:not(:last-child)::after{
+            content:'';
+            width: 1px;
+            height: 40%;
+            background-color:#666; 
+            position: absolute;
+            right: 0px;
+            top:0;
+            bottom: 0;
+            margin: auto 0;
+            @include MCW(390px) {
+               display: none;
+            }
+         }
+         > span{
+            @include ib;
+            box-sizing:border-box;
+            padding: 0 5px;
+            color:$color_fs_orange;
+            font-size:22px;;
+         }
+      }
+
+   }
+
+
 
    //日期搜尋
    .list_date_block{
@@ -900,45 +941,7 @@ $color_fs_footer-font:rgb(124, 124, 124);
    }
 
 
-   //總訂單數結算
-   .total_order_block{
-      @include fxb;
-      width:100%;
-      max-width: 380px;
-      padding: 15px    ;
-      @include MCW(861px) {
-         padding: 5px 10px;
-      }
-      > .item{
-         @include fxb;
-         box-sizing:border-box;
-         padding: 6px 15px 6px 0 ;
-         position: relative;
-         letter-spacing: 1px;
-         &:not(:last-child)::after{
-            content:'';
-            width: 1px;
-            height: 40%;
-            background-color:#666; 
-            position: absolute;
-            right: 0px;
-            top:0;
-            bottom: 0;
-            margin: auto 0;
-            @include MCW(390px) {
-               display: none;
-            }
-         }
-         > span{
-            @include ib;
-            box-sizing:border-box;
-            padding: 0 5px;
-            color:$color_fs_orange;
-            font-size:22px;;
-         }
-      }
 
-   }
    //訂單區塊
    .teacherOrder_list_block{
       @include fxv;

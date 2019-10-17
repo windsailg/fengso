@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url(https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
-.detail_list_container, .detail_list_container > .detail_list > .list_item, .detail_list_container > .detail_list > .list_item > .item.detail, .detail_list_container > .detail_list > .list_item > .item > .detail_btn, .area .container.type_member, #fengso-TeacherManage .title_block > .title, #fengso-TeacherManage .user_data_block, #fengso-TeacherManage .user_data_block .user_data_container, #fengso-TeacherManage .user_data_block .user_data_container .avatar .img_box, #fengso-TeacherManage .user_data_block .user_data_container .avatar .typeaccount__myavaar .img_box_block, #fengso-TeacherManage .tab_block, #fengso-TeacherManage .tags_block .tags_list, #fengso-TeacherManage .back_block, #fengso-TeacherManage .back_block a, #fengso-TeacherManage .list_date_block, #fengso-TeacherManage .list_date_block .input, #fengso-TeacherManage .search_and_sort_block, #fengso-TeacherManage .search_and_sort_block .course_discuss_control_panel, #fengso-TeacherManage .teacher_course_list_block .course_block, #fengso-TeacherManage .teacher_course_list_block .course_block .content_box > .tips > .tips_box, #fengso-TeacherManage .teacher_course_list_block .course_block .content_box > .controls, #fengso-TeacherManage .teacher_course_list_block .course_block .content_box > .controls .item, #fengso-TeacherManage .teacher_course_list_block .course_block .content_box > .controls .item > .elem, #fengso-TeacherManage .total_order_block, #fengso-TeacherManage .total_order_block > .item, #fengso-TeacherManage .teacherOrder_list_block > .course_block .block_head > .order_Info, #fengso-TeacherManage .teacherOrder_list_block > .course_block .block_body, #fengso-TeacherManage .teacherOrder_list_block > .course_block .block_body > .orders, #fengso-TeacherManage .teacherOrder_list_block > .course_block .block_body > .orders .order_item, #fengso-TeacherManage .teacherOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .info_box, #fengso-TeacherManage .teacherOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .controls, #fengso-TeacherManage .teacherOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .controls .rate, #fengso-TeacherManage .teacherOrder_list_block > .course_block .block_body > .status, #fengso-TeacherManage .teacherOrder_list_block > .course_block .block_body > .status > .status_item, #fengso-TeacherManage .tax_list_block > .tax_container .block_head > .order_Info, #fengso-TeacherManage .tax_list_block > .tax_container .block_body, #fengso-TeacherManage .tax_list_block > .tax_container .block_body > .content_box, #fengso-TeacherManage .tax_list_block > .tax_container .block_body > .content_box > .title_list_block, #fengso-TeacherManage .tax_list_block > .tax_container .block_body > .content_box > .content_list_block, #fengso-TeacherManage .tax_list_block > .tax_container .block_body > .content_box > .content_list_block .course_title, #fengso-TeacherManage .tax_list_block > .tax_container .block_body > .content_box > .info_box, #fengso-TeacherManage .tax_list_block > .tax_container .block_body > .content_box > .controls, #fengso-TeacherManage .tax_list_block > .tax_container .block_body > .content_box > .controls .rate, #fengso-TeacherManage .tax_list_block > .tax_container .block_body > .content_box_mob, #fengso-TeacherManage .total_list_block > .total_list_container .block_title_mob > .order_Info, #fengso-TeacherManage .total_list_block > .total_list_container .block_title, #fengso-TeacherManage .total_list_block > .total_list_container .total_list_box, #fengso-TeacherManage .total_list_block > .total_list_container .content_box, #fengso-TeacherManage .total_list_block > .total_list_container .content_box > .content_list_block, #fengso-TeacherManage .total_list_block > .total_list_container .content_box > .content_list_block > .item.detail, #fengso-TeacherManage .total_list_block > .total_list_container .content_box > .content_list_block > .item > .detail_btn, #fengso-TeacherManage .total_list_block > .total_list_container .content_box > .content_list_block .course_title, #fengso-TeacherManage .total_list_block > .total_list_container .content_box > .info_box, #fengso-TeacherManage .total_list_block > .total_list_container .content_box > .controls, #fengso-TeacherManage .total_list_block > .total_list_container .content_box > .controls .rate, #fengso-TeacherManage .total_list_block > .total_list_container .content_box_mob, #fengso-TeacherManage .nothing_block, #fengso-TeacherManage .myInfo_editor_block > .info_block > .input_list > .input_block, #fengso-TeacherManage .myInfo_editor_block > .info_block > .input_list > .input_block.cols_3, #fengso-TeacherManage .myInfo_editor_block > .info_block > .input_list > .input_block .inputs, #fengso-TeacherManage .pager_block {
+.detail_list_container, .detail_list_container > .detail_list > .list_item, .detail_list_container > .detail_list > .list_item > .item.detail, .detail_list_container > .detail_list > .list_item > .item > .detail_btn, .area .container.type_member, #fengso-TeacherManage .title_block > .title, #fengso-TeacherManage .user_data_block, #fengso-TeacherManage .user_data_block .user_data_container, #fengso-TeacherManage .user_data_block .user_data_container .avatar .img_box, #fengso-TeacherManage .user_data_block .user_data_container .avatar .typeaccount__myavaar .img_box_block, #fengso-TeacherManage .tab_block, #fengso-TeacherManage .tags_block .tags_list, #fengso-TeacherManage .back_block, #fengso-TeacherManage .back_block a, #fengso-TeacherManage .total_order_block, #fengso-TeacherManage .total_order_block > .item, #fengso-TeacherManage .list_date_block, #fengso-TeacherManage .list_date_block .input, #fengso-TeacherManage .search_and_sort_block, #fengso-TeacherManage .search_and_sort_block .course_discuss_control_panel, #fengso-TeacherManage .teacher_course_list_block .course_block, #fengso-TeacherManage .teacher_course_list_block .course_block .content_box > .tips > .tips_box, #fengso-TeacherManage .teacher_course_list_block .course_block .content_box > .controls, #fengso-TeacherManage .teacher_course_list_block .course_block .content_box > .controls .item, #fengso-TeacherManage .teacher_course_list_block .course_block .content_box > .controls .item > .elem, #fengso-TeacherManage .teacherOrder_list_block > .course_block .block_head > .order_Info, #fengso-TeacherManage .teacherOrder_list_block > .course_block .block_body, #fengso-TeacherManage .teacherOrder_list_block > .course_block .block_body > .orders, #fengso-TeacherManage .teacherOrder_list_block > .course_block .block_body > .orders .order_item, #fengso-TeacherManage .teacherOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .info_box, #fengso-TeacherManage .teacherOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .controls, #fengso-TeacherManage .teacherOrder_list_block > .course_block .block_body > .orders .order_item > .content_box > .controls .rate, #fengso-TeacherManage .teacherOrder_list_block > .course_block .block_body > .status, #fengso-TeacherManage .teacherOrder_list_block > .course_block .block_body > .status > .status_item, #fengso-TeacherManage .tax_list_block > .tax_container .block_head > .order_Info, #fengso-TeacherManage .tax_list_block > .tax_container .block_body, #fengso-TeacherManage .tax_list_block > .tax_container .block_body > .content_box, #fengso-TeacherManage .tax_list_block > .tax_container .block_body > .content_box > .title_list_block, #fengso-TeacherManage .tax_list_block > .tax_container .block_body > .content_box > .content_list_block, #fengso-TeacherManage .tax_list_block > .tax_container .block_body > .content_box > .content_list_block .course_title, #fengso-TeacherManage .tax_list_block > .tax_container .block_body > .content_box > .info_box, #fengso-TeacherManage .tax_list_block > .tax_container .block_body > .content_box > .controls, #fengso-TeacherManage .tax_list_block > .tax_container .block_body > .content_box > .controls .rate, #fengso-TeacherManage .tax_list_block > .tax_container .block_body > .content_box_mob, #fengso-TeacherManage .total_list_block > .total_list_container .block_title_mob > .order_Info, #fengso-TeacherManage .total_list_block > .total_list_container .block_title, #fengso-TeacherManage .total_list_block > .total_list_container .total_list_box, #fengso-TeacherManage .total_list_block > .total_list_container .content_box, #fengso-TeacherManage .total_list_block > .total_list_container .content_box > .content_list_block, #fengso-TeacherManage .total_list_block > .total_list_container .content_box > .content_list_block > .item.detail, #fengso-TeacherManage .total_list_block > .total_list_container .content_box > .content_list_block > .item > .detail_btn, #fengso-TeacherManage .total_list_block > .total_list_container .content_box > .content_list_block .course_title, #fengso-TeacherManage .total_list_block > .total_list_container .content_box > .info_box, #fengso-TeacherManage .total_list_block > .total_list_container .content_box > .controls, #fengso-TeacherManage .total_list_block > .total_list_container .content_box > .controls .rate, #fengso-TeacherManage .total_list_block > .total_list_container .content_box_mob, #fengso-TeacherManage .nothing_block, #fengso-TeacherManage .myInfo_editor_block > .info_block > .input_list > .input_block, #fengso-TeacherManage .myInfo_editor_block > .info_block > .input_list > .input_block.cols_3, #fengso-TeacherManage .myInfo_editor_block > .info_block > .input_list > .input_block .inputs, #fengso-TeacherManage .pager_block {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -738,6 +738,62 @@
   float: left;
   font-size: 22px;
   padding: 0 10px 0 0;
+}
+
+#fengso-TeacherManage .total_order_block {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: auto;
+  max-width: 380px;
+  padding: 15px;
+}
+
+@media all and (max-width: 861px) {
+  #fengso-TeacherManage .total_order_block {
+    padding: 5px 10px;
+  }
+}
+
+#fengso-TeacherManage .total_order_block > .item {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 6px 15px 6px 0;
+  position: relative;
+  letter-spacing: 1px;
+}
+
+#fengso-TeacherManage .total_order_block > .item:not(:last-child)::after {
+  content: '';
+  width: 1px;
+  height: 40%;
+  background-color: #666;
+  position: absolute;
+  right: 0px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+
+@media all and (max-width: 390px) {
+  #fengso-TeacherManage .total_order_block > .item:not(:last-child)::after {
+    display: none;
+  }
+}
+
+#fengso-TeacherManage .total_order_block > .item > span {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0 5px;
+  color: #FF7757;
+  font-size: 22px;
 }
 
 #fengso-TeacherManage .list_date_block {
@@ -1502,62 +1558,6 @@
 
 #fengso-TeacherManage .teacher_course_list_block .course_block .content_box > hr {
   margin: 14px 0 8px;
-}
-
-#fengso-TeacherManage .total_order_block {
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-  max-width: 380px;
-  padding: 15px;
-}
-
-@media all and (max-width: 861px) {
-  #fengso-TeacherManage .total_order_block {
-    padding: 5px 10px;
-  }
-}
-
-#fengso-TeacherManage .total_order_block > .item {
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 6px 15px 6px 0;
-  position: relative;
-  letter-spacing: 1px;
-}
-
-#fengso-TeacherManage .total_order_block > .item:not(:last-child)::after {
-  content: '';
-  width: 1px;
-  height: 40%;
-  background-color: #666;
-  position: absolute;
-  right: 0px;
-  top: 0;
-  bottom: 0;
-  margin: auto 0;
-}
-
-@media all and (max-width: 390px) {
-  #fengso-TeacherManage .total_order_block > .item:not(:last-child)::after {
-    display: none;
-  }
-}
-
-#fengso-TeacherManage .total_order_block > .item > span {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: inline-block;
-  box-sizing: border-box;
-  padding: 0 5px;
-  color: #FF7757;
-  font-size: 22px;
 }
 
 #fengso-TeacherManage .teacherOrder_list_block {
