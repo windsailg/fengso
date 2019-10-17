@@ -101,12 +101,6 @@
   padding: 5px 0;
 }
 
-@media all and (max-width: 580px) {
-  .detail_list_container > .detail_list > .list_item {
-    padding: 0px 0;
-  }
-}
-
 .detail_list_container > .detail_list > .list_item:last-child {
   margin-top: 5px;
   position: relative;
@@ -126,16 +120,9 @@
 }
 
 .detail_list_container > .detail_list > .list_item > .item {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 100%;
-  max-width: 50%;
+  min-width: 50%;
   margin: 6px auto;
   color: #999;
-}
-
-.detail_list_container > .detail_list > .list_item > .item:first-child {
-  padding: 0 0 0 8px;
 }
 
 .detail_list_container > .detail_list > .list_item > .item i {
@@ -2464,7 +2451,7 @@
   width: 100%;
   overflow: hidden;
   height: unset;
-  margin: 25px 0  10px;
+  margin: 0px 0  10px;
   -webkit-transition: 0.2s all ease-out;
   -o-transition: 0.2s all ease-out;
   transition: 0.2s all ease-out;
@@ -2487,8 +2474,17 @@
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin: 10px 0;
   }
+}
+
+#fengso-TeacherManage .total_list_block a {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+}
+
+#fengso-TeacherManage .total_list_block a:hover {
+  opacity: .9;
 }
 
 #fengso-TeacherManage .total_list_block > .total_list_container {
@@ -2497,7 +2493,7 @@
   display: inline-block;
   float: left;
   width: 100%;
-  margin: 0px 0 18px 0;
+  margin: 0px 0 25px 0;
   padding: 15px 0;
   border: 1px solid #c5c5c5;
 }
@@ -2513,15 +2509,17 @@
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
   }
 }
 
 @media all and (max-width: 781px) {
   #fengso-TeacherManage .total_list_block > .total_list_container {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: inline-block;
+    float: left;
     width: 100%;
+    margin: 0px 0 18px 0;
     padding: 15px 10px 20px;
   }
 }
@@ -2584,7 +2582,7 @@
   height: 52px;
   overflow: hidden;
   padding: 0 0  20px;
-  margin: 10px 0;
+  margin: 10px;
   border: solid #ccc;
   border-width: 0 0 1px 0;
 }
@@ -2639,7 +2637,7 @@
         -ms-flex-align: center;
             align-items: center;
     min-height: 100px;
-    margin: 5px 10px;
+    margin: 15px 0;
     padding: 7px 15px;
     border: 1px solid #c5c5c5;
   }
@@ -2647,8 +2645,8 @@
 
 @media all and (max-width: 780px) {
   #fengso-TeacherManage .total_list_block > .total_list_container .total_list_box {
-    margin: 5px 0px;
-    padding: 8px;
+    width: 100%;
+    padding: 12px 15px;
   }
 }
 
@@ -2705,7 +2703,7 @@
   color: #aaa;
   line-height: 24px;
   overflow: hidden;
-  padding: 3px 0;
+  padding: 8px 0;
   position: relative;
 }
 
@@ -2737,10 +2735,6 @@
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-#fengso-TeacherManage .total_list_block > .total_list_container .content_box > .content_list_block > .item.list_num {
-  color: #666;
 }
 
 #fengso-TeacherManage .total_list_block > .total_list_container .content_box > .content_list_block > .item > .detail_btn {
@@ -2928,6 +2922,17 @@
   display: none;
   font-weight: bold;
   color: #777;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
+  cursor: pointer;
+}
+
+#fengso-TeacherManage .total_list_block > .total_list_container .content_box_mob:hover {
+  opacity: .8;
+  -webkit-transition-duration: .1s;
+       -o-transition-duration: .1s;
+          transition-duration: .1s;
 }
 
 @media all and (max-width: 1100px) {
@@ -2942,40 +2947,8 @@
   }
 }
 
-#fengso-TeacherManage .total_list_block > .total_list_container .content_box_mob > .detail_list_container > .title_block {
-  margin: 0;
-  padding: 10px 0 20px;
-  position: relative;
-}
-
-#fengso-TeacherManage .total_list_block > .total_list_container .content_box_mob > .detail_list_container > .title_block::before {
-  content: '';
-  position: absolute;
-  right: 0;
-  margin-right: auto;
-  left: 0;
-  margin-left: auto;
-  bottom: -2px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: inline-block;
-  float: left;
-  width: 100%;
-  height: 1px;
-  background-color: #ccc;
-}
-
 #fengso-TeacherManage .total_list_block > .total_list_container .content_box_mob > .detail_list_container > .detail_list {
   border: 0px;
-  padding: 10px  10px 0;
-}
-
-#fengso-TeacherManage .total_list_block > .total_list_container .content_box_mob > .detail_list_container > .detail_list > .list_item:last-child {
-  margin: 0;
-}
-
-#fengso-TeacherManage .total_list_block > .total_list_container .content_box_mob > .detail_list_container > .detail_list > .list_item:last-child::before {
-  display: none;
 }
 
 #fengso-TeacherManage .myCourse_list_content {

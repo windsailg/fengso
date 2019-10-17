@@ -1,8 +1,9 @@
 
 $(document).ready(function(){
    
+
+const document_width = $(document).width(); 
 const resizeTimer = null;
-document_width=$(document).width(); 
 $(window).resize(function(){
     if (resizeTimer) {
         clearTimeout(resizeTimer);
@@ -13,7 +14,6 @@ $(window).resize(function(){
             location.reload();
         }, 500);
     }
-
 })
 
 ResizerRunner();

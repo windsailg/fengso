@@ -12,7 +12,7 @@ $(document).ready(function(){
     $('.lazy').Lazy({ 
       scrollDirection: 'vertical',
       effect: 'fadeIn',
-      effectTime:300, //duration
+      effectTime:100, //duration
     //   throttle:1000,//delay
       visibleOnly: true,
       onError: function(element) {
