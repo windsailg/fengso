@@ -127,8 +127,8 @@ $color_fs_footer-font:rgb(124, 124, 124);
       width: 1300px;
       padding: 20px 10px 10px;
       &.type_member{
-         @include fxb;
-         align-items: flex-start;
+         @include fxfs;
+         align-items: center;
          width: 1300px;
          padding: 40px 10px;
          position: relative;
@@ -350,31 +350,42 @@ $color_fs_footer-font:rgb(124, 124, 124);
          @include ib;
          width: auto;
          margin: 0 auto;
+         > a{
+            &:last-child{
+               .tab_item::after{
+                  display: none;
+               }
+            }
+         }
          .tab_item{
             @include ibl;
-            width: 140px;;
+            width: auto;;
             font-weight: normal;
             text-align: center;
             position: relative;
             cursor: pointer;
             font-size: 18px;
             color: rgb(105, 105, 105);
-            padding: 10px 0 16px;
+            padding: 10px 30px 16px;
 
-            &:not(:last-child)::after{
+            &::after{
                content:' ';
-               @include b;
+               @include ib;
                position: absolute;
                width: 1px;
                height: 40%;
                right: 0px;
+               top: 0;
                @include atb;
                transform: skew(-12deg,0);
                background-color: rgb(107, 107, 107);
                @include MCW(681px) {
                   display: none;
                }
+
             }
+
+
             &:hover{
                color:$color_fs_orange;
             }
@@ -443,6 +454,26 @@ $color_fs_footer-font:rgb(124, 124, 124);
       }
 
    }
+   .back_block{
+      @include fxc;
+      box-sizing: border-box;
+      width:auto;
+      padding: 0 30px ;
+      a{
+         i{
+            @include ibl;
+            font-size:22px;
+            padding:0 10px 0 0;
+         }
+         @include fxc;
+         align-items: center;
+         box-sizing: border-box;
+         border: 1px solid #aaa;
+         color:#888;
+         padding:6px 23px 6px  25px;
+      }
+   }
+
 
    //日期搜尋
    .list_date_block{
@@ -635,45 +666,7 @@ $color_fs_footer-font:rgb(124, 124, 124);
          width: 100%;
       }
    }
-   //總訂單數結算
-   .total_order_block{
-      @include fxb;
-      width:100%;
-      max-width: 380px;
-      padding: 15px    ;
-      @include MCW(861px) {
-         padding: 5px 10px;
-      }
-      > .item{
-         @include fxb;
-         box-sizing:border-box;
-         padding: 6px 15px 6px 0 ;
-         position: relative;
-         letter-spacing: 1px;
-         &:not(:last-child)::after{
-            content:'';
-            width: 1px;
-            height: 40%;
-            background-color:#666; 
-            position: absolute;
-            right: 0px;
-            top:0;
-            bottom: 0;
-            margin: auto 0;
-            @include MCW(390px) {
-               display: none;
-            }
-         }
-         > span{
-            @include ib;
-            box-sizing:border-box;
-            padding: 0 5px;
-            color:$color_fs_orange;
-            font-size:22px;;
-         }
-      }
 
-   }
 
    //課程資訊管理
    .swiper_pager_container{
@@ -906,6 +899,46 @@ $color_fs_footer-font:rgb(124, 124, 124);
       }
    }
 
+
+   //總訂單數結算
+   .total_order_block{
+      @include fxb;
+      width:100%;
+      max-width: 380px;
+      padding: 15px    ;
+      @include MCW(861px) {
+         padding: 5px 10px;
+      }
+      > .item{
+         @include fxb;
+         box-sizing:border-box;
+         padding: 6px 15px 6px 0 ;
+         position: relative;
+         letter-spacing: 1px;
+         &:not(:last-child)::after{
+            content:'';
+            width: 1px;
+            height: 40%;
+            background-color:#666; 
+            position: absolute;
+            right: 0px;
+            top:0;
+            bottom: 0;
+            margin: auto 0;
+            @include MCW(390px) {
+               display: none;
+            }
+         }
+         > span{
+            @include ib;
+            box-sizing:border-box;
+            padding: 0 5px;
+            color:$color_fs_orange;
+            font-size:22px;;
+         }
+      }
+
+   }
    //訂單區塊
    .teacherOrder_list_block{
       @include fxv;
@@ -1195,6 +1228,7 @@ $color_fs_footer-font:rgb(124, 124, 124);
          }
       }
    }
+
 
    //稅收管理
    .tax_list_block{
@@ -1487,7 +1521,8 @@ $color_fs_footer-font:rgb(124, 124, 124);
       }
    }
 
-   //結算總表管理(NEW)
+   
+   //結算明細總表
    .total_list_block{
       @include fxv;
       flex-wrap: wrap;
@@ -1558,7 +1593,7 @@ $color_fs_footer-font:rgb(124, 124, 124);
             height: 52px;
             overflow: hidden;
             padding:  0 0  20px;
-            margin: 10px 0;
+            margin: 10px 0 5px;
             border: solid #ccc;
             border-width: 0 0 1px 0;
             @include MCW(1100px) {
@@ -1587,6 +1622,19 @@ $color_fs_footer-font:rgb(124, 124, 124);
             align-items: flex-end;
             width:100%;
             overflow: hidden;
+            position: relative;
+            &:not(:last-child){
+               &::before{
+                  content:'';
+                  @include ibl;
+                  position: absolute;
+                  bottom:0;
+                  left:20px;
+                  right: 20px;
+                  height: 1px;
+                  background-color: #ddd;
+               }
+            }
             @include MCW(1100px) {
                width:auto;
                justify-content: center;
@@ -1605,9 +1653,6 @@ $color_fs_footer-font:rgb(124, 124, 124);
                overflow: visible;
                min-height: 100px;
             }
-
-
-         
          }
          .content_box{
             @include fxb;
@@ -1634,9 +1679,11 @@ $color_fs_footer-font:rgb(124, 124, 124);
                font-weight: 600;
                color: #aaa;
                line-height: 24px;
+               min-height: 44px;
                overflow: hidden;
                padding: 3px 0;
                position: relative;;
+
                &:not(:last-child)::after{
                   content:'';
                   display: block;
