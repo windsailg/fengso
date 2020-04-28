@@ -45,10 +45,11 @@
          color: $color_fs_blue;
       }
       .info_logo{
+         width: 100px;
          @include MCW(650px) {
             @include ibl;
-            width: 160px;
-            padding: 40px 20px 40px 0;
+            // width: 160px;
+            padding: 20px 20px 20px 0;
          }
          @include MCW(460px) {
             width: 120px;
@@ -74,6 +75,9 @@
       @include MCW(650px) {
          padding-left:  0px;
          width: 100%;
+         display: flex;
+         justify-content: center;
+         flex-wrap: wrap;
       }
 
       .links_block{
@@ -84,12 +88,19 @@
          @include M1281() {
             padding:   0 ;
          }
+         @include MCW(650px) {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+         }
+
          @include MCW(480px) {
             padding:   0 ;
             letter-spacing: 0px;
          }
          .links_title{
             @include ibl;
+            width: 100%;
             color: $color_fs_font-title;
             font-weight: 600;
             font-size: 17px;

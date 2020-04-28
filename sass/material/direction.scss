@@ -1,8 +1,6 @@
 
-//variable
-@import './variable/fengso-setting';
-
 //public 
+@import './fengso-setting';
 @import './public/action';
 @import './public/animation';
 @import './public/position';
@@ -18,9 +16,7 @@
 @import './module/inputbox';
 @import './module/checkbox';
 @import './module/radio';
-@import './module/setting';
 @import './module/lightingbox';
-
 
 
 // @import "./public/position";

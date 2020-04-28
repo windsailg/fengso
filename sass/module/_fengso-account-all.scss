@@ -367,7 +367,7 @@
                border: 1px solid rgb(197, 197, 197);
                @include MCW(781px) {
                   width:100%;
-                  padding: 15px  32px 10px;
+                  padding: 15px  15px 10px;
                }
             > .title{
                @include b;
@@ -415,17 +415,20 @@
                align-items: center;
                width: 100%;
                line-height: 24px;
-               font-size: 15px;
+               font-size: 14px;
                color: rgb(112, 112, 112);
-               letter-spacing: 2px;
+               letter-spacing: 1px;
                max-height: 72px;
                overflow: hidden;
-               .rate{
+               @include MCW(781px) {
+                  justify-content: flex-start;
+               }
+               .rate,
+               .homework {
                   @include fxb;
                   @include hover;
                   width: 130px;
                   color: $color_fs_orange;
-
                   cursor: pointer;
                   > i{
                      @include ib;
@@ -459,17 +462,36 @@
                   }
 
                }
-               > .hours{
-                  padding: 6px 0;
+               .homework{
+                  i{
+                     font-size: 28px;
+                  }
+               }
+               .hours{
+                  padding: 6px 5px;
                   i{
                      padding:0 4px 0 0;
                   }
                   color: rgb(165, 165, 165);
                }
                .time_limit{
-                     padding: 6px 0;
-
+                  padding: 6px 5px;
                }
+
+               // .homework{
+               //    background-color: $color_fs_orange;
+               //    color: #ffffff;
+               //    padding: 7px 10px;
+               //    // border:  1px solid #777;
+               //    @include tst;
+               //    @include hover;
+               //    font-size: 15px;
+               //    border-radius:2px;
+                  
+               //    i{
+               //       padding: 0 3px 0 0 ;
+               //    }
+               // }
             }
             > hr{
                margin: 14px 0 8px;
@@ -564,9 +586,9 @@
             justify-content: space-between;
             width: 100%;
             .tips{
-               
-               font-size: 13px;
-               color: rgba(85, 85, 85, 0.63);
+               font-size: 15px;
+               color: rgba(58, 58, 58, 0.7);
+               font-weight: bold;
                @include MCW(601px) {
                   padding: 0 0 8px 0;
                }

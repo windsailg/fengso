@@ -20,6 +20,7 @@ $color-lb_default:rgb(218, 218, 218);
          z-index: 1000;
          border-radius: 5px;
          top: 8%;
+         transition-delay: .3s;
          @include MCW(861px){
             width:95%;
             padding: 42px 15px 20px;
@@ -33,6 +34,7 @@ $color-lb_default:rgb(218, 218, 218);
             max-height: calc(70vh - 46px);
             overflow-x: hidden;
             overflow-y: auto;
+            -webkit-overflow-scrolling:touch;
             @include MCW(861px){
                // max-height: 80vh;
             }

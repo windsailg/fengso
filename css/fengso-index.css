@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url(https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
-#FengsoIndex .imagine_block .imagine_box {
+#FengsoIndex .content_block .title_block > .title_box, #FengsoIndex .content_block .title_block > .title_box .imagine, #FengsoIndex .course_list_block .course_block .image, #FengsoIndex .imagine_block .imagine_box, #FengsoIndex .article_list_block .article_block .image_box {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -21,9 +21,26 @@
           align-items: center;
 }
 
-.img_box img {
-  max-width: 100%;
-  max-height: 100%;
+#FengsoIndex .content_block .title_block > .title_box > .title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
 }
 
 .area {
@@ -80,32 +97,6 @@
   .area .container {
     width: 100%;
   }
-}
-
-.video_box {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: inline-block;
-  float: left;
-  width: 100%;
-  overflow: hidden;
-}
-
-.video_box iframe {
-  width: 100%;
-  height: 100%;
-}
-
-.focuspoint .lazy {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #fff;
-  background-image: url("images/fengso-loading.svg");
-  max-height: 100%;
-}
-
-.focuspoint .lazied {
-  max-height: unset;
 }
 
 @media all and (max-width: 920px) {
@@ -291,10 +282,12 @@
 }
 
 #FengsoIndex .content_block .title_block > .title_box {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: inline-block;
-  float: left;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+  max-width: calc(100% - 150px);
   font-size: calc(16px + 0.5vw);
   font-weight: 600;
   margin: 10px 0;
@@ -302,11 +295,26 @@
 }
 
 #FengsoIndex .content_block .title_block > .title_box > .title {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: inline-block;
-  float: left;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  max-width: 240px;
   padding-right: 10px;
+}
+
+#FengsoIndex .content_block .title_block > .title_box .imagine {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 60px;
+}
+
+@media all and (max-width: 630px) {
+  #FengsoIndex .content_block .title_block > .title_box .imagine {
+    width: 40px;
+  }
 }
 
 #FengsoIndex .content_block .title_block > .title_box > .title_deco {
@@ -318,6 +326,12 @@
   height: 1px;
   background-color: #3b4952;
   margin: 11px 0 0;
+}
+
+@media all and (max-width: 480px) {
+  #FengsoIndex .content_block .title_block > .title_box > .title_deco {
+    display: none;
+  }
 }
 
 #FengsoIndex .content_block .title_block > .more_box {
@@ -361,7 +375,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: inline-block;
-  width: 300px;
+  width: 325px;
   margin: 0 0px 25px;
   padding: 0 12px 0;
   -webkit-transition: 0.2s all ease-out;
@@ -432,6 +446,10 @@
 }
 
 #FengsoIndex .course_list_block .course_block .image {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   height: 165px;
   -webkit-transition: 0.2s all ease-out;
@@ -449,6 +467,9 @@
   -webkit-transition: 0.2s all ease-out;
   -o-transition: 0.2s all ease-out;
   transition: 0.2s all ease-out;
+  width: auto;
+  max-width: unset;
+  max-height: unset;
 }
 
 #FengsoIndex .course_list_block .course_block .image img:hover {
@@ -541,18 +562,24 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: inline-block;
-  font-size: 13px;
-  color: rgba(85, 85, 85, 0.63);
+  font-size: 15px;
+  color: rgba(58, 58, 58, 0.7);
+  font-weight: bold;
 }
 
 @media all and (max-width: 601px) {
   #FengsoIndex .course_list_block .course_block .infos > .tips {
     padding: 0 0 5px 0;
+    width: 100%;
   }
 }
 
 #FengsoIndex .course_list_block .course_block .infos > .tips > .element {
-  padding: 0 5px 0 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  padding: 3px 5px 3px  0;
 }
 
 #FengsoIndex .course_list_block .course_block .infos > .tips > .element i {
@@ -926,6 +953,7 @@
 }
 
 #FengsoIndex .pager_block .pager a {
+  max-width: 120px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: inline-block;
@@ -1172,6 +1200,10 @@
   width: 100%;
 }
 
+#FengsoIndex .article_list_block a {
+  width: 384px;
+}
+
 #FengsoIndex .article_list_block a:hover {
   opacity: .9;
 }
@@ -1184,19 +1216,35 @@
   width: 384px;
 }
 
+@media all and (max-width: 384px) {
+  #FengsoIndex .article_list_block .article_block {
+    width: 100%;
+  }
+}
+
 #FengsoIndex .article_list_block .article_block .image_box {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: block;
-  float: left;
-  width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 384px;
   height: 250px;
+}
+
+@media all and (max-width: 384px) {
+  #FengsoIndex .article_list_block .article_block .image_box {
+    width: 100%;
+    height: 65vw;
+  }
 }
 
 #FengsoIndex .article_list_block .article_block .image_box img {
   -webkit-transition: 0.2s all ease-out;
   -o-transition: 0.2s all ease-out;
   transition: 0.2s all ease-out;
+  width: auto;
+  max-width: unset;
+  max-height: unset;
 }
 
 #FengsoIndex .article_list_block .article_block .image_box img:hover {
@@ -1276,6 +1324,32 @@
   letter-spacing: 3px;
   max-height: 155px;
   overflow: hidden;
+}
+
+.video_box {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  width: 100%;
+  overflow: hidden;
+}
+
+.video_box iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.focuspoint .lazy {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  background-image: url("images/fengso-loading.svg");
+  max-height: 100%;
+}
+
+.focuspoint .lazied {
+  max-height: unset;
 }
 
 .banner_slide_container .swiper-pagination-bullet {

@@ -405,7 +405,8 @@ $color_fs_footer-font:rgb(124, 124, 124);
                min-width: 160px;
             }
             > .sale_num{
-               width: 285px;
+               @include ibl;
+               width: 290px;
                form{
                   display: inline-block;
                }

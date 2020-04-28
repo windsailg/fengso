@@ -2,14 +2,15 @@
 $(document).ready(function(){
    
 
-const document_width = $(document).width(); 
-const resizeTimer = null;
+
+var document_width = $(document).width(); 
+var resizeTimer = null;
 $(window).resize(function(){
     if (resizeTimer) {
         clearTimeout(resizeTimer);
     }
     if(document_width!=$(document).width()){
-        document_width=$(document).width();
+        document_width = $(document).width();
         resizeTimer = setTimeout(function(){
             location.reload();
         }, 500);
@@ -21,17 +22,25 @@ function ResizerRunner(){
     let ww = window.innerWidth;
     if(ww <= 920){
 
-        let SwiperItemSaver = $('#SwiperItemContainer').html();
+        
+        $('#TeacherDetailSwiperWrapper').append($('#SwiperItemContainer').html());
         $('#SwiperItemContainer').hide();
-        $('#TeacherDetailSwiperWrapper').append(SwiperItemSaver);
+        $('#SwiperItemContainer').empty();
 
-        const TeacherIntroTabSwiper = new Swiper('#TeacherIntroTabSwiper',{
+
+        var TeacherIntroTabSwiper = new Swiper('#TeacherIntroTabSwiper',{
             // centeredSlides:true,
+
             grabCursor:true,
             slidesPerView: 'auto',
+            
         })
-
-        const TeacherCourseBlockSwiper = new Swiper('#TeacherDetailSwiper', {
+         
+        var TeacherCourseBlockSwiper = new Swiper('#TeacherDetailSwiper', {
+            initialSlide :0,
+            thumbs: {
+                swiper: TeacherIntroTabSwiper,
+            },
             preventInteractionOnTransition:true,
             followFinger:false,
             threshold:5,
@@ -80,12 +89,22 @@ function ResizerRunner(){
                     }, 500);
                     $(targetFocuspointHot).addClass('lazied');
                     console.log('swiper lazy success')
+
                 },
             },
-            thumbs: {
-                swiper: TeacherIntroTabSwiper,
-            }
+
+            
         });
+
+        TeacherCourseBlockSwiper.update();
+
+        $('.loading_more').click(function(){
+
+            setTimeout(() => {
+                TeacherCourseBlockSwiper.update();
+            }, 500);
+
+        })
 
     }else{
         $('#SwiperItemContainer').show();

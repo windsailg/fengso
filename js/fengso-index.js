@@ -32,16 +32,17 @@ $(document).ready(function(){
     }
     function LightingBoxClosing(BoxType){
         $('#LightingBox , .lightingbox , .user_lr').fadeOut(220);
+        // document.documentElement.style.overflowY = 'visible'; 
     }
 
 
 $(".lazy").Lazy({
-        scrollDirection: 'vertical',
-        effect: 'fadeIn',
-        effectTime:300, //duration
-        throttle:1000,//delay
-        //delay: 2000,
-        visibleOnly: true,
+    scrollDirection: 'vertical',
+    effect: 'fadeIn',
+    effectTime:300, //duration
+    throttle:1000,//delay
+    //delay: 2000,
+    visibleOnly: true,
     onError: function(element) {
         console.log('lazy error loading' + element.data('src'));
     },
@@ -82,7 +83,7 @@ var BannerSwiper = new Swiper('#BannerSwiperBlock', {
         loadPrevNextAmount: 1,
     },
     autoplay: {
-        delay: 5000,
+        delay: 10000,
         stopOnLastSlide: false,
         disableOnInteraction: false,
     },
@@ -102,7 +103,7 @@ var BannerSwiper = new Swiper('#BannerSwiperBlock', {
 
 var CourseHotSwiper = new Swiper('#CourseListBlockHot', {
     autoplay: {
-        delay: 4000,
+        delay: 10000,
         stopOnLastSlide: false,
         disableOnInteraction: true,
     },
@@ -125,9 +126,9 @@ var CourseHotSwiper = new Swiper('#CourseListBlockHot', {
         lazyImageReady: function(imageEl){
             var targetFocuspointHot = $(imageEl).find('.focuspoint');
             setTimeout(() => {
-                $(targetFocuspointHot).focusPoint();
+                targetFocuspointHot.focusPoint();
             }, 100);
-            $(targetFocuspointHot).addClass('lazied');
+            // $(targetFocuspointHot)
         },
     },
     allowTouchMove: true,
@@ -159,7 +160,7 @@ var CourseHotSwiper = new Swiper('#CourseListBlockHot', {
 
 var CoursePreorderSwiper = new Swiper('#CourseListBlockPreorder', {
     autoplay: {
-        delay: 4000,
+        delay: 10000,
         stopOnLastSlide: false,
         disableOnInteraction: true,
     },
@@ -216,7 +217,7 @@ var CoursePreorderSwiper = new Swiper('#CourseListBlockPreorder', {
 
 var TeacherIntroSwiper = new Swiper('#TeacherListBlock', {
     autoplay: {
-        delay: 4000,
+        delay: 10000,
         stopOnLastSlide: false,
         disableOnInteraction: true,
     },
@@ -233,9 +234,8 @@ var TeacherIntroSwiper = new Swiper('#TeacherListBlock', {
     spaceBetween: 0,
     breakpoints: {
         1301: {
-           // slidesPerView: 3,
-           slidesPerView: 'auto',
-           centeredSlides: true,
+            slidesPerView: 'auto',
+            centeredSlides: true,
         },
         401: {
             slidesPerView: 1,
@@ -246,7 +246,7 @@ var TeacherIntroSwiper = new Swiper('#TeacherListBlock', {
 
 var ArticleListSwiper = new Swiper('#ArticleListIndex', {
     autoplay: {
-        delay: 4000,
+        delay: 10000,
         stopOnLastSlide: false,
         disableOnInteraction: true,
     },
@@ -256,22 +256,8 @@ var ArticleListSwiper = new Swiper('#ArticleListIndex', {
     },
     lazy: {
         loadPrevNext: true,
-        loadPrevNextAmount: 3,
+        loadPrevNextAmount: 4,
     },
-    on:{
-        lazyImageLoad: function(imageEl){
-            var targetArticleImg = $(imageEl).find('.swiper-lazy');
-            swiperLazyfocusepointer(targetArticleImg);
-        },
-        lazyImageReady: function(imageEl){
-            var targetArticleFocuspoint = $(imageEl).find('.focuspoint');
-            setTimeout(() => {
-                $(targetArticleFocuspoint).focusPoint();
-            }, 100);
-            $(targetArticleFocuspoint).addClass('lazied');
-        },
-    },
-
     allowTouchMove: true,
     grabCursor : true,
     autoHeight: false,
@@ -282,28 +268,37 @@ var ArticleListSwiper = new Swiper('#ArticleListIndex', {
     loop:true,
     breakpoints: {
         1301: {
-            // slidesPerView: 3,
-            slidesPerView: 'auto',
+            lazy: {
+                loadPrevNext: true,
+                loadPrevNextAmount: 3,
+            },
+        },
+        384: {
             lazy: {
                 loadPrevNext: true,
                 loadPrevNextAmount: 2,
             },
         },
-        401: {
-            slidesPerView: 1,
-            spaceBetween: 0,
-            lazy: {
-                loadPrevNext: true,
-                loadPrevNextAmount: 1,
-            },
+    },
+    on:{
+        lazyImageLoad: function(imageEl){
+            var targetArticleImg = $(imageEl).find('.swiper-lazy');
+            swiperLazyfocusepointer(targetArticleImg);
+        },
+        lazyImageReady: function(imageEl){
+            var targetArticleFocuspoint = $(imageEl).find('.focuspoint');
+            setTimeout(() => {
+                targetArticleFocuspoint.focusPoint();
+            }, 100);
+
         },
     },
 });
 
 function swiperLazyfocusepointer(target){
-var img = new Image();
-img.src = target.data('src');
-var target_focuspoint = target.parent('.focuspoint');
+    let img = new Image();
+    img.src = target.data('src');
+    let target_focuspoint = target.parent('.focuspoint');
     $(target_focuspoint).attr({
         'data-focus-x':"0.00",
         'data-focus-y':"0.00",
@@ -348,8 +343,9 @@ function wrap_ellipsis(article_target,article_length){
     target.hide().children('.lightingbox_wrap').removeClass('isopen').css({'transform':'scale(0)'});
     target.show(200).children('.lightingbox_wrap').addClass('isopen').animate({'opacity':'1'} ,200 ,function() {
         $('#TeacherRegister .lightingbox_wrap').css({'transform':'scale(1)'});
+        // document.documentElement.style.overflowY = 'hidden'; 
     });
-    
+     
  })
 
 

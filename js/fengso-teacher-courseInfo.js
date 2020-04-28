@@ -2,7 +2,7 @@
 $(document).ready(function(){
    
     //slide 功能切換
-    $('.course_information_controls .item').click(function(){
+    $('.course_information_controls .activer').click(function () {
 
         // var targetID = '#' + $(this).data('target'); 
         if($(this).hasClass('active')){　　//如果node是隱藏的則顯示node元素，否則隱藏
@@ -11,7 +11,7 @@ $(document).ready(function(){
             var targetID = '#' + $(this).data('target'); 
             $('.teacher_page_item').hide();
             $(targetID).fadeIn(260);
-            $('.course_information_controls .item').removeClass('active')
+            $('.course_information_controls .activer').removeClass('active')
             $(this).addClass('active');
         }
 

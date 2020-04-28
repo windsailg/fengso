@@ -1,4 +1,29 @@
 @include resetCSS;
+$color_fs_orange:#FF7757;
+$color_fs_pre_goose:#FFB639;
+$color_fs_goose:#FFB636;
+$color_fs_courseList_goose:#FEA226;
+$color_fs_brown:rgb(95, 54, 23);
+$color_fs_blue:rgb(67, 112, 179);
+$color_fs_background_gray_bluer:#F6F7F9; //forgetpass
+
+$color_fs_gray:#BCBDBC;
+$color_fs_gray_2:rgb(161, 161, 161);
+$color_fs_gray_3_fadeblue:#5e6f79;
+; //blue
+$color_fs_gray_3_fadeblue_2:#3b4952; //darkerBlue
+$color_fs_background_gray:#F1F1F1;
+
+$color_link:rgb(54, 54, 54);
+$color_shadow:rgba(77, 77, 77, 0.2);
+
+$color_fs_font-title:rgb(54, 54, 54);
+$color_fs_font-title_2:rgb(68, 68, 68);
+
+$color_fs_font:rgb(90, 90, 90);
+$color_fs_font_fader:rgb(110, 110, 110);
+
+$color_fs_footer-font:rgb(124, 124, 124);
 
 html{
    font-family: 'Century Gothic','Arial','Source Sans Pro' , 'Muli' ,'微軟正黑體', '新細明體';
@@ -71,7 +96,30 @@ button{
       border-radius: 0;
    }
 }
-
+.button{
+   @include selection-none;
+   font-family: 'Century Gothic','Arial','Source Sans Pro' , 'Muli' ,'微軟正黑體','FontAwesome', '新細明體';
+   background: $color_fs_orange;
+   border: 0px solid #fff;
+   cursor:pointer;
+   color:#fff;
+   outline:none;
+   @include tst;
+   border-radius: 5px;
+   padding: 12px 40px;
+   margin: 8px;
+   font-size: 16px;
+   &:hover{
+      opacity: .8;
+   }
+   &.type_gray{
+      background: #ddd;
+      color:#444;
+   }
+   &.shape{
+      border-radius: 0;
+   }
+}
 //if no content, show it  
 .nothing_block{
    @include fxc;
@@ -109,10 +157,10 @@ button{
       max-height: unset;
    }
 }
+
 .img_box{
    img{
-      // height:100%;
-      width:100%;
+      width: 100%;
    }
 }
 
@@ -125,6 +173,8 @@ button{
    @include bl;
    width: 100%;
    line-height: 28px;
+   overflow: hidden;
+   max-height: 60px;
    @include M1301() {
       padding: 0 15px;
    }
@@ -160,7 +210,19 @@ button{
 }
 
 
-
+.new_msg_active{
+   &:before{
+      content:'';
+      @include ibl;
+      position: absolute;
+      top: -4px; 
+      right: -4px;
+      border-radius: 50px;
+      border:2px solid #fff;;
+      padding: 4px;
+      background-color: $color_fs_orange;
+   }
+}
 
 
 // jquery animate 

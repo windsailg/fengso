@@ -24,7 +24,7 @@
          }
          @include MCW(380px){
             width: 100%;
-            padding: 10px 0px 10px;
+            padding: 10px 5px 10px;
          }
       }
       @include M1301(){
@@ -125,7 +125,6 @@
          }
       }
    }
-
    .article_list_block{
       @include fxv;
       flex-wrap: wrap;
@@ -143,16 +142,19 @@
          }
       }
       .article_block{
-         @include fxc;
+         @include fxfs;
          width:100%;
          margin: 0px 0 40px 0;
+         a{
+            width: 100%;
+         }
          @include MCW(781px) {
             // width:100%;
             margin: 0px 0 26px 0;
          }
          .image_box{
             @include bl;
-            width: 320px;
+            width: 276px;
             height: 180px;
             img{
                @include tst;
@@ -160,17 +162,13 @@
                   transform: scale(1.1);
                }
             }
-            //  @include MCW(780px) {
-            //    width:100%;
-            //    height: 54vw;
-            // }
              @include MCW(781px) {
                width: 120px;
-               height: 70px;
+               height: 78px;
             }
             @include MCW(380px) {
                width:100%;
-               height: 57vw;
+               height: 63vw;
             }
          }
          .content_box{
@@ -178,10 +176,6 @@
             padding: 0px  32px 0;
             width: calc(100% - 330px);
             overflow: hidden;
-            // @include MCW(781px) {
-            //    width:100%;
-            //    padding: 15px  32px 10px;
-            // }
             @include MCW(781px) {
                width: calc(100% - 120px);
                padding: 0px  15px 0px;
@@ -241,7 +235,6 @@
          }
       }
    }
-   
    .course_list_block{
       @include fxfe;
       align-items: flex-start;
@@ -327,9 +320,9 @@
             justify-content: space-between;
             width: 100%;
             .tips{
-               
-               font-size: 13px;
-               color: rgba(85, 85, 85, 0.63);
+               font-size: 15px;
+               color: rgba(58, 58, 58, 0.7);
+               font-weight: bold;
                @include MCW(601px) {
                   padding: 0 0 8px 0;
                }

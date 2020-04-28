@@ -89,7 +89,7 @@ $color_fs_footer-font:rgb(124, 124, 124);
                border-radius: 50px;
                background-color:#fff;
                width: 100%;
-               max-width:600px;
+               // max-width:600px;
             }
          }
          .picker_unit{
@@ -135,7 +135,7 @@ $color_fs_footer-font:rgb(124, 124, 124);
                @include ibl;  
                @include PlaceHolder-Style();
                font-size: 17px;
-               
+            
                border:0px solid;;
                width: 90%;
                outline: none;
@@ -541,13 +541,15 @@ $color_fs_footer-font:rgb(124, 124, 124);
             > .title{
                @include nowrap;
                margin: 6px 0;
+               font-size: .9em;
             }
             > .content{
                margin: 6px 0;
-               line-height: 30px;
+               line-height: 1.8em;
+               font-size: .9em;
             }
             > .tips{
-               margin: 6px 0;
+               margin: 2px 0;
                @include flex-center;
                justify-content: space-between;
                font-size: 12px;
@@ -641,18 +643,20 @@ $color_fs_footer-font:rgb(124, 124, 124);
             }
          }
          .trigger{
-            position: absolute;
+            @include fxc;
+            position: relative;
             width: 100%;
             text-align: center;
+            min-height: 1em;
             @include arl;
-            bottom: -15px;
-            font-size: 16px;
+            bottom: -10px;
+            font-size: .9em;
             color:$color_fs_font_fader;
             cursor: pointer;
             @include hover;
             i{
-               position: absolute;
-               padding: 0 0 0 5px;
+               position: relative;
+               padding: 0 0 0 7px;
             }
             // &::after{
             //    font-family: 微軟正黑體;
@@ -711,6 +715,7 @@ $color_fs_footer-font:rgb(124, 124, 124);
       width:100%;
       padding: 20px 30px 20px 20px;
       margin: 20px 0 10px;
+      position: relative;
       @include MCW(700px){
          padding: 14px 15px ;
       }
@@ -724,6 +729,7 @@ $color_fs_footer-font:rgb(124, 124, 124);
          @include MCW(700px){
             justify-content: center;
          }
+         
          &:not(:last-child)::after{
             content:' ';
             @include ibl;
@@ -737,6 +743,7 @@ $color_fs_footer-font:rgb(124, 124, 124);
                // display: none;
             }
          }
+
          > .imagine{
             @include ibl;
             border-radius: 50px;
@@ -750,18 +757,21 @@ $color_fs_footer-font:rgb(124, 124, 124);
                height: 65px;
             }
          }
+
          > .content{
             @include ibl;
             width: calc(100% - 150px);
             @include MCW(700px){
                width: 100%;
             }
+
             > .title_box{
                @include fxb;
                margin: 5px 0  4px  ;
                @include MCW(700px){
                   justify-content: center;
                }
+
                > .name{
                   @include ibl;
                   padding:5px 13px ;
@@ -774,12 +784,14 @@ $color_fs_footer-font:rgb(124, 124, 124);
                      margin: 0;
                   }
                }
+
                > .btn_box{
                   @include fxb;
                   @include MCW(700px){
                      width: 100%;
                      justify-content: center;
                   }
+
                   > .item{
                      @include ibl;
                      padding:3px 5px;
@@ -791,10 +803,24 @@ $color_fs_footer-font:rgb(124, 124, 124);
                         margin:7px 14px  7px ;
                      }
                   }
+
+                  > .answered {
+                     border-color:transparent;
+                     color:#3333338e;
+                     i{
+                        padding:  0 3px 0 0;
+                     }
+                     &:hover{
+                        cursor: default;
+                        opacity: 1;
+                     }
+                  }
+
                   > .view_homework_btn{
                      border-color:#5e6f79;
                      color:#5e6f79;
                   }
+
                   > .discuss_btn{
                      border-color:$color_fs_orange;
                      color:$color_fs_orange;
@@ -869,12 +895,14 @@ $color_fs_footer-font:rgb(124, 124, 124);
       margin: 10px  0;
       padding:0;
 
-      > .unit_title{
+      .unit_title{
          margin: 10px  0;
+         
          > .title{
             font-size: calc(20px + 0.2vw);
             font-weight: bold;
             color: #555;
+            
             i{
                padding: 0 10px  0 0;
             }
@@ -887,9 +915,32 @@ $color_fs_footer-font:rgb(124, 124, 124);
             font-size: 18px;
          }
       }
-
-      > .unit_block{
+      .unit__controller{
          @include ibl;
+         margin: 20px 0 10px ;
+         padding: 14px 20px;
+         @include hover;
+         user-select: none;
+         i{
+            margin:  0 10px 0 0;
+         }
+         &.unit--allopen{
+            background-color: #c0c0c0;
+         }
+         &.unit--allclose {
+            background-color: $color_fs_orange;
+            color: #ffffff;
+         }
+         &.controller--cd{ 
+            // opacity: .5;
+            color: #aaaaaa;
+            background-color: #dbdbdb;
+         }
+      }
+
+      .unit_block{
+         @include iblw();
+
          padding: 16px 0 0  ;
          line-height: 26px;
          @include MCW(700px) {
@@ -897,7 +948,11 @@ $color_fs_footer-font:rgb(124, 124, 124);
             line-height: 24px;
          }
 
-         > .ele{
+         .ele__box{
+            @include iblw();
+            display: none;
+         }
+         .ele{
             @include ibl;
             width: 100%;
             padding: 12px 18px;
@@ -912,7 +967,10 @@ $color_fs_footer-font:rgb(124, 124, 124);
                padding: 0 10px  0 0;
             }
          }
-         > .item{
+         .title{
+            cursor: pointer;
+         }
+         .item{
             margin-left: 28px;
             @include MCW(700px) {
                margin-left: 10px;
@@ -1130,8 +1188,10 @@ $color_fs_footer-font:rgb(124, 124, 124);
       }
    }
 
+
+}
    //討論區塊
-   > .enter_reanswer_block{
+   .enter_reanswer_block{
       @include fxc;
       width:100%;
       border: solid #ccc;
@@ -1163,8 +1223,6 @@ $color_fs_footer-font:rgb(124, 124, 124);
          text-align: right;
       }
    }
-}
-
 
 
 //輸入框樣式
@@ -1289,13 +1347,14 @@ $color_fs_footer-font:rgb(124, 124, 124);
       color: $color_fs_font;
       line-height: 30px;
       >h2, > .style-h2{
-         @include bl;
+         display: block;
          width: 100%;
-         font-weight: 600;
-         font-size: 19px;
-         letter-spacing: 10px;
-         color: $color_fs_font-title;
-         margin: 20px 0 8px ;
+         height: auto;
+         font-weight: 500;
+         font-size: 23px;
+         border-bottom: 1px solid #e2e2e2;
+         padding-bottom: 8px;
+         margin: 50px 0px 20px 0px;
       }
       // >p, > .style-p{
       //    @include bl;

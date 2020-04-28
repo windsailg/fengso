@@ -21,11 +21,6 @@
           align-items: center;
 }
 
-.img_box img {
-  max-width: 100%;
-  max-height: 100%;
-}
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -212,6 +207,39 @@ button.shape {
   border-radius: 0;
 }
 
+.button {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-family: 'Century Gothic','Arial','Source Sans Pro' , 'Muli' ,'微軟正黑體','FontAwesome', '新細明體';
+  background: #FF7757;
+  border: 0px solid #fff;
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
+  border-radius: 5px;
+  padding: 12px 40px;
+  margin: 8px;
+  font-size: 16px;
+}
+
+.button:hover {
+  opacity: .8;
+}
+
+.button.type_gray {
+  background: #ddd;
+  color: #444;
+}
+
+.button.shape {
+  border-radius: 0;
+}
+
 .nothing_block {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -269,6 +297,8 @@ button.shape {
   float: left;
   width: 100%;
   line-height: 28px;
+  overflow: hidden;
+  max-height: 60px;
 }
 
 @media all and (max-width: 1301px) {
@@ -317,6 +347,21 @@ button.shape {
 
 .bread_crumb_block .bread_crumb .bread_crumb_item.bc_last {
   font-weight: 600;
+}
+
+.new_msg_active:before {
+  content: '';
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  border-radius: 50px;
+  border: 2px solid #fff;
+  padding: 4px;
+  background-color: #FF7757;
 }
 
 .isopen {

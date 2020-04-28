@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url(https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 @import url(https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
-#fengso-productDetail .search_and_sort_block, #fengso-productDetail .search_and_sort_block .course_discuss_control_panel, #fengso-productDetail .course_inputs_block .check_block, #fengso-productDetail .course_inputs_block .check_block .checkbox_block, #fengso-productDetail .course_inputs_block .upload_box .tip_box, #fengso-productDetail .course_inputs_block .btns.type_center, #fengso-productDetail .course_discuss_blocks, #fengso-productDetail .course_homework_block, #fengso-productDetail .course_homework_block > .homework_block, #fengso-productDetail .course_homework_block > .homework_block > .content > .title_box, #fengso-productDetail .course_homework_block > .homework_block > .content > .title_box > .btn_box, #fengso-productDetail .course_homework_block > .homework_block > .content > .date_box, .homework_discussion_block, .homework_discussion_block > .content > .ele, .homework_discussion_block > .content > .chapter_box, .homework_discussion_block > .content > .title, .homework_discussion_block > .content > .name_box, .homework_discussion_block > .content > .reanswer_block, .homework_discussion_block > .content > .reanswer_block > .content > .ele, .homework_discussion_block > .content > .reanswer_block > .content > .chapter_box, .homework_discussion_block > .content > .reanswer_block > .content > .title, .homework_discussion_block > .content > .reanswer_block > .content > .name_box, .homework_discussion_block > .enter_reanswer_block, .enter_block, .enter_block > .selects, .enter_block > .ratingStar {
+#fengso-productDetail .search_and_sort_block, #fengso-productDetail .search_and_sort_block .course_discuss_control_panel, #fengso-productDetail .course_inputs_block .check_block, #fengso-productDetail .course_inputs_block .check_block .checkbox_block, #fengso-productDetail .course_inputs_block .upload_box .tip_box, #fengso-productDetail .course_inputs_block .btns.type_center, #fengso-productDetail .course_discuss_blocks, #fengso-productDetail .course_discuss_blocks .course_discuss_block .trigger, #fengso-productDetail .course_homework_block, #fengso-productDetail .course_homework_block > .homework_block, #fengso-productDetail .course_homework_block > .homework_block > .content > .title_box, #fengso-productDetail .course_homework_block > .homework_block > .content > .title_box > .btn_box, #fengso-productDetail .course_homework_block > .homework_block > .content > .date_box, .homework_discussion_block, .homework_discussion_block > .content > .ele, .homework_discussion_block > .content > .chapter_box, .homework_discussion_block > .content > .title, .homework_discussion_block > .content > .name_box, .homework_discussion_block > .content > .reanswer_block, .homework_discussion_block > .content > .reanswer_block > .content > .ele, .homework_discussion_block > .content > .reanswer_block > .content > .chapter_box, .homework_discussion_block > .content > .reanswer_block > .content > .title, .homework_discussion_block > .content > .reanswer_block > .content > .name_box, .enter_reanswer_block, .enter_block, .enter_block > .selects, .enter_block > .ratingStar {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -22,9 +22,11 @@
           align-items: center;
 }
 
-.img_box img {
-  max-width: 100%;
-  max-height: 100%;
+#fengso-productDetail .unit_list_container .unit_block, #fengso-productDetail .unit_list_container .unit_block .ele__box {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
 }
 
 #fengso-productDetail .course_rate_title {
@@ -123,7 +125,6 @@
   border-radius: 50px;
   background-color: #fff;
   width: 100%;
-  max-width: 600px;
 }
 
 #fengso-productDetail .search_and_sort_block .course_discuss_control_panel .picker_unit {
@@ -977,15 +978,17 @@
      text-overflow: ellipsis;
   max-height: 40px;
   margin: 6px 0;
+  font-size: .9em;
 }
 
 #fengso-productDetail .course_discuss_blocks .course_discuss_block .content_box > .content {
   margin: 6px 0;
-  line-height: 30px;
+  line-height: 1.8em;
+  font-size: .9em;
 }
 
 #fengso-productDetail .course_discuss_blocks .course_discuss_block .content_box > .tips {
-  margin: 6px 0;
+  margin: 2px 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;
@@ -1142,15 +1145,20 @@
 }
 
 #fengso-productDetail .course_discuss_blocks .course_discuss_block .trigger {
-  position: absolute;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
   width: 100%;
   text-align: center;
+  min-height: 1em;
   right: 0;
   margin-right: auto;
   left: 0;
   margin-left: auto;
-  bottom: -15px;
-  font-size: 16px;
+  bottom: -10px;
+  font-size: .9em;
   color: #6e6e6e;
   cursor: pointer;
   -webkit-transition: 0.2s all ease-out;
@@ -1167,8 +1175,8 @@
 }
 
 #fengso-productDetail .course_discuss_blocks .course_discuss_block .trigger i {
-  position: absolute;
-  padding: 0 0 0 5px;
+  position: relative;
+  padding: 0 0 0 7px;
 }
 
 #fengso-productDetail .course_discuss_blocks .course_discuss_block .input {
@@ -1240,6 +1248,7 @@
   width: 100%;
   padding: 20px 30px 20px 20px;
   margin: 20px 0 10px;
+  position: relative;
 }
 
 @media all and (max-width: 700px) {
@@ -1404,6 +1413,20 @@
   }
 }
 
+#fengso-productDetail .course_homework_block > .homework_block > .content > .title_box > .btn_box > .answered {
+  border-color: transparent;
+  color: #3333338e;
+}
+
+#fengso-productDetail .course_homework_block > .homework_block > .content > .title_box > .btn_box > .answered i {
+  padding: 0 3px 0 0;
+}
+
+#fengso-productDetail .course_homework_block > .homework_block > .content > .title_box > .btn_box > .answered:hover {
+  cursor: default;
+  opacity: 1;
+}
+
 #fengso-productDetail .course_homework_block > .homework_block > .content > .title_box > .btn_box > .view_homework_btn {
   border-color: #5e6f79;
   color: #5e6f79;
@@ -1512,46 +1535,92 @@
   padding: 0;
 }
 
-#fengso-productDetail .unit_list_container > .unit_title {
+#fengso-productDetail .unit_list_container .unit_title {
   margin: 10px  0;
 }
 
-#fengso-productDetail .unit_list_container > .unit_title > .title {
+#fengso-productDetail .unit_list_container .unit_title > .title {
   font-size: calc(20px + 0.2vw);
   font-weight: bold;
   color: #555;
 }
 
-#fengso-productDetail .unit_list_container > .unit_title > .title i {
+#fengso-productDetail .unit_list_container .unit_title > .title i {
   padding: 0 10px  0 0;
 }
 
-#fengso-productDetail .unit_list_container > .unit_title hr {
+#fengso-productDetail .unit_list_container .unit_title hr {
   background-color: #ddd;
   margin: 18px 0;
 }
 
-#fengso-productDetail .unit_list_container > .unit_title > .subtitle {
+#fengso-productDetail .unit_list_container .unit_title > .subtitle {
   font-size: 18px;
 }
 
-#fengso-productDetail .unit_list_container > .unit_block {
+#fengso-productDetail .unit_list_container .unit__controller {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: inline-block;
+  float: left;
+  margin: 20px 0 10px;
+  padding: 14px 20px;
+  -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#fengso-productDetail .unit_list_container .unit__controller:hover {
+  opacity: .8;
+  -webkit-transition-duration: .1s;
+       -o-transition-duration: .1s;
+          transition-duration: .1s;
+}
+
+#fengso-productDetail .unit_list_container .unit__controller i {
+  margin: 0 10px 0 0;
+}
+
+#fengso-productDetail .unit_list_container .unit__controller.unit--allopen {
+  background-color: #c0c0c0;
+}
+
+#fengso-productDetail .unit_list_container .unit__controller.unit--allclose {
+  background-color: #FF7757;
+  color: #ffffff;
+}
+
+#fengso-productDetail .unit_list_container .unit__controller.controller--cd {
+  color: #aaaaaa;
+  background-color: #dbdbdb;
+}
+
+#fengso-productDetail .unit_list_container .unit_block {
+  max-width: 100%;
   float: left;
   padding: 16px 0 0;
   line-height: 26px;
 }
 
 @media all and (max-width: 700px) {
-  #fengso-productDetail .unit_list_container > .unit_block {
+  #fengso-productDetail .unit_list_container .unit_block {
     padding: 8px 0 0;
     line-height: 24px;
   }
 }
 
-#fengso-productDetail .unit_list_container > .unit_block > .ele {
+#fengso-productDetail .unit_list_container .unit_block .ele__box {
+  max-width: 100%;
+  float: left;
+  display: none;
+}
+
+#fengso-productDetail .unit_list_container .unit_block .ele {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: inline-block;
@@ -1563,22 +1632,26 @@
 }
 
 @media all and (max-width: 700px) {
-  #fengso-productDetail .unit_list_container > .unit_block > .ele {
+  #fengso-productDetail .unit_list_container .unit_block .ele {
     margin: 6px 0;
     padding: 8px 12px;
   }
 }
 
-#fengso-productDetail .unit_list_container > .unit_block > .ele i {
+#fengso-productDetail .unit_list_container .unit_block .ele i {
   padding: 0 10px  0 0;
 }
 
-#fengso-productDetail .unit_list_container > .unit_block > .item {
+#fengso-productDetail .unit_list_container .unit_block .title {
+  cursor: pointer;
+}
+
+#fengso-productDetail .unit_list_container .unit_block .item {
   margin-left: 28px;
 }
 
 @media all and (max-width: 700px) {
-  #fengso-productDetail .unit_list_container > .unit_block > .item {
+  #fengso-productDetail .unit_list_container .unit_block .item {
     margin-left: 10px;
   }
 }
@@ -1927,7 +2000,7 @@
   margin: 10px 0 7px 0;
 }
 
-.homework_discussion_block > .enter_reanswer_block {
+.enter_reanswer_block {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
@@ -1939,7 +2012,7 @@
   padding: 20px 0 20px;
 }
 
-.homework_discussion_block > .enter_reanswer_block > .title {
+.enter_reanswer_block > .title {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: inline-block;
@@ -1947,7 +2020,7 @@
   width: 100%;
 }
 
-.homework_discussion_block > .enter_reanswer_block > .inputer {
+.enter_reanswer_block > .inputer {
   font-family: 'Century Gothic','Arial','Source Sans Pro' , 'Muli' ,'微軟正黑體','FontAwesome', '新細明體';
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1961,11 +2034,11 @@
   padding: 10px 16px;
 }
 
-.homework_discussion_block > .enter_reanswer_block > .inputer:focus {
+.enter_reanswer_block > .inputer:focus {
   outline-color: #FF7757;
 }
 
-.homework_discussion_block > .enter_reanswer_block > .btn_block {
+.enter_reanswer_block > .btn_block {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: inline-block;
@@ -2140,16 +2213,14 @@
 }
 
 .intro_block #CourseIntro > h2, .intro_block #CourseIntro > .style-h2 {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   display: block;
-  float: left;
   width: 100%;
-  font-weight: 600;
-  font-size: 19px;
-  letter-spacing: 10px;
-  color: #363636;
-  margin: 20px 0 8px;
+  height: auto;
+  font-weight: 500;
+  font-size: 23px;
+  border-bottom: 1px solid #e2e2e2;
+  padding-bottom: 8px;
+  margin: 50px 0px 20px 0px;
 }
 
 .intro_block #CourseIntro > .style-tb {

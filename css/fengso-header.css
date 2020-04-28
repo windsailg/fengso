@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url(https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
-.sidebar .container .sidebar_list_type .type_name_block, #ITeachContainer > .input_list > .input_block, #ITeachContainer > .btns {
+.sidebar .container .sidebar_list_type .type_name_block, #ITeachContainer > .input_list > .input_block, #ITeachContainer > .btns, .gotop_gobottom {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -19,11 +19,6 @@
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.img_box img {
-  max-width: 100%;
-  max-height: 100%;
 }
 
 .sidebar {
@@ -208,17 +203,12 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: block;
-  width: 1280px;
+  width: 100%;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 25px 15px 0;
   height: 100%;
   position: relative;
-}
-
-@media all and (max-width: 1301px) {
-  #fengso-header .header_container {
-    width: 100%;
-  }
 }
 
 @media all and (max-width: 781px) {
@@ -273,14 +263,16 @@
           box-sizing: border-box;
   display: inline-block;
   float: left;
-  margin: 0px 0px 0;
-  width: 108px;
+  margin: 0;
+  position: relative;
+  width: 110px;
+  margin-top: -2px;
 }
 
 @media all and (max-width: 781px) {
   #fengso-header .header_container .fengso_logo {
-    width: 85px;
-    padding: 6px 0 0 0;
+    width: 100px;
+    margin-top: 0px;
   }
 }
 
@@ -494,6 +486,7 @@
   float: right;
   margin: 6px 40px 0 0;
   cursor: pointer;
+  position: relative;
 }
 
 @media all and (max-width: 1301px) {
@@ -511,6 +504,7 @@
   display: inline-block;
   font-size: 18px;
   margin: 0 10px 0 0;
+  position: relative;
 }
 
 #fengso-header .header_container .cart .header_cart_img i {
@@ -879,4 +873,104 @@
 
 .i_want_teach {
   display: none;
+}
+
+.gotop_gobottom {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  width: 42px;
+  height: 42px;
+  border-radius: 4px;
+  background-color: #0000003f;
+  opacity: .8;
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  font-size: 20px;
+  z-index: 40;
+  pointer-events: all;
+  cursor: pointer;
+  -webkit-transition: .4s ease-in-out;
+  -o-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
+}
+
+.gotop_gobottom.addhight {
+  bottom: 95px;
+}
+
+@media all and (max-width: 640px) {
+  .gotop_gobottom {
+    width: 35px;
+    height: 35px;
+    font-size: 13px;
+    right: 20px;
+  }
+}
+
+.gotop_gobottom i {
+  padding: 2px 0 0 0;
+  color: #ffffff;
+}
+
+@media all and (max-width: 600px) {
+  .gotop_gobottom i {
+    padding: 0px 0 0 0;
+  }
+}
+
+.gotop_gobottom .gotop_gobottom_deco {
+  width: 50%;
+  position: absolute;
+  right: 0;
+  margin-right: auto;
+  left: 0;
+  margin-left: auto;
+  border-radius: 4px;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+@media all and (max-width: 600px) {
+  .gotop_gobottom .gotop_gobottom_deco {
+    width: 38%;
+  }
+}
+
+.gotop_gobottom .gotop_gobottom_deco.gobotton {
+  bottom: 10px;
+}
+
+@media all and (max-width: 600px) {
+  .gotop_gobottom .gotop_gobottom_deco.gobotton {
+    bottom: 10px;
+  }
+}
+
+.gotop_gobottom .gotop_gobottom_deco.gotop {
+  top: 10px;
+}
+
+@media all and (max-width: 600px) {
+  .gotop_gobottom .gotop_gobottom_deco.gotop {
+    top: 10px;
+  }
+}
+
+.gotop_gobottom:hover {
+  opacity: 1;
+}
+
+.gotop_gobottom.unactive {
+  pointer-events: none;
+  opacity: .8;
+  -webkit-filter: drop-shadow(0px 0px 7px transparent);
+  filter: drop-shadow(0px 0px 7px transparent);
+  color: #999;
 }

@@ -61,11 +61,79 @@ $(document).ready(function(){
  function lightingBoxAnimation(){
    let target = $('#TeacherRegister');
    target.hide().children('.lightingbox_wrap').removeClass('isopen').css({'transform':'scale(0)'});
-   target.fadeIn(100).children('.lightingbox_wrap').addClass('isopen').animate({'opacity':'1'} ,200 ,function() {
+   target.fadeIn(100).children('.lightingbox_wrap').addClass('isopen').animate({'opacity':'1'} ,150 ,function() {
       $('#TeacherRegister .lightingbox_wrap').css({'transform':'scale(1)'});
    });
  }
  
+
+   var ScrollTimer;
+
+   // $('#GoTopAndBottomButton').hide();
+
+   $(window).scroll(function () {
+
+      $('#GoTopAndBottomButton').show();
+      ScrollTimer = window.setTimeout(function () {
+         windowTop = $(this).scrollTop() + 10;
+         pageHeight = $(document).height();
+         windowHeight = $(this).height();
+         //a + c > b
+         if (windowTop + windowHeight >= pageHeight) {
+            $('#Recommender').addClass('oncollapse');
+            $('#Collapser').addClass('active');
+         }
+         //Skylight Mobile ScrollHide Function
+         if (windowTop >= 200) {
+            $('#SkylightLinkMobile').addClass('onhide');
+         } else {
+            $('#SkylightLinkMobile').removeClass('onhide');
+         }
+
+
+
+
+         //算出卷軸距離文件底部的高度
+         var OnScrolltoBottomHeight = $(document).height() - $(window).height() - $(window).scrollTop();
+         if (OnScrolltoBottomHeight <= 400) {
+            $('#GoTopAndBottomButton').html('<i class="fas fa-arrow-up"><span class="gotop_gobottom_deco gotop "></span></i>')
+         } else {
+            $('#GoTopAndBottomButton').html('<i class="fas fa-arrow-down"><span class="gotop_gobottom_deco gobotton"></span></i>')
+         }
+      }, 200)
+   });
+
+   //Go top Button Click Func
+   $('#GoTopAndBottomButton').on('click', function () {
+      $(this).addClass('unactive');
+      $('html , body').css({
+         'scroll-behavior': 'unset',
+      });
+      setTimeout(() => {
+         $(this).removeClass('unactive');
+         $('html , body').css({
+            'scroll-behavior': 'smooth',
+         });
+      }, 1500);
+      var CheckScrolltoBottomHeight = $(document).height() - $(window).height() - $(window).scrollTop();
+      if (CheckScrolltoBottomHeight <= 400) {
+         $('html, body').animate({
+            scrollTop: $('html').offset().top
+         }, {
+            duration: 1000, easing: "swing"
+         });
+      } else {
+         $('html, body').animate({
+            scrollTop: $(document).height() - $(window).height()
+         }, {
+            duration: 1000, easing: "swing"
+         });
+      }
+
+
+   });
+
+
 
 });
 

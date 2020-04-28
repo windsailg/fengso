@@ -1,6 +1,7 @@
 
 //  *{outline-color: rgba(255, 118, 87, 0.233);outline-width: 1px;outline-style:solid;}
 
+
 .area{
    @include ibl;
    width: 100%;
@@ -39,30 +40,6 @@
       @include M1301() {
          width: 100%;
       }
-   }
-}
-
-.video_box{
-   @include ibl;
-   width: 100%;
-   overflow: hidden;
-   iframe{
-      width: 100%;
-      height: 100%;
-   }
-}
-
-.focuspoint{
-   // @include flex-center;
-   // align-content: center;
-   .lazy{
-      @include bg-loading;
-      background-color: #fff;
-      background-image: url("images/fengso-loading.svg");
-      max-height: 100%;
-   }
-   .lazied{
-      max-height: unset;
    }
 }
 
@@ -136,15 +113,24 @@
          padding: 10px  ;
          color: $color_fs_font-title;
          > .title_box{
-            @include ibl;
+            @include fxfs;
+            width: 100%;
+            max-width: calc(100% - 150px);
             font-size: calc(16px + 0.5vw);
             font-weight: 600;
             
             margin: 10px 0;
             color:$color_fs_gray_3_fadeblue;
             > .title{
-               @include ibl;
+               @include fxfsw(240px);
                padding-right: 10px;
+            }
+            .imagine{
+               @include fxc;
+               width: 60px;
+               @include MCW(630px) {
+                  width: 40px;
+               }
             }
             > .title_deco{
                @include ibl;
@@ -152,6 +138,9 @@
                height: 1px;
                background-color:$color_fs_gray_3_fadeblue_2;
                margin: 11px 0 0;
+               @include MCW(480px) {
+                  display: none;
+               }
             }
          }
          > .more_box{
@@ -163,6 +152,7 @@
             }
          }
       }
+      
    }
    .course_list_block{
       // @include flex-center;
@@ -183,7 +173,7 @@
       }
       .course_block{
          @include ib;
-         width: 300px;
+         width: 325px;
          margin: 0 0px 25px ;
          padding: 0 12px 0;
          @include tst;
@@ -225,6 +215,7 @@
    
          }
          .image{
+            @include fxc;
             width: 100%;
             height: 165px;
             
@@ -239,6 +230,9 @@
             }
             img{
                @include tst;
+               width: auto;;
+               max-width: unset;
+               max-height:unset;;
                &:hover{
                   transform: scale(1.1);
                }
@@ -268,14 +262,16 @@
             width: 100%;
             > .tips{
                @include ib;
-               font-size: 13px;
-               color: rgba(85, 85, 85, 0.63);
-               
+               font-size: 15px;
+               color: rgba(58, 58, 58, 0.7);
+               font-weight: bold;
                @include MCW(601px) {
                   padding: 0 0 5px 0;
+                  width: 100%;;
                }
                > .element{
-                  padding:  0 5px 0 0 ;
+                  @include ibl;
+                  padding:  3px 5px 3px  0;
                   i{
                      padding:  0 5px 0 0 ;
                   }
@@ -457,6 +453,7 @@
          width: auto;
          height: 60px;
          a{
+            max-width: 120px;
             @include ib;
          }
          .pager_number{
@@ -598,6 +595,7 @@
       justify-content: space-between;
       width: 100%;
       a{
+         width: 384px;
          &:hover{
             opacity: .9;
          }
@@ -605,12 +603,24 @@
       .article_block{
          @include ibl;
          width:384px;
+         @include MCW(384px) {
+            width:100%;
+         }
          .image_box{
-            @include bl;
-            width: 100%;
+            @include fxc;
+            width: 384px;
             height: 250px;
+            @include MCW(384px) {
+               width: 100%;
+               height: 65vw;
+            }
             img{
                @include tst;
+               width: auto;;
+               // width: 100%;
+               // height: 100%;
+               max-width: unset;
+               max-height:unset;
                &:hover{
                   transform: scale(1.1);
                }
@@ -660,6 +670,29 @@
    }
 }
 
+.video_box{
+   @include ibl;
+   width: 100%;
+   overflow: hidden;
+   iframe{
+      width: 100%;
+      height: 100%;
+   }
+}
+
+.focuspoint{
+   // @include flex-center;
+   // align-content: center;
+   .lazy{
+      @include bg-loading;
+      background-color: #fff;
+      background-image: url("images/fengso-loading.svg");
+      max-height: 100%;
+   }
+   .lazied{
+      max-height: unset;
+   }
+}
 
 .banner_slide_container{
    .swiper-pagination-bullet {

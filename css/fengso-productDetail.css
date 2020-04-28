@@ -1,5 +1,6 @@
+@charset "UTF-8";
 @import url(https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
-#fengso-productDetail .belt_blocks .belt_blocks_container > .belt_block, #fengso-productDetail .belt_blocks .belt_blocks_container > .belt_elements, #fengso-productDetail .belt_blocks .belt_blocks_container > .belt_elements > .belt_block_item > .count_box, #fengso-productDetail .belt_blocks .belt_blocks_container > .belt_elements > .belt_block_item > .count_box > .count_item {
+#fengso-productDetail .course_main_block .course_list, #fengso-productDetail .course_main_block .course_list .rate_block, #fengso-productDetail .course_main_block .course_list .rate_block .act, #fengso-productDetail .course_main_block .course_list .list_block .course_type_list .course_list_content > .course_list_item, #fengso-productDetail .course_main_block .course_list .list_block .course_type_list .course_list_content > .course_list_item.chapter_list .content:first-child .title, #fengso-productDetail .course_main_block .course_list .list_block .course_type_list .course_list_content > .course_list_item .infos, #fengso-productDetail .course_main_block .course_list .list_block .course_type_list .course_list_content > .course_list_item .content, #fengso-productDetail .belt_blocks .belt_blocks_container > .belt_block, #fengso-productDetail .belt_blocks .belt_blocks_container > .belt_elements, #fengso-productDetail .belt_blocks .belt_blocks_container > .belt_elements > .belt_block_item > .count_box, #fengso-productDetail .belt_blocks .belt_blocks_container > .belt_elements > .belt_block_item > .count_box > .count_item, #fengso-productDetail .belt_blocks .belt_blocks_container > .price .original__price__block, #fengso-productDetail .teacher_block .teacher_box .action_icons {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -18,11 +19,6 @@
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.img_box img {
-  max-width: 100%;
-  max-height: 100%;
 }
 
 /* This text is in Century Gothic */
@@ -125,7 +121,7 @@
           box-sizing: border-box;
   display: inline-block;
   float: left;
-  width: 880px;
+  width: 853px;
   overflow: hidden;
 }
 
@@ -263,18 +259,18 @@
   height: 480px;
 }
 
-@media all and (max-width: 1301px) {
+@media all and (max-width: 710px) {
   #fengso-productDetail .course_main_block .course_info .video_block .course_video {
-    height: 80vw;
+    height: 57vw;
     max-height: 400px;
   }
 }
 
 #fengso-productDetail .course_main_block .course_list {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: inline-block;
-  float: left;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 39px 0px 0 50px;
   width: 320px;
 }
@@ -287,37 +283,13 @@
 }
 
 #fengso-productDetail .course_main_block .course_list .rate_block {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: inline-block;
-  width: 100%;
-  height: 100px;
-  padding: 0 0px 0 0px;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-flow: row;
-      -ms-flex-flow: row;
-          flex-flow: row;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  width: 100%;
+  height: 100px;
+  padding: 0 0px 0 0px;
 }
 
 @media all and (max-width: 1301px) {
@@ -367,9 +339,10 @@
 }
 
 #fengso-productDetail .course_main_block .course_list .rate_block .act {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -384,7 +357,8 @@
 
 @media all and (max-width: 1301px) {
   #fengso-productDetail .course_main_block .course_list .rate_block .act {
-    width: unset;
+    width: 50%;
+    max-width: 150px;
   }
 }
 
@@ -395,19 +369,6 @@
   float: left;
   font-size: 36px;
   padding: 10px 0;
-}
-
-#fengso-productDetail .course_main_block .course_list .rate_block .score {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: inline-block;
-  float: left;
-  width: calc(100% - 50px);
-  padding-left: 35px;
-  font-size: 24px;
-  font-weight: 600;
-  padding: 10px 0 0  10px;
-  color: #FF7757;
 }
 
 #fengso-productDetail .course_main_block .course_list .rate_block .act_name {
@@ -458,7 +419,7 @@
   content: 'Added';
   position: absolute;
   top: 10px;
-  left: -4px;
+  left: 2px;
   opacity: 0;
   animation-name: plus;
   animation-duration: 1s;
@@ -494,10 +455,6 @@
     top: -45px;
     opacity: 0;
   }
-}
-
-#fengso-productDetail .course_main_block .course_list .rate_block .add_to_list .act_name {
-  margin: 16px 0 0;
 }
 
 #fengso-productDetail .course_main_block .course_list .list_block {
@@ -641,10 +598,10 @@
 }
 
 #fengso-productDetail .course_main_block .course_list .list_block .course_type_list .course_list_content > .course_list_item {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: inline-block;
-  float: left;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -665,6 +622,16 @@
   }
 }
 
+#fengso-productDetail .course_main_block .course_list .list_block .course_type_list .course_list_content > .course_list_item:not(:last-child)::after {
+  content: '';
+  position: relative;
+  bottom: -12px;
+  width: 100%;
+  height: 1px;
+  left: -15px;
+  background-color: #dbdbdb;
+}
+
 #fengso-productDetail .course_main_block .course_list .list_block .course_type_list .course_list_content > .course_list_item.active {
   -webkit-box-shadow: 5px 5px 10px rgba(82, 82, 82, 0.301);
           box-shadow: 5px 5px 10px rgba(82, 82, 82, 0.301);
@@ -673,6 +640,8 @@
   -webkit-transform: translate(-10px, 0px);
       -ms-transform: translate(-10px, 0px);
           transform: translate(-10px, 0px);
+  pointer-events: none;
+  cursor: default;
 }
 
 #fengso-productDetail .course_main_block .course_list .list_block .course_type_list .course_list_content > .course_list_item.active .icon .play_btn {
@@ -683,26 +652,84 @@
   border-color: transparent transparent transparent #ffffff;
 }
 
-#fengso-productDetail .course_main_block .course_list .list_block .course_type_list .course_list_content > .course_list_item .chapter, #fengso-productDetail .course_main_block .course_list .list_block .course_type_list .course_list_content > .course_list_item .title, #fengso-productDetail .course_main_block .course_list .list_block .course_type_list .course_list_content > .course_list_item .time {
+#fengso-productDetail .course_main_block .course_list .list_block .course_type_list .course_list_content > .course_list_item.active::after {
+  opacity: 0;
+}
+
+#fengso-productDetail .course_main_block .course_list .list_block .course_type_list .course_list_content > .course_list_item.chapter_list .content:first-child .title {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-weight: bold;
+  -webkit-line-clamp: 2;
+  /* 設定欲顯示的行數，超出則顯示省略符號(...)。 */
+  -webkit-box-orient: vertical;
+  /* 設定 box 的子元素，是由上往下垂直排列。 */
+  display: -webkit-box;
+  /* 設定 display 為 -webkit-box 元素。 */
+  overflow: hidden;
+}
+
+#fengso-productDetail .course_main_block .course_list .list_block .course_type_list .course_list_content > .course_list_item .chapter {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: inline-block;
   float: left;
-  white-space: nowrap;
-  overflow: hidden;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
-  max-height: 40px;
-  width: 85%;
-  padding: 4px 0;
+  width: 100%;
 }
 
-#fengso-productDetail .course_main_block .course_list .list_block .course_type_list .course_list_content > .course_list_item .chapter {
+#fengso-productDetail .course_main_block .course_list .list_block .course_type_list .course_list_content > .course_list_item .chapter i {
+  padding: 0 5px 0 0;
+}
+
+#fengso-productDetail .course_main_block .course_list .list_block .course_type_list .course_list_content > .course_list_item .infos {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 4px 10px 4px 0;
   color: #6e6e6e;
+  width: 100%;
+  max-width: 50px;
+}
+
+#fengso-productDetail .course_main_block .course_list .list_block .course_type_list .course_list_content > .course_list_item .time {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  text-align: right;
+  color: #FF7757;
+  padding: 2px 0 4px 0;
+  min-width: 50px;
+}
+
+#fengso-productDetail .course_main_block .course_list .list_block .course_type_list .course_list_content > .course_list_item .content {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  float: left;
+  width: 100%;
 }
 
 #fengso-productDetail .course_main_block .course_list .list_block .course_type_list .course_list_content > .course_list_item .title {
-  font-weight: 600;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  -webkit-line-clamp: 2;
+  /* 設定欲顯示的行數，超出則顯示省略符號(...)。 */
+  -webkit-box-orient: vertical;
+  /* 設定 box 的子元素，是由上往下垂直排列。 */
+  display: -webkit-box;
+  /* 設定 display 為 -webkit-box 元素。 */
+  overflow: hidden;
+  padding: 4px 0px 4px 0;
+  max-height: 56px;
+  width: calc(100% - 60px);
+  line-height: 24px;
   color: #363636;
   font-size: 15px;
 }
@@ -713,34 +740,34 @@
   }
 }
 
-#fengso-productDetail .course_main_block .course_list .list_block .course_type_list .course_list_content > .course_list_item .time {
-  color: #FF7757;
+#fengso-productDetail .course_main_block .course_list .list_block .course_type_list .course_list_content > .course_list_item .title i {
+  padding: 0 4px 0 0;
 }
 
 #fengso-productDetail .course_main_block .course_list .list_block .course_type_list .course_list_content > .course_list_item .icon {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: block;
   -webkit-transition: 0.2s all ease-out;
   -o-transition: 0.2s all ease-out;
   transition: 0.2s all ease-out;
-  position: absolute;
+  margin: 0 0px 0px 0;
+  position: relative;
   width: 25px;
-  height: 25px;
-  right: 10px;
-  top: 34px;
+  max-height: 42px;
 }
 
 #fengso-productDetail .course_main_block .course_list .list_block .course_type_list .course_list_content > .course_list_item .icon .play_btn {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: block;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
   cursor: pointer;
   background: #fff;
   width: 24px;
   height: 24px;
   border-radius: 50px;
-  position: relative;
   -webkit-transition: 0.2s all ease-out;
   -o-transition: 0.2s all ease-out;
   transition: 0.2s all ease-out;
@@ -770,6 +797,11 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: block;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
   cursor: pointer;
   width: 22px;
   height: 22px;
@@ -819,10 +851,14 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: block;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
   cursor: pointer;
   width: 24px;
   height: 24px;
-  position: relative;
   text-align: center;
 }
 
@@ -1079,11 +1115,59 @@
   color: #fff;
 }
 
+#fengso-productDetail .belt_blocks .belt_blocks_container > .price .original__price__block {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: skewX(14deg) scale(1, 0.9);
+      -ms-transform: skewX(14deg) scale(1, 0.9);
+          transform: skewX(14deg) scale(1, 0.9);
+  width: 100%;
+  padding: 0 20px;
+  text-decoration: line-through;
+  text-align: center;
+  color: #b9b9b9;
+  line-height: 20px;
+  font-size: 20px;
+  position: absolute;
+  top: 20px;
+}
+
+@media all and (max-width: 1301px) {
+  #fengso-productDetail .belt_blocks .belt_blocks_container > .price .original__price__block {
+    text-align: center;
+    -webkit-transform: skewX(0deg);
+        -ms-transform: skewX(0deg);
+            transform: skewX(0deg);
+    padding: 0;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    top: unset;
+  }
+}
+
+#fengso-productDetail .belt_blocks .belt_blocks_container > .price .original__price__block .original__price__title {
+  position: unset;
+  padding: 0px 5px;
+}
+
+#fengso-productDetail .belt_blocks .belt_blocks_container > .price .original__price__block .original__price__price {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  padding: 0px 5px;
+}
+
 #fengso-productDetail .belt_blocks .belt_blocks_container > .price .col {
   -webkit-transform: skewX(14deg) scale(1, 0.9);
       -ms-transform: skewX(14deg) scale(1, 0.9);
           transform: skewX(14deg) scale(1, 0.9);
-  padding: 15px 30px;
+  padding: 15px 20px;
 }
 
 @media all and (max-width: 1301px) {
@@ -1106,7 +1190,8 @@
 
 @media all and (max-width: 1301px) {
   #fengso-productDetail .belt_blocks .belt_blocks_container > .price .col > .title {
-    padding: 0px 0 15px;
+    padding: 6px 0;
+    font-size: 20px;
   }
 }
 
@@ -1763,9 +1848,38 @@
   color: #FF7757;
 }
 
+#fengso-productDetail .teacher_block .teacher_box .action_icons {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+#fengso-productDetail .teacher_block .teacher_box .action_icons a {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  color: #aaa;
+  padding: 2px 8px;
+}
+
+#fengso-productDetail .teacher_block .teacher_box .action_icons a i {
+  font-size: 23px;
+}
+
 #fengso-productDetail .teacher_block .teacher_box .teacher_intro {
   margin: 20px auto;
   color: #a1a1a1;
   line-height: 30px;
   text-align: left;
+}
+
+#fengso-productDetail .vjs-poster {
+  background-color: transparent;
+}
+
+#fengso-productDetail .video-js {
+  background-color: transparent;
 }

@@ -556,20 +556,24 @@ $color_fs_footer-font:rgb(124, 124, 124);
       width:100%;
       padding: 20px 30px 20px 20px;
       margin: 10px 0 10px;
-      > .course_discuss_block{
+      .course_discuss_block {
          @include flex-center;
          justify-content: flex-start;
          align-items: flex-start;
-         width: 100%;;
-         margin: 30px 0 36px;
+         width: 100%;
+         ;
+         margin: 26px 0;
          position: relative;
-         .avatar_box{
+
+         .avatar_box {
             @include ibl;
             width: 150px;
+
             @include MCW(861px) {
                width: 100%;
             }
-            .avatar{
+
+            .avatar {
                @include b;
                margin: 0 auto;
                border: 4px solid #D8D6D7;
@@ -578,123 +582,156 @@ $color_fs_footer-font:rgb(124, 124, 124);
                width: 100px;
                height: 100px;
             }
-            .name{
+
+            .name {
                @include b;
                text-align: center;
                margin: 10px auto;
             }
          }
-         .content_box{
+
+         .content_box {
             @include ibl;
             width: calc(100% - 150px);
             line-height: 30px;
             font-size: 17px;
-            max-height: 100px;
+            max-height: 112px;
             overflow: hidden;
-            color:$color_fs_font_fader;
+            color: $color_fs_font_fader;
+
             @include MCW(861px) {
                width: 100%;
             }
-            &.expand{
+
+            &.expand {
                max-height: unset;
                overflow: auto;
             }
-            > .chapter_block{
+
+            &.expand {
+               max-height: unset;
+               overflow: auto;
+            }
+
+            >.chapter_block {
                width: 100%;
+               color: $color_fs_orange;
                font-size: 16px;
                letter-spacing: 2px;
-               color:$color_fs_orange;
+
                @include MCW(861px) {
                   padding: 10px 0;
                   text-align: center;
                }
             }
-            > .title{
+
+            >.title {
                @include nowrap;
                margin: 6px 0;
+               font-size: .9em;
             }
-            > .tips{
+
+            >.content {
                margin: 6px 0;
+               line-height: 1.9em;
+               font-size: .9em;
+            }
+
+            >.tips {
+               margin: 2px 0;
                @include flex-center;
                justify-content: space-between;
                font-size: 12px;
-               .user_info{
-                  .element{
+
+               >.user_info {
+                  .element {
                      padding: 0 8px 0 0;
-                     color:rgb(136, 136, 136);
+                     color: rgb(136, 136, 136);
+
                      @include hover;
-                     i{
+
+                     i {
                         padding: 0 5px 0 0;
                      }
                   }
-                  .user_name{
-                     color:$color_fs_orange;
+
+                  .user_name {
+                     color: $color_fs_orange;
                      padding: 0;
                   }
+
+                  .likes {}
+
+                  .discusses {}
                }
-               .status{
-                  &.solved{
-                     color:$color_fs_orange;
+
+               >.status {
+                  &.solved {
+                     color: $color_fs_orange;
                      border-color: $color_fs_orange;
                      border-style: solid;
                      border-width: 1px;
                      padding: 0px 2px;
                      line-height: 15px;
                   }
-                  &.unsolved{
-                     color:$color_fs_font_fader;
-                  }
+
+                  &.unsolved {}
 
                }
 
             }
-            > .content{
-               margin: 6px 0;
-               line-height: 30px;
-            }
 
-
-            .answer{
+            .answer {
                @include flex-center;
                align-items: flex-start;
                margin: 30px auto 5px;
-               > .avatar_box{
+
+               >.avatar_box {
                   align-items: flex-start;
                   width: 120px;
+
                   @include MCW(861px) {
                      width: 100px;
                   }
+
                   @include MCW(480px) {
                      width: 100%;
                      padding-bottom: 15px;
                   }
-                 > .avatar{
+
+                  >.avatar {
                      border: 3px solid $color_fs_goose;
                      width: 72px;
                      height: 72px;
-                     &.student{
+
+                     &.student {
                         border-color: #D8D6D7;
                      }
                   }
                }
-               > .content_box.type_answer{
+
+               >.content_box.type_answer {
                   width: calc(100% - 120px);
                   max-height: unset;
+
                   @include MCW(861px) {
                      width: calc(100% - 100px);
                   }
+
                   @include MCW(480px) {
                      width: 100%;
                   }
-                  .tips{
-                     .user_info{
-                        .user_name{
+
+                  .tips {
+                     .user_info {
+                        .user_name {
                            border-radius: 50px;
                            padding: 5px 15px;
                            background: $color_fs_orange;
                            color: #fff;
                            font-size: 14px;
-                           &.student{
+
+                           &.student {
                               padding: 5px 0px;
                               background: unset;
                               color: $color_fs_orange;
@@ -705,20 +742,25 @@ $color_fs_footer-font:rgb(124, 124, 124);
                }
             }
          }
-         .trigger{
-            position: absolute;
+
+         .trigger {
+            @include fxc;
+            position: relative;
             width: 100%;
             text-align: center;
+            min-height: 1em;
             @include arl;
-            bottom: -34px;
-            font-size: 16px;
-            color:$color_fs_font_fader;
+            bottom: -10px;
+            font-size: .9em;
+            color: $color_fs_font_fader;
             cursor: pointer;
             @include hover;
-            i{
-               position: absolute;
-               padding: 0 0 0 5px;
+
+            i {
+               position: relative;
+               padding: 0 0 0 7px;
             }
+
             // &::after{
             //    font-family: 微軟正黑體;
             //    @include fontawesome;
@@ -726,7 +768,8 @@ $color_fs_footer-font:rgb(124, 124, 124);
             //    color:#444;
             // }
          }
-         .input{
+
+         .input {
             @include ff;
             @include ib;
             min-height: 80px;
@@ -734,9 +777,10 @@ $color_fs_footer-font:rgb(124, 124, 124);
             font-size: 17px;
             border: 1px solid rgb(219, 219, 219);
             padding: 8px;
-            margin:  5px 0 15px 0;
-            &:focus{
-               outline-color:$color_fs_orange;
+            margin: 5px 0 15px 0;
+
+            &:focus {
+               outline-color: $color_fs_orange;
             }
          }
       }

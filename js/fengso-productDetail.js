@@ -1,6 +1,17 @@
 
-$(document).ready(function(){
 
+$(document).ready(function(){
+   $('#header').load('header.html');
+   $('#footer').load('footer.html');
+
+
+
+   //Add title to the List item
+   $('.course_list_item ').each(function(){
+      let targetItemTitle = $(this).children('.title').html();
+      $(this).attr('title',targetItemTitle);
+   });
+   
    //IntroVideo Activer
    $('.video_activer').click(function(){
       $('.video_activer').removeClass('active');
@@ -17,15 +28,15 @@ $(document).ready(function(){
    })
 
    //CourseList /ChapterList active control
-   $('.chapter_list').children('.type_collapse').click(function(){
+   $('.chapter_list').find('.type_collapse').on('click' , function(){
       if($(this).hasClass('active')){
          $(this).removeClass('active');
          $(this).find('.square').html('<i class="fas fa-minus"></i>');
-         $(this).next('.step_2').show();
+         $(this).parents('.content').next('.step_2').show();
       }else{
          $(this).addClass('active');
          $(this).find('.square').html('<i class="fas fa-plus"></i>');
-         $(this).next('.step_2').hide();
+         $(this).parents('.content').next('.step_2').hide();
       }
    })
 
@@ -105,6 +116,9 @@ $(document).ready(function(){
       }
 
    })
+
+
+
    //rating function mob
    // const labels = document.querySelectorAll('label');
    // const getInput = val => document.getElementById(`star_${val}`);
@@ -148,12 +162,14 @@ $(document).ready(function(){
    });
 
 
-   //HomeworkDiscussion LightingBox content
-   $('.discuss_btn').click(function(){
 
-      //放入該區塊內容
-      let thisDetail = $(this).parents('.homework_block').children('.homework_discussion_block')
-      $('#LightingBoxHomework').find('.lightingbox_container').html(thisDetail.clone());
+
+   $('.discuss_btn').click(function(){
+      //取出學園區塊內容
+      let thisDetail = $(this).parents('.homework_block').children('.homework_discussion_block');
+
+      //將內容物複製到燈箱
+      $('#LightingBoxHomework').find('.homework_discuss_container').html(thisDetail.clone());
 
       //開啟燈箱動畫
       let target = $('#LightingBoxHomework');
@@ -161,6 +177,6 @@ $(document).ready(function(){
          target.show().children('.lightingbox_wrap').addClass('isopen').animate({'opacity':'1'} ,200 ,function() {
          $('#LightingBoxHomework .lightingbox_wrap').css({'transform':'scale(1)'});
       });
-
+      
    }) 
 });
