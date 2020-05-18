@@ -286,10 +286,10 @@
   display: inline-block;
   float: left;
   width: 100%;
-  font-size: 20px;
+  font-size: 1.6em;
   font-weight: bold;
   color: #363636;
-  line-height: 28px;
+  line-height: 1.6em;
   padding: 10px 0 30px;
 }
 
@@ -320,7 +320,7 @@
 #fengso-ArticleDetail .article_detail_block .article_block > .info_block > .tags .tag {
   padding: 5px 12px;
   margin: 0 15px 0 0;
-  background: #182432;
+  background: #b1162b;
   color: #fff;
 }
 

@@ -177,10 +177,10 @@ $color_fs_footer-font:rgb(124, 124, 124);
          > .title{
             @include ibl;
             width:100%;
-            font-size: 20px;
+            font-size: 1.6em;
             font-weight: bold;
             color:$color_fs_font-title;
-            line-height: 28px;
+            line-height: 1.6em;
             padding: 10px 0 30px ;
          }
          > .info_block{
@@ -197,7 +197,7 @@ $color_fs_footer-font:rgb(124, 124, 124);
                .tag{
                   padding:5px 12px ;
                   margin: 0 15px 0 0;
-                  background: #182432;
+                  background: rgb(177, 22, 43);
                   color:#fff;;
                }
             }

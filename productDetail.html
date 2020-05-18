@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="css/focuspoint.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli|Source+Sans+Pro">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.css">
     <script src="https://kit.fontawesome.com/9188edaa95.js"></script>
 </head>
     
@@ -269,7 +269,7 @@
                                     </ul>
 
                                 </div>
-                                
+
                                 <div id="Preview" class="course_type_list preview">
 
                                         <ul class="course_list_content">
@@ -499,16 +499,19 @@
                 <div class="intro_block col 2col">
 
                     <div class="intro_tab_block">
-                        <ul id="CourseContentTab" class="intro_tab">
-                            <li class="tab_item active" data-target="course_intro">課程簡介</li>
-                            <li class="tab_item" data-target="course_rate">課程評價</li>
-                            <li class="tab_item" data-target="course_discuss">問題討論</li>
-                            <li class="tab_item" data-target="course_homework">課程作業</li>
-                        </ul>
+                        <div id="CourseContentTab" class="intro_tab">
+                            <div class="swiper-wrapper">
+                                <div class="tab_item swiper-slide active" data-target="course_intro">課程簡介</div>
+                                <div class="tab_item swiper-slide" data-target="course_rate">課程評價</div>
+                                <div class="tab_item swiper-slide" data-target="course_discuss">問題討論</div>
+                                <div class="tab_item swiper-slide" data-target="course_homework">課程作業</div>
+                            </div>
+                            <div class="swiper-button-next tab__next"></div>
+                            <div class="swiper-button-prev tab__prev"></div>
+                        </div>
                         <hr>
                     </div>
                     
-
                     <div id="CourseMainContent" class="course_intro_main_content">
 
                         <div id="CourseIntro" class="course_intro course_tabtarget">
@@ -1658,6 +1661,59 @@
                     </div>
                 </div>
 
+                <div id="CourseShareBlock" class="course__share__block">
+
+                    <div class="course__share__price sub">
+                        <span class="share__prive__title ">原價</span>
+                        <span class="share__prive">NT 8,000</span>
+                    </div>
+
+                    <div class="course__share__price main">
+                        <span class="share__prive__title">特價</span>
+                        <span class="share__prive">NT 1,000</span>
+                    </div>
+
+                    <div class="course__share__buy__soon">
+                        立即購買<i class="fas fa-cart-plus"></i>
+                    </div>
+
+                    <div class="course__share__box">
+                        分享到：
+                        
+                        <span class="ele fb" data-href="https://developers.facebook.com/docs/plugins/">
+                            <a class="fb-xfbml-parse-ignore"
+                                href="https://www.facebook.com/sharer/sharer.php?u=https://www.fengso.com.tw/"
+                                target="_blank">
+                                <i class="fab fa-facebook-square"></i>
+                            </a>
+                        </span>
+
+                        <span class="ele line">
+                            <div class="line-it-button" data-lang="zh_Hant" data-type="share-b"
+                                data-ver="2" data-url="https://www.fengso.com.tw/" data-color="default"
+                                data-count="false" style="display: none;">
+                            </div>
+                        </span>
+
+
+                        <span id="CopyHref" class="copy__href">
+                            
+                            <span class="link__btn">
+                                <i class="fas fa-link"></i>
+                                
+                            </span>
+                            <input type="text" class="link__box" readonly />
+                            
+
+                        </span>
+
+
+                        
+                    </div>
+                    
+                </div>
+
+                <span id="CopySuccessAlert" class="copy__success">已複製網址至剪貼簿</span>
             </div>
 
         </div>
@@ -1723,12 +1779,37 @@
 <!-- OnlyThisPage -->
 <script src="js/fengso-productDetail.js"></script>
 <script src="js/fengso-structural-productDetail.js"></script>
+<script async="async" defer="defer" src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js"></script>
 
 
 <script>
 
+    var CourseIntroTabSwiper = new Swiper('.intro_tab', {
+        allowTouchMove: true,
+        slidesPerView: 'auto',
+        effect: 'slide',
+        spaceBetween: 0,
+        loop: false,
+        autoplay: false,
+        breakpoints: {
+            0: { //当屏幕宽度大于等于1280
+                centeredSlides: true,
+            },
+            1280: { //当屏幕宽度大于等于1280
+                centeredSlides: false,
+            },
+        },
+        navigation: {
+            nextEl: '.tab__next',
+            prevEl: '.tab__prev',
+        },
+    });
+
+
 $(document).ready(function(){
     // Add to list
+
+
     $('.add_to_list').click(function(){
         AddList();
     })
@@ -1770,7 +1851,6 @@ $(document).ready(function(){
             }, 500);
             target.addClass('active animate').children('.act_name').html('已加入最愛');
             target.children('.btn').html('<i class="fas fa-heart"></i>');
-
         }
     };
 

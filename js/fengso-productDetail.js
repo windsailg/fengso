@@ -6,6 +6,22 @@ $(document).ready(function(){
 
 
 
+   //寫入網址到input
+   $('.link__box').val(location.href);
+   //選取並複製選取的內容
+   $('.link__btn').on('click', function() {      
+      $('.link__box').select();
+      document.execCommand('copy');
+      $(this).addClass('isactive');
+      $('#CopySuccessAlert').addClass('isshow');
+      setTimeout(() => {
+         $(this).removeClass('isactive');
+         $('#CopySuccessAlert').removeClass('isshow');
+      }, 1200);
+   })
+
+
+
    //Add title to the List item
    $('.course_list_item ').each(function(){
       let targetItemTitle = $(this).children('.title').html();
@@ -180,3 +196,65 @@ $(document).ready(function(){
       
    }) 
 });
+
+
+$(window).bind('scroll resize', function () {
+
+   var eleTop = $('.intro_block').offset().top - 75;//物件高度
+
+   var windowTop = $(window).scrollTop();//卷軸頂部高度
+   var tabWindowTop = windowTop;//桌面header高度
+   var mobWindowTop = windowTop + 40;//手機header高度
+
+   //卷軸高度大於物件距離頂端高度(0)
+   if (eleTop > tabWindowTop) {
+      $('#CourseShareBlock').removeClass('isfixed');
+      $('.intro_tab_block').css({
+         'position': 'relative',
+         'top': '0',
+      });
+      $('.intro_block').css({
+         'padding-top': 'unset',
+      })
+   } else if (eleTop <= mobWindowTop) {
+
+      $('#CourseShareBlock').addClass('isfixed');
+      $('.intro_tab_block').css({
+         'position': 'fixed',
+         'top': '80px',
+      });
+      
+      $('.intro_tab_block hr').css({
+         'display': 'none',
+      });
+      $('.intro_block').css({
+         'padding-top': '75px',
+      })
+      // if (window.innerWidth > 1301) {
+
+
+      //    // $('.pb-container').css({
+      //    //    'padding': '90px  0 0 0',
+      //    // })
+      // } else {
+      //    $('.intro_tab_block').css({
+      //       'position': 'fixed',
+      //       'top': '50px',
+      //    });
+      // }
+   }
+
+
+}).scroll();
+
+
+
+// $('#tabs-nav').children('.swiper-slide').find('a').click(function () {
+
+//    $("html, body").animate({
+//       scrollTop: $("#CourseTaber").offset().top
+//    }, {
+//       duration: 300, easing: "swing"
+//    });
+
+// });

@@ -371,6 +371,7 @@
                                         <i class="far fa-clock"></i>
                                     </div>
                                 </div>
+
                                 <div class="count_box">
                                     <div class="count_item">
                                         <div class="number">130</div>
@@ -381,20 +382,38 @@
                                         <span class="subtitle">分鐘</span>
                                     </div>
                                 </div>
+
                             </div>
 
                             <div class="belt_block_item reciprocal">
                                 <div class="imagine_box">
-                                    <div class="title">預購倒數</div>
+                                    <div class="title">優惠結束時間</div>
                                     <div class="imagine">
                                         <i class="far fa-calendar-alt"></i>
                                     </div>
                                 </div>
                                 <div class="count_box">
+
                                     <div class="count_item">
-                                        <div class="number">12588</div>
+                                        <div id="CounterDay"  class="counter__ele number">10</div>
                                         <span class="subtitle">天</span>
                                     </div>
+
+                                    <div class="count_item">
+                                        <div id="CounterHour" class="counter__ele number">23</div>
+                                        <span class="subtitle">小時</span>
+                                    </div>
+
+                                    <div class="count_item">
+                                        <div id="CounterMinute" class="counter__ele number">59</div>
+                                        <span class="subtitle">分鐘</span>
+                                    </div>
+
+                                    <div class="count_item">
+                                        <div id="CounterSecond" class="counter__ele number">59</div>
+                                        <span class="subtitle">秒</span>
+                                    </div>
+
                                 </div>
                             </div>
 
@@ -942,7 +961,8 @@
 
 <script>
 
-   $(document).ready(function(){
+
+$(document).ready(function(){
     // Add to list
     $('.add_to_list').click(function(){
         AddList();
@@ -1007,6 +1027,10 @@
     });
 
     $('.unit_block .title').on('click',function(){        
+            $(this).css({'pointer-events':'none'});
+        setTimeout(() => {
+            $(this).css({'pointer-events':'auto'});
+        }, 400);
 
         if($(this).parent('.unit_block').hasClass('.unit_block--isopen')){
             $(this).parent('.unit_block').removeClass('.unit_block--isopen');
@@ -1020,7 +1044,51 @@
     });
 
 
+    //設定開課時間
+    var ctr_day = 1;
+    var ctr_hor = 1;
+    var ctr_min = 1;
+    var ctr_sec = 10;
+    
+    
+    $('#CounterSecond').html(ctr_sec);
+    $('#CounterMinute').html(ctr_min);
+    $('#CounterHour').html(ctr_hor);
+    $('#CounterDay').html(ctr_day);
+
+    //倒數計時器
+    setInterval(() => {
+        $('#CounterSecond').html(ctr_sec);
+        ctr_sec -- ;
+        //秒針歸零
+        if(ctr_sec <= -1){
+            ctr_sec = 59 ;
+            ctr_min -- ;
+            $('#CounterMinute').html(ctr_min);
+        }
+        if(ctr_min <= -1){
+            ctr_min = 59;
+            ctr_hor -- ;
+            $('#CounterMinute').html(ctr_min);
+            $('#CounterHour').html(ctr_hor);
+        }
+        if(ctr_hor <=  -1){
+            ctr_hor = 23 ;
+            ctr_day -- ;
+            $('#CounterHour').html(ctr_hor);
+            $('#CounterDay').html(ctr_day);
+        }
+    }, 1000);
+
+
+
+    
 });
+
+
+
+
+
 </script>
 
     
