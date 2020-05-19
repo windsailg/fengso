@@ -215,33 +215,44 @@ $(window).bind('scroll resize', function () {
       });
       $('.intro_block').css({
          'padding-top': 'unset',
-      })
+      });
+      $('.intro_tab').css({
+         'box-shadow': '0px 0px 0px transparent',
+      });
    } else if (eleTop <= mobWindowTop) {
 
       $('#CourseShareBlock').addClass('isfixed');
       $('.intro_tab_block').css({
          'position': 'fixed',
          'top': '80px',
+         'transition': '.3s all ease-in-out',
       });
       
       $('.intro_tab_block hr').css({
          'display': 'none',
+         
       });
+
       $('.intro_block').css({
-         'padding-top': '75px',
+         'padding-top': '60spx',
       })
-      // if (window.innerWidth > 1301) {
 
+      if (window.innerWidth <=780) {
+         $('.intro_tab_block').css({
+            'position': 'fixed',
+            'top': '60px',
+            'transition': '0s',
+         });
+         $('.intro_tab').css({
+            'box-shadow': '0px 0px 10px #00000063',
+         });
+      }else{
+         $('.intro_tab').css({
+            'box-shadow': '0px 0px 0px transparent',
+         });
 
-      //    // $('.pb-container').css({
-      //    //    'padding': '90px  0 0 0',
-      //    // })
-      // } else {
-      //    $('.intro_tab_block').css({
-      //       'position': 'fixed',
-      //       'top': '50px',
-      //    });
-      // }
+      }
+
    }
 
 

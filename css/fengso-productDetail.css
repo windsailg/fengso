@@ -1732,6 +1732,14 @@
 @media all and (max-width: 1300px) {
   #fengso-productDetail .intro_block .intro_tab_block {
     max-width: unset;
+    left: 0;
+  }
+}
+
+@media all and (max-width: 780px) {
+  #fengso-productDetail .intro_block .intro_tab_block {
+    left: 0px;
+    top: 60px;
   }
 }
 

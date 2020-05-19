@@ -1049,9 +1049,15 @@ $color_fs_footer-font:rgb(124, 124, 124);
          padding:  0 0 5px 0;
          z-index: 10;
          transition: 0s;
+        
          
          @include MCW(1300px) {
             max-width:unset;
+            left: 0;
+         }
+         @include MCW(780px) {
+            left: 0px;
+            top: 60px;
          }
          @include MCW(681px) {
             padding:  0 0 18px 0;
@@ -1062,6 +1068,7 @@ $color_fs_footer-font:rgb(124, 124, 124);
             // width: 100%;
             position: relative;
             overflow: hidden;
+            
             .tab_item{
                @include ibl;
                font-size: 1.15em;
