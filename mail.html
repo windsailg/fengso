@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>FengsoMail</title>
+
+   <style>
+      .mail__main{
+         display: inline-block;
+         width: 100%;
+         max-width: 100%;
+         padding: 10px;
+         box-sizing: border-box;
+         color:#000033;
+         line-height: 1.2em;
+      }
+      .mail__header{
+         display: block;
+         width: 100%;
+         max-width: 100%;
+      }
+      .mail__logo{
+         display: inline-block;
+         float: left;
+         width: 100%;
+         max-width: 150px;
+      }
+      .mail__logo img{
+         max-width: 100%;
+      }
+      .mail__link{
+         display: inline-block;
+         line-height: 50px;
+         float: right;
+         font-size: .9em;
+         color:#000033;
+
+      }
+      .mail__main hr{
+         float: left;
+         width: 100%;
+         height: 1px;
+         background-color: #aaaaaa;
+         border:  0px solid transparent;
+      }  
+      .mail__body{
+         display: inline-block;
+         width: 100%;
+         max-width: 100%;
+         padding: 15px 0;
+         box-sizing: border-box;
+         color:#000033;
+      }
+      .mail__title{
+         font-size: 1.2em;
+         padding: 10px 0;
+         font-weight: 500;
+      }
+      .mail__content{
+         display: inline-block;
+         width: 100%;
+         line-height: 1.5em;
+         max-width: 100%;
+         padding: 4px 0;
+      }
+      .mail__main a{
+         color:#000033;
+      }
+      .mail__content .hightlight{
+         color:#DF673E;
+         padding: 0 4px ;
+      }
+      .mail__main .mail__coupon{
+         display: inline-block;
+         padding: 46px 0 0 0;
+         box-sizing: border-box;
+         margin: 12px 0;
+         background-image:url('./img/coupon_bg.png');
+         background-repeat: no-repeat;
+         width: 282px;
+         height: 132px;
+         color: #ffffff;
+         text-decoration: none;
+         letter-spacing: 2px;
+         font-size: 1.2em;
+         color:#ffffff;
+      }
+      .mail__main .mail__coupon__serial{
+         display: flex;
+         justify-content: center;
+         max-height: 25px;
+         align-items: center;
+         text-align: center;
+         padding: 4px 16px;
+         font-size:.8em;
+         font-weight: 600;
+         color: #E57D00;
+         letter-spacing: 1.5px;
+         background-color: #ffffff;
+         width: 120px;
+         margin:  0 auto ;
+
+      }
+      .mail__main .mail__coupon__tip{
+         display: inline-block;
+         width: 100%;
+         margin: 13px auto 0;
+         text-align: center;
+         font-size: 1.4em;
+         
+         -webkit-text-stroke: 0px #ffffff;
+         font-weight: bold;
+      }
+      .marginer{
+         display: inline-block;
+         width: 100%;
+         max-width: 100%;
+         padding: 1px 0;
+      }
+
+   </style>
+
+</head>
+<body>
+   
+   <div class="mail__main" 
+      style="
+      display: inline-block;
+      width: 100%;
+      max-width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      color:#000033;
+      line-height: 1.2em;
+   ">
+      <div class="mail__header">
+         <a href="https://www.fengso.com.tw"  class="mail__logo" 
+            style="
+               display: inline-block;
+               width: 100%;
+               max-width: 150px;
+            ">
+            <img style="max-width: 100%;" src="https://www.fengso.com.tw/front/fengso-new/img/fengso_logo.png">
+         </a>
+
+         <a href="https://www.fengso.com.tw" class="mail__link" 
+            style="
+               display: flex;
+               font-size: .9em;
+               color:#000033;
+            ">www.fengso.com.tw</a>
+      </div>
+
+      <hr style="
+         height: 1px;
+         background-color: #aaaaaa;
+         border: 0px solid transparent;
+      ">
+
+      <div class="mail__body" 
+      style="
+         display: inline-block;
+         width: 100%;
+         max-width: 100%;
+         padding: 15px 0;
+         box-sizing: border-box;
+         color:#000033;
+      "> 
+
+         <div class="mail__title"
+         style="
+            font-size: 1.2em;
+            padding: 10px 0;
+            font-weight: 500;
+         ">
+            親愛的會員您好
+         </div>
+
+         <div class="mail__content" style="
+            display: inline-block;
+            width: 100%;
+            max-width: 100%;
+            padding: 4px 0;
+         ">
+            感謝您註冊峰碩資訊網站，現在起註冊峰碩資訊網站，即贈送一組優惠代碼。
+            該優惠代碼可以前往峰碩資訊網站 > 購物車 在結帳頁面下方輸入代碼，即可折抵現金。
+         </div>
+
+         <div class="marginer" style="
+            display: inline-block;
+            width: 100%;
+            max-width: 100%;
+            padding: 1px 0;
+         "></div>
+
+         <div class="mail__coupon">
+            <div class="mail__coupon__serial">BCD33593RTY</div>
+            <div class="mail__coupon__tip">折抵$500</div>
+         </div>
+
+         <div class="marginer" style="
+            display: inline-block;
+            width: 100%;
+            max-width: 100%;
+            padding: 1px 0;
+         "></div>
+
+
+         <div class="mail__content" 
+         style="
+            display: inline-block;
+            width: 100%;
+            max-width: 100%;
+            padding: 4px 0;
+         ">優惠代碼有效期限
+         <span class="hightlight" 
+         style="
+            color:#DF673E;
+            padding: 0 4px ;
+         ">
+            即日起至 2021年 12月31日
+         </span>
+         </div>
+         <div class="mail__content" 
+         style="
+            display: inline-block;
+            width: 100%;
+            max-width: 100%;
+            padding: 4px 0;
+         ">優惠代碼使用範圍
+         <span class="hightlight"
+            style=" color:#DF673E;
+            padding: 0 4px ;
+         ">全峰碩資訊網站 所有課程</span>
+         </div>
+
+
+
+
+
+         <div class=""></div>
+
+
+
+         <div class="marginer" style="
+            display: inline-block;
+            width: 100%;
+            max-width: 100%;
+            padding: 1px 0;
+         "></div>
+
+
+         <div class="marginer" style="
+            display: inline-block;
+            width: 100%;
+            max-width: 100%;
+            padding: 1px 0;
+         "></div>
+         <div class="marginer" style="
+            display: inline-block;
+            width: 100%;
+            max-width: 100%;
+            padding: 1px 0;
+         "></div>
+         <div class="mail__content"
+            style="
+            display: inline-block;
+            width: 100%;
+            max-width: 100%;
+            padding: 4px 0;
+         "><a href="#" style="color:#000033;">峰碩資訊學院</a>　敬上</div>
+         <div class="mail__content"
+               style="
+               display: inline-block;
+               width: 100%;
+               max-width: 100%;
+               padding: 4px 0;
+         ">客服專線：02-5580-2599</div>
+      </div>
+
+      <hr style="
+         height: 1px;
+         background-color: #aaaaaa;
+         border: 0px solid transparent;
+      ">
+
+      <div class="mail__content" 
+      style="
+         display: inline-block;
+         width: 100%;
+         max-width: 100%;
+         padding: 4px 0;">
+         此封信件為系統發送 請勿直接email回覆
+      </div>
+      
+
+   </div>
+
+
+
+
+</body>
+</html>
