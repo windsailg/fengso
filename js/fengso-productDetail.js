@@ -6,6 +6,7 @@ $(document).ready(function(){
 
 
 
+
    //寫入網址到input
    $('.link__box').val(location.href);
    //選取並複製選取的內容
@@ -201,14 +202,22 @@ $(document).ready(function(){
 $(window).bind('scroll resize', function () {
 
    var eleTop = $('.intro_block').offset().top - 75;//物件高度
+   var teacherbottomTop = $('.teacher__bottom__block').offset().top -75;//物件高度
 
    var windowTop = $(window).scrollTop();//卷軸頂部高度
    var tabWindowTop = windowTop;//桌面header高度
    var mobWindowTop = windowTop + 40;//手機header高度
 
    //卷軸高度大於物件距離頂端高度(0)
+   //老師下方分享高度判斷
+   if (teacherbottomTop > tabWindowTop) {
+      $('.course__share__block').removeClass('isfixed');
+   } else if (teacherbottomTop <= mobWindowTop) {
+      $('.course__share__block').addClass('isfixed');
+   }
+   //課程介紹高度判斷
    if (eleTop > tabWindowTop) {
-      $('#CourseShareBlock').removeClass('isfixed');
+
       $('.intro_tab_block').css({
          'position': 'relative',
          'top': '0',
@@ -220,23 +229,17 @@ $(window).bind('scroll resize', function () {
          'box-shadow': '0px 0px 0px transparent',
       });
    } else if (eleTop <= mobWindowTop) {
-
-      $('#CourseShareBlock').addClass('isfixed');
       $('.intro_tab_block').css({
          'position': 'fixed',
          'top': '80px',
          'transition': '.3s all ease-in-out',
       });
-      
       $('.intro_tab_block hr').css({
          'display': 'none',
-         
       });
-
       $('.intro_block').css({
          'padding-top': '60spx',
       })
-
       if (window.innerWidth <=780) {
          $('.intro_tab_block').css({
             'position': 'fixed',

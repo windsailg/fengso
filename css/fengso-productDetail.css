@@ -1951,14 +1951,32 @@
   text-align: left;
 }
 
+#fengso-productDetail .teacher__bottom__block {
+  opacity: 1;
+  position: relative;
+  width: 30%;
+}
+
+@media all and (max-width: 1301px) {
+  #fengso-productDetail .teacher__bottom__block {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 1170px) {
+  #fengso-productDetail .teacher__bottom__block {
+    position: unset;
+    width: 100%;
+  }
+}
+
 #fengso-productDetail .course__share__block {
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  max-width: 240px;
+  max-width: 348px;
   position: absolute;
-  right: 90px;
   top: 50px;
   -webkit-box-shadow: 0px 0px 20px #00000017;
           box-shadow: 0px 0px 20px #00000017;
@@ -1969,6 +1987,7 @@
   -webkit-transition: 0s ease-in-out;
   -o-transition: 0s ease-in-out;
   transition: 0s ease-in-out;
+  z-index: 10;
 }
 
 #fengso-productDetail .course__share__block.isfixed {
@@ -1984,8 +2003,28 @@
   transition: .3s ease-in-out;
 }
 
-@media all and (max-width: 1900px) {
+@media all and (max-width: 1170px) {
   #fengso-productDetail .course__share__block.isfixed {
+    top: unset;
+    right: 0px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    left: 0px;
+    max-width: 100%;
+    width: 100%;
+    bottom: 0px;
+    -webkit-transition: 0s;
+    -o-transition: 0s;
+    transition: 0s;
+    padding: 5px;
+  }
+  #fengso-productDetail .course__share__block.isfixed .course__share__buy__soon {
+    max-width: 50%;
+    padding: 8px 10px;
+    margin: 5px 0;
+  }
+  #fengso-productDetail .course__share__block.isfixed .course__share__box,
+  #fengso-productDetail .course__share__block.isfixed .course__share__price {
     display: none;
   }
 }
@@ -2075,7 +2114,7 @@
 }
 
 #fengso-productDetail .course__share__block .course__share__box .line {
-  padding: 6px 0 0 0;
+  padding: 3px 0 0 0;
   width: 25px;
   height: 25px;
 }
@@ -2171,4 +2210,8 @@
 
 #fengso-productDetail .video-js {
   background-color: transparent;
+}
+
+.footer_container {
+  padding-bottom: 80px !important;
 }
