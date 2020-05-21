@@ -2003,6 +2003,10 @@
   transition: .3s ease-in-out;
 }
 
+#fengso-productDetail .course__share__block.isfixed.dp-mob {
+  display: none;
+}
+
 @media all and (max-width: 1170px) {
   #fengso-productDetail .course__share__block.isfixed {
     top: unset;
@@ -2017,6 +2021,12 @@
     -o-transition: 0s;
     transition: 0s;
     padding: 5px;
+  }
+  #fengso-productDetail .course__share__block.isfixed.dp-mob {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
   }
   #fengso-productDetail .course__share__block.isfixed .course__share__buy__soon {
     max-width: 50%;

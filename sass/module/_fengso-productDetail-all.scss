@@ -1242,12 +1242,16 @@ $color_fs_footer-font:rgb(124, 124, 124);
       opacity: 0;
       transition: 0s ease-in-out;
       z-index: 10;
+      
       &.isfixed{
          opacity: 1;
          display: flex;
          position: fixed;
          top:100px;
          transition: .3s ease-in-out;
+         &.dp-mob{
+            display: none;
+         }
          @include MCW(1170px) {
             top:unset;
             right:0px;
@@ -1258,6 +1262,9 @@ $color_fs_footer-font:rgb(124, 124, 124);
             bottom: 0px;
             transition: 0s;
             padding: 5px;
+            &.dp-mob {
+               display: flex;
+            }
             .course__share__buy__soon{
                max-width: 50%;
                padding: 8px 10px;
